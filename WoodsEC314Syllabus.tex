@@ -3,9 +3,19 @@
 \usepackage{hyperref}
 % \usepackage{draftwatermark}
 % \SetWatermarkScale{4}
-\newcommand{\Term}{Fall 2015}
-\newcommand{\Office}{at Monday from 10:30-12:00}
-\newcommand{\Piazza}{\url{ http://piazza.com/pdx/fall2015/ec314/home}}
+
+\newif\ifhybrid
+\newif\ifonline
+\newif\ifinperson
+
+% \hybridtrue
+\onlinetrue
+
+\newcommand{\Term}{Winter 2016}
+\newcommand{\Office}{at Monday from Noon-1:00}
+\newcommand{\Piazza}{\url{ http://piazza.com/pdx/winter2016/ec314/home}}
+\newcommand{\FinalExam}{at 8am on Friday March 18th}
+\newcommand{\DRCDate}{Febuary 8th }
 
 \date{}
 %opening
@@ -31,14 +41,21 @@ The main objectives are to prepare engineers for their PE and FE exams and to
 provide engineers, economists and others with a shared language and
 understanding of basic finance topics.
 
-This is a hybrid class. That means that we only have half the usual amount of classroom time but will have a lot more work on-line.
+\ifhybrid \input{HybridWarn} \fi
+\ifonline \input{OnlineWarn} \fi
 
+This class has an in-person final exam at \FinalExam.  The final exam is required. If you are taking the final at the PSU testing center you must schedule your exam to start at that time.  You must notify me via email by \DRCDate or it will be assumed that you are taking the exam in the main exam room.
 
 \section{Prerequisites}
 
 There are no prerequisites for this course. However, a reasonable math
 background, MTH 95, is a practical requirement. 
- The math placement assessment for MTH 111, testing concepts from MTH 70 and 95, i.e., high school algebra, will be given on the first day.  If you don't do well, you should reconsider enrolling in this course.
+
+\ifonline
+  
+  \else
+    The math placement assessment for MTH 111, testing concepts from MTH 70 and 95, i.e., high school algebra, will be given on the first day.  If you don't do well, you should reconsider enrolling in this course.
+\fi
 
 \section{Contact Information}
 
@@ -53,8 +70,6 @@ that called ``Logistics''. I will check piazza on a regular basis during regular
 If you send me an email with a question that should be asked in a piazza, I
 will ask you to post it there rather than answer in email.
 
-\input{TAInfo}
- 
 My office is in CH 241-O.  The best ways of contacting me, in
 decreasing order of effectiveness:
 \begin{itemize}
@@ -66,21 +81,17 @@ decreasing order of effectiveness:
 
 You are encouraged to use the IM function of your PSU email account rather than email. This will allow me to get back to you more quickly and more conversationally. Please be aware that I will likely not reply till the next day if you IM me after 6pm or on the weekend.  
 
-My office hours will be held \Office ~through the last week of class, not including finals week. There is no need to make an appointment for these hours -- just come.  D2L has a link that allows you to attend office hours remotely via hangout.
-
-%If you can't attend regular office hours, please check my calendar link on D2L. I will make a limited number of 15 minute slots available each week. All appointments are assumed to be online via a hangout.  Evening appointments are available. \emph{If you make an appointment and fail to show up without first canceling, I will penalize you one quiz grade.}  
+\emph{My office hours will be held \Office ~through the last week of class, not including finals week.} There is no need to make an appointment for these hours -- just come.  D2L has a link that allows you to attend office hours remotely via hangout.
 
 
 If you can’t attend regular office hours, please check my calendar \url{https://woodsj.youcanbook.me/}. I will make a limited number of 15 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize you one pre quiz grade.  
 
-
-
+\input{TAInfo}
+ 
 \section{Textbooks and Other Sources}
 I have assigned Chan S. Park ``Contemporary Engineering Economics
-4ed''.  If the 4th edition is unavailable, the 3rd, 5th, or 6th editions are also
-acceptable but \emph{all readings and suggested questions will be from
-  the 4th edition.} 
-  
+4ed'' as a convenience to students that have their textbooks paid for by a third party. 
+
 I am pretty comfortable with any engineering
 economics textbook you choose, but it is your responsibility to figure
 out the relevant readings from the descriptions of the subject matter.
@@ -89,7 +100,7 @@ make the correspondences.  Many students have found the textbook unnecessary giv
 
 ``Schaum's Outline of Engineering Economics'' by Sepulveda, Souder and Gottfried is a useful second reference if you are having trouble with time value of money.
 
-\subsection{Online Resources}
+\subsection{Online Resources} ***HERE***
 We will make significant use of online resources and technology.  The
 three main tools are:
 \begin{itemize}
@@ -108,21 +119,24 @@ also find a tutorial on how to use D2L on your D2L landing page.
 
 The course D2L landing page will have several important links:
 \begin{itemize}
-\item EC314 Wiki, where most of the supplementary material, videos and
-  podcasts reside.
-\item Schedule an Appointment, where you can arrange times to meet
-  other than office hours for help or an oral exam.
+  \item EC314 Wiki, where most of the supplementary material, videos and
+    podcasts reside.
+  \ifonline
+    \item Schedule an Appointment, where you can arrange times to meet
+    other than office hours for help.
+    \else
+    \item Schedule an Appointment, where you can arrange times to meet
+    other than office hours for help or an oral exam.  
+  \fi
   
   \item A hangout link so you can attend office hours via webcam.
-  
-\item Calendar of Topics and Deadlines, for deadlines and due dates.
-\item Table of Contents for 4th Edition Book
+  \item Calendar of Topics and Deadlines, for deadlines and due dates.
+  \item Table of Contents for 4th Edition Book
 \end{itemize}
 
 Pay particular attention to the course content tab in the upper
 left. This is where most of the online work starts.  Each module will
 be structured with one or more of the following:
-
 
 \begin{itemize}
   % \item Goal: What we are trying to make sure you can do.
@@ -206,10 +220,17 @@ Online participation is not optional. That is how we do homework.
 
 \section{Assessments and Grade Policy}
 
-Your grade in the class will be determined by your performance on the online assignments in D2L (80\%) and the in-person final exam (20\%).  Grades will be based on your class rank and limited by your performance on the in-class assessments of essential skills which are detailed in section \ref{sec:essentialSkills}. 
+\ifonline
+  Your grade in the class will be determined by your performance on the online assignments in D2L (80\%) and the in-person final exam (20\%).  Grades will be based on your class rank.
 
-I typically end up with \emph{about} 30\%
-A's and 30\% B's in my in-person and hybrid courses.    
+  Only about 30\% of students enrolled at the start of term complete the online version of this course.  The typically grade distribution is often worse than the my in-person and hybrid courses where \emph{about} 30\% of students earn A's and another 30\% earn B's.
+
+\else
+  Your grade in the class will be determined by your performance on the online assignments in D2L (80\%) and the in-person final exam (20\%).  Grades will be based on your class rank and limited by your performance on the in-class assessments of essential skills which are detailed in section \ref{sec:essentialSkills}. 
+  
+  I typically end up with \emph{about} 30\%
+  A's and 30\% B's in my in-person and hybrid courses.    
+\fi
 
 \subsection{On-line Quizzes}
 
@@ -224,68 +245,75 @@ failures, illness, bad days and other bad luck.  I will take care of this adjust
 
 \subsection{Final Exam}
 
+The function of the required final exam is to provide me with added assurance that online work was completed by the person enrolled in the class.  Because of this, picture ID will be required to enter the the examination room.  \emph{Not taking the final exam, or scoring in the 15th percentile or lower, will result in a failing grade.}
 
-The function of the required final exam is to provide me with added assurance that online work was completed by the person enrolled in the class.  Because of this, picture ID will be required to enter the the examination room.  \emph{Not taking the final exam will result in a failing grade.}
+It has been my expierence that students I have suspected of not doing their own work online do so poorly on the final exam that they fail the class.
 
-The final exam will consist of written, not multiple choice questions, covering the same material as the online quizzes and will be more problem solving than definitional. I will provide you with a sheet of accounting ratios and formulas for some time value of money calculations.  These materials will be posted on D2L in the course materials section.  In the final exam, you will be allowed a calculator and writing implement.  Phones, smart watches, books, computers are not allowed.
+The final exam will consist of written, not multiple choice questions, covering the same material as the online quizzes and will be more problem solving than definitional. I will provide you with a sheet of accounting ratios, tables for depreciation, and formulas for some time value of money calculations.  These materials will be posted on D2L in the course materials section.  In the final exam, you will be allowed a calculator and writing implement.  Phones, smart watches, books, computers are not allowed.
 
-%Low scores on the final exam, relative to quiz scores, will be used as a signal for us to investigate your quiz scores more rigorously for irregularities.  \emph{Implausible differences will be referred for student code of conduct violations.}  Note that because the final exam is required for a passing grade in the course, consistent with OAR 577-031-0142, code of conduct violations will result in an F for the course.
+\ifonline
 
+\else
+   \subsection{ Necessary but not Sufficient Requirements for Passing Grades}\label{sec:essentialSkills}
+  
+   The course is focused on four essential skills:
+   
+   \begin{itemize}
+   
+   \item Accounting: Knowledge of the definitions and locations of a
+     small subset of items found on income statements, balance sheets and
+     cash flow statements.
+   
+   \item Time Value: The ability to represent arbitrary cash flows
+     consisting of common patterns, such as constant series and linear
+     gradient series, in factor notation and compute the present worth of
+     these series.
+   
+   \item Choice: The ability choose acceptable and optimal investments,
+     given cash flows and an interest rate, using the present worth,
+     annual worth and internal rate of return criteria.
+   
+   \item Income/Cash Flow: The ability to construct simple income/cash
+     flow statement, e.g., for an asset purchase or expense, including
+     depreciation, interest, taxes, gains tax and working capital, to
+     support an investment decision based on the present worth, annual
+     worth or internal rate of return criteria.
+   \end{itemize}
+   
+  
+  You must demonstrate proficiency in all four to receive an A in the course, three of the four to receive a B in the course, and two of the four to receive a C-.  These are requirements in addition to having sufficiently high quiz scores.  In other words, these are necessary but not sufficient requirements for the indicated letter grades.
+  
+  There are three kinds of opportunities to pass these essential skills:
+  \begin{itemize}
+      \item In class
+      \item Oral exam by appointment
+      \item As addendum to the final exam
+  \end{itemize}
+  
+   
+  \subsubsection{In Class Essential Questions}
+  
+  Ten to fifteen minutes of each session is reserved to allow students to demonstrate these skills with a brief written test. Certifying questions will be made available soon after the topics are introduced in class. Students may attempt one question per class and we will bring new questions every week.  All questions will be scored on a pass/no pass basis. 
+  
+  Your graded essential questions will be available at the will call window in the Economics office, CH 241.  This return procedure is FERPA compliant and I apologize for the inconvenience.
+  
+  Examples of past questions and keys to the grading rubric may be found
+  in outline on the course wiki under ``Essential Skills Hints ''.  Note that the formats of some of the questions have changed over time.
+  
+  \subsubsection{Essential Questions by Oral Exam}
+  
+  Students may schedule a 15 minute appointment with the professor through the appointment link. There are often no free appointment slots available in the final two weeks of class and it is the responsibility of the student to plan appropriately. \emph{If you don’t see an available appointment slot, there are no available slots.} There will be some difference in the format of the oral exams relative to the written version. After failed oral exam I will give feedback on how to study and do better the next time. Please expect to show your student ID.
+  
+  Please refrain from scheduling multiple oral exams on the same day.  If you make more than one appointment, I will cancel all but the earliest.
+  
+  \subsubsection{ Essential Questions as Addendum to the Final Exam}
+  You will also be able to make two attempts in the final exam period. This is in addition to the final exam. You will have your choice of any two essential questions, even two of the same. This is intended to be your last chance to demonstrate proficiency, not the main chance.
 
- \subsection{ Necessary but not Sufficient Requirements for Passing Grades}\label{sec:essentialSkills}
- 
+\fi
 
- The course is focused on four essential skills:
- 
- \begin{itemize}
- 
- \item Accounting: Knowledge of the definitions and locations of a
-   small subset of items found on income statements, balance sheets and
-   cash flow statements.
- 
- \item Time Value: The ability to represent arbitrary cash flows
-   consisting of common patterns, such as constant series and linear
-   gradient series, in factor notation and compute the present worth of
-   these series.
- 
- \item Choice: The ability choose acceptable and optimal investments,
-   given cash flows and an interest rate, using the present worth,
-   annual worth and internal rate of return criteria.
- 
- \item Income/Cash Flow: The ability to construct simple income/cash
-   flow statement, e.g., for an asset purchase or expense, including
-   depreciation, interest, taxes, gains tax and working capital, to
-   support an investment decision based on the present worth, annual
-   worth or internal rate of return criteria.
- \end{itemize}
- 
+\ifonline
 
-You must demonstrate proficiency in all four to receive an A in the course, three of the four to receive a B in the course, and two of the four to receive a C-.  These are requirements in addition to having sufficiently high quiz scores.  In other words, these are necessary but not sufficient requirements for the indicated letter grades.
-
-There are three kinds of opportunities to pass these essential skills:
-\begin{itemize}
-    \item In class
-    \item Oral exam by appointment
-    \item As addendum to the final exam
-\end{itemize}
-
- 
-\subsubsection{In Class Essential Questions}
-
-Ten to fifteen minutes of each session is reserved to allow students to demonstrate these skills with a brief written test. Certifying questions will be made available soon after the topics are introduced in class. Students may attempt one question per class and we will bring new questions every week.  All questions will be scored on a pass/no pass basis. 
-
-Your graded essential questions will be available at the will call window in the Economics office, CH 241.  This return procedure is FERPA compliant and I apologize for the inconvenience.
-
-Examples of past questions and keys to the grading rubric may be found
-in outline on the course wiki under ``Essential Skills Hints ''.  Note that the formats of some of the questions have changed over time.
-
-\subsubsection{Essential Questions by Oral Exam}
-
-Students may schedule a 15 minute appointment with the professor through the appointment link. There are often no free appointment slots available in the final two weeks of class and it is the responsibility of the student to plan appropriately. \emph{If you don’t see an available appointment slot, there are no available slots.} There will be some difference in the format of the oral exams relative to the written version. After failed oral exam I will give feedback on how to study and do better the next time. Please expect to show your student ID.
-
-\subsubsection{ Essential Questions as Addendum to the Final Exam}
-You will also be able to make two attempts in the final exam period. This is in addition to the final exam. You will have your choice of any two essential questions, even two of the same. This is intended to be your last chance to demonstrate proficiency, not the main chance.
-
+\else
 \subsection{Extra Credit}\label{sec:ExtraCredit}
 Extra credit, equivalent to two pre quiz grades, is available for the
 course.  
@@ -306,53 +334,7 @@ To earn extra credit:
 \end{enumerate}
 
 Please note that it is possible for a student to write a poor answer that never never gains enough positive responses for me to evaluate.  It is also possible for a poorly written answer to be edited and improved sufficiently for the extra credit to be granted to someone other than the original author.
-
-% Extra credit is earned by making significant contributions to the
-% course wiki.  While adding to the wiki without extra credit reward
-% is encouraged, extra credit will not be given if the following
-% procedure is not followed.
-
-% \begin{itemize}
-% \item Check the list of to do items on the To Do page
-%   \url{http://ec314-pdx-edu.wikidot.com/to-do}.  There is also a
-%   link in the left panel.
-% \item Send me an email telling me which item you intend to complete
-%   before you start work. Your email must include a deadline. I will
-%   change the wiki to show that you are working on the item and the
-%   deadline.
-% \item I will not accept ex-post notification.
-% \item Once you have completed the project, you will send me an email
-% \item I may ask for changes or improvements before the extra-credit
-%   is granted.
-% \item They must be completed by November 27th.
-
-% \end{itemize}
-% \subsection{Additional Requirements for Grades Higher than B}
-% 
-% This is a requirement in addition to the one above, for
-% students that would like to be considered for a grade higher than a
-% B. Completing this assignment does not ensure an A, it just makes it
-% possible should your rank in the class warrant the grade.
-% 
-% This assignment comes in two parts. After you complete the 'Income/Cash Flow' module construct a reasonably complete proposal for a choice problem that includes:
-% 
-% \begin{itemize}
-% 
-% \item The context of the choice, for example, considering two different business vehicles but one has a higher resale value.
-% \item Assumptions about:
-% \begin{itemize}
-% \item Revenue and cost changes;
-% \item Cost basis and resale of any assets;
-% \item Any loans;
-% \item Changes in working capital requirements
-% \end{itemize}
-% \item The main problems you will have to deal with, e.g., a gains tax or a loan with many payments per year.
-% \end{itemize}
-% 
-% This will be submitted to the ``Income Cash Flow Proposal'' dropbox folder in D2L by  March 3rd for approval.  If not approved, any revisions to the proposal must be completed by March 13th.  In general only one revision will be allowed before your proposal is rejected.  Please note that D2L will not allow you to submit a proposal until you have completed the Post Income and Cashflow quiz.
-% 
-% A spreadsheet showing the Income and Cashflow statement as well as narrative, not to exceed one page, explaining the statement and your investment choice must be submitted to the ``Income Cash Flow Final'' dropbox by March 20th.  This will be evaluated on a pass/no pass basis. If your submission is made prior to March 13th, you may receive feedback and an opportunity for resubmission.
-% 
+\fi
 
 
 \section{Other Rules}
@@ -406,16 +388,16 @@ posted on D2L and the course wiki.
 
 
 \section{Changes From Previous Terms}
-The format and rules for the class change from term to term and are often the result of a discussion about how to improve the course conducted at the end of the term. The general changes from the Spring 2015 are:
+The format and rules for the class change from term to term and are often the result of a discussion about how to improve the course conducted at the end of the term. The general changes from the Winter 2015 are:
 
 \begin{itemize}
     \item Practice quizzes now have a link to a wiki page on that specific question.
-    \item In-class quizzes, which were essentially participation grades, have been eliminated.
-    \item Extra credit is now available by providing detailed answers to practice questions in a timely manner that are demonstrated to be useful to students.
+%     \item In-class quizzes, which were essentially participation grades, have been eliminated.
+%     \item Extra credit is now available by providing detailed answers to practice questions in a timely manner that are demonstrated to be useful to students.
     \item The wiki now has a voting system to flag both good and bad pages.
-    \item The essential questions now work on a sliding scale with only two required for a passing grade and all four required for an A.
+%     \item The essential questions now work on a sliding scale with only two required for a passing grade and all four required for an A.
     \item A comprehensive written final exam was added.
-    \item A more FERPA compliant method to return essential questions was added.
+%     \item A more FERPA compliant method to return essential questions was added.
     \item Pre quizzes now show which questions were correct and not just the total score.
     \item Mandatory 24hr spacing of Pre quiz attempts has been removed.
     \item Pre quizzes make use of randomized question sets and not just parameters and question order.

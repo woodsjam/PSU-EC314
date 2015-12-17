@@ -10,6 +10,7 @@
 
 % \hybridtrue
 \onlinetrue
+% inpersontrue
 
 \newcommand{\Term}{Winter 2016}
 \newcommand{\Office}{at Monday from Noon-1:00}
@@ -101,7 +102,7 @@ make the correspondences.  Many students have found the textbook unnecessary giv
 
 ``Schaum's Outline of Engineering Economics'' by Sepulveda, Souder and Gottfried is a useful second reference if you are having trouble with time value of money.
 
-\subsection{Online Resources} ***HERE***
+\subsection{Online Resources}
 We will make significant use of online resources and technology.  The
 three main tools are:
 \begin{itemize}
@@ -170,11 +171,13 @@ The calendar tool will show quiz deadlines. These are hard deadlines.  Having a 
 %   by the last week of class -- not the last day of finals week.  
   
 
-
+\subsubsection{Piazza}
 Piazza will be used for news and other announcements and has the advantage of being available independently of D2L and the PSU login mechanism.  
 
 If you have questions related to course administration, post them in
 the ``logistics'' folder by composing a message with a brief version of your question in the subject line. This way we can form a knowledge base that everyone can use.  If you email me a question like this, I will just ask you to post the question in this folder.  Save yourself a step and start with a post.
+
+Many of the D2L quiz questiions don't have very informative keys. This is partially because may of the questions have several mathematically correct answers or ask for examples, which are by their nature unique for each student. \emph{After the due date feel free to post the full question in piazza.  I and other students will work out an answer key.}
 
 
 \subsubsection{EC314 Wiki}
@@ -211,13 +214,18 @@ of the term. If your inappropriate
 conduct is in private, a student code of conduct violation complaint
 may be filed.
 
- \subsection{Attendance and Online Participation}
- 
- If you choose to attend class, please prepare by completing the required readings and reviewing your notes from the previous lecture. If you choose not to attend a class, you are still responsible for acquiring notes, handouts, and any announced schedule changes from other students. You will be ineligible for demonstrations of basic skills, i.e., the essential questions. 
- 
- Don’t let your children be a barrier to attending class. Bringing your children to class occasionally is tolerated and encouraged.
+\ifonline
 
-Online participation is not optional. That is how we do homework.
+\else
+   \subsection{Attendance and Online Participation}
+   
+   If you choose to attend class, please prepare by completing the required readings and reviewing your notes from the previous lecture. If you choose not to attend a class, you are still responsible for acquiring notes, handouts, and any announced schedule changes from other students. You will be ineligible for demonstrations of basic skills, i.e., the essential questions. 
+   
+   Don’t let your children be a barrier to attending class. Bringing your children to class occasionally is tolerated and encouraged.
+  
+  Online participation is not optional. That is how we do homework.
+
+\fi
 
 \section{Assessments and Grade Policy}
 
@@ -239,9 +247,23 @@ There will be two types of graded quizzes, `Pre' and `Post', on D2L.  A `Pre'
 quiz with 20 points is worth the same as a `Pre' quiz of 3 points as
 far as your grade goes.  You will be given the maximum score of the two nearly identical attempts. Points are only comparable within a quiz, not between quizzes.  `Post' quizzes are worth twice as much as `Pre' quizzes.
 
+\ifonline
 
-Your quiz score is determined by the sum of the percent correct of the pre quizzes plus twice the sum of the percent correct on each of the post quizzes. I drop either the two lowest pre quiz scores or the lowest post quiz, whichever results in the highest score. 
-The dropped scores are intended to be a buffer for technical
+  The optimal study pattern is to:
+  \begin{itemize}
+  \item Read the required material.
+  \item Try some of the practice quiz questions.
+  \item Wait a day.
+  \item Review the material again and do more of the practice questions.
+  \item If confident, take the `Pre' quiz, reviewing concepts between each of the two attempts. Ideally you should put a day for review of the questions between the two attempts.
+  \item Wait a day.
+  \item Review and take the `Post' quiz.
+  \end{itemize}
+
+\fi
+
+
+Your quiz score is determined by the sum of the percent correct of the pre quizzes plus twice the sum of the percent correct on each of the post quizzes. I drop either the two lowest pre quiz scores or the lowest post quiz, whichever results in the highest score. The dropped scores are intended to be a buffer for technical
 failures, illness, bad days and other bad luck.  I will take care of this adjustment at the end of term.  
 
 \subsection{Final Exam}
@@ -397,7 +419,7 @@ The format and rules for the class change from term to term and are often the re
 %     \item Extra credit is now available by providing detailed answers to practice questions in a timely manner that are demonstrated to be useful to students.
     \item The wiki now has a voting system to flag both good and bad pages.
 %     \item The essential questions now work on a sliding scale with only two required for a passing grade and all four required for an A.
-    \item A comprehensive written final exam was added.
+    \item The comprehensive written final exam is now composed of questions not in the POST quizzes .
 %     \item A more FERPA compliant method to return essential questions was added.
     \item Pre quizzes now show which questions were correct and not just the total score.
     \item Mandatory 24hr spacing of Pre quiz attempts has been removed.

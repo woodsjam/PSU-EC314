@@ -1,22 +1,23 @@
 \documentclass[letterpaper,10pt]{article}
 \usepackage{fullpage}
 \usepackage{hyperref}
-% \usepackage{draftwatermark}
-% \SetWatermarkScale{4}
+\usepackage{draftwatermark}
+\SetWatermarkScale{4}
 
 \newif\ifhybrid
 \newif\ifonline
 \newif\ifinperson
 
 % \hybridtrue
-\onlinetrue
-% inpersontrue
+% \onlinetrue
+ \inpersontrue
 
-\newcommand{\Term}{Winter 2016}
-\newcommand{\Office}{at Monday from Noon-1:00}
-\newcommand{\Piazza}{\url{ http://piazza.com/pdx/winter2016/ec314/home}}
-\newcommand{\FinalExam}{at 8am on Friday March 18th}
-\newcommand{\DRCDate}{Febuary 8th }
+\newcommand{\Term}{Spring 2016}
+\newcommand{\Office}{on Monday from 3-4:30}
+\newcommand{\Piazza}{\url{ http://piazza.com/pdx/spring2016/ec314/home}}
+\newcommand{\FinalExam}{at 12:30pm  on June 9th}
+\newcommand{\MidtermExam}{on April 27th}
+\newcommand{\DRCDate}{May 2nd }
 
 \date{}
 %opening
@@ -44,7 +45,7 @@ understanding of basic finance topics.
 \ifhybrid \input{HybridWarn} \fi
 \ifonline \input{OnlineWarn} \fi
 
-\emph{This class has an in-person final exam at \FinalExam.  The final exam is required. If you are taking the final at the PSU testing center you must schedule your exam to start at that time.  You must notify me via email by \DRCDate or it will be assumed that you are taking the exam in the main exam room.}
+\emph{This class has an in-person final exam at \FinalExam ~and a midterm \MidtermExam. If you are taking the exams at the PSU testing center, you must schedule your exam to start at the same time as the rest of the class. It is recomended that you schedule those appointments with the testing center as soon as possible to avoid taking the exam with the rest of the class.}
 
 \section{Prerequisites}
 
@@ -84,11 +85,12 @@ If you can’t attend regular office hours, please check my calendar \url{https:
 \input{TAInfo}
  
 \section{Textbooks and Other Sources}
-I have assigned Chan S. Park ``Contemporary Engineering Economics
-4ed'' as a convenience to students that have their textbooks paid for by a third party. 
 
-I am pretty comfortable with any engineering
-economics textbook you choose, but it is your responsibility to figure
+Most enginering economics texts have just about the same material, with some small variations and additions. I have assigned Chan S. Park ``Contemporary Engineering Economics
+4ed'' as a convenience to students that have their textbooks paid for by a third party. It contains enough of the acounting material that is normally not included in an engineering economics course, but is included in this one to make it part of a universities studies cluster course. 
+
+
+I am pretty comfortable with any engineering economics textbook you choose, but it is your responsibility to figure
 out the relevant readings from the descriptions of the subject matter.
 The table of contents for the 4th edition (\url{http://web.pdx.edu/~woodsj/Teaching/table\%20of\%20contents.pdf}) is posted to help you
 make the correspondences.  Many students have found the textbook unnecessary given the online resources.
@@ -134,9 +136,8 @@ left. This is where most of the online work starts.  Each module will
 be structured with one or more of the following:
 
 \begin{itemize}
-  % \item Goal: What we are trying to make sure you can do.
-\item Preparation: Pages out of the book and wiki you should read.
-  \emph{Wiki links are required.}  Former students have suggested that these should read and watched before attempting the quizzes.  Don't start the quizzes and then use the book and wiki as a reference.
+
+\item Preparation: Pages out of the book and wiki you should read. Former students have suggested that these should read and watched before attempting the quizzes.  Don't start the quizzes and then use the book and wiki as a reference.
   
   \item Practice Assignment: This is an online assignment that you may take as many times as you wish and does not count toward your grade. Each of these questions will have a wiki page associated with them. 
 
@@ -153,15 +154,7 @@ be structured with one or more of the following:
  The pre and post quizzes are timed. You have 120 minutes to complete each quiz but the usual time to complete a quiz is approximately 45 minutes.  Please do not start them and
   then close them without submitting answers; you will receive a zero on those quizzes.  
 
-% Students have suggested that starting quizzes so that they overlap office hours or a tutorial is very useful.
-
-
 The calendar tool will show quiz deadlines. These are hard deadlines.  Having a disruption in D2L or internet connectivity in the hour or two before the deadline does not change the deadline, it means you should plan on finishing the quizzes in advance of the deadline.
-
-% You have a lot of latitude on when you
-%   finish topics. Statistically, there is an inverse relationship between when students start on the material and the grade they receive.  The later you start, the lower your grade. All modules should be completed
-%   by the last week of class -- not the last day of finals week.  
-  
 
 \subsubsection{Piazza}
 Piazza will be used for news and other announcements and has the advantage of being available independently of D2L and the PSU login mechanism.  
@@ -225,7 +218,7 @@ may be filed.
   Only about 30\% of students enrolled at the start of term complete the online version of this course.  The typically grade distribution is often worse than the my in-person and hybrid courses where \emph{about} 30\% of students earn A's and another 30\% earn B's.
 
 \else
-  Your grade in the class will be determined by your performance on the online assignments in D2L (80\%) and the in-person final exam (20\%).  Grades will be based on your class rank and limited by your performance on the in-class assessments of essential skills which are detailed in section \ref{sec:essentialSkills}. 
+  Your grade in the class will be determined by your performance on the online assignments in D2L (60\%), the midterm (20\%) and the final exam (20\%).  Grades will be based on your class rank and limited by your performance on the in-class assessments of essential skills which are detailed in section \ref{sec:essentialSkills}. 
   
   I typically end up with \emph{about} 30\%
   A's and 30\% B's in my in-person and hybrid courses.    
@@ -256,13 +249,13 @@ far as your grade goes.  You will be given the maximum score of the two nearly i
 Your quiz score is determined by the sum of the percent correct of the pre quizzes plus twice the sum of the percent correct on each of the post quizzes. I drop either the two lowest pre quiz scores or the lowest post quiz, whichever results in the highest score. The dropped scores are intended to be a buffer for technical
 failures, illness, bad days and other bad luck.  I will take care of this adjustment at the end of term.  
 
-\subsection{Final Exam}
+\subsection{Final Exam and Midterm}
 
-The function of the required final exam is to provide me with added assurance that online work was completed by the person enrolled in the class.  Because of this, picture ID will be required to enter the the examination room.  \emph{Not taking the final exam, or scoring in the 15th percentile or lower, will result in a failing grade.}
+The function of the in class exams is to provide me with added assurance that online work was completed by the person enrolled in the class.  Because of this, picture ID will be required to enter the the examination room.  \emph{Not taking the final exam will result in a failing grade.}
 
-It has been my experience that students I have suspected of not doing their own work online do so poorly on the final exam that they fail the class.
+It has been my experience that students I have suspected of not doing their own work online do so poorly on the exams that they fail the class.
 
-The final exam will consist of written, not multiple choice questions, covering the same material as the online quizzes and will be more problem solving than definitional. I will provide you with a sheet of accounting ratios, tables for depreciation, and formulas for some time value of money calculations.  These materials will be posted on D2L in the course materials section.  In the final exam, you will be allowed a calculator and writing implement.  Phones, smart watches, books, computers are not allowed.
+The exams will consist of written, not multiple choice questions, covering the same material as the online quizzes and will be more problem solving than definitional. I will provide you with a sheet of accounting ratios, tables for depreciation, and formulas for some time value of money calculations.  These materials will be posted on D2L in the course materials section.  In the final exam, you will be allowed a calculator and writing implement.  Phones, smart watches, books, computers are not allowed.
 
 \ifonline
 
@@ -342,7 +335,7 @@ To earn extra credit:
     
     \item Encourage your fellow students, ideally through piazza, to look at your answer, perhaps improve it, discuss it using the discuss tab, and finally give it an up or down vote using the voting tab on each page.  
     
-    \item I will evaluate the worked answer if within two weeks of your email the net rating of the response is at least +5 when I make my daily check, and give credit to one of the writers if warranted.
+    \item I will evaluate the worked answer if within two weeks of your email the net rating of the response is at least +5 when I make my daily check, and give /emph{one pre quiz worth of extra credit} to one of the writers if warranted.
 
 \end{enumerate}
 
@@ -357,7 +350,7 @@ Please note that it is possible for a student to write a poor answer that never 
 \item Begging for grades will result in an immediate lowering of your
   course grade by a full letter grade.
   
-  \item When completing online quizzes you may use your book, wiki, calculator, spreadsheets, notes, or other resources as long as it is not another student or person.  It is intended that you do these things by yourself.
+  \item When completing online quizzes you may use your book, wiki, calculator, spreadsheets, notes, or other resources as long as it is not another student or person.  The work must be authentically and genuinly your own. In other words, if you are copying answers you found online, it is not your work.
   
 \ifonline
 
@@ -404,19 +397,20 @@ posted on D2L and the course wiki.
 
 
 \section{Changes From Previous Terms}
-The format and rules for the class change from term to term and are often the result of a discussion about how to improve the course conducted at the end of the term. The general changes from the Winter 2015 are:
+The format and rules for the class change from term to term and are often the result of a discussion about how to improve the course conducted at the end of the term. The general changes from the Spring 2015 are:
 
 \begin{itemize}
     \item Practice quizzes now have a link to a wiki page on that specific question.
-%     \item In-class quizzes, which were essentially participation grades, have been eliminated.
-%     \item Extra credit is now available by providing detailed answers to practice questions in a timely manner that are demonstrated to be useful to students.
+     \item In-class quizzes, which were essentially participation grades, have been eliminated.
+     \item Extra credit is now available by providing detailed answers to practice questions in a timely manner that are demonstrated to be useful to students.
     \item The wiki now has a voting system to flag both good and bad pages.
-%     \item The essential questions now work on a sliding scale with only two required for a passing grade and all four required for an A.
+     \item The essential questions now work on a sliding scale with only two required for a passing grade and all four required for an A.
     \item The comprehensive written final exam is now composed of questions not in the POST quizzes .
-%     \item A more FERPA compliant method to return essential questions was added.
+     \item A more FERPA compliant method to return essential questions was added.
     \item Pre quizzes now show which questions were correct and not just the total score.
-    \item Mandatory 24hr spacing of Pre quiz attempts has been removed.
+%     \item Mandatory 24hr spacing of Pre quiz attempts has been removed.
     \item Pre quizzes make use of randomized question sets and not just parameters and question order.
+    \item There is now an inclass midterm and final exam.
     \item Post quizzes now have more open response questions that are a step closer to what will be on the final exam.
 \end{itemize}
 

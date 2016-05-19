@@ -60,7 +60,7 @@ knitr::opts_chunk$set(echo = FALSE)
     - Different experiences in differnt years.
 > - You need to do an analysis that covers all that.
 
-# Simple How To
+# Warnings
 
 ## You Have Seen Sensitivity Analysis
 > - Recall the PW diagrams we used in learning IRR?
@@ -115,20 +115,136 @@ Allows you to vary time on a smaller time frame.
     - Uncertain if it is your trick die that rolls a 6 half the time or the true die.
     
 > - You end up descibing your beliefs about the probability as a Beta distribution.
+    - Hint, you just walked into the land of Bayesian statistics.
+    - We will do some Monte Carlo simulations later so you can see what to do.
+
 > - Talk about your sensitivity analysis as about the mean of the present worth rather than the present worth.
 
 
-
+# Simple How To
 ## PW Example
+Consider a simple constant series that we can describe the present worth with factor notation:
 
-<!-- Point out that it is easiest -->
+$$ P = C + A (P|A, i = r, N = n)$$
+
+Lots of parameters to vary:
+
++ A, the size of the constant benefits. 
++ r, the discount rate
++ n, how long you get payments
++ C, the inital cost
+
+We warned you about r and n so lets vary just A
+
+## PW Figure
+r = .1, n = 10, C = -10, $A \in [0,5]$ 
+
+```{r SimplePW, fig.height=4, echo=FALSE}
+curve(-10 + x * ((1.1 ^ 10 - 1 ))/(.1 * 1.1 ^ 10), 0, 5, xlab = "A", ylab = "PW")
+curve(0 * x, 0, 5, add = TRUE)
+
+PWABreak <- 10 * (.1 * 1.1 ^ 10)/((1.1 ^ 10 - 1 ))
+```
+BTW PW is zero when A =`r PWABreak`
+
+
+## What Do You Learn from this?
+
+> - If you are pretty sure that A is not near `r PWABreak`, you are done spending time getting a better estimate of A.
+    - Refining you estimate of the parameter with more data, more detailed calculations, more bids, more literature review will not change the decision.
+    - Looking for more precision or less uncertainty is a waste of resource.
+    
+> - If not, then you need to decide if the effort is worth the refinement.  That depends on your other options.
+    - Yes, sometimes you do a cost benefit analysis of doing cost benefit analysese.
+    
+
+## What Do You Learn from this? (Con't)
+> - The client can check on the consequences of their beliefs about A. 
+> - Note we still don't know risk, for that we need to know the distribution of our beliefs about A.
+    - Is it N(2, .5)?
+    - Is it U(1,4)?
+    - We will do this later.
+    
+> - Sensitivity with present worth is easiest of the three.
 
 ## AW Example
+- Stick with the same cash flow as before with present worthfactor notation:
 
-<!-- Explain the "Life of asset" complication -->
+$$ P = C + A (P|A, i = r, N = n)$$
+
+- No more difficult than PW sensitivity analysis unless you want to vary the N.
+- Annual worth is just
+
+$$ AW = A + C (A|P,i = r, N = n)$$
+
+## AW Figure
+
+```{r SimpleAW, fig.height=4, echo=FALSE}
+curve(x +  -10 * (.1 * 1.1 ^ 10)/((1.1 ^ 10 - 1 )), 0, 5, xlab = "A", ylab = "AW")
+curve(0 * x, 0, 5, add = TRUE)
+
+PWABreak <- 10 * (.1 * 1.1 ^ 10)/((1.1 ^ 10 - 1 ))
+```
+
+
+- This is the same information as the PW graph translated into AW.  
+- Some clients like to see it this way.
+
 ## IRR Example
 
-<!-- Bifurcation problems -->
+> - Will use a more complex model for this because IRR can get odd.
+> - Changing the parameters can change not just the location of the roots, i.e., the IRRS but also the number of roots.
+> - If you want to learn more, read up on bifurcations.
+> - Reuse the example for multiple IRRs we had in class:
+    - -1000, 3900, -5030, 2145
+    
+    
+## Recall the PW function 
+This has IRRs at 10%, 30% and 50%
+```{r}
+
+curve(-1000 + 3900/(1 + x) - 5030/(1 + x)^2 + 2145/(1 + x)^3, 0, .6, ylab = "PW", xlab="i"  )
+curve(0 * x, 0, .6, add = TRUE)
+
+```
+
+## Watch the roots change
+$A_0= -1002$ One root
+
+```{r}
+
+curve(-1002 + 3900/(1 + x) - 5030/(1 + x)^2 + 2145/(1 + x)^3, 0, .6, ylab = "PW", xlab="i"  )
+curve(0 * x, 0, .6, add = TRUE)
+
+```
+
+
+
+## Watch the roots change
+$A_0= -999$ Three roots
+
+```{r}
+
+curve(-999 + 3900/(1 + x) - 5030/(1 + x)^2 + 2145/(1 + x)^3, 0, .6, ylab = "PW", xlab="i"  )
+curve(0 * x, 0, .6, add = TRUE)
+
+```
+
+
+
+## Watch the roots change
+$A_0= -997$ One root again
+
+```{r}
+
+curve(-997 + 3900/(1 + x) - 5030/(1 + x)^2 + 2145/(1 + x)^3, 0, .6, ylab = "PW", xlab="i"  )
+curve(0 * x, 0, .6, add = TRUE)
+
+```
+
+
+
+
 
 
 
@@ -158,7 +274,7 @@ Allows you to vary time on a smaller time frame.
 <!-- How to set bounds -->
 <!-- Interpretations -->
 
-## Montecarlo Simulations
+## Monte Carlo Simulations
 
 <!-- The triangle inequality -->
 

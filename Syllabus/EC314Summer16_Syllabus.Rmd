@@ -1,0 +1,248 @@
+---
+title: "Syllabus EC314 Summer 2016"
+author: "James Woods"
+date: "5/19/2016"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Course Description
+
+This course will examine the tools required to analyze expenditures that yield benefits over time -- investments. The use of accounting documents and a focus on the time value of money will allow students to analyze choices in a variety of security, loan, and equipment investment decisions. The main objectives are to prepare engineers for their PE and FE exams and to provide engineers, economists and others with a shared language and understanding of basic finance topics.
+
+## Prerequisits
+
+There are no prerequisites for this course. However, a reasonable math
+background, MTH 95, is a practical requirement. 
+
+The math placement assessment for MTH 111, testing concepts from MTH 70 and 95, i.e., high school algebra, will be given on the first day.  If you don't do well, you should reconsider enrolling in this course.
+
+
+## Key Dates
+
+A detailed list of quiz due dates will be in the D2L calendar.  The summary is:
+
++ Final Exam: August 11th
++ Midterm 1: July 5th
++ Midterm 2: July 26th
++ Quizzes: Weekly at Monday 5pm
+
+Exams will be given on those days and at those times only.  I do not give make up exams.  
+
+The PSU testing center is not open after 5pm.  I am still trying to arrange accommodations for students with DRC compensation of a reduced distraction environment and extra time.  I will likely be locating a small nearby classroom.  This could mean staying on campus till 9:10 on exam day if your compensation allows for extra time.
+
+# Contact Information
+
+If each of you sent me an email, text, or message, once a week, I would be unable to respond to all your questions.  Rather than emailing questions, I encourage you to post your questions on Piazza (*NEED URL*). If you have any problems or feedback for the developers, email team@piazza.com. Please get signed up as soon as possible. 
+
+There is a folder for each of the class modules. If you want to discuss the class material, need a clarification or have a concern about a quiz question, look to see if someone has asked the same question and if it has been answered.  If you have a question about course mechanics, interpretation of the syllabus, or where something is located, there is a folder for that called ``Logistics''. I will check piazza on a regular basis during regular business hours, and answer questions. I expect you and your peers to help to each other; I will indicate the good answers and make clarifications.  
+
+If you send me an email with a question that should be asked in a piazza, I will ask you to post it there rather than answer in email.
+
+If your question is not appropriate for piazza, the best ways of contacting me, in decreasing order of effectiveness:
+
++ IM/hangout: woodsj@pdx.edu
++ Phone/text: (503) 465-4883
++ Email:woodsj@pdx.edu (Answered only on M W and F)
++ D2L email: Do not use.  I will not respond.
+
+You are encouraged to use the IM function of your PSU email account, or text, rather than email. This will allow me to get back to you more quickly and more conversationally. Please be aware that I will likely not reply till the next day if you IM me after 5pm or on the weekend.  
+
+Office Hours:
+
++ My office is in CH 241-O.  
++ HOURS through the last week of class, not including finals week. There is no need to make an appointment for these hours -- just come.
++ If you can’t attend regular office hours, please check my calendar \url{https://woodsj.youcanbook.me/}. I will make a limited number of 15 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize you one pre quiz grade.  
+
+# Textbook and Other Resources
+
+Most engineering economics texts have just about the same material, with some small variations and additions. I have assigned Chan S. Park ``Contemporary Engineering Economics
+6ed'' as a convenience to students that have their textbooks paid for by a third party. It contains enough of the accounting material that is normally not included in an engineering economics course, but is included in this one to make it part of a universities studies cluster course. 
+
+
+I am pretty comfortable with any engineering economics textbook you choose, but it is your responsibility to figure
+out the relevant readings from the descriptions of the subject matter.
+The table of contents for the 6th edition (\url{http://web.pdx.edu/~woodsj/Teaching/table\%20of\%20contents.pdf}) is posted to help you
+make the correspondences.  Many students have found the textbook unnecessary given the online resources.  The goal is to have your textbook cost less than \$30.
+
+``Schaum's Outline of Engineering Economics'' by Sepulveda, Souder and Gottfried is a useful second reference if you are having trouble with time value of money.
+
+## Online Resources
+We will make significant use of online resources and technology.  The
+three main tools are:
+
++ D2L
++ Course Wiki
++ Piazza
+
+
+### Netiquette
+Since we will be having some online interaction, we should be clear
+about what we should and should not do.
+
+In class, I can see what is going on at all times.  In the online
+environment, I can't see everything and I can't react as quickly to
+what I do see.  Students are expected to be particularly trustworthy
+both in terms of their own conduct, and in reporting inappropriate
+conduct to me.
+
+I will not tolerate profanity, obscenity, or remarks intended to
+discount or dismiss either a person or his or her point of view. If your inappropriate message is in the public forum, I will warn you
+once in that public space. If you continue with inappropriate conduct
+in the public spaces, your access to them will be denied for the rest
+of the term. If your inappropriate conduct is in private, a student code of conduct violation complaint may be filed. 
+ 
+
+
+### D2L
+
+D2L is our main platform for homework, i.e., online quizzes.  Should you have technical problems with D2L
+or your computer please resolve them yourself with the general campus
+help desk or D2L help (\url{http://www.pdx.edu/oit/d2l}).  You will
+also find a tutorial on how to use D2L on your D2L landing page.
+*You are responsible for learning how to use D2L.*
+
+The course D2L landing page will have several important links:
+
+  + EC314 Wiki, where most of the supplementary material, videos and
+    podcasts reside.
+  + Schedule an Appointment, where you can arrange times to meet
+    other than office hours for help.
+  + Calendar of Topics and Deadlines, for deadlines and due dates.
+  + Table of Contents for 4th Edition Book
+
+Pay particular attention to the course content tab in the upper
+left. This is where most of the online work starts.  Each module will
+be structured with one or more of the following:
+
+  + Textbook sections to read
+  + Wiki pages to review
+  + One or more quizzes
+
+The quizzes are timed. You have 120 minutes to complete each quiz.  Please do not start them and then close them without submitting answers; you will receive a zero on those quizzes.  
+
+The calendar tool will show quiz deadlines. These are hard deadlines.  Having a disruption in D2L or internet connectivity in the hour or two before the deadline does not change the deadline, it means you should plan on finishing the quizzes in advance of the deadline.
+
+### Course Wiki
+
+The second most important resource is the wiki.  Most of the
+supplementary reading material, videos, screencasts, and podcasts are
+collected here. You should visit the ``Course Outline'' link on the
+left \url{http://ec314-pdx-edu.wikidot.com/outline} to see what we will be doing.
+
+A link to the wiki may be found on the D2L landing page.  You must create both a wikidot account and ask for access to the course wiki.  Create the account first, log in, and ask for access by filling out the request form.  I log in once a day and allow everyone access.  
+
+An account is required so that it is easy for you to make corrections to the wiki.  If you see something that needs fixing -- fix it.  If it is wrong, we can roll it back.  Don't be shy about making edits.  There are ``how to'' pages and sandbox to help you out.
+
+This resource is outside of PSU and the help desk will not provide
+assistance.  You and I are both customers. I have no special status.
+
+ 
+### Piazza
+
+Piazza will be used for news and other announcements and has the advantage of being available independently of D2L and the PSU login mechanism.  
+
+If you have questions related to course administration, post them in the ``logistics'' folder by composing a message with a brief version of your question in the subject line. This way we can form a knowledge base that everyone can use.  If you email me a question like this, I will just ask you to post the question in this folder.  Save yourself a step and start with a post.
+
+Many of the D2L quiz questions don't have very informative keys. This is partially because many of the questions have several mathematically correct answers or ask for examples, which are by their nature, unique for each student. *After the due date, feel free to post full questions in piazza.  I and other students will work out an answer key.*
+
+# Assessments and Grade Policy
+
+Your grade in the class will be based on your performance on the two midterms and the final exam.  
+
++ Final Exam (50%)
++ Midterm 1 (20%)
++ Midterm 2 (20%)
++ D2L quizzes (10%)
+
+The quizzes in D2L are a minor part of your grade, but you will hard pressed to pass the class without spending significant time with the material.
+
+## In-class Exams
+
+In class exams will be long answer questions similar to the open response questions in D2L.  D2L has a sample of an old final exam to get you familiar with the style of questions.
+
+Students will be assigned seats and photo ID will be required. You will only be allowed a writing implement and a calculator.  No headphones, phones, smart watches, internet connected devices, or other material will be allowed.  All backpacks will be stored at the front or side of the classroom.
+
+## D2L Quizzes
+
+These will typically be due before the midterms.  You will be allowed four attempts at each quiz and receive the highest score of the four attempts.
+
+Each attempt will be a random selection of questions, including a few open response questions that are similar to midterm and final exam questions.  While you will receive immediate feedback on which questions you answered correctly and incorrectly for most questions, some will have to be hand graded.  Those questions will be graded within 72 hrs of the due date.  Quiz grades will be updated at that time.
+
+Please note that you have a world of resources open to you, but the work required to answer the question must be your own.  Pasting in an answer you found online or were given by another person is a violation of the student code of conduct.
+
+
+# Topics
+
+Course topics were developed based on the need for students to pass the PE and FE exams as well as the restrictions imposed by this class being a university studies U course.  Full details on the topics, including textbook readings, references to the course wiki, and quizzes are in D2L.  A rough outline is below:
+
++ Accounting
+
+    + Introducation to accounting concepts
+    + Accounting ratios
+
++ Time value of money
+
+    + Notation and Calculations
+    + Loans
+
++ Investment Criteria
+
+    + Present Worth
+    + Annual Worth
+    + Internal Rate of Return
+    
++ Cost Estimation
+
+    + Depreciation and Taxes
+    + Cash flow projections
+
++ New Environments
+    
+    + Increasing cost of funds
+    + Capital Budgeting
+
++ Single Period Choice
+
+    + Cost functions
+    + Break-even
+    + Make vs Buy
+    + Optimal pace
+    
++ Uncertainty
+    
+    + Sensitivity Analysis
+    + Belief Elicitation
+    + Monte Carlo simulations
+
+
+# Other Rules
+
++ Begging for grades will result in an immediate lowering of your course grade by a full letter grade.
+  
++ When completing online quizzes you may use your book, wiki, calculator, spreadsheets, notes, or other resources as long as it is not another student or person.  The work must be authentically and genuinely your own. In other words, if you are copying answers you found online, it is not your work.
+  
++ Go to office hours at the first sign of trouble -- not as a last resort.
+
++ In this classroom, we support and value diversity.  To do so requires that we:
+
+    + Respect the dignity and essential worth of all individuals
+    + Promote a culture of respect toward all individuals
+    + Respect the privacy, property, and freedom of others
+    + Reject bigotry, discrimination, violence, or intimidation of any kind
+    + Practice personal and academic integrity and expect it from others
+    + Promote the diversity of opinions, ideas, and backgrounds, which is the lifeblood of a university
+
+   For additional information, please see the Office of Affirmative Action \& Equal Opportunity at \url{http://www.pdx.edu/diversity/affirmative-action}.
+
+
++ Accommodations are collaborative efforts between students, faculty, and the Disability Resource Center.  If you have a documented disability and require accommodation, you must arrange to meet with the course instructor prior to or within the first week of the term.  The documentation of your disability must come in writing from the Disability Resource Center (Faculty letter).  Students who believe they are eligible for accommodations but who have not yet obtained approval through the DRC should contact the DRC immediately.  Reasonable and appropriate accommodations will be provided for students with documented disabilities.  For more information on the Disability Resource Center, please see \url{http://www.drc.pdx.edu/}. 
+
++ Academic honesty is expected and required of students enrolled in this course.  Suspected academic dishonesty in this course will be handled according to the procedures set out in the Student Code of Conduct.
+
++ I am sympathetic to family emergencies but you must inform me as soon as possible. If the notice is verbal, please email me with your understanding of our agreement. All agreements have to be in writing.
+

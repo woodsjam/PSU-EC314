@@ -1,0 +1,166 @@
+---
+title: "Uncertainty in Cash Flows"
+author: "James Woods"
+date: "5/19/2016"
+output: ioslides_presentation
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Why Uncertainty and Sensitivity?
+
+## Why?
+> - We really don't know
+> - Some of our guesses may be critical and senstivity analysis may guide us to spend more time supporting those assumptions.
+> - Clients may ask for risk assessments
+> - Clients may have other assumptions about critical parameters
+
+## What do you mean "I don't know"?
+
+> - We are way more certain than we should be.
+> - Example:
+    - Make your best guess at the population of Keyna
+    - Give yourself a reasonable upper and lower bound so you are 80% sure the true value is there.
+    - Not zero to a billion
+    
+
+> - 44.35 M.  
+> - One in five of you should be out of bounds.
+
+## Some parameters are more critical than others
+
+> - Cost effectivness depends on estimating costs and benefits.
+> - Example:  Cost effectivness of an Energy Efficiency improvement
+    - Costs, commonly install costs are easy to get.
+    - Benefits, due to hours used, are critical.  
+> - Low use, not cost effective.  
+> - High use, cost effective.
+
+## Client Requests
+
+> - It is not that they don't trust you.
+> - Risk plays into setting a MARR.
+    - High risk, high MARR
+    - Low Risk, low MARR
+> - They want to know the probability of success
+> - It is part of a portfolio of risks:
+    - They want to know how risky
+    - They want to know how correlated it is with other risks.
+> - They like independent risks
+> - They like risks that are negativly correlated with existing risk
+
+## Clients Have Different Assumptions
+
+> - They may disagree with you but you still want to show them that the results are valid
+> - There may be actual diversity.  
+    - Different costs at different locations.
+    - Different experiences in differnt years.
+> - You need to do an analysis that covers all that.
+
+# Simple How To
+
+## You Have Seen Sensitivity Analysis
+> - Recall the PW diagrams we used in learning IRR?
+> - Shows how PW changes with changes in MARR. 
+    $PW = -10 + \frac{15}{(1+r)}$
+    
+```{r PWFunction, fig.height=4}
+
+curve(-10 + 15 / (1 + x), 0, 1, ylab = "PW", xlab = "MARR"  )
+curve(0 * x, 0,1, add = TRUE)
+
+```
+
+
+## Other Parameters
+
+There are some parameters that are usually of concern:
+
+> - Initial costs
+> - Salvage value
+> - Scale
+
+Some are harder than others:
+
+> - Planning horizon
+> - Uncertainty about Risks
+
+## Why planning horizon is harder
+
+> - Mostly you assume time is discrete -- not continuous.
+> - You need to either change to continuous discounting
+    $\frac{1}{e^{N(1+r)}}$ rather than $\frac{1}{(1+r)^N}$
+> - Or create an equivelent MARR with smaller compounding periods but equivelent with their nominal statment.
+
+## Example: MARR 10% per year compounded daily
+
+Start with 10% per year MARR and find equivelent annual MARR compounded daily.
+
+$$\left(1 + \frac{r}{365}  \right)^{365} = 1.1$$
+
+$$365 \left[ 1.1^{\frac{1}{365}} -1   \right] = `r 365*(1.1^(1/365) -1)`$$
+
+Allows you to vary time on a smaller time frame.
+
+
+## Why uncertainty about risks is harder
+
+- Risk is when you know the odds but don't know the outcome.
+    - You know that each side of a true die has a 1/6 chance of showing.
+
+- Uncertainty is when you don't know the odds.
+    - Uncertain if it is your trick die that rolls a 6 half the time or the true die.
+    
+> - You end up descibing your beliefs about the probability as a Beta distribution.
+> - Talk about your sensitivity analysis as about the mean of the present worth rather than the present worth.
+
+
+
+## PW Example
+
+<!-- Point out that it is easiest -->
+
+## AW Example
+
+<!-- Explain the "Life of asset" complication -->
+## IRR Example
+
+<!-- Bifurcation problems -->
+
+
+
+# Prior Development
+
+## Single Person
+
+<!-- How to ask about a distribution -->
+
+## Multi-Person
+
+<!-- Asking for best guess and how to deal with distributions from each -->
+
+<!-- Delphi survey -->
+
+## Joint Distributions
+
+<!-- Point out that it is easier with more than one and that I never had a client that could do a joint -->
+
+
+# Multiple Parameter Sensitivity
+
+
+## Spider Graphs
+
+<!-- Limitiations of no interactions -->
+<!-- How to set bounds -->
+<!-- Interpretations -->
+
+## Montecarlo Simulations
+
+<!-- The triangle inequality -->
+
+
+# Interested in More?

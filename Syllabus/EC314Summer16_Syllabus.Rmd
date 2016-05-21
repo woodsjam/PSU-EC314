@@ -37,7 +37,7 @@ The PSU testing center is not open after 5pm.  I am still trying to arrange acco
 
 # Contact Information
 
-If each of you sent me an email, text, or message, once a week, I would be unable to respond to all your questions.  Rather than emailing questions, I encourage you to post your questions on Piazza (*NEED URL*). If you have any problems or feedback for the developers, email team@piazza.com. Please get signed up as soon as possible. 
+If each of you sent me an email, text, or message, once a week, I would be unable to respond to all your questions.  Rather than emailing questions, I encourage you to post your questions on Piazza (https://piazza.com/pdx/summer2016/ec314). If you have any problems or feedback for the developers, email team@piazza.com. Please get signed up as soon as possible. 
 
 There is a folder for each of the class modules. If you want to discuss the class material, need a clarification or have a concern about a quiz question, look to see if someone has asked the same question and if it has been answered.  If you have a question about course mechanics, interpretation of the syllabus, or where something is located, there is a folder for that called ``Logistics''. I will check piazza on a regular basis during regular business hours, and answer questions. I expect you and your peers to help to each other; I will indicate the good answers and make clarifications.  
 
@@ -55,7 +55,7 @@ You are encouraged to use the IM function of your PSU email account, or text, ra
 Office Hours:
 
 + My office is in CH 241-O.  
-+ HOURS through the last week of class, not including finals week. There is no need to make an appointment for these hours -- just come.
++ Drop in office hours are Tuesday 3-4pm  through the last week of class. There is no need to make an appointment for these hours -- just come.
 + If you can’t attend regular office hours, please check my calendar \url{https://woodsj.youcanbook.me/}. I will make a limited number of 15 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize you one pre quiz grade.  
 
 # Textbook and Other Resources
@@ -66,7 +66,7 @@ Most engineering economics texts have just about the same material, with some sm
 
 I am pretty comfortable with any engineering economics textbook you choose, but it is your responsibility to figure
 out the relevant readings from the descriptions of the subject matter.
-The table of contents for the 6th edition (\url{http://web.pdx.edu/~woodsj/Teaching/table\%20of\%20contents.pdf}) is posted to help you
+The table of contents for the 6th edition (\url{https://s3-us-west-2.amazonaws.com/woodsjteaching/TableOfContents6thEd.pdf}) is posted to help you
 make the correspondences.  Many students have found the textbook unnecessary given the online resources.  The goal is to have your textbook cost less than \$30.
 
 ``Schaum's Outline of Engineering Economics'' by Sepulveda, Souder and Gottfried is a useful second reference if you are having trouble with time value of money.
@@ -161,6 +161,8 @@ Your grade in the class will be based on your performance on the two midterms an
 
 The quizzes in D2L are a minor part of your grade, but you will hard pressed to pass the class without spending significant time with the material.
 
+Course grades will be based on class rank with cut offs between letter grades determined by gaps in the distribution.  
+
 ## In-class Exams
 
 In class exams will be long answer questions similar to the open response questions in D2L.  D2L has a sample of an old final exam to get you familiar with the style of questions.
@@ -178,7 +180,7 @@ Please note that you have a world of resources open to you, but the work require
 
 # Topics
 
-Course topics were developed based on the need for students to pass the PE and FE exams as well as the restrictions imposed by this class being a university studies U course.  Full details on the topics, including textbook readings, references to the course wiki, and quizzes are in D2L.  A rough outline is below:
+Course topics were developed based on the need for students to pass the PE and FE exams, my own experience as a consultant, as well as the restrictions imposed by this class being a university studies U course.  Full details on the topics, including textbook readings, references to the course wiki, and quizzes are in D2L.  A rough outline is below:
 
 + Accounting
 

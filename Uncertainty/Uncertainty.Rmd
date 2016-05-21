@@ -3,7 +3,6 @@ title: "Uncertainty in Cash Flows"
 author: "James Woods"
 date: "5/19/2016"
 output: ioslides_presentation
-
 ---
 
 ```{r setup, include=FALSE}
@@ -28,7 +27,9 @@ knitr::opts_chunk$set(echo = FALSE)
     
 
 > - 44.35 M.  
-> - One in five of you should be out of bounds.
+     - One in five of you should be out of bounds.
+     - Usually, if honest, more than one in five will be out.
+     - If less, Hawthorn Effect
 
 ## Some parameters are more critical than others
 
@@ -242,13 +243,18 @@ curve(0 * x, 0, .6, add = TRUE)
 
 ```
 
+## IRR Problems
+> - Your IRR sensitivity functions are not always continuous.
+> - It requires a lot of time with clients to explain this.
+> - Recomend talking your clents out of it.
 
 
+# Priors for Sensitivity Analysis
+
+> - In the examples above we just picked bounds.
+> - Book gives some bad advice on how to pick the design points, bounds, in a sensitivity analysis, $\pm$ 20%.
 
 
-
-
-# Prior Development
 
 ## Single Person
 

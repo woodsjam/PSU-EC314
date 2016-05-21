@@ -212,7 +212,7 @@
 
 </article></slide><slide class=''><hgroup><h2>Example: MARR 10% per year compounded daily</h2></hgroup><article  id="example-marr-10-per-year-compounded-daily">
 
-<p>Start with 10% per year MARR and find equivelent annual MARR compounded daily.</p>
+<p>Start with 10% per year MARR and find equivalent annual MARR compounded daily.</p>
 
 <p>\[\left(1 + \frac{r}{365}  \right)^{365} = 1.1\]</p>
 
@@ -262,7 +262,7 @@
 <li>A, the size of the constant benefits.</li>
 <li>r, the discount rate</li>
 <li>n, how long you get payments</li>
-<li>C, the inital cost</li>
+<li>C, the initial cost</li>
 </ul>
 
 <p>We warned you about r and n so lets vary just A</p>
@@ -312,7 +312,7 @@
 </article></slide><slide class=''><hgroup><h2>AW Example</h2></hgroup><article  id="aw-example">
 
 <ul>
-<li>Stick with the same cash flow as before with present worthfactor notation:</li>
+<li>Stick with the same cash flow as before with present worth factor notation:</li>
 </ul>
 
 <p>\[ P = C + A (P|A, i = r, N = n)\]</p>
@@ -378,34 +378,118 @@
 
 </article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Priors for Sensitivity Analysis</h2></hgroup><article  id="priors-for-sensitivity-analysis">
 
+</article></slide><slide class=''><hgroup><h2>Finding a Good Range</h2></hgroup><article  id="finding-a-good-range">
+
 <ul class = 'build'>
 <li>In the examples above we just picked bounds.</li>
-<li>Book gives some bad advice on how to pick the design points, bounds, in a sensitivity analysis, \(\pm\) 20%.</li>
+<li>Book gives some bad advice on how to pick the design points, bounds, in a sensitivity analysis, \(\pm\) 20%.
+
+<ul>
+<li>Sometimes 20% is way too big, remember the intial cost in the IRR example? 4$ on a scale of 1000$</li>
+<li>Sometimes 20% is way too small. What is the smallest safety factor you have ever used? 1.25?</li>
+</ul></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Single Person</h2></hgroup><article  id="single-person">
 
-<!-- How to ask about a distribution -->
+<ul class = 'build'>
+<li>A few warnings.
 
-</article></slide><slide class=''><hgroup><h2>Multi-Person</h2></hgroup><article  id="multi-person">
+<ul>
+<li>This does not work with everyone. They have to be reasonably numeric.</li>
+<li>They have to be a real expert, with real opinions, real experience with data.</li>
+<li>It is ok, if they need time, have to make some calculations or want to look a few things up.</li>
+</ul></li>
+</ul>
 
-<!-- Asking for best guess and how to deal with distributions from each -->
+<ul class = 'build'>
+<li>Three questions for each parameter
 
-<!-- Delphi survey -->
+<ul>
+<li>What is your best guess?</li>
+<li>Largest value that you are 90% sure the value is below?</li>
+<li>Smallest value that you are 90% sure the value is above?<br/></li>
+<li>Basically, what are your 80% bounds.</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Allows a Spider graph.</h2></hgroup><article  id="allows-a-spider-graph.">
+
+<ul class = 'build'>
+<li>Horizontal axis shows percent difference from best guess.</li>
+<li>Vertical shows the investment criteria of interest. <img src='http://tornadocharts.com/wp-content/uploads/sites/2/2015/06/sensit-sensitivity-analysis-spider-chart.gif' title=''/></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>What to watch for?</h2></hgroup><article  id="what-to-watch-for">
+
+<ul class = 'build'>
+<li>Parameter that cause a decision, sign, change.
+
+<ul>
+<li>Can turn a good idea into a bad one without more research</li>
+</ul></li>
+<li>High sensitivity parameters, high slope.
+
+<ul>
+<li>Your expert may be more certain than they should be and should be consulted more about that parameter.</li>
+</ul></li>
+<li>Low sensitivity parameters, low slope.
+
+<ul>
+<li>No more time should be spent on these.</li>
+<li>Unless, your job is devil&#39;s advocate.</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Multi-Person</h2></hgroup><article  id="multi-person">
+
+</article></slide><slide class=''><hgroup><h2>Feasible</h2></hgroup><article  id="feasible">
+
+<p>You have many choices:</p>
+
+<ul class = 'build'>
+<li>Ask everyone for their best guess for each parameter:
+
+<ul>
+<li>Leads to Monte Carlo Simulations.</li>
+<li>Captures correlations between beliefs in parameters</li>
+</ul></li>
+</ul>
+
+<ul class = 'build'>
+<li>Delphi Survey:
+
+<ul>
+<li>Asks not just for numbers, but why you choose the number.</li>
+<li>Monte Carlo Simulations</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Possible but difficult</h2></hgroup><article  id="possible-but-difficult">
+
+<ul class = 'build'>
+<li>Ask everyone for the best guess and 80% bounds:
+
+<ul>
+<li>Beyond scope of course.</li>
+<li>Welcome again to Baysian land.</li>
+</ul></li>
+</ul>
+
+<ul class = 'build'>
+<li>Ask everyone for joint distributions:
+
+<ul>
+<li>Hard to to do.</li>
+<li>Goes Bayesian again.</li>
+<li>Never had a client that could do it.</li>
+<li>I have trouble doing it.</li>
+</ul></li>
+</ul>
 
 </article></slide><slide class=''><hgroup><h2>Joint Distributions</h2></hgroup><article  id="joint-distributions">
 
 <!-- Point out that it is easier with more than one and that I never had a client that could do a joint -->
-
-</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Multiple Parameter Sensitivity</h2></hgroup><article  id="multiple-parameter-sensitivity">
-
-</article></slide><slide class=''><hgroup><h2>Spider Graphs</h2></hgroup><article  id="spider-graphs">
-
-<!-- Limitiations of no interactions -->
-
-<!-- How to set bounds -->
-
-<!-- Interpretations -->
 
 </article></slide><slide class=''><hgroup><h2>Monte Carlo Simulations</h2></hgroup><article  id="monte-carlo-simulations">
 

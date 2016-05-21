@@ -98,7 +98,7 @@ Some are harder than others:
 
 ## Example: MARR 10% per year compounded daily
 
-Start with 10% per year MARR and find equivelent annual MARR compounded daily.
+Start with 10% per year MARR and find equivalent annual MARR compounded daily.
 
 $$\left(1 + \frac{r}{365}  \right)^{365} = 1.1$$
 
@@ -133,7 +133,7 @@ Lots of parameters to vary:
 + A, the size of the constant benefits. 
 + r, the discount rate
 + n, how long you get payments
-+ C, the inital cost
++ C, the initial cost
 
 We warned you about r and n so lets vary just A
 
@@ -169,7 +169,7 @@ BTW PW is zero when A =`r PWABreak`
 > - Sensitivity with present worth is easiest of the three.
 
 ## AW Example
-- Stick with the same cash flow as before with present worthfactor notation:
+- Stick with the same cash flow as before with present worth factor notation:
 
 $$ P = C + A (P|A, i = r, N = n)$$
 
@@ -251,34 +251,73 @@ curve(0 * x, 0, .6, add = TRUE)
 
 # Priors for Sensitivity Analysis
 
+## Finding a Good Range
+
 > - In the examples above we just picked bounds.
 > - Book gives some bad advice on how to pick the design points, bounds, in a sensitivity analysis, $\pm$ 20%.
-
-
+    - Sometimes 20% is way too big, remember the intial cost in the IRR example?  4$ on a scale of 1000$
+    - Sometimes 20% is way too small.  What is the smallest safety factor you have ever used? 1.25?
 
 ## Single Person
 
-<!-- How to ask about a distribution -->
+> - A few warnings.
+    - This does not work with everyone.  They have to be reasonably numeric.
+    - They have to be a real expert, with real opinions, real experience with data.
+    - It is ok, if they need time, have to make some calculations or want to look a few things up.
+    
+> - Three questions for each parameter
+    - What is your best guess?
+    - Largest value that you are 90% sure the value is below?
+    - Smallest value that you are 90% sure the value is above?  
+    - Basically, what are your 80% bounds.
 
-## Multi-Person
 
-<!-- Asking for best guess and how to deal with distributions from each -->
+## Allows a Spider graph.
+> - Horizontal axis shows percent difference from best guess.
+> - Vertical shows the investment criteria of interest.
+ ![](http://tornadocharts.com/wp-content/uploads/sites/2/2015/06/sensit-sensitivity-analysis-spider-chart.gif)
 
-<!-- Delphi survey -->
+## What to watch for?
+
+> - Parameter that cause a decision, sign, change.
+    - Can turn a good idea into a bad one without more research
+> - High sensitivity parameters, high slope.
+    - Your expert may be more certain than they should be and should be consulted more about that parameter.
+> - Low sensitivity parameters, low slope.
+    - No more time should be spent on these.
+    - Unless, your job is devil's advocate.
+
+# Multi-Person
+
+## Feasible
+
+You have many choices:
+
+> - Ask everyone for their best guess for each parameter:
+    - Leads to Monte Carlo Simulations.
+    - Captures correlations between beliefs in parameters
+
+> - Delphi Survey:
+    - Asks not just for numbers, but why you choose the number.
+    - Monte Carlo Simulations
+
+
+## Possible but difficult
+
+> - Ask everyone for the best guess and 80% bounds:
+    - Beyond scope of course.
+    - Welcome again to Baysian land.
+    
+> - Ask everyone for joint distributions:
+    - Hard to to do.
+    - Goes Bayesian again.
+    - Never had a client that could do it.
+    - I have trouble doing it.
 
 ## Joint Distributions
 
 <!-- Point out that it is easier with more than one and that I never had a client that could do a joint -->
 
-
-# Multiple Parameter Sensitivity
-
-
-## Spider Graphs
-
-<!-- Limitiations of no interactions -->
-<!-- How to set bounds -->
-<!-- Interpretations -->
 
 ## Monte Carlo Simulations
 

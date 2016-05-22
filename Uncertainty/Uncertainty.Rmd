@@ -306,6 +306,7 @@ You have many choices:
 
 > - Ask everyone for the best guess and 80% bounds:
     - Beyond scope of course.
+    - Use with small numbers of experts
     - Welcome again to Baysian land.
     
 > - Ask everyone for joint distributions:
@@ -314,14 +315,132 @@ You have many choices:
     - Never had a client that could do it.
     - I have trouble doing it.
 
-## Joint Distributions
+# Example Joint Distributions
 
-<!-- Point out that it is easier with more than one and that I never had a client that could do a joint -->
+## Ask Everyone for best guess at each parameter.
+
+> - You need at least as many experts as parameters.
+> - If you have a lot of experts, 30+, you can simulate the objective function directly on the data or bootstrap for the uncertainty.
+> - If you have few, you can approximate with a multivariate normal distribution.
 
 
-## Monte Carlo Simulations
+## What is Jamie's BMI?
 
-<!-- The triangle inequality -->
+- Figure out Jamie's Body Mass Index, $\frac{kg}{M^2}$.
+- Collected these 10 guesses of height and weight in M and kg.
+```{r echo=FALSE}
+library(MASS)
+library(knitr)
+Obs <- as.data.frame(mvrnorm(10, c(1.8,86), matrix(c(.1,.2,.2,5),2,2)))
+names(Obs) <- c("Ht", "Wt")
+kable(Obs, pad = 0)
+```
 
+## Direct 
+```{r include=FALSE}
+library(dplyr)
+Obs <- Obs %>% mutate(BMI = Wt/(Ht ^ 2)) 
+
+```
+
+- Experts say the median BMI is `r median(Obs$BMI)`.
+- 80% are sure it is between `r quantile(Obs$BMI, .1)` and `r quantile(Obs$BMI, .9)`
+
+```{r echo=FALSE, warning=FALSE, message=FALSE, fig.height=3, fig.width=4}
+library(dplyr)
+library(ggplot2)
+Obs %>%  ggplot(aes(BMI)) + geom_histogram()
+
+```
+
+This is just plotting the data, which works with 30+ experts.
+
+## Or Estimate the Joint Normal Distribution
+
+- Means of `r colMeans(cbind(Obs$Ht,Obs$Wt))`
+- and var/cov of 
+```{r, echo=FALSE}
+kable(var(cbind(Obs$Ht,Obs$Wt)))
+
+```
+
+## And Simulate for 1000 replications
+
+- You can get exact results for Normals added to Normals but the minute you divide, stick to reporting confidence intervals, medians and modes.
+
+    - Normal divided by Normal is Cauchy, which has no defined mean and no defined variance. 
+    
+ 
+
+```{r echo=FALSE, fig.height=3, fig.width=4, warning=FALSE, message=FALSE}
+
+SimObs <- as.data.frame(mvrnorm(1000, colMeans(cbind(Obs$Ht, Obs$Wt)), var(cbind(Obs$Ht, Obs$Wt))))
+names(SimObs) <- c("Ht", "Wt")
+SimObs <- SimObs %>% mutate(BMI = Wt/(Ht ^ 2)) 
+
+SimObs %>% ggplot(aes(BMI)) + geom_histogram()
+
+```
+
+   -80% are sure the BMI is between `r quantile(SimObs$BMI, .1)` and `r quantile(SimObs$BMI, .9)`
+
+# Problems with "Just ask experts"
+
+## Lack of structure causes problems
+
+- Responses are not always independent
+    - The boss is in the room and you don't want to disagree.
+    - Everyone uses the same reference document
+        - Example, you can tell which field by the number people give for the value of a statistical life.
+            - $9.1 million, Environmental Protection Agency
+            - $7.9 million, Food and Drug Administration
+            - $9.4 million, Transportation Department
+- Little thought is put into it
+    
+
+## Fixes
+  - Use incentivized polls like Intel.
+  - Parimutuel betting, like some electrical utilities.
+  - Delphi Surveys
+
+## Incentivized Polls
+
+  - Guess Jamie's BMI.  Closest to the actual gets $10.
+  - Skin in the game gives incentive for more thought.
+  - Only works when you will eventually find out actual.
+  
+  
+  - Oddly works better if you don't know how people are betting.
+
+      - Can produce groupthink bubbles, if you see how others are betting.
+      - Easy to find the mode, but harder to tell if it is real.
+      
+  - Can get expensive with many winners:
+      - everyone guesses the same correct answer.
+      - More expensive when there is less certainty.
+  
+
+## Parimutuel Betting
+
+  - Guess Jamie's BMI. Correct answers split the pot with the others that got it right.
+  - Racetrack method.
+  - Less likely to get bubbles, but
+      - Harder to see if there is a mode in the guess.
+  - Cheaper than incentivized poll if high probability of multiple winners.
+  - Cost does not increase with a priori certainty.
+  
+## Delphi Surveys
+
+General Pattern:
+  - Ask each person in private for best guess.
+  - Compile results.
+  - Ask outliers why they said what they did.
+  - Give everyone:
+  
+      - The distribution of guesses for each parameter
+      - The reasons the outliers gave for the answer the gave.
+      
+  - Ask for another guess.
+  - Report the new distribution or repeat if desired.
 
 # Interested in More?

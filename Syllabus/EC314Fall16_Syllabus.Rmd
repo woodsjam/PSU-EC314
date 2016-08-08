@@ -26,14 +26,13 @@ The math placement assessment for MTH 111, testing concepts from MTH 70 and 95, 
 
 A detailed list of quiz due dates will be in the D2L calendar.  The summary is:
 
-+ Final Exam: August 11th
-+ Midterm 1: July 5th
-+ Midterm 2: July 26th
-+ Quizzes: Weekly due Monday 5pm
++ Final Exam: December 5th
++ Midterm: October 24th
++ Quizzes: Weekly due Friday 5pm and Sunday 11:59pm
 
 Exams will be given on those days and at those times only.  I do not give make up, early or late exams.  
 
-The PSU testing center is not open after 5pm.  I am still trying to arrange accommodations for students with DRC compensation of a reduced distraction environment and extra time.  I will likely be locating a small nearby classroom.  This could mean staying on campus till 9pm on exam day if your compensation allows for extra time.
+If you have a DRC compensation and would normally schedule an exam in the testing center, you must schedule your exam on the day of the exam and start at the same time as the rest of the class, 8am.
 
 # Contact Information
 
@@ -55,7 +54,7 @@ You are encouraged to use the IM function of your PSU email account, or text, ra
 Office Hours:
 
 + My office is in CH 241-O.
-+ Drop in office hours are Tuesday 3-4pm  through the last week of class. There is no need to make an appointment for these hours -- just come.
++ Drop in office hours are Monday 2:30-3:30pm  through the last week of class. There is no need to make an appointment for these hours -- just come.
 + If you can’t attend regular office hours, please check my calendar \url{https://woodsj.youcanbook.me/}. I will make a limited number of 15 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize you one quiz grade.  
 
 # Textbook and Other Resources
@@ -152,11 +151,10 @@ Many of the D2L quiz questions don't have very informative keys. This is partial
 
 # Assessments and Grade Policy
 
-Your grade in the class will be based on your performance on the two midterms and the final exam.  
+Your grade in the class will be based on your performance on the a midterm and the final exam.  
 
 + Final Exam (50%)
-+ Midterm 1 (20%)
-+ Midterm 2 (20%)
++ Midterm 1 (40%)
 + D2L quizzes (10%)
 
 The quizzes in D2L are a minor part of your grade, but you will be hard pressed to pass the class without spending significant time with the material.
@@ -171,9 +169,9 @@ Students will be assigned seats and photo ID will be required for all exams. You
 
 ## D2L Quizzes
 
-These will typically be due before the midterms.  You will be allowed four attempts at each quiz and receive the highest score of the four attempts.
+These will typically be due before the midterms.  You will be allowed four attempts on the quizzes that are due on Friday and receive the highest score of the four attempts. Each attempt will be a random selection of questions
 
-Each attempt will be a random selection of questions, including a few open response questions that are similar to midterm and final exam questions.  While you will receive immediate feedback on which questions you answered correctly and incorrectly for most questions, some will have to be hand graded.  Those questions will be graded within 72 hrs of the due date.  Quiz grades will be updated at that time.
+The quizzes due on Sunday will have a few open response questions that are similar to midterm and final exam questions. Those questions will be graded within 72 hrs of the due date.  Quiz grades will be updated at that time.
 
 Please note that you have a world of resources open to you, but the work required to answer the question must be your own.  Pasting in an answer you found online or were given by another person is a violation of the student code of conduct.
 

@@ -248,3 +248,4 @@ Course topics were developed based on the need for students to pass the PE and F
 
 + I am sympathetic to family emergencies but you must inform me as soon as possible. If the notice is verbal, please email me with your understanding of our agreement. All agreements have to be in writing.
 
+Link to this syllabus https://github.com/woodsjam/PSU-EC314.  Check branch for this term.  

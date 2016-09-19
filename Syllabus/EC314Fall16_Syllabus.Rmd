@@ -1,5 +1,5 @@
 ---
-title: "Syllabus EC314 Summer 2016"
+title: "Syllabus EC314 Fall 2016"
 author: "James Woods"
 date: ""
 output: pdf_document

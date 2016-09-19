@@ -26,9 +26,9 @@ The math placement assessment for MTH 111, testing concepts from MTH 70 and 95, 
 
 A detailed list of quiz due dates will be in the D2L calendar.  The summary is:
 
-+ Final Exam: December 5th
++ Final Exam: December 5th, 8 am
 + Midterm: October 24th
-+ Quizzes: Weekly due Wednesday and Thursday 11:59pm
++ Quizzes: Weekly due Wednesday and Thursday 11:59 pm
 + Last day to drop or change grade option: November 13th
 
 Exams will be given on those days and at those times only.  I do not give make up, early or late exams.  
@@ -56,7 +56,7 @@ Office Hours:
 
 + My office is in CH 241-O.
 + Drop in office hours are Monday 2:30-3:30pm  through the last week of class. There is no need to make an appointment for these hours -- just come.
-+ If you can’t attend regular office hours, please check my calendar \url{https://woodsj.youcanbook.me/}. I will make a limited number of 15 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize you one quiz grade.  
++ If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 15 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize you one quiz grade.  
 
 Contact information and office hours for the teaching assistant will be posted on Piazza after the first week of class.
 
@@ -68,7 +68,7 @@ Most engineering economics texts have just about the same material, with some sm
 
 I am pretty comfortable with any engineering economics textbook you choose, but it is your responsibility to figure
 out the relevant readings from the descriptions of the subject matter.
-The table of contents for the 6th edition (\url{https://s3-us-west-2.amazonaws.com/woodsjteaching/TableOfContents6thEd.pdf}) is posted to help you
+The table of contents for the 6th edition (https://s3-us-west-2.amazonaws.com/woodsjteaching/TableOfContents6thEd.pdf) is posted to help you
 make the correspondences.  Many students have found the textbook unnecessary given the online resources.  The goal is to have your textbook cost less than \$30.
 
 ``Schaum's Outline of Engineering Economics'' by Sepulveda, Souder and Gottfried is a useful second reference if you are having trouble with time value of money.
@@ -104,7 +104,7 @@ of the term. If your inappropriate conduct is in private, a student code of cond
 
 D2L is our main platform for homework, i.e., online quizzes.  Should you have technical problems with D2L
 or your computer please resolve them yourself with the general campus
-help desk or D2L help (\url{http://www.pdx.edu/oit/d2l}).  You will
+help desk or D2L help (http://www.pdx.edu/oit/d2l).  You will
 also find a tutorial on how to use D2L on your D2L landing page.
 *You are responsible for learning how to use D2L.*
 
@@ -134,7 +134,7 @@ The calendar tool will show quiz deadlines. These are hard deadlines.  Having a 
 The second most important resource is the wiki.  Most of the
 supplementary reading material, videos, screencasts, and podcasts are
 collected here. You should visit the ``Course Outline'' link on the
-left \url{http://ec314-pdx-edu.wikidot.com/outline} to see what we will be doing.
+left http://ec314-pdx-edu.wikidot.com/outline to see what we will be doing.
 
 A link to the wiki may be found on the D2L landing page.  You must create both a wikidot account and ask for access to the course wiki.  Create the account first, log in, and ask for access by filling out the request form.  I log in once a day and allow everyone access.  
 
@@ -240,10 +240,10 @@ Course topics were developed based on the need for students to pass the PE and F
     + Practice personal and academic integrity and expect it from others
     + Promote the diversity of opinions, ideas, and backgrounds, which is the lifeblood of a university
 
-   For additional information, please see the Office of Affirmative Action \& Equal Opportunity at \url{http://www.pdx.edu/diversity/affirmative-action}.
+   For additional information, please see the Office of Affirmative Action \& Equal Opportunity at http://www.pdx.edu/diversity/affirmative-action.
 
 
-+ Accommodations are collaborative efforts between students, faculty, and the Disability Resource Center.  If you have a documented disability and require accommodation, you must arrange to meet with the course instructor prior to or within the first week of the term.  The documentation of your disability must come in writing from the Disability Resource Center (Faculty letter).  Students who believe they are eligible for accommodations but who have not yet obtained approval through the DRC should contact the DRC immediately.  Reasonable and appropriate accommodations will be provided for students with documented disabilities.  For more information on the Disability Resource Center, please see \url{http://www.drc.pdx.edu/}. 
++ Accommodations are collaborative efforts between students, faculty, and the Disability Resource Center.  If you have a documented disability and require accommodation, you must arrange to meet with the course instructor prior to or within the first week of the term.  The documentation of your disability must come in writing from the Disability Resource Center (Faculty letter).  Students who believe they are eligible for accommodations but who have not yet obtained approval through the DRC should contact the DRC immediately.  Reasonable and appropriate accommodations will be provided for students with documented disabilities.  For more information on the Disability Resource Center, please see http://www.drc.pdx.edu/. 
 
 + Academic honesty is expected and required of students enrolled in this course.  Suspected academic dishonesty in this course will be handled according to the procedures set out in the Student Code of Conduct.
 

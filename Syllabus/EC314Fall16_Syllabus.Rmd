@@ -56,7 +56,7 @@ Office Hours:
 
 + My office is in CH 241-O.
 + Drop in office hours are Monday 2:30-3:30pm  through the last week of class. There is no need to make an appointment for these hours -- just come.
-+ If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 15 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize you one quiz grade.  
++ If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 20 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize you one quiz grade.  
 
 Contact information and office hours for the teaching assistant will be posted on Piazza after the first week of class.
 
@@ -150,7 +150,7 @@ Piazza will be used for news and other announcements and has the advantage of be
 
 If you have questions related to course administration, post them in the ``logistics'' folder by composing a message with a brief version of your question in the subject line. This way we can form a knowledge base that everyone can use.  If you email me a question like this, I will just ask you to post the question in this folder.  Save yourself a step and start with a post.
 
-Many of the D2L quiz questions don't have very informative keys. This is partially because many of the questions have several mathematically correct answers or ask for examples, which are by their nature, unique for each student. *After the due date, feel free to post full questions in piazza.  I and other students will work out an answer key.*
+Many of the D2L quiz questions don't have very informative keys. This is partially because many of the questions have several mathematically correct answers or ask for examples which are, by their nature, unique for each student. *After the due date, feel free to post full questions in piazza.  I and other students will work out an answer key.*
 
 # Assessments and Grade Policy
 

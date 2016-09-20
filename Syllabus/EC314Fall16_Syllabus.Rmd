@@ -69,7 +69,7 @@ Most engineering economics texts have just about the same material, with some sm
 I am pretty comfortable with any engineering economics textbook you choose, but it is your responsibility to figure
 out the relevant readings from the descriptions of the subject matter.
 The table of contents for the 6th edition (https://s3-us-west-2.amazonaws.com/woodsjteaching/TableOfContents6thEd.pdf) is posted to help you
-make the correspondences.  Many students have found the textbook unnecessary given the online resources.  The goal is to have your textbook cost less than \$30.
+make the correspondences.  Many students have found the textbook unnecessary given the online resources.  The goal is to have your textbook cost less than $30.
 
 ``Schaum's Outline of Engineering Economics'' by Sepulveda, Souder and Gottfried is a useful second reference if you are having trouble with time value of money.
 

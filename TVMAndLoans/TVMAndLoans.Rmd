@@ -1,0 +1,652 @@
+---
+title: "Time Value of Money and Loans"
+author: "James Woods"
+date: "10/15/2016"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+
+Acc<-function(x){format(x,nsmall=2,digits=2,big.mark=',',scientific=FALSE)}
+pgivena<-function(a,i,n){a*((1+i)^n -1)/(i*(1+i)^n)}
+pgiveng<-function(g,i,n){g*( (1+i)^n -(i*n) -1  )/(i^2*(1+i)^n)}
+agivenp<-function(p,i,n){p*(i*(1+i)^n)/((1+i)^n -1)}
+pgivengrow<-function(a1,g,i,n){a1*(1-(1+g)^n*(1+i)^(-n))/(i-g)}
+
+
+fgivena<-function(a,i,n){pgivena(a,i,n)*(1+i)^n}
+fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
+
+```
+
+
+## Easy Cash Flow to Factor Notation
+
+```{r fig.width=3, fig.height=2, fig.align='center'}
+library(ggplot2)
+cf <- data.frame(y=c(0,1,1,1,1,1))
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+Find representation of Present Worth in factor notation
+
+## Answer
+```{r fig.width=3, fig.height=2, fig.align='center'}
+library(ggplot2)
+cf <- data.frame(y=c(0,1,1,1,1,1))
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
++ Shape is constant series
++ Length is 5, which you get by counting the number of non-zero elements.
++ Height is 1, that the the A you are looking for. 
+
+$$1 (P|A, i, 5)$$
+
+## Just to be clear about factor notation
+
+$$Looking~For = Number(Looking~For|What is number, i, How Long)$$
+
+## Try this
+```{r fig.width=3, fig.height=2, fig.align='center'}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,1,2,3,4))
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+
+## Linar Gradient is Tricky
+```{r fig.width=3, fig.height=2, fig.align='center'}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,1,2,3,4))
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
++ Shape is linear gradient
++ Length is 5, count non-zeros and 'add one for the pot'. If zero is the start, period two is the first time you see a non-zero value.
++ G, is 1, how much it changes by from period to period
+
+$$ 1(P|G,i,5)$$
+
+
+## Now lets put two things together
+
+```{r fig.width=3, fig.height=2, fig.align='center'}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,1,2,3,4) + c(0,4,4,4,4,4))
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+## You should see this as
+```{r fig.width=3, fig.height=1.5, fig.align='center'}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,1,2,3,4) + c(0,4,4,4,4,4))
+cf$x=0:(length(cf$y)-1)
+cf$LG <- c(0,0,1,2,3,4)
+cf$C <- c(0,4,4,4,4,4)
+print(ggplot(cf,aes(x,C,label=C))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+
+print(ggplot(cf,aes(x,LG,label=LG))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+
+## Following from above
+
+```{r fig.width=3, fig.height=2, fig.align='center'}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,1,2,3,4) + c(0,4,4,4,4,4))
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
++ See the constant series that is 4 high and 5 long $4(P|A,i,5)$
++ See the linear gradient that has G of 1 and is 5 long $1(P|A,i,5)$
+
+$$4(P|A,i,5)+ 1(P|A,i,5)$$
+
+## How about this. Single byte change
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,1,2,3,4) - c(0,4,4,4,4,4))
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+## You should see this
+```{r fig.width=3, fig.height=1.5, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,1,2,3,4) + c(0,4,4,4,4,4))
+cf$x=0:(length(cf$y)-1)
+cf$LG <- c(0,0,1,2,3,4)
+cf$C <- -c(0,4,4,4,4,4)
+print(ggplot(cf,aes(x,C,label=C))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+
+print(ggplot(cf,aes(x,LG,label=LG))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+## Following from above
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,1,2,3,4) - c(0,4,4,4,4,4))
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
++ See the constant series that is -4 high and 5 long $-4(P|A,i,5)$
++ See the linear gradient that has G of 1 and is 5 long $1(P|A,i,5)$
+
+$$-4(P|A,i,5)+ 1(P|A,i,5)$$
+
+
+## Try this with only addition and subtraction
+
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,5,5,5,5,5,5,5) - c(0,5,5,5,0,0,0,0))
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+## Should get this
+
+
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,5,5,5,5,5,5,5) - c(0,5,5,5,0,0,0,0))
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+$$5(P|A,i,7) - 5(P|A,i,3)$$
+
+## Time Shifting is easier
+
+$$ P = \frac{F}{(1+i)^N}$$
+
++ You can replace the F with anything to move the common shapes around.
+
+## Last example as time shift
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,0,0,5,5,5,5) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+$$\frac{5(P|A, i, 4)}{(1+i)^3}$$
+
+
+## Further out
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,0,0,0,0,5,5,5,5) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+$$\frac{5(P|A, i, 4)}{(1+i)^5}$$
+
+## Two ways of thinking about time shifting
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,0,0,0,0,5,5,5,5) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
++ $\frac{5(P|A, i, 4)}{(1+i)^5}$
++ The the exponent is the time period just to the left of the series.
++ The sum of the N and the exponent is equal to the last period you see the series. 
+
+
+## Tricky one
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,0,0,-2,-4,-6,-8,-10) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+## You should see
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,0,0,-2,-4,-6,-8,-10) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+$$\frac{-2(P|G,i, 6)}{(1+i)^2}$$
+
+## Warnings
+
++ There is no unique factor representation of a cash flow.
++ Some are easier to spot than others.
++ Usually the story tells you the shape.
+    + Loan payments look like $(P|A)$
+    + Accelerator clauses look like $(P|A_1)$
+    
+## Same Problem Several Ways
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,1,2,3,4,5,5,5,5) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+Try it with the linear gradient ending at time 4 and the constant series going from 5 to 8.
+
+## How did you do?
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,1,2,3,4,5,5,5,5) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+$$\frac{1(P|G, i, 5)}{(1+i)^{-1}} + \frac{5(P|A, i, 4)}{(1+i)^{4}}$$
+
+## Again
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,1,2,3,4,5,5,5,5) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+Try it with the linear gradient ending at time 5 and the constant series going from 6 to 8.
+
+
+## How did you do?
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,1,2,3,4,5,5,5,5) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+$$\frac{1(P|G, i, 6)}{(1+i)^{-1}} + \frac{5(P|A, i, 3)}{(1+i)^{5}}$$
+
+## Try the civil engineer's solution
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,1,2,3,4,5,5,5,5) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+Stack constant series like a layer cake. There is one that is one high from period 1 to 8.  Another that is one high from period 2 to 8 and so on.
+
+## Civil engineer's solution
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,1,2,3,4,5,5,5,5) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+$$ \frac{1(P|A, i, 8)}{(1+i)^0} + \frac{1(P|A, i, 7)}{(1+i)^1} +\frac{1(P|A, i, 6)}{(1+i)^2} \frac{1(P|A, i, 5)}{(1+i)^3} + \frac{1(P|A, i, 4)}{(1+i)^4}$$
+
+
+## How about this?
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,12,10,8,6,4,2) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+Hint: $-2(P|G, i, 7)$ is wrong in many ways.
+
+## You should see it as
+
+```{r fig.width=3, fig.height=1.5, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,12,12,12,12,12,12) - c(0,0,0,2,4,6,8,10))
+cf$x=0:(length(cf$y)-1)
+cf$LG <- -c(0,0,0,2,4,6,8,10)
+cf$C <- c(0,0,12,12,12,12,12,12)
+print(ggplot(cf,aes(x,C,label=C))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+
+print(ggplot(cf,aes(x,LG,label=LG))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+## Solution
+
+$$\frac{12(P|A, i, 6)}{(1+i)^1} + \frac{-2 (P|G, i, 6)}{(1+i)^1}$$
+
++ All Linear gradients start at zero. If they don't you have to include a constant series.
++ Work by analogy from slope intercept form of a line.
+    + $Y=MX + b$
+    + $Y=(P|G)+(P|A)$
+    
+## Review
+
++ Look for shapes constant, geometric gradient and linear gradient.
+
++ Count for the N.  Remember to add one for the pot only on linear gradient.
+
++ Sum of N and exponent is equal to the time period where you last see the cash flow
+
++ Work the analogy with slope intercept form of a line.
+
+## Big Test
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(1,2,4,8,16,13,10,7,4,1) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+## Big Test ( A Solution)
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(1,2,4,8,16,13,10,7,4,1) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+$$ \frac{1(P|A_1, i, g = 100\%, 4)}{(1+i)^{-1}} + \frac{16 (P|A, i, 6)}{(1+i)^3} - \frac{2 (P|G, i, 6)}{(1+i)^3}$$
+
+
+## Similar problem
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(2,4,6,8,10,12,14,16,8,4,2,1) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+## Similar problem (Solution)
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(2,4,6,8,10,12,14,16,8,4,2,1) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+$$\frac{2 (P|G, i, 8)}{ (1+i)^-2} + \frac{16 (P|A_1, i, g = -50\%, 5)}{(1+i)^6}$$
+
+## Lets go backwards. Find the intended cash flow for this.
+
+$$\frac{5(P|A, i, 10)}{(1+i)^2} - \frac{1 (P|G, i, 4)}{ (1+i)^ 4}$$
+
+## Solution
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,0,5,5,5,5,5,5,5,5,5,5) - c(0,0,0,0,0,0,1,2,3,0,0,0,0) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+## Hints for Study
+
++ Kill trees. Work lots of problems.  Everything after this depends on understanding TVM.
++ Drill and Kill the examples and the videos at bottom of the page. http://ec314-pdx-edu.wikidot.com/q2:time-value-of-money
++ When evaluating these expressions, try to do all the work in the calculator in one operation.  Sometimes rounding and truncation errors are bad with large interest rates.
+
+
+## First Application of TVM: Loans
+
++ Been dealing with the interest rate as the per period rate.
++ We could move value in time but could not change the unit of analysis, the definition of a period.
++ Effective interest rates allows us to stretch and compress time scales, and
++ Adapt the interest rate to the unit of analysis we want to use.
+
+## Basics of Effective Interest Rates
+
++ Interest rates have three components:
+    + Nominal statement
+    + Nominal Period
+    + Compounding period
+    
++ The final component 'Desired Effective Period' depends on the problem you are trying to solve.
+    + For loans, you want the effective rate per payment period.
+    + For general interest rate comparisons, you want an annual rate most of the time.
+    + Others are problem specific.
+    
+## General Form
+
+$$ \left( 1 + \frac{Nominal}{\# ~Compounding ~in ~Nominal ~Period} \right)^{\# Compounding ~in ~Desired} -1$$
+
+Example: Effective annual rate for 2\% per month compounded daily
+
+$$ \left( 1+ \frac{.02}{30}  \right)^{365} -1 = `r (1+.02/30)^365 -1` $$
+
+
+## Application to Time Value of Money Calcs
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,5,0,5,0,5,0,5,0,5) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+```
+
+Not a constant series but you can find PW with brute force with interest at 10\% per period compounded each period.
+
+$$ P= \frac{5}{(1+.1)^{2}} + \frac{5}{(1+.1)^{4}}+\frac{5}{(1+.1)^{6}}+\frac{5}{(1+.1)^{8}}+\frac{5}{(1+.1)^{10}}$$
+
+## Reframe the problem
+
+Find the 2-Period interest rate
+
+$$ \left( 1 + \frac{.1}{1} \right)^2 -1 =`r 1.1^2 -1` = i_2$$
+
+and rewrite as a constant series
+
+$$P = 5 (P|A, i= i_2, 5)$$
+
+Try the two calculations, brute force and this.  They give the same result `r pgivena(5,.21,5)`.
+
+## But Lets Get Into Loans
+
+There is a bewildering number  of  parameters  for loans.  
+
++ How interest is treated:
+    + Simple interest -- Which we will not address
+    + Amortizing -- which uses $(P|A)$ and is common.
+
++ How interest is paid
+    + Interest only -- you owe what your borrowed at the end.
+    + Fully Amortizing -- you owe nothing at the end.
+    + Other -- Negative and partial amortizing
+
++ Stability of interest rates and how changes are implemented
+    + Fixed rate loans
+    + Adjustable rate loans
+    + Refinance
+    
+And many conventions on how loans and interest rates are described.
+
+
+## Example Convention
+
+"I took out a 3.5\% mortgage". 
+
++ That means that they took out a 30-year fixed rate mortgage where the interest rate is 3.5\% per year compounded monthly with monthly payments.  
+
++ They told you the nominal rate but all the other parameters are by convention.
+
+
+## Lets take out and pay off some loans
+
++ Our loan examples will typically have high rates, so you can see the effects of changes on the interest rates.
++ The terms may be goofy, weekly payments compounded daily.
++ Usually a small number of payments to keep everything on one slide.
+
+## How to Calculate Payments on Amortizing Loan
+
+$$Payment = Principal (A|P, i = i_e, \#~Payments)$$
+
+$i_e$ is the effective interest rate per payment period.
+
+## Example
+
+Borrow 10,000 at 7\% per week compounded daily with biweekly payments for 10 months.
+
+
+
+Effective interest rate per payment period:
+$\left( 1 +\frac{.07}{7}  \right)^{14} -1 = `r (1+.07/7)^14 -1` = i_e$
+
+
+
+Payments:
+$10000 (A|P, i = i_e, 20) = `r agivenp(10000,(1+.07/7)^14 -1,20)`$
+
+
+## Simpler Example with Payment Details
+
+\$10,000 at 10\% per month, compounded monthly, for three monthly payments.
+
+What are the payments?
+$10000 (A|P, i = .1, 3) = `r agivenp(10000,.1,3)`$
+
+## Amatorization Tables
+
++ They show for each payment
+    + The payment
+    + The interest expense  -- important since this goes on the incomes statement and reduces taxes.
+    + The principal payment -- Does not reduces taxes or go on income statement but it does reduce cash flow.
+    + Balance -- How much you owe after the payment.
+    
++ How you get them:
+    + Payments are always the same
+    + Interest expense is the balance remaining times the effective interest rate per payment period.
+    + Principal payment is the payment less the interest expense.
+    + Balance remaining is the previous balance remaining less then principal payment.
+    
+    
+## For the loan
+
+```{r}
+FinFormat <- function(x) format(x, digits=2, decimal.mark=".",   big.mark=",", small.interval=3)
+
+PMT <- agivenp(10000,.1,3)
+i1 <- 10000*.1
+P1 <- PMT -i1
+B1 <- 10000-P1
+
+i2 <- B1*.1
+P2 <- PMT -i2
+B2 <- B1-P2
+
+i3 <- B2*.1
+P3 <- PMT - i3
+B3 <- B2-P3
+
+
+```
+
+Payment Number | Payment          | Interest  | Principal | Balance
+---------------|---------         |---------- |-----------|--------
+0              |                  |                 |                 |`r FinFormat(10000)`
+1              |`r FinFormat(PMT)`|`r FinFormat(i1)`|`r FinFormat(P1)`|`r FinFormat(B1)`
+2              |`r FinFormat(PMT)`|`r FinFormat(i2)`|`r FinFormat(P2)`|`r FinFormat(B2)`
+3              |`r FinFormat(PMT)`|`r FinFormat(i3)`|`r FinFormat(P3)`|`r FinFormat(B3)`
+
+
+
+Yes, there is a little rounding.
+
+## You can also find balance remaining with (P|A)
+
++ The balance remaining on an amortizing loan is always equal to the present worth of the remaining payments.
+
++ From Table before, balance remaining after one payment is, `r FinFormat(B1)`.
+
++ $`r FinFormat(PMT)`(P|A, i =.1, 2) = `r pgivena(PMT, .1, 2)`$
+
+
+## Refi vs Interest rate change
+
++ Refinance means taking out a whole new loan with a different interest rate.
+    + If you refinance your mortgage, 360 payments, after making 120 payments, your new payments are based on the current balance remaining and the new rate, but it resets the number of payments
+    + You have 360 payments to pay off the loan.
+
++ If the interest rate changes, such as when you have an ARM loan.
+    + You calculate the new payments based on the new rate and current balance remaining, but the number of remaining payments stays the same
+    + You would still have only 240 payment left.
+    
+
+  
+## Compare a refi at 5\% vs interest reduction to 5\% after one payment.
+
++ Refi: $`r B1`(A|P, i = .05, 3 ) = `r agivenp(B1,.05,3)`$
++ ARM: $`r B1`(A|P, i = .05, 2 ) = `r agivenp(B1,.05,2)`$
+
++ In short:
+    + Refi can lower your rate and extend the term resulting in lower payments.
+    + Lowering an interest rate reduces the rate but does not decrease the remaining term.  Payments are lower but by not as much as a refi.
+    
+
+## What about Interest Only Loans?
+
++ There are good use cases.  
++ They are great if:
+    + You are trying to conserve cash
+    + You do not intend to make all the payments on the loan.
+    + You are financing an asset that _will_ appreciate in value.
+    
++ Having to pay back what you borrowed after making a lot of payments can come as a surprise.
+    + Modern terminology is 'balloon payment'
+    + Old terminology is 'bullet'
+
+
+## Compare and interest only mortgage vs amortizing
+
+Start with the same 6\% interest rate on a 30-year \$200,000 mortgage.
+
++ The effective interest rate per payment period is $\frac{.06}{12}= .05\%$
+
++ Payment on amortizing loan is $200000 (A|P, i = .05\%, 360) = `r agivenp(200000,.005,360)`$.
++ Payment on interest only is $200000 (.005) = `r 200000*.005`$.
+
+
++ Note that the payments are lower for interest only, but they still owe the original \$200000 after making all those payments.
+
+## Typical Amatorization Table for Interest Only Loan
+
+Payment Number | Payment          | Interest  | Principal | Balance
+---------------|---------         |---------- |-----------|--------
+0              |                  |                 |                 |`r FinFormat(10000)`
+1              |`r FinFormat(10000*.1)`|`r FinFormat(10000*.1)`|`r FinFormat(0)`|`r FinFormat(10000)`
+2              |`r FinFormat(10000*.1)`|`r FinFormat(10000*.1)`|`r FinFormat(0)`|`r FinFormat(10000)`
+3              |`r FinFormat(10000*.1)`|`r FinFormat(10000*.1)`|`r FinFormat(10000)`|`r FinFormat(0)`
+
+
+There are multiple conventions on where to put the bullet.  I like it there but others have a separate line or column for the principal repayment.  The disadvantage is that it blows the usual definition of principal payment as the payment less interest expense.
+
+
+##  There Ends the Material for the Midterm
+
++ Bring ID, calculator and writing implement
++ No notes
++ You have seen the equations sheet.
++ Bags at the sides.
++ Phones and smart watches in bags
++ Seating chart will be up on screen
+
+
+Questions?

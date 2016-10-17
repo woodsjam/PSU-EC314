@@ -106,9 +106,9 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 ```
 
 + See the constant series that is 4 high and 5 long $4(P|A,i,5)$
-+ See the linear gradient that has G of 1 and is 5 long $1(P|A,i,5)$
++ See the linear gradient that has G of 1 and is 5 long $1(P|G,i,5)$
 
-$$4(P|A,i,5)+ 1(P|A,i,5)$$
+$$4(P|A,i,5)+ 1(P|G,i,5)$$
 
 ## How about this. Single byte change
 
@@ -140,9 +140,9 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 ```
 
 + See the constant series that is -4 high and 5 long $-4(P|A,i,5)$
-+ See the linear gradient that has G of 1 and is 5 long $1(P|A,i,5)$
++ See the linear gradient that has G of 1 and is 5 long $1(P|G,i,5)$
 
-$$-4(P|A,i,5)+ 1(P|A,i,5)$$
+$$-4(P|A,i,5)+ 1(P|G,i,5)$$
 
 
 ## Try this with only addition and subtraction
@@ -299,7 +299,7 @@ cf$x=0:(length(cf$y)-1)
 print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
 ```
 
-$$ \frac{1(P|A, i, 8)}{(1+i)^0} + \frac{1(P|A, i, 7)}{(1+i)^1} +\frac{1(P|A, i, 6)}{(1+i)^2} \frac{1(P|A, i, 5)}{(1+i)^3} + \frac{1(P|A, i, 4)}{(1+i)^4}$$
+$$ \frac{1(P|A, i, 8)}{(1+i)^0} + \frac{1(P|A, i, 7)}{(1+i)^1} +\frac{1(P|A, i, 6)}{(1+i)^2} + \frac{1(P|A, i, 5)}{(1+i)^3} + \frac{1(P|A, i, 4)}{(1+i)^4}$$
 
 
 ## How about this?
@@ -384,7 +384,7 @@ cf$x=0:(length(cf$y)-1)
 print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
 ```
 
-$$\frac{2 (P|G, i, 8)}{ (1+i)^-2} + \frac{16 (P|A_1, i, g = -50\%, 5)}{(1+i)^6}$$
+$$\frac{2 (P|G, i, 8)}{ (1+i)^{-2}} + \frac{16 (P|A_1, i, g = -50\%, 5)}{(1+i)^6}$$
 
 ## Lets go backwards. Find the intended cash flow for this.
 

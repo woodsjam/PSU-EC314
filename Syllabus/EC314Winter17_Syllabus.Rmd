@@ -39,7 +39,7 @@ If you have a DRC compensation and would normally schedule an exam in the testin
 
 Communication will be handled through slack https://ec314winter17.slack.com. You should have received an invitation, if not just go to that URL and use your @pdx.edu email to sign up. There are reasonable help documents to get you started. https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users
 
-Slack will be used for IM, email and forum style communication. If you have a question about course material or the course itself, ask in one of the channels. If you have a personal message that is not intended for others, send a direct message.
+Slack will be used for IM, email and forum style communication.  It even handles phone calls. If you have a question about course material or the course itself, ask in one of the channels. If you have a personal message that is not intended for others, send a direct message.
 
 Please note that I am not online all the time and when I am online I will prioritize well phrased questions with sufficient detail.  I tend to ignore general complaints, questions that can be answered by reading the syllabus or using the search bar.  
 

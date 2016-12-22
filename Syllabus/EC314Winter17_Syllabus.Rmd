@@ -19,12 +19,10 @@ This course will examine the tools required to analyze expenditures that yield b
 There are no prerequisites for this course. However, a reasonable math
 background, MTH 95, is a practical requirement. 
 
-The math placement assessment for MTH 111, testing concepts from MTH 70 and 95, i.e., high school algebra, will be given on the first day.  If you don't do well, you should reconsider enrolling in this course.
+A brief assessment of math skills, testing concepts from MTH 70 and 95, i.e., high school algebra, will be given on the first day.  If you don't do well, you should reconsider enrolling in this course.
 
 
 ## Key Dates
-
-A detailed list of quiz due dates will be in the D2L calendar.  The summary is:
 
 + Final Exam: March 20th, 8 am
 + Midterm 1: February 2nd
@@ -33,17 +31,17 @@ A detailed list of quiz due dates will be in the D2L calendar.  The summary is:
 
 Exams will be given on those days and at those times only.  I do not give make up, early or late exams.  
 
-If you have a DRC compensation and would normally schedule an exam in the testing center, you must schedule your exam on the day of the exam and start at the same time as the rest of the class, 8am.
+If you have a DRC compensation and would normally schedule an exam in the testing center, you must schedule your exam on the day of the exam and start at the same time as the rest of the class.
 
 # Contact Information
 
-Communication will be handled through slack https://ec314winter17.slack.com. You should have received an invitation, if not just go to that URL and use your @pdx.edu email to sign up. There are reasonable help documents to get you started. https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users
+Communication will be handled through slack https://ec314winter17.slack.com. You should have received an invitation, if not, just go to that URL and use your @pdx.edu email to sign up. There are reasonable help documents to get you started. https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users
 
 Slack will be used for IM, email and forum style communication.  It even handles phone calls. If you have a question about course material or the course itself, ask in one of the channels. If you have a personal message that is not intended for others, send a direct message. The group has global do not disturb hours of 10pm -8am.  If you would like something different, alter your personal settings.
 
-Please note that I am not online all the time, and when I am online I will prioritize well phrased questions with sufficient detail.  I tend to ignore general complaints, questions that can be answered by reading the syllabus or using the search bar.  
+Please note that I am not online all the time, and when I am online I will prioritize well-phrased questions with sufficient detail.  I tend to ignore general complaints, questions that can be answered by reading the syllabus or using the search bar.  
 
-I will not react to questions in the two days prior to an exam except under limited circumstances. I am just trying to protect my workload from student procrastination.   
+I will not react to questions in the two days prior to an exam, i.e., the weekend before, under most circumstances. I am just trying to protect my workload from student procrastination.  *If your study strategy is to cram the night before, you are on your own.* 
 
 
 Office Hours:
@@ -127,7 +125,7 @@ left http://ec314-pdx-edu.wikidot.com/outline to see what we will be doing.
 
 A link to the wiki may be found on the D2L landing page.  You must create both a wikidot account and ask for access to the course wiki.  Create the account first, log in, and ask for access by filling out the request form.  I log in once a day and allow everyone access.  
 
-An account is required so that it is easy for you to make corrections to the wiki.  If you see something that needs fixing -- fix it.  If it is wrong, we can roll it back.  Don't be shy about making edits.  There are ``how to'' pages and sandbox to help you out.
+An account is required so that it is easy for you to make corrections to the wiki.  _If you see something that needs fixing -- fix it._  If it is wrong, we can roll it back.  Don't be shy about making edits.  There are ``how to'' pages and sandbox to help you out.
 
 This resource is outside of PSU and the help desk will not provide
 assistance.  You and I are both customers. I have no special status.
@@ -147,9 +145,9 @@ Course grades will be based on class rank with cut points between letter grades 
 
 ## In-class Exams
 
-D2L has samples of exams to get you familiar with the style of questions.
+D2L has samples of exams to get you familiar with the style of the questions. The keys will have a few errors, but the errors are frequently noted in the errata page.
 
-Students will be assigned seats and photo ID will be required for all exams. You will only be allowed a writing implement and a calculator.  No headphones, phones, smart watches, internet connected devices, or other material will be allowed.  All backpacks will be stored at the front or side of the classroom.
+Students will be assigned seats and photo ID will be required for all exams. You will only be allowed a writing implement and a calculator.  No headphones, phones, smart watches, internet connected devices, or other material will be allowed.  All backpacks will be stored at the front or side of the classroom.  If we see a phone, we will take your exam, you will receive a zero, and you will be sent to the dean of student life.
 
 
 ## Practice D2L Quizzes
@@ -225,5 +223,13 @@ Course topics were developed based on the need for students to pass the PE and F
 + Academic honesty is expected and required of students enrolled in this course.  Suspected academic dishonesty in this course will be handled according to the procedures set out in the Student Code of Conduct.
 
 + I am sympathetic to family emergencies but you must inform me as soon as possible. If the notice is verbal, please email me with your understanding of our agreement. All agreements have to be in writing.
+
++ This course meets degree requirements in several ways:
+    + The “U” in the course number indicates that this course belongs to a University Studies Upper-Division Cluster, so you may be here to earn cluster credit;
+    + This course is an elective for the economic, BSQE, and other majors, so you may be here to earn credit towards your major;
+    + This course serves as an elective in several economics minors, so you may be here to earn credits towards your minor;
+    + Since you can double-dip your Cluster credits and credits towards a minor, you may be here to earn both Cluster and minor credit. 
+
++ This course is part of the following cluster(s): Design Thinking/Innovation/ Entrepreneurship; Knowledge, Values, and Rationality; Community Studies.
 
 Link to this syllabus https://github.com/woodsjam/PSU-EC314.  Check branch for this term.  

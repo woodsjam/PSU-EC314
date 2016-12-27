@@ -50,7 +50,7 @@ Office Hours:
 + Drop in office hours are Tuesday 1:00-2:30pm  through the last week of class. There is no need to make an appointment for these hours -- just come.
 + If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 20 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points.  
 
-Contact information and office hours for the teaching assistant will be posted on slack after the first week of class.  We will also post some hours were we will available interactively on slack.
+Office hours for Kevin Payne, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack.
 
 # Textbook and Other Resources
 
@@ -232,4 +232,4 @@ Course topics were developed based on the need for students to pass the PE and F
 
 + This course is part of the following cluster(s): Design Thinking/Innovation/ Entrepreneurship; Knowledge, Values, and Rationality; Community Studies.
 
-Link to this syllabus https://github.com/woodsjam/PSU-EC314.  Check branch for this term.  
+Link to this syllabus https://github.com/woodsjam/PSU-EC314.  There is a branch for each term.  Be sure to choose the correct branch to see the current syllabus.  

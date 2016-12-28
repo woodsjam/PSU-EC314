@@ -36,13 +36,13 @@ This is just a pre-test to see where everyone is on math, accounting and finance
     + Machinery
     + Cash
     + Owner Equity
-    + Accounts Recievable
+    + Accounts Receivable
 
 
 
 2. Which of the following is a liability?
     + Cash
-    + Accounts Recievable
+    + Accounts Receivable
     + Owner Equity
     + Tax Owed
     + None of the above

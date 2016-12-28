@@ -1,0 +1,92 @@
+---
+title: "Pre-Test"
+author: "James Woods"
+date: "12/28/2016"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Directions
+
+This is just a pre-test to see where everyone is on math, accounting and finance topics.  It does not count for a grade; I just need the information to guide a few lectures.
+
+## Math
+
+1. Add $$\frac{2}{x+3} + \frac{5}{x+2}$$
+
+\vspace{1 in}
+
+2. Use the properties of exponents to simplify this expression: $$\frac{14(x^2 y^3)^2}{7 x^3 y^{10}}$$
+
+\vspace{1 in}
+
+3. Set up and solve a system of equations to answer this question.  A theater sells adult tickets for \$8 and children’s tickets for \$5.  If a total of $236 was taken in on sales of 34 total tickets, how many adult tickets and how many children’s tickets were sold?
+
+\vspace{2 in}
+
+## Accounting Concepts
+
+1. Which of the following is _not_ an asset?
+    + Employees 
+    + Land
+    + Machinery
+    + Cash
+    + Owner Equity
+    + Accounts Recievable
+
+
+
+2. Which of the following is a liability?
+    + Cash
+    + Accounts Recievable
+    + Owner Equity
+    + Tax Owed
+    + None of the above
+
+
+3. Which of the following is an expense?
+    + Owner Equity
+    + A Loan
+    + Taxes
+    + None of the above
+
+
+
+## Interest
+
+1.  Suppose you deposit \$100 into an account that earns 12% a year compounded _annually_.  How much would be in the account after 10 years?
+
+\vspace{2 in}
+
+2.  Suppose you deposit \$100 into an account that earns 12% a year compounded _monthly_.  How much would be in the account after 10 years?
+
+\vspace{2 in}
+
+
+
+## Choice
+
+Consider the following assets:
+
+Year| A | B | C
+----|---|---|---
+0   | 0 | 0 |0
+1   |10 |0  |0
+2   |0  |10 |20 
+
+Asset A gives \$10 in year 1.  Asset B gives \$10 in year 2 and asset C gives \$20 in year 2.
+
+1. Between A and B, which would you prefer and why?
+
+\vspace{1.5 in}
+
+2. Between B and C, which would you prefer and why?
+\vspace{1.5 in}
+
+3. Between A and C, which would you prefer and why?
+\vspace{1.5 in}
+

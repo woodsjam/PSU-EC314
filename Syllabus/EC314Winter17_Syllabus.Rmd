@@ -19,7 +19,7 @@ This course will examine the tools required to analyze expenditures that yield b
 There are no prerequisites for this course. However, a reasonable math
 background, MTH 95, is a practical requirement. 
 
-A brief assessment of math skills, testing concepts from MTH 70 and 95, i.e., high school algebra, will be given on the first day.  If you don't do well, you should reconsider enrolling in this course.
+A brief assessment that includes math skills from MTH 70 and 95 will be given on the first day.  If you don't do well on that part of the assessment, you should reconsider enrolling in this course.
 
 
 ## Key Dates
@@ -41,7 +41,7 @@ Slack will be used for IM, email and forum style communication.  It even handles
 
 Please note that I am not online all the time, and when I am online I will prioritize well-phrased questions with sufficient detail.  I tend to ignore general complaints, questions that can be answered by reading the syllabus or using the search bar.  
 
-I will not react to questions in the two days prior to an exam, i.e., the weekend before, under most circumstances. I am just trying to protect my workload from student procrastination.  *If your study strategy is to cram the night before, you are on your own.* 
+I will not react to questions in the two days prior to an exam  under most circumstances. I am just trying to protect my workload from student procrastination.  *If your study strategy is to cram the night before, you are on your own.* 
 
 
 Office Hours:

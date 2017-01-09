@@ -49,7 +49,7 @@ $$A = 34 - C = 34 - 12 = 22$$
     + Owner Equity
     + Accounts Receivable
 
-Employees are expenses.  You can't own them, so they can't be an asset.  
+Employees are expenses, not assets.  You can't own them, so they can't be an asset.  
 
 Land, Machinery and Cash are all assets since they can be owned.
 
@@ -65,7 +65,7 @@ Accounts receivable is an asset.  Those are invoices that you have sent out but 
     + Tax Owed
     + None of the above
 
-Cash and Accounts Receivable are both assets and owner equity is just the difference between assets and liabilities.
+Cash and Accounts Receivable are both assets, and owner equity is just the difference between assets and liabilities.
 
 "Tax Owed" is a colloquialism for a few accounting terms.  "Tax Owed" is a liability if you visualized is as a fixed amount sitting on the balance sheet.  It is an expense if you visualized it as an amount per month.
 

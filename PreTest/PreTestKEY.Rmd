@@ -85,11 +85,11 @@ Taxes are the expense.  Usually, when you see it like this it is intended to be 
 
 1.  Suppose you deposit \$100 into an account that earns 12% a year compounded _annually_.  How much would be in the account after 10 years?
 
-$$ 100 (1+.12)^{12} = `r 100*1.12^12`$$
+$$ 100 (1+.12)^{10} = `r 100*1.12^10`$$
 
 2.  Suppose you deposit \$100 into an account that earns 12% a year compounded _monthly_.  How much would be in the account after 10 years?
 
-$$ 100 (1+.01)^{144} = `r 100*1.01^144`$$
+$$ 100 (1+.01)^{120} = `r 100*1.01^120`$$
 
 ## Choice
 

@@ -363,7 +363,7 @@ cf$x=0:(length(cf$y)-1)
 print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
 ```
 
-$$ \frac{1(P|A_1, i, g = 100\%, 4)}{(1+i)^{-1}} + \frac{16 (P|A, i, 6)}{(1+i)^3} - \frac{2 (P|G, i, 6)}{(1+i)^3}$$
+$$ \frac{1(P|A_1, i, g = 100\%, 4)}{(1+i)^{-1}} + \frac{16 (P|A, i, 6)}{(1+i)^3} - \frac{3 (P|G, i, 6)}{(1+i)^3}$$
 
 
 ## Similar problem

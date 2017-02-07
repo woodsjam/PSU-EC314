@@ -639,14 +639,14 @@ Payment Number | Payment          | Interest  | Principal | Balance
 There are multiple conventions on where to put the bullet.  I like it there but others have a separate line or column for the principal repayment.  The disadvantage is that it blows the usual definition of principal payment as the payment less interest expense.
 
 
-##  There Ends the Material for the Midterm
+<!-- ##  There Ends the Material for the Midterm -->
 
-+ Bring ID, calculator and writing implement
-+ No notes
-+ You have seen the equations sheet.
-+ Bags at the sides.
-+ Phones and smart watches in bags
-+ Seating chart will be up on screen
+<!-- + Bring ID, calculator and writing implement -->
+<!-- + No notes -->
+<!-- + You have seen the equations sheet. -->
+<!-- + Bags at the sides. -->
+<!-- + Phones and smart watches in bags -->
+<!-- + Seating chart will be up on screen -->
 
 
-Questions?
+<!-- Questions? -->

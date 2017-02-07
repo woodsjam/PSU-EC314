@@ -523,7 +523,7 @@ $10000 (A|P, i = i_e, 20) = `r agivenp(10000,(1+.07/7)^14 -1,20)`$
 What are the payments?
 $10000 (A|P, i = .1, 3) = `r agivenp(10000,.1,3)`$
 
-## Amatorization Tables
+## Amortization Tables
 
 + They show for each payment
     + The payment
@@ -618,9 +618,9 @@ Yes, there is a little rounding.
 
 Start with the same 6\% interest rate on a 30-year \$200,000 mortgage.
 
-+ The effective interest rate per payment period is $\frac{.06}{12}= .05\%$
++ The effective interest rate per payment period is $\frac{.06}{12}= .5\%$
 
-+ Payment on amortizing loan is $200000 (A|P, i = .05\%, 360) = `r agivenp(200000,.005,360)`$.
++ Payment on amortizing loan is $200000 (A|P, i = .5\%, 360) = `r agivenp(200000,.005,360)`$.
 + Payment on interest only is $200000 (.005) = `r 200000*.005`$.
 
 

@@ -24,10 +24,10 @@ A brief assessment that includes math skills from MTH 70 and 95 will be given on
 
 ## Key Dates
 
-+ Final Exam: March 23rd, 8 am
-+ Midterm 1: February 2nd
-+ Midterm 2: February 23rd
-+ Last day to drop or change grade option: February 26th.
++ Final Exam: XXX
++ Midterm 1: XXX
++ Midterm 2: XXX
++ Last day to drop or change grade option: XXX.
 
 Exams will be given on those days and at those times only.  I do not give make up, early or late exams.  
 
@@ -35,7 +35,7 @@ If you have a DRC compensation and would normally schedule an exam in the testin
 
 # Contact Information
 
-Communication will be handled through slack https://ec314winter17.slack.com. You should have received an invitation, if not, just go to that URL and use your @pdx.edu email to sign up. There are reasonable help documents to get you started. https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users
+Communication will be handled through slack https://ec314spring17.slack.com. You should have received an invitation, if not, just go to that URL and use your @pdx.edu email to sign up. There are reasonable help documents to get you started. https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users
 
 Slack will be used for IM, email and forum style communication.  It even handles phone calls. If you have a question about course material or the course itself, ask in one of the channels. If you have a personal message that is not intended for others, send a direct message. The group has global do not disturb hours of 10pm -8am.  If you would like something different, alter your personal settings.
 
@@ -47,10 +47,10 @@ I will not react to questions in the two days prior to an exam  under most circu
 Office Hours:
 
 + My office is in CH 241-O.
-+ Drop in office hours are Tuesday 1:00-2:30pm  through the last week of class. There is no need to make an appointment for these hours -- just come.
++ Drop in office hours are XXX  through the last week of class. There is no need to make an appointment for these hours -- just come.
 + If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 20 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points.  
 
-Office hours for Kevin Payne, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack.
+Office hours for XXX, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack.
 
 # Textbook and Other Resources
 
@@ -139,7 +139,7 @@ Your grade in the class will be based on your performance on the midterms and th
 + Midterm 1 (30%)
 + Midterm 2 (30%)
 
-The quizzes in D2L are not part of your grade, but you will be hard pressed to pass the class without spending significant time with the material.
+The quizzes in D2L are not part of your grade, except for noted below, but you will be hard pressed to pass the class without spending significant time with the material.
 
 Course grades will be based on class rank with cut points between letter grades determined by gaps in the distribution.  
 
@@ -149,6 +149,21 @@ D2L has samples of exams to get you familiar with the style of the questions. Th
 
 Students will be assigned seats and photo ID will be required for all exams. You will only be allowed a writing implement and a calculator.  No headphones, phones, smart watches, internet connected devices, or other material will be allowed.  All backpacks will be stored at the front or side of the classroom.  If we see a phone, we will take your exam, you will receive a zero, and you will be sent to the dean of student life.
 
+## Consequences for Low Scores on Midterms
+
+After each midterm the instructor will announce a cut score for the exam.  If your exam score is equal to or less than the cut score you will be notified on your returned exam and as a feedback on your grades in D2L. This will trigger additional requirements. Not picking up your exam or reviewing your grades in D2L will not excuse you from these requirements. 
+
+1. You must meet with the instructor or graduate assistant _at least a week before the next exam_ to discuss the exam, course material and how to study for the next exam. Given the volume of appointment slots, scheduling conflicts is not a valid excuse.
+
+1. All practice quizzes covering the material on the exam with the poor score must be taken and passed with a score of 60\% or better _at least a week before the next exam_. Note that you may take them as many times as you wish.
+
+1. All practice quizzes containing material on next exam are mandatory.  You will be required to pass each with a 60\% score or better _at least two days before the next exam_. Note that you may take them as many times as you wish.
+
+1. Your next exam will include additional _remedial_ questions.  These questions will be graded first on a pass/no pass basis with a fairly low standard. If these questions are not passed, the remainder of the exam will not be graded and you will receive a score of zero.
+
+*Failure to complete complete these requirements will result in a score of zero on the next exam.*  
+
+The intent of these rules is to force students to refocus on the material so that they will be more sucessful in the class.
 
 ## Practice D2L Quizzes
 

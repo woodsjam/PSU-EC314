@@ -1,5 +1,5 @@
 ---
-title: "Syllabus EC314 Winter 2017"
+title: "Syllabus EC314 Spring 2017"
 author: "James Woods"
 date: ""
 output: pdf_document
@@ -24,10 +24,10 @@ A brief assessment that includes math skills from MTH 70 and 95 will be given on
 
 ## Key Dates
 
-+ Final Exam: XXX
-+ Midterm 1: XXX
-+ Midterm 2: XXX
-+ Last day to drop or change grade option: XXX.
++ Final Exam: June 15th from 12:30 -- 2:20
++ Midterm 1: April 26th
++ Midterm 2: May 17th
++ Last day to drop or change grade option: May 21st.
 
 Exams will be given on those days and at those times only.  I do not give make up, early or late exams.  
 
@@ -47,10 +47,10 @@ I will not react to questions in the two days prior to an exam  under most circu
 Office Hours:
 
 + My office is in CH 241-O.
-+ Drop in office hours are XXX  through the last week of class. There is no need to make an appointment for these hours -- just come.
++ Drop in office hours are Monday 10-11:30  through the last week of class. There is no need to make an appointment for these hours -- just come.
 + If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 20 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points.  
 
-Office hours for XXX, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack.
+Office hours for Kevin Payne, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack.
 
 # Textbook and Other Resources
 
@@ -151,19 +151,22 @@ Students will be assigned seats and photo ID will be required for all exams. You
 
 ## Consequences for Low Scores on Midterms
 
-After each midterm the instructor will announce a cut score for the exam.  If your exam score is equal to or less than the cut score you will be notified on your returned exam and as a feedback on your grades in D2L. This will trigger additional requirements. Not picking up your exam or reviewing your grades in D2L will not excuse you from these requirements. 
+After each midterm the instructor will announce a cut score for the exam.  If your exam score is equal to or less than the cut score, you will be notified on your returned exam and as a feedback on your grade in D2L. This will trigger additional requirements. Not picking up your exam or reviewing your grades in D2L will not excuse you from these requirements. 
 
-1. You must meet with the instructor or graduate assistant _at least a week before the next exam_ to discuss the exam, course material and how to study for the next exam. Given the volume of appointment slots, scheduling conflicts is not a valid excuse.
+1. You must meet with the instructor or graduate assistant _at least a week before the next exam_ to discuss the exam, course material and how to study for the next exam. Given the volume of appointment slots, scheduling conflicts are not a valid excuse.
 
-1. All practice quizzes covering the material on the exam with the poor score must be taken and passed with a score of 60\% or better _at least a week before the next exam_. Note that you may take them as many times as you wish.
+1. You will be assigned d2l quizzes covering the material on the exam with the poor score.  These quizzes must be taken and passed with a score of 60\% or better by the due date listed on each quiz. Note that you may take them as many times as you wish.  These are separate from the practice quizzes.
 
-1. All practice quizzes containing material on next exam are mandatory.  You will be required to pass each with a 60\% score or better _at least two days before the next exam_. Note that you may take them as many times as you wish.
+1. You will be assigned quizzes covering material on the next exam.  You will be required to pass each with a 60\% score or better by the listed due date. Note that you may take them as many times as you wish. These are separate from the practice quizzes.
+
+1. A brief written assignment will be made available to you at the end of each class.  You must pick up and complete the assignment, returning it at the beginning of the next class.  These assignments will be graded on a pass/non-pass basis with fairly low standard.  You must pass 60% of the assignments (rounded down). Nobody other than you will be able to pick up or drop off assignments.
 
 1. Your next exam will include additional _remedial_ questions.  These questions will be graded first on a pass/no pass basis with a fairly low standard. If these questions are not passed, the remainder of the exam will not be graded and you will receive a score of zero.
 
-*Failure to complete complete these requirements will result in a score of zero on the next exam.*  
 
-The intent of these rules is to force students to refocus on the material so that they will be more sucessful in the class.
+*Failure to complete these requirements will result in a score of zero on the next exam.*  
+
+The intent of these rules is to force students to refocus on the material so that they will be more successful in the class.
 
 ## Practice D2L Quizzes
 
@@ -217,7 +220,7 @@ Course topics were developed based on the need for students to pass the PE and F
 
 + Begging for grades will result in an immediate lowering of your course grade by a full letter grade.
   
-<!-- + When completing online quizzes you may use your book, wiki, calculator, spreadsheets, notes, or other resources as long as it is not another student or person.  *The work must be authentically and genuinely your own. In other words, if you are copying answers you found online, it is not your work.* -->
++ When completing online quizzes or other assignments, you may use your book, wiki, calculator, spreadsheets, notes, or other resources as long as it is not another student or person.  *The work must be authentically and genuinely your own. In other words, if you are copying answers you found online, it is not your work.*
 
 + Go to office hours at the first sign of trouble -- not as a last resort.
 

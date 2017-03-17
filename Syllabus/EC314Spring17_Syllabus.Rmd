@@ -157,7 +157,7 @@ After each midterm the instructor will announce a cut score for the exam.  If yo
 
 1. You will be assigned d2l quizzes covering the material on the exam with the poor score.  These quizzes must be taken and passed with a score of 60\% or better by the due date listed on each quiz. Note that you may take them as many times as you wish.  These are separate from the practice quizzes.
 
-1. You will be assigned quizzes covering material on the next exam.  You will be required to pass each with a 60\% score or better by the listed due date. Note that you may take them as many times as you wish. These are separate from the practice quizzes.
+1. You will be assigned d2l quizzes covering material on the next exam.  You will be required to pass each with a 60\% score or better by the listed due date. Note that you may take them as many times as you wish. These are separate from the practice quizzes.
 
 1. A brief written assignment will be made available to you at the end of each class.  You must pick up and complete the assignment, returning it at the beginning of the next class.  These assignments will be graded on a pass/non-pass basis with fairly low standard.  You must pass 60% of the assignments (rounded down). Nobody other than you will be able to pick up or drop off assignments.
 
@@ -170,7 +170,7 @@ The intent of these rules is to force students to refocus on the material so tha
 
 ## Practice D2L Quizzes
 
-D2L quizzes are not included in the grade calculation.  They are all multiple choice and calculation style questions and intended as one way, but not the only way to practice for the exams.
+D2L quizzes are not included in the grade calculation.  They are all multiple choice and calculation style questions and intended as one way, but not the only way, to practice for the exams.
 
 # Topics
 

@@ -50,7 +50,9 @@ Office Hours:
 + Drop in office hours are Monday 10-11:30  through the last week of class. There is no need to make an appointment for these hours -- just come.
 + If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 20 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points.  
 
-Office hours for Kevin Payne, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack.
+<!-- Office hours for Kevin Payne, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack. -->
+
+Office hours for Kevin Payne, the teaching assistant are Tuesday 10am-2pm and Wednesday 2:30-4:30 in CH 230.
 
 # Textbook and Other Resources
 

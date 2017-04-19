@@ -1,7 +1,7 @@
 ---
 title: "Pre-Test"
 author: "James Woods"
-date: "12/28/2016"
+date: ""
 output: pdf_document
 ---
 

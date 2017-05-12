@@ -28,7 +28,7 @@ fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
 library(ggplot2)
 cf <- data.frame(y=c(0,1,1,1,1,1))
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 Find representation of Present Worth in factor notation
 
@@ -37,7 +37,7 @@ Find representation of Present Worth in factor notation
 library(ggplot2)
 cf <- data.frame(y=c(0,1,1,1,1,1))
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 + Shape is constant series
@@ -55,7 +55,7 @@ $$Looking~For = Number(Looking~For|What is number, i, How Long)$$
 library(ggplot2)
 cf <- data.frame(y=c(0,0,1,2,3,4))
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 
@@ -64,7 +64,7 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 library(ggplot2)
 cf <- data.frame(y=c(0,0,1,2,3,4))
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 + Shape is linear gradient
@@ -80,7 +80,7 @@ $$ 1(P|G,i,5)$$
 library(ggplot2)
 cf <- data.frame(y=c(0,0,1,2,3,4) + c(0,4,4,4,4,4))
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 ## You should see this as
@@ -90,9 +90,9 @@ cf <- data.frame(y=c(0,0,1,2,3,4) + c(0,4,4,4,4,4))
 cf$x=0:(length(cf$y)-1)
 cf$LG <- c(0,0,1,2,3,4)
 cf$C <- c(0,4,4,4,4,4)
-print(ggplot(cf,aes(x,C,label=C))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,C,label=C))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 
-print(ggplot(cf,aes(x,LG,label=LG))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,LG,label=LG))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 
@@ -102,7 +102,7 @@ print(ggplot(cf,aes(x,LG,label=LG))+geom_bar(stat="Identity",color='gray',fill='
 library(ggplot2)
 cf <- data.frame(y=c(0,0,1,2,3,4) + c(0,4,4,4,4,4))
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 + See the constant series that is 4 high and 5 long $4(P|A,i,5)$
@@ -116,7 +116,7 @@ $$4(P|A,i,5)+ 1(P|G,i,5)$$
 library(ggplot2)
 cf <- data.frame(y=c(0,0,1,2,3,4) - c(0,4,4,4,4,4))
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 ## You should see this
@@ -126,9 +126,9 @@ cf <- data.frame(y=c(0,0,1,2,3,4) + c(0,4,4,4,4,4))
 cf$x=0:(length(cf$y)-1)
 cf$LG <- c(0,0,1,2,3,4)
 cf$C <- -c(0,4,4,4,4,4)
-print(ggplot(cf,aes(x,C,label=C))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,C,label=C))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 
-print(ggplot(cf,aes(x,LG,label=LG))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,LG,label=LG))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 ## Following from above
 
@@ -136,7 +136,7 @@ print(ggplot(cf,aes(x,LG,label=LG))+geom_bar(stat="Identity",color='gray',fill='
 library(ggplot2)
 cf <- data.frame(y=c(0,0,1,2,3,4) - c(0,4,4,4,4,4))
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 + See the constant series that is -4 high and 5 long $-4(P|A,i,5)$
@@ -152,7 +152,7 @@ $$-4(P|A,i,5)+ 1(P|G,i,5)$$
 library(ggplot2)
 cf <- data.frame(y=c(0,5,5,5,5,5,5,5) - c(0,5,5,5,0,0,0,0))
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 ## Should get this
@@ -163,7 +163,7 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 library(ggplot2)
 cf <- data.frame(y=c(0,5,5,5,5,5,5,5) - c(0,5,5,5,0,0,0,0))
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 $$5(P|A,i,7) - 5(P|A,i,3)$$
@@ -179,7 +179,7 @@ $$ P = \frac{F}{(1+i)^N}$$
 library(ggplot2)
 cf <- data.frame(y=c(0,0,0,0,5,5,5,5) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 $$\frac{5(P|A, i, 4)}{(1+i)^3}$$
@@ -190,7 +190,7 @@ $$\frac{5(P|A, i, 4)}{(1+i)^3}$$
 library(ggplot2)
 cf <- data.frame(y=c(0,0,0,0,0,0,5,5,5,5) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 $$\frac{5(P|A, i, 4)}{(1+i)^5}$$
@@ -200,7 +200,7 @@ $$\frac{5(P|A, i, 4)}{(1+i)^5}$$
 library(ggplot2)
 cf <- data.frame(y=c(0,0,0,0,0,0,5,5,5,5) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 + $\frac{5(P|A, i, 4)}{(1+i)^5}$
@@ -213,7 +213,7 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 library(ggplot2)
 cf <- data.frame(y=c(0,0,0,0,-2,-4,-6,-8,-10) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 ## You should see
@@ -221,7 +221,7 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 library(ggplot2)
 cf <- data.frame(y=c(0,0,0,0,-2,-4,-6,-8,-10) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 $$\frac{-2(P|G,i, 6)}{(1+i)^2}$$
@@ -240,7 +240,7 @@ $$\frac{-2(P|G,i, 6)}{(1+i)^2}$$
 library(ggplot2)
 cf <- data.frame(y=c(0,1,2,3,4,5,5,5,5) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 Try it with the linear gradient ending at time 4 and the constant series going from 5 to 8.
@@ -251,7 +251,7 @@ Try it with the linear gradient ending at time 4 and the constant series going f
 library(ggplot2)
 cf <- data.frame(y=c(0,1,2,3,4,5,5,5,5) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 $$\frac{1(P|G, i, 5)}{(1+i)^{-1}} + \frac{5(P|A, i, 4)}{(1+i)^{4}}$$
@@ -262,7 +262,7 @@ $$\frac{1(P|G, i, 5)}{(1+i)^{-1}} + \frac{5(P|A, i, 4)}{(1+i)^{4}}$$
 library(ggplot2)
 cf <- data.frame(y=c(0,1,2,3,4,5,5,5,5) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 Try it with the linear gradient ending at time 5 and the constant series going from 6 to 8.
@@ -274,7 +274,7 @@ Try it with the linear gradient ending at time 5 and the constant series going f
 library(ggplot2)
 cf <- data.frame(y=c(0,1,2,3,4,5,5,5,5) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 $$\frac{1(P|G, i, 6)}{(1+i)^{-1}} + \frac{5(P|A, i, 3)}{(1+i)^{5}}$$
@@ -285,7 +285,7 @@ $$\frac{1(P|G, i, 6)}{(1+i)^{-1}} + \frac{5(P|A, i, 3)}{(1+i)^{5}}$$
 library(ggplot2)
 cf <- data.frame(y=c(0,1,2,3,4,5,5,5,5) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 Stack constant series like a layer cake. There is one that is one high from period 1 to 8.  Another that is one high from period 2 to 8 and so on.
@@ -296,7 +296,7 @@ Stack constant series like a layer cake. There is one that is one high from peri
 library(ggplot2)
 cf <- data.frame(y=c(0,1,2,3,4,5,5,5,5) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 $$ \frac{1(P|A, i, 8)}{(1+i)^0} + \frac{1(P|A, i, 7)}{(1+i)^1} +\frac{1(P|A, i, 6)}{(1+i)^2} + \frac{1(P|A, i, 5)}{(1+i)^3} + \frac{1(P|A, i, 4)}{(1+i)^4}$$
@@ -308,7 +308,7 @@ $$ \frac{1(P|A, i, 8)}{(1+i)^0} + \frac{1(P|A, i, 7)}{(1+i)^1} +\frac{1(P|A, i, 
 library(ggplot2)
 cf <- data.frame(y=c(0,0,12,10,8,6,4,2) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 Hint: $-2(P|G, i, 7)$ is wrong in many ways.
@@ -321,9 +321,9 @@ cf <- data.frame(y=c(0,0,12,12,12,12,12,12) - c(0,0,0,2,4,6,8,10))
 cf$x=0:(length(cf$y)-1)
 cf$LG <- -c(0,0,0,2,4,6,8,10)
 cf$C <- c(0,0,12,12,12,12,12,12)
-print(ggplot(cf,aes(x,C,label=C))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,C,label=C))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 
-print(ggplot(cf,aes(x,LG,label=LG))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,LG,label=LG))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 ## Solution
@@ -351,7 +351,7 @@ $$\frac{12(P|A, i, 6)}{(1+i)^1} + \frac{-2 (P|G, i, 6)}{(1+i)^1}$$
 library(ggplot2)
 cf <- data.frame(y=c(1,2,4,8,16,13,10,7,4,1) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_x_discrete())
 ```
 
 ## Big Test ( A Solution)
@@ -360,7 +360,7 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 library(ggplot2)
 cf <- data.frame(y=c(1,2,4,8,16,13,10,7,4,1) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_x_discrete())
 ```
 
 $$ \frac{1(P|A_1, i, g = 100\%, 4)}{(1+i)^{-1}} + \frac{16 (P|A, i, 6)}{(1+i)^3} - \frac{3 (P|G, i, 6)}{(1+i)^3}$$
@@ -372,7 +372,7 @@ $$ \frac{1(P|A_1, i, g = 100\%, 4)}{(1+i)^{-1}} + \frac{16 (P|A, i, 6)}{(1+i)^3}
 library(ggplot2)
 cf <- data.frame(y=c(2,4,6,8,10,12,14,16,8,4,2,1) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 ## Similar problem (Solution)
@@ -381,7 +381,7 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 library(ggplot2)
 cf <- data.frame(y=c(2,4,6,8,10,12,14,16,8,4,2,1) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 $$\frac{2 (P|G, i, 8)}{ (1+i)^{-2}} + \frac{16 (P|A_1, i, g = -50\%, 5)}{(1+i)^6}$$
@@ -396,7 +396,7 @@ $$\frac{5(P|A, i, 10)}{(1+i)^2} - \frac{1 (P|G, i, 4)}{ (1+i)^ 4}$$
 library(ggplot2)
 cf <- data.frame(y=c(0,0,0,5,5,5,5,5,5,5,5,5,5) - c(0,0,0,0,0,0,1,2,3,0,0,0,0) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 ## Hints for Study
@@ -440,7 +440,7 @@ $$ \left( 1+ \frac{.02}{30}  \right)^{365} -1 = `r (1+.02/30)^365 -1` $$
 library(ggplot2)
 cf <- data.frame(y=c(0,0,5,0,5,0,5,0,5,0,5) )
 cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text())
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 ```
 
 Not a constant series but you can find PW with brute force with interest at 10\% per period compounded each period.

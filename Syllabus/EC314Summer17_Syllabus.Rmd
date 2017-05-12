@@ -1,5 +1,5 @@
 ---
-title: "Syllabus EC314 Spring 2017"
+title: "Syllabus EC314 Summer 2017"
 author: "James Woods"
 date: ""
 output: pdf_document
@@ -24,10 +24,11 @@ A brief assessment that includes math skills from MTH 70 and 95 will be given on
 
 ## Key Dates
 
-+ Final Exam: June 15th from 12:30 -- 2:20
-+ Midterm 1: April 26th
-+ Midterm 2: May 17th
-+ Last day to drop or change grade option: May 21st.
++ Final Exam: August 17th from 4:30 -- 6:50
++ Midterm Exam: July 25th
+<!-- + Midterm 1: April 26th -->
+<!-- + Midterm 2: May 17th -->
+<!-- + Last day to drop or change grade option: May 21st. -->
 
 Exams will be given on those days and at those times only.  I do not give make up, early or late exams.  
 
@@ -35,7 +36,7 @@ If you have a DRC compensation and would normally schedule an exam in the testin
 
 # Contact Information
 
-Communication will be handled through slack https://ec314spring17.slack.com. You should have received an invitation, if not, just go to that URL and use your @pdx.edu email to sign up. There are reasonable help documents to get you started. https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users
+Communication will be handled through slack https://ec314summer17.slack.com/. You should have received an invitation, if not, just go to that URL and use your @pdx.edu email to sign up. There are reasonable help documents to get you started. https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users
 
 Slack will be used for IM, email and forum style communication.  It even handles phone calls. If you have a question about course material or the course itself, ask in one of the channels. If you have a personal message that is not intended for others, send a direct message. The group has global do not disturb hours of 10pm -8am.  If you would like something different, alter your personal settings.
 
@@ -47,12 +48,11 @@ I will not react to questions in the two days prior to an exam  under most circu
 Office Hours:
 
 + My office is in CH 241-O.
-+ Drop in office hours are Monday 10-11:30  through the last week of class. There is no need to make an appointment for these hours -- just come.
++ Drop in office hours are Tuesday 3:00-4:00  through the last week of class. There is no need to make an appointment for these hours -- just come.
 + If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 20 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points.  
 
-<!-- Office hours for Kevin Payne, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack. -->
+Office hours for David Hong, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack.
 
-Office hours for Kevin Payne, the teaching assistant are Tuesday 10am-2pm and Wednesday 2:30-4:30 in CH 230.
 
 # Textbook and Other Resources
 
@@ -137,9 +137,12 @@ assistance.  You and I are both customers. I have no special status.
 
 Your grade in the class will be based on your performance on the midterms and the final exam.  
 
-+ Final Exam (40%)
-+ Midterm 1 (30%)
-+ Midterm 2 (30%)
+<!-- + Final Exam (40%) -->
+<!-- + Midterm 1 (30%) -->
+<!-- + Midterm 2 (30%) -->
+
++ Final Exam (60%)
++ Midterm (40%)
 
 The quizzes in D2L are not part of your grade, except for noted below, but you will be hard pressed to pass the class without spending significant time with the material.
 
@@ -169,6 +172,14 @@ After each midterm the instructor will announce a cut score for the exam.  If yo
 *Failure to complete these requirements will result in a score of zero on the next exam.*  
 
 The intent of these rules is to force students to refocus on the material so that they will be more successful in the class.
+
+## Voluntary Commitment to "Consequences for Low Scores on Midterms"
+
+Students may volunteer to be treated as if they had a low score, mandatory online quizzes, daily homework and a required meeting from the start of the course.  This can help you commit to coming to class every day and engaging with the material on a regular basis.
+
+You will be able to commit to these requirements through a quiz that will be available the first week of class and after the midterm. 
+
+Please note that failure to satisfy the requirements will result in the same penalties -- a zero on the next exam.
 
 ## Practice D2L Quizzes
 

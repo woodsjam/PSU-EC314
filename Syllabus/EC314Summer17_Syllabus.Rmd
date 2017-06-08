@@ -144,7 +144,7 @@ Your grade in the class will be based on your performance on the midterms and th
 + Final Exam (60%)
 + Midterm (40%)
 
-The quizzes in D2L are not part of your grade, except for noted below, but you will be hard pressed to pass the class without spending significant time with the material.
+The quizzes in D2L are not part of your grade, except as noted below, but you will be hard pressed to pass the class without spending significant time with the material.
 
 Course grades will be based on class rank with cut points between letter grades determined by gaps in the distribution.  
 
@@ -154,15 +154,17 @@ D2L has samples of exams to get you familiar with the style of the questions. Th
 
 Students will be assigned seats and photo ID will be required for all exams. You will only be allowed a writing implement and a calculator.  No headphones, phones, smart watches, internet connected devices, or other material will be allowed.  All backpacks will be stored at the front or side of the classroom.  If we see a phone, we will take your exam, you will receive a zero, and you will be sent to the dean of student life.
 
+The seating chart for the exam will be released on slack just before the exam to make it easier to find your seat.
+
 ## Consequences for Low Scores on Midterms
 
 After each midterm the instructor will announce a cut score for the exam.  If your exam score is equal to or less than the cut score, you will be notified on your returned exam and as a feedback on your grade in D2L. This will trigger additional requirements. Not picking up your exam or reviewing your grades in D2L will not excuse you from these requirements. 
 
 1. You must meet with the instructor or graduate assistant _at least a week before the next exam_ to discuss the exam, course material and how to study for the next exam. Given the volume of appointment slots, scheduling conflicts are not a valid excuse.
 
-1. You will be assigned d2l quizzes covering the material on the exam with the poor score.  These quizzes must be taken and passed with a score of 60\% or better by the due date listed on each quiz. Note that you may take them as many times as you wish.  These are separate from the practice quizzes.
+1. You will be assigned d2l quizzes covering the material on the exam with the poor score. These quizzes will all start with "REQUIRED" and are different from the voluntary quizzes for grading purposes. These quizzes must be taken and passed with a score of 60\% or better by the due date listed on each quiz. Note that you may take them as many times as you wish.
 
-1. You will be assigned d2l quizzes covering material on the next exam.  You will be required to pass each with a 60\% score or better by the listed due date. Note that you may take them as many times as you wish. These are separate from the practice quizzes.
+1. You will be assigned d2l quizzes covering material on the next exam.  You will be required to pass each with a 60\% score or better by the listed due date. These quizzes will all start with "REQUIRED" and are different from the voluntary quizzes for grading purposes. Note that you may take them as many times as you wish.
 
 1. A brief written assignment will be made available to you at the end of each class.  You must pick up and complete the assignment, returning it at the beginning of the next class.  These assignments will be graded on a pass/non-pass basis with fairly low standard.  You must pass 60% of the assignments (rounded down). Nobody other than you will be able to pick up or drop off assignments.
 
@@ -173,9 +175,11 @@ After each midterm the instructor will announce a cut score for the exam.  If yo
 
 The intent of these rules is to force students to refocus on the material so that they will be more successful in the class.
 
+Just because your grade is above the cut score does not mean that you have received a passing grade.
+
 ## Voluntary Commitment to "Consequences for Low Scores on Midterms"
 
-Students may volunteer to be treated as if they had a low score, mandatory online quizzes, daily homework and a required meeting from the start of the course.  This can help you commit to coming to class every day and engaging with the material on a regular basis.
+Students may volunteer to be treated as if they had a low score, mandatory online quizzes, daily homework and a required meeting from the start of the course. You will not have the special remedial questions on the exam. This can help you commit to coming to class every day and engaging with the material on a regular basis.
 
 You will be able to commit to these requirements through a quiz that will be available the first week of class and after the midterm. 
 

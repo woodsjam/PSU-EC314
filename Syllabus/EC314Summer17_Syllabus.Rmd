@@ -168,7 +168,7 @@ After each midterm the instructor will announce a cut score for the exam.  If yo
 
 1. A brief written assignment will be made available to you at the end of each class.  You must pick up and complete the assignment, returning it at the beginning of the next class.  These assignments will be graded on a pass/non-pass basis with fairly low standard.  You must pass 60% of the assignments (rounded down). Nobody other than you will be able to pick up or drop off assignments.
 
-1. Your next exam will include additional _remedial_ questions.  These questions will be graded first on a pass/no pass basis with a fairly low standard. If these questions are not passed, the remainder of the exam will not be graded and you will receive a score of zero.
+<!-- 1. Your next exam will include additional _remedial_ questions.  These questions will be graded first on a pass/no pass basis with a fairly low standard. If these questions are not passed, the remainder of the exam will not be graded and you will receive a score of zero. -->
 
 
 *Failure to complete these requirements will result in a score of zero on the next exam.*  
@@ -179,7 +179,7 @@ Just because your grade is above the cut score does not mean that you have recei
 
 ## Voluntary Commitment to "Consequences for Low Scores on Midterms"
 
-Students may volunteer to be treated as if they had a low score, mandatory online quizzes, daily homework and a required meeting from the start of the course. You will not have the special remedial questions on the exam. This can help you commit to coming to class every day and engaging with the material on a regular basis.
+Students may volunteer to be treated as if they had a low score, mandatory online quizzes, daily homework and a required meeting from the start of the course. This can help you commit to coming to class every day and engaging with the material on a regular basis.
 
 You will be able to commit to these requirements through a quiz that will be available the first week of class and after the midterm. 
 

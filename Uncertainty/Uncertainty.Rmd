@@ -1,0 +1,446 @@
+---
+title: "Uncertainty in Cash Flows"
+author: "James Woods"
+date: "5/19/2016"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Why Uncertainty and Sensitivity?
+
+## Why?
+> - We really don't know
+> - Some of our guesses may be critical and senstivity analysis may guide us to spend more time supporting those assumptions.
+> - Clients may ask for risk assessments
+> - Clients may have other assumptions about critical parameters
+
+## What do you mean "I don't know"?
+
+> - We are way more certain than we should be.
+> - Example:
+    - Make your best guess at the population of Keyna
+    - Give yourself a reasonable upper and lower bound so you are 80% sure the true value is there.
+    - Not zero to a billion
+    
+
+> - 44.35 M.  
+     - One in five of you should be out of bounds.
+     - Usually, if honest, more than one in five will be out.
+     - If less, Hawthorn Effect
+
+## Some parameters are more critical than others
+
+> - Cost effectivness depends on estimating costs and benefits.
+> - Example:  Cost effectivness of an Energy Efficiency improvement
+    - Costs, commonly install costs are easy to get.
+    - Benefits, due to hours used, are critical.  
+> - Low use, not cost effective.  
+> - High use, cost effective.
+
+## Client Requests
+
+> - It is not that they don't trust you.
+> - Risk plays into setting a MARR.
+    - High risk, high MARR
+    - Low Risk, low MARR
+> - They want to know the probability of success
+> - It is part of a portfolio of risks:
+    - They want to know how risky
+    - They want to know how correlated it is with other risks.
+> - They like independent risks
+> - They like risks that are negativly correlated with existing risk
+
+## Clients Have Different Assumptions
+
+> - They may disagree with you but you still want to show them that the results are valid
+> - There may be actual diversity.  
+    - Different costs at different locations.
+    - Different experiences in differnt years.
+> - You need to do an analysis that covers all that.
+
+# Warnings
+
+## You Have Seen Sensitivity Analysis
+> - Recall the PW diagrams we used in learning IRR?
+> - Shows how PW changes with changes in MARR. 
+    $PW = -10 + \frac{15}{(1+r)}$
+    
+```{r PWFunction, fig.height=4}
+
+curve(-10 + 15 / (1 + x), 0, 1, ylab = "PW", xlab = "MARR"  )
+curve(0 * x, 0,1, add = TRUE)
+
+```
+
+
+## Other Parameters
+
+There are some parameters that are usually of concern:
+
+> - Initial costs
+> - Salvage value
+> - Scale
+
+Some are harder than others:
+
+> - Planning horizon
+> - Uncertainty about Risks
+
+## Why planning horizon is harder
+
+> - Mostly you assume time is discrete -- not continuous.
+> - You need to either change to continuous discounting
+    $\frac{1}{e^{N(1+r)}}$ rather than $\frac{1}{(1+r)^N}$
+> - Or create an equivelent MARR with smaller compounding periods but equivelent with their nominal statment.
+
+## Example: MARR 10% per year compounded daily
+
+Start with 10% per year MARR and find equivalent annual MARR compounded daily.
+
+$$\left(1 + \frac{r}{365}  \right)^{365} = 1.1$$
+
+$$365 \left[ 1.1^{\frac{1}{365}} -1   \right] = `r 365*(1.1^(1/365) -1)`$$
+
+Allows you to vary time on a smaller time frame.
+
+
+## Why uncertainty about risks is harder
+
+- Risk is when you know the odds but don't know the outcome.
+    - You know that each side of a true die has a 1/6 chance of showing.
+
+- Uncertainty is when you don't know the odds.
+    - Uncertain if it is your trick die that rolls a 6 half the time or the true die.
+    
+> - You end up descibing your beliefs about the probability as a Beta distribution.
+    - Hint, you just walked into the land of Bayesian statistics.
+    - We will do some Monte Carlo simulations later so you can see what to do.
+
+> - Talk about your sensitivity analysis as about the mean of the present worth rather than the present worth.
+
+
+# Simple How To
+## PW Example
+Consider a simple constant series that we can describe the present worth with factor notation:
+
+$$ P = C + A (P|A, i = r, N = n)$$
+
+Lots of parameters to vary:
+
++ A, the size of the constant benefits. 
++ r, the discount rate
++ n, how long you get payments
++ C, the initial cost
+
+We warned you about r and n so lets vary just A
+
+## PW Figure
+r = .1, n = 10, C = -10, $A \in [0,5]$ 
+
+```{r SimplePW, fig.height=4, echo=FALSE}
+curve(-10 + x * ((1.1 ^ 10 - 1 ))/(.1 * 1.1 ^ 10), 0, 5, xlab = "A", ylab = "PW")
+curve(0 * x, 0, 5, add = TRUE)
+
+PWABreak <- 10 * (.1 * 1.1 ^ 10)/((1.1 ^ 10 - 1 ))
+```
+BTW PW is zero when A =`r PWABreak`
+
+
+## What Do You Learn from this?
+
+> - If you are pretty sure that A is not near `r PWABreak`, you are done spending time getting a better estimate of A.
+    - Refining you estimate of the parameter with more data, more detailed calculations, more bids, more literature review will not change the decision.
+    - Looking for more precision or less uncertainty is a waste of resource.
+    
+> - If not, then you need to decide if the effort is worth the refinement.  That depends on your other options.
+    - Yes, sometimes you do a cost benefit analysis of doing cost benefit analysese.
+    
+
+## What Do You Learn from this? (Con't)
+> - The client can check on the consequences of their beliefs about A. 
+> - Note we still don't know risk, for that we need to know the distribution of our beliefs about A.
+    - Is it N(2, .5)?
+    - Is it U(1,4)?
+    - We will do this later.
+    
+> - Sensitivity with present worth is easiest of the three.
+
+## AW Example
+- Stick with the same cash flow as before with present worth factor notation:
+
+$$ P = C + A (P|A, i = r, N = n)$$
+
+- No more difficult than PW sensitivity analysis unless you want to vary the N.
+- Annual worth is just
+
+$$ AW = A + C (A|P,i = r, N = n)$$
+
+## AW Figure
+
+```{r SimpleAW, fig.height=4, echo=FALSE}
+curve(x +  -10 * (.1 * 1.1 ^ 10)/((1.1 ^ 10 - 1 )), 0, 5, xlab = "A", ylab = "AW")
+curve(0 * x, 0, 5, add = TRUE)
+
+PWABreak <- 10 * (.1 * 1.1 ^ 10)/((1.1 ^ 10 - 1 ))
+```
+
+
+- This is the same information as the PW graph translated into AW.  
+- Some clients like to see it this way.
+
+## IRR Example
+
+> - Will use a more complex model for this because IRR can get odd.
+> - Changing the parameters can change not just the location of the roots, i.e., the IRRS but also the number of roots.
+> - If you want to learn more, read up on bifurcations.
+> - Reuse the example for multiple IRRs we had in class:
+    - -1000, 3900, -5030, 2145
+    
+    
+## Recall the PW function 
+This has IRRs at 10%, 30% and 50%
+```{r}
+
+curve(-1000 + 3900/(1 + x) - 5030/(1 + x)^2 + 2145/(1 + x)^3, 0, .6, ylab = "PW", xlab="i"  )
+curve(0 * x, 0, .6, add = TRUE)
+
+```
+
+## Watch the roots change
+$A_0= -1002$ One root
+
+```{r}
+
+curve(-1002 + 3900/(1 + x) - 5030/(1 + x)^2 + 2145/(1 + x)^3, 0, .6, ylab = "PW", xlab="i"  )
+curve(0 * x, 0, .6, add = TRUE)
+
+```
+
+
+
+## Watch the roots change
+$A_0= -999$ Three roots
+
+```{r}
+
+curve(-999 + 3900/(1 + x) - 5030/(1 + x)^2 + 2145/(1 + x)^3, 0, .6, ylab = "PW", xlab="i"  )
+curve(0 * x, 0, .6, add = TRUE)
+
+```
+
+
+
+## Watch the roots change
+$A_0= -997$ One root again
+
+```{r}
+
+curve(-997 + 3900/(1 + x) - 5030/(1 + x)^2 + 2145/(1 + x)^3, 0, .6, ylab = "PW", xlab="i"  )
+curve(0 * x, 0, .6, add = TRUE)
+
+```
+
+## IRR Problems
+> - Your IRR sensitivity functions are not always continuous.
+> - It requires a lot of time with clients to explain this.
+> - Recomend talking your clents out of it.
+
+
+# Priors for Sensitivity Analysis
+
+## Finding a Good Range
+
+> - In the examples above we just picked bounds.
+> - Book gives some bad advice on how to pick the design points, bounds, in a sensitivity analysis, $\pm$ 20%.
+    - Sometimes 20% is way too big, remember the intial cost in the IRR example?  4$ on a scale of 1000$
+    - Sometimes 20% is way too small.  What is the smallest safety factor you have ever used? 1.25?
+
+## Single Person
+
+> - A few warnings.
+    - This does not work with everyone.  They have to be reasonably numeric.
+    - They have to be a real expert, with real opinions, real experience with data.
+    - It is ok, if they need time, have to make some calculations or want to look a few things up.
+    
+> - Three questions for each parameter
+    - What is your best guess?
+    - Largest value that you are 90% sure the value is below?
+    - Smallest value that you are 90% sure the value is above?  
+    - Basically, what are your 80% bounds.
+
+
+## Allows a Spider graph.
+> - Horizontal axis shows percent difference from best guess.
+> - Vertical shows the investment criteria of interest.
+ ![](http://tornadocharts.com/wp-content/uploads/sites/2/2015/06/sensit-sensitivity-analysis-spider-chart.gif)
+
+## What to watch for?
+
+> - Parameter that cause a decision, sign, change.
+    - Can turn a good idea into a bad one without more research
+> - High sensitivity parameters, high slope.
+    - Your expert may be more certain than they should be and should be consulted more about that parameter.
+> - Low sensitivity parameters, low slope.
+    - No more time should be spent on these.
+    - Unless, your job is devil's advocate.
+
+# Multi-Person
+
+## Feasible
+
+You have many choices:
+
+> - Ask everyone for their best guess for each parameter:
+    - Leads to Monte Carlo Simulations.
+    - Captures correlations between beliefs in parameters
+
+> - Delphi Survey:
+    - Asks not just for numbers, but why you choose the number.
+    - Monte Carlo Simulations
+
+
+## Possible but difficult
+
+> - Ask everyone for the best guess and 80% bounds:
+    - Beyond scope of course.
+    - Use with small numbers of experts
+    - Welcome again to Baysian land.
+    
+> - Ask everyone for joint distributions:
+    - Hard to to do.
+    - Goes Bayesian again.
+    - Never had a client that could do it.
+    - I have trouble doing it.
+
+# Example Joint Distributions
+
+## Ask Everyone for best guess at each parameter.
+
+> - You need at least as many experts as parameters.
+> - If you have a lot of experts, 30+, you can simulate the objective function directly on the data or bootstrap for the uncertainty.
+> - If you have few, you can approximate with a multivariate normal distribution.
+
+
+## What is Jamie's BMI?
+
+- Figure out Jamie's Body Mass Index, $\frac{kg}{M^2}$.
+- Collected these 10 guesses of height and weight in M and kg.
+```{r echo=FALSE}
+library(MASS)
+library(knitr)
+Obs <- as.data.frame(mvrnorm(10, c(1.8,86), matrix(c(.1,.2,.2,5),2,2)))
+names(Obs) <- c("Ht", "Wt")
+kable(Obs, pad = 0)
+```
+
+## Direct 
+```{r include=FALSE}
+library(dplyr)
+Obs <- Obs %>% mutate(BMI = Wt/(Ht ^ 2)) 
+
+```
+
+- Experts say the median BMI is `r median(Obs$BMI)`.
+- 80% are sure it is between `r quantile(Obs$BMI, .1)` and `r quantile(Obs$BMI, .9)`
+
+```{r echo=FALSE, warning=FALSE, message=FALSE, fig.height=3, fig.width=4}
+library(dplyr)
+library(ggplot2)
+Obs %>%  ggplot(aes(BMI)) + geom_histogram()
+
+```
+
+This is just plotting the data, which works with 30+ experts.
+
+## Or Estimate the Joint Normal Distribution
+
+- Means of `r colMeans(cbind(Obs$Ht,Obs$Wt))`
+- and var/cov of 
+```{r, echo=FALSE}
+kable(var(cbind(Obs$Ht,Obs$Wt)))
+
+```
+
+## And Simulate for 1000 replications
+
+- You can get exact results for Normals added to Normals but the minute you divide, stick to reporting confidence intervals, medians and modes.
+
+    - Normal divided by Normal is Cauchy, which has no defined mean and no defined variance. 
+    
+ 
+
+```{r echo=FALSE, fig.height=3, fig.width=4, warning=FALSE, message=FALSE}
+
+SimObs <- as.data.frame(mvrnorm(1000, colMeans(cbind(Obs$Ht, Obs$Wt)), var(cbind(Obs$Ht, Obs$Wt))))
+names(SimObs) <- c("Ht", "Wt")
+SimObs <- SimObs %>% mutate(BMI = Wt/(Ht ^ 2)) 
+
+SimObs %>% ggplot(aes(BMI)) + geom_histogram()
+
+```
+
+   -80% are sure the BMI is between `r quantile(SimObs$BMI, .1)` and `r quantile(SimObs$BMI, .9)`
+
+# Problems with "Just ask experts"
+
+## Lack of structure causes problems
+
+- Responses are not always independent
+    - The boss is in the room and you don't want to disagree.
+    - Everyone uses the same reference document
+        - Example, you can tell which field by the number people give for the value of a statistical life.
+            - $9.1 million, Environmental Protection Agency
+            - $7.9 million, Food and Drug Administration
+            - $9.4 million, Transportation Department
+- Little thought is put into it
+    
+
+## Fixes
+  - Use incentivized polls like Intel.
+  - Parimutuel betting, like some electrical utilities.
+  - Delphi Surveys
+
+## Incentivized Polls
+
+  - Guess Jamie's BMI.  Closest to the actual gets $10.
+  - Skin in the game gives incentive for more thought.
+  - Only works when you will eventually find out actual.
+  
+  
+  - Oddly works better if you don't know how people are betting.
+
+      - Can produce groupthink bubbles, if you see how others are betting.
+      - Easy to find the mode, but harder to tell if it is real.
+      
+  - Can get expensive with many winners:
+      - everyone guesses the same correct answer.
+      - More expensive when there is less certainty.
+  
+
+## Parimutuel Betting
+
+  - Guess Jamie's BMI. Correct answers split the pot with the others that got it right.
+  - Racetrack method.
+  - Less likely to get bubbles, but
+      - Harder to see if there is a mode in the guess.
+  - Cheaper than incentivized poll if high probability of multiple winners.
+  - Cost does not increase with a priori certainty.
+  
+## Delphi Surveys
+
+General Pattern:
+  - Ask each person in private for best guess.
+  - Compile results.
+  - Ask outliers why they said what they did.
+  - Give everyone:
+  
+      - The distribution of guesses for each parameter
+      - The reasons the outliers gave for the answer the gave.
+      
+  - Ask for another guess.
+  - Report the new distribution or repeat if desired.
+
+# Interested in More?

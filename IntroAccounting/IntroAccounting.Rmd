@@ -39,10 +39,9 @@ Enough knowledge to read the basic documents but not enough to create them.
     + Cash Flow statement (Inflows and Outflows of Cash)
 + There are other accounting areas
     + Audit (Makes sure people follow the rules and are not misstating things.)
-    + Cost (Similar to financial but for internal consumption.)
+    + Cost or Managerial (Cost benefit, volume studies, accounting approach to much of this class.)
     + Forensic (Get an attorney)
     + Fund and Governmental (Where money is separated and has strings)
-    + Managerial (Internal decisions about risk and strategy)
     + Tax (Often Different Rules)
 
 ## What is in the three documents?

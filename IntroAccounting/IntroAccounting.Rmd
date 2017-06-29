@@ -50,6 +50,35 @@ This is mostly a discussion of nouns.  We will add verbs and get *transactions* 
 
 https://prezi.com/agobxmlocjgj/accountingnoquiz/
 
+## In summary
+
++ Balance Sheet
+    + Assets, things that can be owned.
+        + Current, things that turn into cash over the normal course of doing business.
+        + Fixed, things that require an act of volition to turn into cash.
+        + Other
+    + Liabilities, things that are owed
+        + Current, requires cash in the near future
+        + Other
+    + Owner equity, what is left over OE $\equiv$ Assets - Liabilities
++ Income statement, revenue and expenses
+    + More expenses increase a positive number
+    
+## Summary (Con't)
+
++ Cash Flow Statement, More cash = increase
+    + Operations
+        + Same direction as net income
+    + Investments
+        + Increase if you sell and asset.
+    + Finance
+        + Increase if you borrow
+        + Increase with new owners _investing_
+
+
+## Quiz!
+
+https://prezi.com/rukunfcbnemy/intro-accounting/
 
 ## Connections between the documents
 
@@ -137,4 +166,9 @@ Expense & Liabilities & Investments\\
 \end{tabular}
 \end{center}
 
+## Lets Try an Example
+
+This is before Biketown came into existence.
+
+https://drive.google.com/file/d/0B3ilawp4z7olcVl5TXQ5dVI0WFU/view
 

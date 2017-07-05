@@ -7,7 +7,7 @@ output: beamer_presentation
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-
+options(scipen=999)
 
 Acc<-function(x){format(x,nsmall=2,digits=2,big.mark=',',scientific=FALSE)}
 pgivena<-function(a,i,n){a*((1+i)^n -1)/(i*(1+i)^n)}
@@ -21,19 +21,177 @@ fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
 
 ```
 
+## Time Value of Money Goals
+
++ Create a logical basis for comparing costs and benefits in different time periods.
++ Introduce a common notation that engineers and many economists use for these calculations.
++ Set the basis for:
+    + Loans 
+    + Investment criteria
+    
+## Assumptions
+
+These are demonstrably false but give us tractable methods.
+
++ Costs and benefits of equal size have equal value in all time periods. _Can evaluate without worrying about wealth or taste changes._
++ The value of costs and benefits is independent of costs and benefits  in other time periods. _No habit, addiction or hangovers._
++ Benefits offset costs. _Ever fought a parking ticket?_
++ Future values are known with certainty. _Math is easy_
+
+## What it looks like
+
+$$\sum x_n d(n)$$
+
++ $d(n)$ is a discounting function.  
++ Many are possible but only a few are time consistent.
+    + $d(n) = \frac{1}{(1+r)^n}$ for discrete time.
+    + $d(n) = \frac{1}{e^{r n}}$ for continuous time.
+    
+## Example of Time Inconsistency
+
+I did this in class
+
++ Chose 6-pack of beer a month and a day from now or 1 beer a month from now.
++ A beer right now or a 6-pack tomorrow.
++ Many of you changed your mind.
+
+
+## Integer time
+
++ Will say "Time 1", "Time zero" because "1st time period is confusing"
++ "Now" means time zero.
++ Intervals are half open on the right, e.g., $[0,1)$
+
+## Notes on the interest rate
+
++ We will treat the interest rate as a simple  thing until loans.
++ The rate is always just the per period rate.
++ Later we will get into:
+    + The nominal period.
+    + Compounding period.
+    + Nominial statement.
+    + Effective interest rates.
+
+## Time Consistent  Integer Time Discounting
+
+$$F= P (1+i)^N$$
+
+Symbolic notation depends on context.
+
++ i = The interest rate
++ P = Present worth = some value in time zero.
++ N = N time periods from N = Time N
++ F = Future Value = Present Value in time N = A value in time N.
+
+
+## Easy Future Value Calculation
+
+"If you deposit  $26 into an account that earns 2% a month, how much will be in the account after 500 months?"
+
+$$F = 26(1+.02)^{500} = `r 26*(1+.02)^500`$$
+
++ "how much will be in the account after" is a good signal for future value.
++ 100ths of a percent is more than adequate for calculations.
++ Usually, cents is close enought.
++ D2L questions have a tollerance.
+
+## Easy Present Worth Calculation
+
+"How much would you have to deposit now into an acccount that earns 10% per year to have 100K in 10 years?"
+
+$$P = \frac{100K}{(1+.1)^{10}} = `r 100/1.1^10`K$$
+
++ "How much would you have to deposit now" is a present worth indicator.
+
+## Graphical Notation
+
+![](Sketch.png)
+
+
+## Comments on Graphical Notation
+
++ Up vectors are cash inflow.  
++ Down are cash outflow.
++ Magnitude is size of cash flows.
++ Cash flow in any period is $A_n$.
+
+## Symbols Used in Symbolic (Factor) Notation
+
++ $A_n$ Cost or benefit in time n
++ $n$ Arbitrary time period
++ $N$ Usually but not always the last time period
++ $P$ Present worth in time zero
++ $P_n$ Present worth in time n.
++ $A$ Used in constant series to indicate same value for time 1 to N.
++ $G$ Used in linear gradient series to indicate the change in cash flow from time 1 to N.
++ $g$ Used in geometric gradient series to indicate the percent change in cash flow  from time 1 to N.
+
+## What is factor notation?
+
+It is a functional representation of common cash flow patterns:
+
++ Constant Series, $A_{n+1} = A_n, \forall n = 1 \dots N$
++ Linear Gradient, $A_{n+1} = A_n + G, A_1=0, \forall n = 1 \dots N$
++ Geometric Gradient, $A_{n+1} = A_n (1+g), \forall n = 1 \dots N$
+
+There are other notations in use, e.g. actuarial notation.
+
+![By Delimata - Own work, GFDL, https://commons.wikimedia.org/w/index.php?curid=4312450](https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Actuarial_notation.svg/219px-Actuarial_notation.svg.png){width=20% }
+
+## Factor Notation
+
++ It is a short-hand for the closed form representations of present and future worth for the common patterns
++ Example
+    $$10(P|A, i= 10\%, 5) = 10 \left[ \frac{(1 + .1)^5 -1}{.1 (1+.1)^5}\right] = `r pgivena(10, .1, 5)`$$
+
+The things in the parentheses are a subsitute for the things in the square brackets.
+
+
+## The Key
+
+$$Looking~For = Number(Looking~For|What is number, i, How Long)$$
+
++ A big list is here http://ec314-pdx-edu.wikidot.com/annotated-equations-sheet
++ Hint, if you know $(P|X)$,  $(F|X) = (P|X) (1+r)^N$
+
+## Wait, closed form notation?
+
++ Remember the tricks from sequences and series?  Many work for finite sequences.
++ Closed form has advantage over brute force (We do that next) in that if you mess it up, it looks stupid. 
++ There are also tables of pre-calculated values which are useful for the PE exam.
+
+## Present Worth Three Ways
+```{r fig.width=3, fig.height=1.5, fig.align='center'}
+library(ggplot2)
+cf <- data.frame(y = 10 * c(0,1,1,1,1,1))
+cf$x = 0:(length(cf$y) - 1)
+print(ggplot(cf,aes(x,y,label = y)) + geom_bar(stat = "Identity",color = 'gray',fill = 'gray') + xlab("Period") + ylab("Cash Flow") + geom_text() + scale_y_discrete())
+```
+  + Brute force: $\sum_{n=1}^{5} \frac{10}{(1+.1)^n}$
+  + Tabular: $10 * `r pgivena(1, .1, 5)`$
+  + Closed form: $10(P|A, i = 10\%, 5) = 10 \frac{( 1+.1)^5 - 1}{.1 (1+.1)^5}$ 
+  + Either way you should get `r pgivena(10, .1, 5)`.  
+
+
+## Comments on Three Methods
+
++ Brute force always works but when you make a mistake it hides.
++ Tables don't exist for all interest rates but it was way faster on the PE, which is a speed test.
++ Closed form looks stupid if you have made a mistake, but easy to make a mistake.
+
 
 ## Easy Cash Flow to Factor Notation
 
-```{r fig.width=3, fig.height=2, fig.align='center'}
+```{r fig.width=3, fig.height=1.5, fig.align='center'}
 library(ggplot2)
-cf <- data.frame(y=c(0,1,1,1,1,1))
-cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
+cf <- data.frame(y = c(0,1,1,1,1,1))
+cf$x = 0:(length(cf$y) - 1)
+print(ggplot(cf,aes(x,y,label = y)) + geom_bar(stat = "Identity",color = 'gray',fill = 'gray') + xlab("Period") + ylab("Cash Flow") + geom_text() + scale_y_discrete())
 ```
 Find representation of Present Worth in factor notation
 
 ## Answer
-```{r fig.width=3, fig.height=2, fig.align='center'}
+```{r fig.width=3, fig.height=1.5, fig.align='center'}
 library(ggplot2)
 cf <- data.frame(y=c(0,1,1,1,1,1))
 cf$x=0:(length(cf$y)-1)
@@ -46,12 +204,8 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 
 $$1 (P|A, i, 5)$$
 
-## Just to be clear about factor notation
-
-$$Looking~For = Number(Looking~For|What is number, i, How Long)$$
-
 ## Try this
-```{r fig.width=3, fig.height=2, fig.align='center'}
+```{r fig.width=3, fig.height=1.5, fig.align='center'}
 library(ggplot2)
 cf <- data.frame(y=c(0,0,1,2,3,4))
 cf$x=0:(length(cf$y)-1)
@@ -60,7 +214,7 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 
 
 ## Linar Gradient is Tricky
-```{r fig.width=3, fig.height=2, fig.align='center'}
+```{r fig.width=3, fig.height=1.5, fig.align='center'}
 library(ggplot2)
 cf <- data.frame(y=c(0,0,1,2,3,4))
 cf$x=0:(length(cf$y)-1)

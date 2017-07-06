@@ -1,0 +1,366 @@
+---
+title: "Loans"
+author: "James Woods"
+date: ""
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(scipen=999)
+
+Acc<-function(x){format(x,nsmall=2,digits=2,big.mark=',',scientific=FALSE)}
+pgivena<-function(a,i,n){a*((1+i)^n -1)/(i*(1+i)^n)}
+pgiveng<-function(g,i,n){g*( (1+i)^n -(i*n) -1  )/(i^2*(1+i)^n)}
+agivenp<-function(p,i,n){p*(i*(1+i)^n)/((1+i)^n -1)}
+pgivengrow<-function(a1,g,i,n){a1*(1-(1+g)^n*(1+i)^(-n))/(i-g)}
+
+
+fgivena<-function(a,i,n){pgivena(a,i,n)*(1+i)^n}
+fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
+
+```
+
+
+## First Application of TVM: Loans
+
++ Been dealing with the interest rate as the per period rate.
++ We could move value in time but could not change the unit of analysis, the definition of a period.
++ Effective interest rates allows us to stretch and compress time scales, and
++ Adapt the interest rate to the unit of analysis we want to use.
+
+## Basics of Effective Interest Rates
+
++ Interest rates have three components:
+    + Nominal statement
+    + Nominal Period
+    + Compounding period
+    
++ The final component 'Desired Effective Period' depends on the problem you are trying to solve.
+    + For loans, you want the effective rate per payment period.
+    + For general interest rate comparisons, you want an annual rate most of the time.
+    + Others are problem specific.
+    
+## General Form
+
+$$ \left( 1 + \frac{Nominal}{\# ~Compounding ~in ~Nominal ~Period} \right)^{\# Compounding ~in ~Desired} -1$$
+
+Example: Effective annual rate for 2\% per month compounded daily
+
+$$ \left( 1+ \frac{.02}{30}  \right)^{365} -1 = `r (1+.02/30)^365 -1` $$
+
+## A Note on Time
+
++ If you see "Effective Interest Rate", read it as "Effective *Annual* Interest Rate".
++ Date Relations requires a contract.  Our class contract is:
+    + 7 day = 1 week
+    + 4 week = 1 month
+    + 30 day = 1 month
+    + 12 month =1 year
+    + 52 week= 1 year
+    + 3 month= 1 quarter
+    + 90 day = 1 quarter
+    + 12 week= 1 quarter
+    + 365 day= 1 year
+    
+## When Converting 
+
+
++ Convert directly when possible.
++ Take the  short route on conversions. 365 days = 1 Year 
++ Don't convert days to weeks, then weeks to months and months to years and get,   7*4*12 = 336 days = 1 Year. 
+
+
+## More Frequent Compounding, Higher Effective Rates
+
+Effective Annual Rate
+
++ 12\% per year compounded yearly 
+    + $\left( 1+ \frac{.12}{1}  \right)^{1} -1 = `r (1+.12/1)^1 -1`$
++ 12\% per year compounded monthly 
+    + $\left( 1+ \frac{.12}{12}  \right)^{12} -1 = `r (1+.12/12)^12 -1`$
++ 12\% per year compounded daily 
+    + $\left( 1+ \frac{.12}{365}  \right)^{365} -1 = `r (1+.12/365)^365 -1`$
+
+
+## Desired Effective Period
+
+If it is a multiple of the compounding period, use the math.  If not, read the contract.
+
+12\% per year compounded daily 
+
++ Effective Monthly Rate
+    + $\left( 1+ \frac{.12}{365}  \right)^{30} -1 = `r (1+.12/365)^30 -1`$
+
++ Effective (Annual) Rate 
+    + $\left( 1+ \frac{.12}{365}  \right)^{365} -1 = `r (1+.12/365)^365 -1`$
+
++ Effective Decadal Rate
+    + $\left( 1+ \frac{.12}{3650}  \right)^{365} -1 = `r (1+.12/365)^3650 -1`$
+
+
+
+
+## Application to Time Value of Money Calcs
+
+```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
+library(ggplot2)
+cf <- data.frame(y=c(0,0,5,0,5,0,5,0,5,0,5) )
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
+```
+
+Not a constant series but you can find PW with brute force with interest at 10\% per period compounded each period.
+
+$$ P= \frac{5}{(1+.1)^{2}} + \frac{5}{(1+.1)^{4}}+\frac{5}{(1+.1)^{6}}+\frac{5}{(1+.1)^{8}}+\frac{5}{(1+.1)^{10}}$$
+
+## Reframe the problem
+
+Find the 2-Period interest rate
+
+$$ \left( 1 + \frac{.1}{1} \right)^2 -1 =`r 1.1^2 -1` = i_2$$
+
+and rewrite as a constant series
+
+$$P = 5 (P|A, i= i_2, 5)$$
+
+Try the two calculations, brute force and this.  They give the same result `r pgivena(5,.21,5)`.
+
+
+
+## But Lets Get Into Loans
+
+There is a bewildering number  of  parameters  for loans.  
+
++ How interest is treated:
+    + Simple interest -- Which we will not address
+    + Amortizing -- which uses $(P|A)$ and is common.
+
++ How interest is paid
+    + Interest only -- you owe what your borrowed at the end.
+    + Fully Amortizing -- you owe nothing at the end.
+    + Other -- Negative and partial amortizing
+
++ Stability of interest rates and how changes are implemented
+    + Fixed rate loans
+    + Adjustable rate loans
+    + Refinance
+    
+And many conventions on how loans and interest rates are described.
+
+
+## Example Convention
+
+"I took out a 3.5\% mortgage". 
+
++ That means that they took out a 30-year fixed rate mortgage where the interest rate is 3.5\% per year compounded monthly with monthly payments.  
+
++ They told you the nominal rate but all the other parameters are by convention.
+
+
+## Lets take out and pay off some loans
+
++ Our loan examples will typically have high rates, so you can see the effects of changes on the interest rates.
++ The terms may be goofy, weekly payments compounded daily.
++ Usually a small number of payments to keep everything on one slide.
+
+## How to Calculate Payments on Amortizing Loan
+
+$$Payment = Principal (A|P, i = i_e, \#~Payments)$$
+
+$i_e$ is the effective interest rate per payment period.
+
+## Example
+
+Borrow 10,000 at 7\% per week compounded daily with biweekly payments for 10 months.
+
+
+
+Effective interest rate per payment period:
+$\left( 1 +\frac{.07}{7}  \right)^{14} -1 = `r (1+.07/7)^14 -1` = i_e$
+
+
+
+Payments:
+$10000 (A|P, i = i_e, 20) = `r agivenp(10000,(1+.07/7)^14 -1,20)`$
+
+
+## Simpler Example with Payment Details
+
+\$10,000 at 10\% per month, compounded monthly, for three monthly payments.
+
+What are the payments?
+$10000 (A|P, i = .1, 3) = `r agivenp(10000,.1,3)`$
+
+## Amortization Tables
+
++ They show for each payment
+    + The payment
+    + The interest expense  -- important since this goes on the income statement and reduces taxes.
+    + The principal payment -- Does not reduces taxes or go on income statement but it does reduce cash flow.
+    + Balance -- How much you owe after the payment.
+    
++ How you get them:
+    + Payments are always the same
+    + Interest expense is the balance remaining times the effective interest rate per payment period.
+    + Principal payment is the payment less the interest expense.
+    + Balance remaining is the previous balance remaining less then principal payment.
+    
+    
+## For the loan
+
+```{r}
+FinFormat <- function(x) format(x, digits=2, decimal.mark=".",   big.mark=",", small.interval=3)
+
+PMT <- agivenp(10000,.1,3)
+i1 <- 10000*.1
+P1 <- PMT -i1
+B1 <- 10000-P1
+
+i2 <- B1*.1
+P2 <- PMT -i2
+B2 <- B1-P2
+
+i3 <- B2*.1
+P3 <- PMT - i3
+B3 <- B2-P3
+
+
+```
+
+Payment Number | Payment          | Interest  | Principal | Balance
+---------------|---------         |---------- |-----------|--------
+0              |                  |                 |                 |`r FinFormat(10000)`
+1              |`r FinFormat(PMT)`|`r FinFormat(i1)`|`r FinFormat(P1)`|`r FinFormat(B1)`
+2              |`r FinFormat(PMT)`|`r FinFormat(i2)`|`r FinFormat(P2)`|`r FinFormat(B2)`
+3              |`r FinFormat(PMT)`|`r FinFormat(i3)`|`r FinFormat(P3)`|`r FinFormat(B3)`
+
+
+
+Yes, there is a little rounding.
+
+## You can also find balance remaining with (P|A)
+
++ The balance remaining on an amortizing loan is always equal to the present worth of the remaining payments.
+
++ Also, true before you make you make your first payment.
+
++ From Table before, balance remaining after one payment is, `r FinFormat(B1)`.
+
++ $`r FinFormat(PMT)`(P|A, i =.1, 2) = `r pgivena(PMT, .1, 2)`$
+
+
+## Refi vs Interest rate change
+
++ Refinance means taking out a whole new loan with a different interest rate.
+    + If you refinance your mortgage, 360 payments, after making 120 payments, your new payments are based on the current balance remaining and the new rate, but it resets the number of payments
+    + You have 360 payments to pay off the loan.
+
++ If the interest rate changes, such as when you have an ARM loan.
+    + You calculate the new payments based on the new rate and current balance remaining, but the number of remaining payments stays the same
+    + You would still have only 240 payment left.
+    
+
+  
+## Compare a refi at 5\% vs interest reduction to 5\% after one payment.
+
++ Refi: $`r B1`(A|P, i = .05, 3 ) = `r agivenp(B1,.05,3)`$
++ ARM: $`r B1`(A|P, i = .05, 2 ) = `r agivenp(B1,.05,2)`$
+
++ In short:
+    + Refi can lower your rate and extend the term resulting in lower payments.
+    + Lowering an interest rate reduces the rate but does not decrease the remaining term.  Payments are lower but by not as much as a refi.
+    
+
+## What about Interest Only Loans?
+
++ There are good use cases.  
++ They are great if:
+    + You are trying to conserve cash
+    + You do not intend to make all the payments on the loan.
+    + You are financing an asset that _will_ appreciate in value.
+    
++ Having to pay back what you borrowed after making a lot of payments can come as a surprise.
+    + Modern terminology is 'balloon payment'
+    + Old terminology is 'bullet'
+
+
+## Compare and interest only mortgage vs amortizing
+
+Start with the same 6\% interest rate on a 30-year \$200,000 mortgage.
+
++ The effective interest rate per payment period is $\frac{.06}{12}= .5\%$
+
++ Payment on amortizing loan is $200000 (A|P, i = .5\%, 360) = `r agivenp(200000,.005,360)`$.
++ Payment on interest only is $200000 (.005) = `r 200000*.005`$.
+
+
++ Note that the payments are lower for interest only, but they still owe the original \$200000 after making all those payments.
+
+## Typical Amatorization Table for Interest Only Loan
+
+Payment Number | Payment          | Interest  | Principal | Balance
+---------------|---------         |---------- |-----------|--------
+0              |                  |                 |                 |`r FinFormat(10000)`
+1              |`r FinFormat(10000*.1)`|`r FinFormat(10000*.1)`|`r FinFormat(0)`|`r FinFormat(10000)`
+2              |`r FinFormat(10000*.1)`|`r FinFormat(10000*.1)`|`r FinFormat(0)`|`r FinFormat(10000)`
+3              |`r FinFormat(10000*.1)`|`r FinFormat(10000*.1)`|`r FinFormat(10000)`|`r FinFormat(0)`
+
+
+There are multiple conventions on where to put the bullet.  I like it there but others have a separate line or column for the principal repayment.  The disadvantage is that it blows the usual definition of principal payment as the payment less interest expense.
+
+## What is a "point"
+
++ Slang for 1 percent.  
++ Basis point is 1/100 of a percent.
++ Cool kids even say "BEEP" for basis point.
+
++ "Points", side payments as a percent of the loan, to or from the lender, can signal how long you want to keep the loan.
+
+## Why "Points"?
+
+US Mortgages allow early repayment by just paying off the balance remaining.
+
++ Canada requires you to pay the interest if you locked it in.
++ Other places require you to repurchase a fraction of the bond that holds your mortgage. 
+    + If the interest rate in the market drops, you could owe more than you borrowed.
+    + Price of bonds moves opposite of interest rates.
+
+## The Problem
+
++ Lender costs are front-loaded.
++ If you don't keep the loan for 30-years, they need to charge higher rates to recover.
++ If a bank tells you that you get a lower rate if you promise to keep it for 30 years, you lie and say yes.
+
+Solution: Menu Contract
+
+## Menu Contract
+
++ Two types of people Short-timers and long-timers.
++ Bank can't tell the difference.
++ A pooling contract, short-timers and long-timers getting the same rate is inefficient.
++ Points
+    + Give the bank money now in exchange for lower payments.
+    + Lower payments are more valuable to the borrower when they are a long-timer.
+
+## Truth Revealing
+
+Ignoring time value of money ...
+
+You can Pay \$15 for a \$1 reduction in annual payments. 
+
++ Long-timer (30-years)
+    + Take it and save \$30 - \$15 = \$15 dollars  
++ Short-timer (5-years)
+    + Take it and be worse off \$5 - \$15 = - \$10
+
+Only real long timers will pay the point.  They credibly reveal they are a long-timer.    
+
+## How to Study
+
++ No real drill and kill.
++ Know how to find the right interest rate for what you are trying to do.  Loan payments require effective interest rate per payment period.
++ Be able to fill out an amortization table.
++ Be able to refi and have your interest rate adjusted.
++ Will come back when we do cash flow projections.
+

@@ -595,5 +595,6 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 + Kill trees. Work lots of problems.  Everything after this depends on understanding TVM.
 + Drill and Kill the examples and the videos at bottom of the page. http://ec314-pdx-edu.wikidot.com/q2:time-value-of-money
 + When evaluating these expressions, try to do all the work in the calculator in one operation.  Sometimes rounding and truncation errors are bad with large interest rates.
++ Go forwards, factor notation to cash flow diagram, and backwards, cash flow to factor.
 
 

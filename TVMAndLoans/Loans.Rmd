@@ -68,8 +68,8 @@ $$ \left( 1+ \frac{.02}{30}  \right)^{365} -1 = `r (1+.02/30)^365 -1` $$
 
 + Convert directly when possible.
 + Take the  short route on conversions. 365 days = 1 Year 
-+ Don't convert days to weeks, then weeks to months and months to years and get,   7*4*12 = 336 days = 1 Year. 
-
++ Don't convert days to weeks, then weeks to months and months to years and get,   (7)(4)(12) = 336 days = 1 Year. 
++ In real life, check the contract.
 
 ## More Frequent Compounding, Higher Effective Rates
 
@@ -82,6 +82,10 @@ Effective Annual Rate
 + 12\% per year compounded daily 
     + $\left( 1+ \frac{.12}{365}  \right)^{365} -1 = `r (1+.12/365)^365 -1`$
 
+
+## Keep in mind
+
+$$ \left( 1 + \frac{Nominal}{\# ~Compounding ~in ~Nominal ~Period} \right)^{\# Compounding ~in ~Desired} -1$$
 
 ## Desired Effective Period
 
@@ -96,9 +100,43 @@ If it is a multiple of the compounding period, use the math.  If not, read the c
     + $\left( 1+ \frac{.12}{365}  \right)^{365} -1 = `r (1+.12/365)^365 -1`$
 
 + Effective Decadal Rate
-    + $\left( 1+ \frac{.12}{3650}  \right)^{365} -1 = `r (1+.12/365)^3650 -1`$
+    + $\left( 1+ \frac{.12}{365}  \right)^{3650} -1 = `r (1+.12/365)^3650 -1`$
+
+## Off-Beat Examples
+
++ Effective monthly rate of 18% per year compounded monthly.
+    + $\left( 1+ \frac{.18}{365}  \right)^{30} -1 = `r (1+.18/365)^30 -1`$
++ Effective annual rate of 7% per week compounded daily.
+    + $\left( 1+ \frac{.07}{7}  \right)^{365} -1 = `r (1+.07/7)^365 -1`$
++ Effective monthly rate of a 3% mortgage.
+    + Remember, "mortgage" tells you to assume a lot of things in the US.
+    + $\left( 1+ \frac{.03}{12}  \right)^{1} -1 = \frac{.03}{12} = `r .03/12`$
+
+## Back to the Pre-test
 
 
+1.  Suppose you deposit \$100 into an account that earns 12% a year compounded _annually_.  How much would be in the account after 10 years?
+
+2.  Suppose you deposit \$100 into an account that earns 12% a year compounded _monthly_.  How much would be in the account after 10 years?
+
+## Answer 1
+
+
+1.  Suppose you deposit \$100 into an account that earns 12% a year compounded _annually_.  How much would be in the account after 10 years?
+
++ Use *year* as your unit of analysis.  
++ Effective interest rate per year is $\left( 1+ \frac{.12}{1}  \right)^{1} -1 = `r .12`$
++ "In account after" indicates future value.
++ $100 ( 1 + .12 )^{10} = `r 100*(1.12)^10`$
+
+## Answer 2
+
+2.  Suppose you deposit \$100 into an account that earns 12% a year compounded _monthly_.  How much would be in the account after 10 years?
+
++ Use *month* as your unit of analysis.  
++ Effective interest rate per month is $\left( 1+ \frac{.12}{12}  \right)^{1} -1 = `r .12/12`$
++ "In account after" indicates future value.
++ $100 ( 1 + .01 )^{10*12} = `r 100*(1.01)^(10*12)`$
 
 
 ## Application to Time Value of Money Calcs

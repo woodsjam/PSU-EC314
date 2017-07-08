@@ -1,0 +1,82 @@
+---
+title: "Choice"
+output: pdf_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(scipen=999)
+
+Acc<-function(x){format(x,nsmall=2,digits=2,big.mark=',',scientific=FALSE)}
+pgivena<-function(a,i,n){a*((1+i)^n -1)/(i*(1+i)^n)}
+pgiveng<-function(g,i,n){g*( (1+i)^n -(i*n) -1  )/(i^2*(1+i)^n)}
+agivenp<-function(p,i,n){p*(i*(1+i)^n)/((1+i)^n -1)}
+pgivengrow<-function(a1,g,i,n){a1*(1-(1+g)^n*(1+i)^(-n))/(i-g)}
+
+
+fgivena<-function(a,i,n){pgivena(a,i,n)*(1+i)^n}
+fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
+
+```
+
+<!-- This is just a rough in -->
+
+## Goals
+
++ Be able to make a *financial* argument for the choice of one asset over another.
++ Be able to use all the criteria depending on client needs.
++ Do some calculator practice.
+
+
+## Convergent Development
+
++ Both Engineering and Economics developed Cost/Benefit analysis ideas in parallel.
++ Many similarities but ...
+    + Engineers focus on the money alone.
+    + Economists focus on welfare, money plus opportunity costs.
++ The side-effect is a lot of misunderstandings.
+
+## Things you need to know to make a choice
+
++ The kind of choice (Environment), e.g., exclusive choice
++ The assets
++ The minimum acceptable rate of return (MARR), an interest rate
++ The planning horizon
++ The prefered criteria
+
+## Two Envioronments
+
+## How we describe assets
+
+## Synthetic Assets
+
+## The Three + One Tests
+
+## Basic, no calculation, ideas
+
+This is from the pre-test
+
+Year| A | B | C
+----|---|---|---
+0   | 0 | 0 |0
+1   |10 |0  |0
+2   |0  |10 |20 
+
++ More in the same time period is better, $C \succ B$
++ Same amount sooner is better, $A \succ B$
++ Anything other than these two pure cases requires some computation.
+
+
+## Simple Payback
+
++ Warning
+    + This one is not consistent with the others and does not always give the same choice.
+    + In common use as a pre-test
+
+## Why Simple Payback Fails
+
+##
+## Using exclusive choice for counts
+
+##

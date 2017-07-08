@@ -172,3 +172,30 @@ This is before Biketown came into existence.
 
 https://drive.google.com/file/d/0B3ilawp4z7olcVl5TXQ5dVI0WFU/view
 
+## Back to the Pre-test
+
++ Which of the following is _not_ an asset?
+    + Employees 
+    + Land
+    + Machinery
+    + Cash
+    + Owner Equity
+    + Accounts Receivable
+
+
+
++ Which of the following is a liability?
+    + Cash
+    + Accounts Receivable
+    + Owner Equity
+    + Tax Owed
+    + None of the above
+
+
++ Which of the following is an expense?
+    + Owner Equity
+    + A Loan
+    + Taxes
+    + None of the above
+
+

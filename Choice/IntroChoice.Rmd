@@ -1,6 +1,6 @@
 ---
 title: "Choice"
-output: pdf_document
+output: beamer_presentation
 ---
 
 
@@ -33,9 +33,23 @@ fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
 
 + Both Engineering and Economics developed Cost/Benefit analysis ideas in parallel.
 + Many similarities but ...
-    + Engineers focus on the money alone.
-    + Economists focus on welfare, money plus opportunity costs.
-+ The side-effect is a lot of misunderstandings.
+    + Engineers focus on the money alone and certainty style analysis
+    + Economists focus on welfare, money plus opportunity costs, and like the dealing with randomness.
++ The side-effect is a lot of misunderstandings and a lot of complaints about goofiness on all sides.
+
+## There are rule books
+
+Here is one for energy efficiency evaluation.  
+
+https://nationalefficiencyscreening.org/wp-content/uploads/2017/05/NSPM_May-2017_final.pdf
+
+Your industry may, or may not, have one, but you should find out the quirks in the usual rules for your industry.  
+
+Some rules may be odd because of:
+  
+  + Actual laws and regulations (the details legislators didn't write.)
+  + Case law.
+  + Local and unwritten past practice.
 
 ## Things you need to know to make a choice
 
@@ -43,13 +57,50 @@ fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
 + The assets
 + The minimum acceptable rate of return (MARR), an interest rate
 + The planning horizon
-+ The prefered criteria
++ The preferred criteria
 
 ## Two Envioronments
 
-## How we describe assets
+We only work with four environments in this class.  
 
-## Synthetic Assets
++ *Unconstrained Choice*: Pick the _acceptable_ assets. 
++ *Exclusive Choice*: Pick the _best_ asset. 
++ Increasing Cost of Funds: Pick acceptable assets when you face many interest rates.
++ Capital Budgeting: Pick the best group of assets when limited on how much you can spend.
+
+## How we Describe Assets
+
++ As a finite menu of choices, e.g., A, B, C, D, E.
++ It could be a list like:
+    + French Frys, oninion rings, cheese sticks, deep fried oreo.
+    + or Cash Flows
+    
+    Year| A | B | C
+----|---|---|---
+0   | 0 | 0 |0
+1   |10 |0  |0
+2   |0  |10 |20 
+
+
+## More on the assets.
+
++ Always assume there is only one if each asset.
++ If you need to choose about getting more than one.
+    + 1 to 3 French Fries in unconstrained choice. {French Fry, French Fry, French Fry}
+    + 1 to 3 French Fries in exlusive choice. {1 French Fry, 2 French Fry, 3 French Fry}
+
++ Key Econ vs Engineer Difference
+    + Engineers with have an adder for "interactive effects"
+    + Economists will tend to have an objective function that does something similar.
+
+## Examples
+
++ Give me a list of options that is clearly unconstrained, "Choose the acceptable assets", choice.
++ Give me a list of options that is clearly exclusive, "Choose the best asset", choice.
+
+## MARR
+
+## Planning Horizon
 
 ## The Three + One Tests
 

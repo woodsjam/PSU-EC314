@@ -1,8 +1,11 @@
 ---
 title: "Time Value of Money"
 author: "James Woods"
-date: ""
-output: beamer_presentation
+date: ''
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+  beamer_presentation: default
 ---
 
 ```{r setup, include=FALSE}

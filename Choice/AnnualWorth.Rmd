@@ -22,7 +22,7 @@ fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
 
 ## Goals
 
-+ Present AW as a frequent client preferred measure of costs and benefits.
++ Present AW as a frequently preferred measure of costs and benefits.
 + Show details of AW calculation.
 + Give warnings about interpretation
 + Show a computational advantage in problems of repeated purchases.
@@ -33,8 +33,8 @@ fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
 $$AW(Asset) = PW(Asset)(A|P,i,Life~of~Asset)$$
 
 + AW is a transformation of present worth.
-+ AW is except in one edge case, smaller than PW.
-    + The edge case is an asset the is installed at time zero and only lasts through time 1.
++ AW is, except in one edge case, smaller than PW.
+    + The edge case is an asset that is installed at time zero and only lasts through time 1.
     + $(A|P,i,1) = \frac{i (1+i)}{ (1+i) -1} = (1+i)$
 + Many synonyms
     + Levelized cost
@@ -112,7 +112,7 @@ What is the levelized cost of the $1.5M metal roof when the MARR is 10%?
 
 ## Answer
 
-$$1500K(A|P, i = 1, 40) = `r agivenp(1500, .1, 40)`K$$
+$$1500K(A|P, i = .1, 40) = `r Acc(agivenp(1500, .1, 40))`K$$
 
 Interpret this as the annual cost of roofing services.
 
@@ -136,10 +136,121 @@ AW2 <- agivenp(PW2, .1, 40)
 ```
 
 
-+ One Roof: $ `r PW1`K (A|P, i = 10\%, 20) = `r Acc(AW1)`K$
++ One Roof: $ `r Acc(PW1)`K (A|P, i = 10\%, 20) = `r Acc(AW1)`K$
 + Two Roofs:
-    + $PW(PVC| 40 Years) = `r PW1`K + \frac{`r Acc(PW1)`K}{1.1^{20}} = `r Acc(PW2)`K$
+    + $PW(PVC| 40 Years) = `r Acc(PW1)`K + \frac{`r Acc(PW1)`K}{1.1^{20}} = `r Acc(PW2)`K$
     + $AW(PVC| 40 Years) = `r Acc(PW2)`K (A|P, i = 10\%, 40) = `r Acc(AW2)`K$
     
     
+
+This is the computational advantage of AW in the case of repeated purchases.
+
+## Repeated Purchases
+
++ AW provides a computational shortcut when there are repeated purchases.
+    + If you buy one asset and then replace it with an identical one.
+    + Like replacing lamps in fixtures.
++ Only works if the asset lives are factors of the planning horizon.
++ I usually call these conforming assets.
++ Example:  
+    + Planning horizon of 12 years.
+    + Options have lives of 3, 4, 2, and 6 years.
+    
+## Repeated Purchases (Con't)
+
+As long as assets are factors of the planning horizon:
+
+$$AW(Asset | Single) = AW (Asset| Repeated)$$
+
+## The planning horizon
+
+Often times you are not given an explicit planning horizon.
+
++ I've done this to you with abstract assets.  The planning horizon is implicitly the life of the longest lived asset.
++ Planning horizon is 2 years.
+    
+Year| A | B | 
+----|---|---|
+0   | 0 | 0 |
+1   |10 |0  |
+2   |0  |10 |
+
+## Common Practice
+
++ Common practice is to set the planning horizon equal to the least common multiple of the asset lives.
+    + Asset lives of 2, 3 and 4 years
+    + Planning horizon of 12.
++ Same as result as infinite horizon without the limits.
+
+## Comments on Common Practice
+
++ The planning horizon should be reasonable.
++ Backyard Aquaculture Story:
+    + Two potential pumps: 3 and 4 year pumps
+    + Planning horizon 12 years.
+    + If 8 and 9 years?  I'm not living another 72 years.
++ Rounding a few years on asset lives often does not matter much for long-lived investments.
+    + (P|A, i = 1., 100) = `r pgivena(1, .1, 100)`
+    + (P|A, i = 1., 101) = `r pgivena(1, .1, 101)`
++ Do the math anyway, you are billing, but it probably won't change the decision.
+
+## Common Practice  for Non-conforming Assets
+
++ Two general options:
+    + Repeat purchases followed by an equipment lease for the remaing time.
+    + Repeat purchases followed by salvage/sale of asset before end of life.
++ Calculate PW based on these patterns and convert to AW.
++ Example:  5 Year asset and 12 year planning horizon
+    + Lease: $PW = PW(Asset) + \frac{PW(Asset)}{(1 +i)^{5} } + \frac{Lease(P|A, i, 2)}{(1+i)^{10}}$
+    + Salvage: $PW = PW(Asset) + \frac{PW(Asset)}{(1 +i)^{5} } + \frac{PW(Asset)}{(1 +i)^{10} } +
+    \frac{Salvage}{(1+i)^{12}}$
+    
+## Backyard Aquaculture
+
+The idea was to add Tillapia to the composting and garden cycle. MARR of 10%
+
++ Choice of two pumps to keep water moving.
+    + Pump 1: 7 year life, $100.
+    + Pump 2: 5 year life, $75.
+    
++ Calculate the AW
++ Choose the best asset to provide this service.
+
+## Answer
+
++ Note implied planning horizon is 35 years.
++ AW Calculations
+    + $AW(Pump 1) = 100 (A|P, i = .1, 7) = `r Acc(agivenp(100, .1, 7))`
+    + $AW(Pump 2) = 75 (A|P, i = .1, 5) = `r Acc(agivenp(100, .1, 5))`
+    
++ Interpretation
+    + Pump 1 provides pumping services at a cost of \$`r Acc(agivenp(100, .1, 7))` per year.
+    + Pump 2 provides pumping services at a cost of \$`r Acc(agivenp(75, .1, 5))` per year.
+
+
+Notice that Pump 2 provides pumping services at the lowest cost.
+
+## You Can Do PW too
+
+PW Calculations for 35 Year planning horizon.
+
++ $PW(Pump~1| 35 Years) = 100 + \frac{100}{1.1^{7}}+ \frac{100}{1.1^{14}}+ \frac{100}{1.1^{21}} + \frac{100}{1.1^{28}} = `r Acc(100 + 100/1.1^7+ 100/1.1^14+ 100/1.1^21+ 100/1.1^28)`$
++ Will use the time compression trick.
+```{r}
+R5 <- round((1.1)^5-1,4)
+```
+    + Effective 5-year rate: $(1+\frac{.1}{1})^5 -1 = `r R5`$
+
+    + $PW(Pump~2| 35 Years) = 75 + \frac{75(P|A, i = `r R5`, 6)}{(1+ `r R5`)} = `r Acc(75 + pgivena(75, R5, 6))`$
+    
+    
+Notice that Pump 2 provides pumping services at the lowest cost.
+
+
+## Summary
+
++ AW and PW give consistent choice but by different means.
++ AW provides a computational advantage when asset lives are factors of planning horizon.
++ Clients often find AW, per-period costs and benefits, easier to interpret than PW, life-cycle costs and benefits.
+
 

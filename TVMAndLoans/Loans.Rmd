@@ -104,7 +104,7 @@ If it is a multiple of the compounding period, use the math.  If not, read the c
 
 ## Off-Beat Examples
 
-+ Effective monthly rate of 18% per year compounded monthly.
++ Effective monthly rate of 18% per year compounded daily.
     + $\left( 1+ \frac{.18}{365}  \right)^{30} -1 = `r (1+.18/365)^30 -1`$
 + Effective annual rate of 7% per week compounded daily.
     + $\left( 1+ \frac{.07}{7}  \right)^{365} -1 = `r (1+.07/7)^365 -1`$
@@ -168,7 +168,7 @@ Try the two calculations, brute force and this.  They give the same result `r pg
 
 ## But Lets Get Into Loans
 
-There is a bewildering number  of  parameters  for loans.  
+There is a bewildering number  of parameters  for loans.  
 
 + How interest is treated:
     + Simple interest -- Which we will not address

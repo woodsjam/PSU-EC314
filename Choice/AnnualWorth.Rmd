@@ -1,0 +1,145 @@
+---
+title: "Annual Worth"
+output: beamer_presentation
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(scipen=999)
+
+Acc<-function(x){format(x,nsmall=2,digits=2,big.mark=',',scientific=FALSE)}
+pgivena<-function(a,i,n){a*((1+i)^n -1)/(i*(1+i)^n)}
+pgiveng<-function(g,i,n){g*( (1+i)^n -(i*n) -1  )/(i^2*(1+i)^n)}
+agivenp<-function(p,i,n){p*(i*(1+i)^n)/((1+i)^n -1)}
+pgivengrow<-function(a1,g,i,n){a1*(1-(1+g)^n*(1+i)^(-n))/(i-g)}
+
+
+fgivena<-function(a,i,n){pgivena(a,i,n)*(1+i)^n}
+fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
+
+```
+
+## Goals
+
++ Present AW as a frequent client preferred measure of costs and benefits.
++ Show details of AW calculation.
++ Give warnings about interpretation
++ Show a computational advantage in problems of repeated purchases.
+
+
+## AW
+
+$$AW(Asset) = PW(Asset)(A|P,i,Life~of~Asset)$$
+
++ AW is a transformation of present worth.
++ AW is except in one edge case, smaller than PW.
+    + The edge case is an asset the is installed at time zero and only lasts through time 1.
+    + $(A|P,i,1) = \frac{i (1+i)}{ (1+i) -1} = (1+i)$
++ Many synonyms
+    + Levelized cost
+    + Capitalized cost (Danger PW is sometimes called this too)
+    + Equivalent annual cost
+    
+## Simple Example
+
+The car costs 10K and will last five years.  What is the per-period cost of the car when the MARR is 10%?
+
+$$10K(A|P, i = 10\%, 5) = `r Acc(agivenp(10, .1, 5))`K$$
+
++ The purchase price -- now -- is a present worth.
++ Notice that it is not $\frac{10K}{5}$. It does take into account that you paid for the car in time zero.
+
+## The AW Criteria
+
++ Annual Worth
+    + Per-period costs and benefits ($)
+    + Unconstrained: If $AW \geq 0$ get it.
+    + Exclusive: If assets have the same life, choose asset with largest AW.
+    
+## Unconstrained Choice
+
+If $AW \geq 0$ get it.
+
+$$AW(Asset) = PW(Asset)(A|P,i,Life~of~Asset)$$
+
++ Note that $(A|P,i,Life~of~Asset)$ is always positive.
++ That means $PW \geq 0 \Rightarrow AW \geq 0$
+
+
+## Exclusive Choice
+
+If assets have the same life, choose asset with largest AW.
+
++ The "If" is critical
++ Example why
+
+Year| A | B |
+----|---|---|
+0   | 0 | 0 |
+1   |10 |9  |
+2   |  |9  |
+3   | |9  |
+4   | |9  |
+5   | |9  |
+AW | 10 | 9|  
+
++ With moderate MARR, B is better but has lower AW.
+
+## The If
+
++ It is less restrictive than you think and often useful.
++ You can construct assets from other assets.
++ Example {Car, Kayak Rack, Kayaks}
+    + Doesn't make sense to get a rack without a car or kayaks.
+    + Re-frame as exclusive choice: 
+        + A = {Car}
+        + B = {Car, Kayaks}
+        + C = {Car, Rack, Kayaks}
+
+## How this helps with repeated purchases
+
++ Remember the Roof Example?
+    + Metal Roof (Like the old one but 'done correctly') would last 40 years and cost $1.5M.
+    + PVC Roof would last 20 years and cost 800K to install.  It also requires 15K in additional inspection and maintenance in years 16-20.
++ These have unequal lives but you can use AW by constructing a new asset
+    + A = {Metal now}
+    + B = {PVC now, PVC in 20 years}
+    
+## The Metal Roof
+
+What is the levelized cost of the $1.5M metal roof when the MARR is 10%?
+
+## Answer
+
+$$1500K(A|P, i = 1, 40) = `r agivenp(1500, .1, 40)`K$$
+
+Interpret this as the annual cost of roofing services.
+
+## The PVC Roof
+
+What is the levelized cost of the the two PVC roofs when the MARR is 10%?
+
+PW of the first roof is:
+$$PW(PVC) = 800K + \frac{15K(P|A, i = .1, 5)}{(1+.1)^{15}} = `r Acc(800 + pgivena(15, .1, 5)/(1.1^15))`K$$
+
+## Trick Question
+
+The answer is the same if you make the calculation with two roofs or one.
+
+```{r}
+PW1 <- 800 + pgivena(15, .1, 5)/(1.1^15)
+AW1 <- agivenp(PW1, .1, 20)
+PW2 <- PW1 + PW1/1.1^20
+AW2 <- agivenp(PW2, .1, 40)
+
+```
+
+
++ One Roof: $ `r PW1`K (A|P, i = 10\%, 20) = `r Acc(AW1)`K$
++ Two Roofs:
+    + $PW(PVC| 40 Years) = `r PW1`K + \frac{`r Acc(PW1)`K}{1.1^{20}} = `r Acc(PW2)`K$
+    + $AW(PVC| 40 Years) = `r Acc(PW2)`K (A|P, i = 10\%, 40) = `r Acc(AW2)`K$
+    
+    
+

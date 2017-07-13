@@ -82,10 +82,10 @@ We only work with four environments in this class, two now and two later.
 
 ## More on the assets.
 
-+ Always assume there is only one if each asset.
-+ If you need to choose about getting more than one.
-    + 1 to 3 French Fries in unconstrained choice. {French Fry, French Fry, French Fry}
-    + 1 to 3 French Fries in exclusive choice. {1 French Fry, 2 French Fry, 3 French Fry}
++ Always assume there is only one of each asset.
++ If you need to choose how many.
+    + 1 to 3 French Fries in unconstrained choice. {French Fry, French Fry, French Fry} (Rare Econ)
+    + 1 to 3 French Fries in exclusive choice. {1 French Fry, 2 French Fry, 3 French Fry} (Eng + Econ)
 
 + Key Econ vs Engineer Difference
     + Engineers tend to modify the assets but keep the same objective function, i.e., sum the assets and the adder for interaction.
@@ -110,22 +110,33 @@ It is intended to represent the opportunity cost of the investment.  Opportunity
     + State bond rate
     + Growth rate in real GDP.
     
-## MARR (Con't)
+## Sometimes
 
+You have to hold the client's hand and guide them through a process of finding the right real (abstracting out inflation) interest rate and then adding in inflation forecasts.  
+    
+$$Nominal = Real + Inflation + (Real)(Inflation)$$    
+    
+Sometimes you are told
+
++ Ask accounting.
++ There may be a law.
++ Office of Management and Budget (OMB) publishes what you should use https://www.federalregister.gov/documents/2017/01/10/2017-00209/discount-rates-for-cost-effectiveness-analysis-of-federal-programs
 + In this class I will give you the MARR.
-+ Gotchas
-    + If you have constraints, cash flow limitations like the capital budgeting problem, the MARR does not reflect the full opportunity cost.
-    + The shadow cost of the constraint is implicitly in the choice but this confuses people.
-    + Econ/Engineer difference.
-        + Engineers change the procedure to keep present worth calculation easy.
-        + Economists switch to mixed integer programming.
+
+## Gotchas
+
++ If you have constraints, cash flow limitations like the capital budgeting problem, the MARR does not reflect the full opportunity cost.
++ The shadow cost of the constraint is implicitly in the choice but this confuses people.
++ Econ/Engineer difference.
+    + Engineers change the procedure to keep present worth calculation easy.
+    + Economists switch to constrained optimization.
 
 ## Planning Horizon
 
 This is how far into the future you need to look.
 
 + In this class it is mostly implied by the kind of question.
-+ Most important when we are looking at service investments. When we must provide specific services for a stated number of years.
++ Most important when we are looking at service investments, i.e., when we must provide specific services for a stated number of years.
 + Can be important in determining which asset is best.
 
 One of the first questions for many home improvements is, "How long will you stay in the house?" Not all improvements get reflected in the sales price.
@@ -164,7 +175,7 @@ Different planning horizon yields different choices.
 + Annual Worth
     + Per-period costs and benefits ($)
     + Unconstrained: If $AW \geq 0$ get it.
-    + Exclusive: If assets have the same life, choose largest AW
+    + Exclusive: If assets have the same life, choose asset with largest AW
 + Internal Rate of Return
     + Per-period costs *or* benefits (%)
     + Unconstrained:  If a single IRR exists ...
@@ -178,7 +189,7 @@ Different planning horizon yields different choices.
 <!-- AW| Per-Period costs and benefits| If $WW \geq 0$ buy it| If assets have same life, Largest AW | Good for repeated purchases. -->
 <!-- IRR| Per-dollar costs or benefits| If investment and IRR>MARR, buy it.  If loan and IRR<MARR get it.| The procedure| Great in later environments. -->
 
-## Why the calculation
+## Why the calculation?
 
 This is from the pre-test
 
@@ -219,7 +230,7 @@ Year| A | B | C
 
 "Must have simple payback of 3 years or less."
 
-+ Pretty simple, a five year old and a legislator can understand it.
++ Pretty simple, a five year old *or* a legislator can understand it.
 + Does not require an interest rate.
 + Computationally simple.
 
@@ -248,7 +259,7 @@ Year| A | B |
 + Works best with a single cost and a stream of benefits that follow.
 + Often used as a pre-screen before PW/AW/IRR are applied.
 + Not always consistent with the big three tests, fails some good investments and passes some bad ones.
-
++ There is also a discounted payback criteria. Silk purse out of a sow's ear
 
 Will not test you on this.
 
@@ -301,7 +312,7 @@ Year| A | MARR |
 1   |15 |11  |
 PW(10%)| `r -10 + 15/1.1`| 0|
 
-+ Putting money in the MARR account always give a PW of zero.
++ Putting money in the MARR account always gives a PW of zero.
 + You beat or tie the MARR account by having a $PW \geq 0$
 
 ## Exclusive Choice
@@ -359,9 +370,119 @@ PW(20%)| `r -10 +10/1.2`| `r -10 + 15/1.2^2`| `r -10 + 8/1.2 + 8/1.2^2`
 
 ## More Real
 
-You have the choice of two loans with annual payments:
+You have the choice of two 100K mortgages:
 
 + 15-year loan at 3%.
 + 30-year loan at 4%
 
-Which do you choose when your savings earns 8%? 
+Which do you choose when your savings earns 8% per year compounded monthly? 
+
+Hints:
+
++ Find the payments for each loan.
++ Evaluate the present worth of the payments at your opportunity cost, 8%.
+
+## Solution
+
++ Payments:
+    + $100K(A|P, i =\frac{.03}{12} , 15(12)) = `r Acc(agivenp(100000, .03/12, 15*12))`$
+    + $100K(A|P, i = \frac{.04}{12}, 30 (12)) = `r Acc(agivenp(100000, .04/12, 30*12))`$
+    
++ PW of payments at $\frac{.08}{12}$
+    + $`r Acc(agivenp(100000, .03/12, 15*12))` (P|A, i = \frac{.08}{12} , 15(12)) = `r Acc(pgivena(agivenp(100000, .03/12, 15*12), .08/12, 15*12))`$
+    + $`r Acc(agivenp(100000, .04/12, 30*12))` (P|A, i = \frac{.08}{12}, 30(12)) = `r Acc(pgivena(agivenp(100000, .04/12, 30*12), .08/12, 30*12))`$
+    
++ Notice
+    + The 30-year loan is a better deal given your MARR of 8% compounded monthly.
+    + If it was 1% compounded monthly you would prefer the 15-year loan
+        + `r Acc(agivenp(100000, .03/12, 15*12))` (P|A, i = .01/12, 15(12)) = `r Acc(pgivena(agivenp(100000, .03/12, 15*12), .01/12, 15*12))`
+        + `r Acc(agivenp(100000, .04, 30))` (P|A, i = .01/12, 30(12)) = `r Acc(pgivena(agivenp(100000, .04/12, 30*12), .01/12, 30*12))`
+      
+## Note
+  
+  + IRL We use net cash flow instead of the payment to take into account tax effects.
+  + The MARR changes the which choice is best.
+  + The higher the MARR the greater preference for accepting more costs as long as those costs are pushed into the future.
+  
+## Real Life Example
+
+Numbers have been changed to make it simpler and more interesting. IRL the PVC roof won.
+
++ Parkrose High School needed a new roof https://www.google.com/maps/@45.5527135,-122.5397698,192m/data=!3m1!1e3
++ Barrel roof leaked.
++ Two choices:
+    + Metal Roof (Like the old one but 'done correctly') would last 40 years and cost $1.5M.
+    + PVC Roof would last 20 years and cost 800K to install.  It also requires 15K in additional inspection and maintenance in years 16-20.
++ Note
+    + Not an apples to apples comparison as stated.  You need to provide 40 years of roofing services, with both styles of roof.
+    + Planning horizon is 40 years.
+    + Often called a service investment.  The benefits are the same.  You are just comparing costs.
+
+## Stage 1 Tasks
+
++ Show a cash flow diagram for the two options.
++ Show the factor notation representation of the two options.
+
+## Cash Flow Diagram
+
+![](PVCRoof)
+
+## Notes on figure
+
++ This is cost convention, common with service investments.
++ If you have down vectors you are in net benefit convention.
+
+## PW
+
++ $PW(Metal|40 Years) = 1.5M$
++ Several Ways
+    + Roof 1 + Roof 2
+$$PW(PVC|40 Years) = 800K + \frac{15K(P|A, i, 5)}{(1+i)^{15}} + \frac{800K + \frac{15K(P|A, i, 5)}{(1+i)^{15}}}{(1+i)^{20}}$$
+    + You can also do Install + Maintenance
+    
+## What about the MARR?
+
+IRL there was 1/4% Qualified Zone Academy Bonding  (QZAB) available.
+
++ Explore the limits of MARR
++ Suppose MARR is 0%.  
+    + You can then just add cash flows up.
+    + *Metal Roof: 1.5M*
+    + PVC Roof: 800K +800K + 15K x 10
++ Suppose the MARR limits out to infinity
+    + The future does not matter.  You only need to look at first costs.
+    + Metal Roof: 1.5M
+    + *PVC Roof: 800K*
+
+The best roof depends on the the MARR.
+
+##  PW vs MARR
+
+```{r}
+PW <- function(marr) {
+  800 + 800/(1 + marr)^20 + pgivena(15, marr, 5)/(1+marr)^15 + pgivena(15, marr, 5)/(1+marr)^35
+}
+
+curve(PW, from = .01 , to = .1, xname = "MARR")
+curve(x*0 + 1500, from = .01 , to = .1  , add = TRUE, col = "violet")
+
+```
+
+
+## What Happened In Reallity
+
++ The PVC option was cheaper.
++ We considered the politics of replacing a 40-year roof that failed in less than 10 years with identical roof with promises that it would be done correctly.
+    + Everyone that could be sued had been sued or gone out of business.
+    + Non-pecuniary benefits play a part and they are not always monetized.
++ Lucky that the financial and non-financial favored PVC. 
++ If not we would have had to figure out how to monetize the political fallout to make the decision.
+
+
+## Comments on PW Criteria
+
++ PW is your workhorse criteria. Use this when things get tough.
++ PW as, "Life-cycle costs and benefits" is very confusing for some people.
++ PW is often not intuitive relative to AW, i.e,  "Per period costs and benefits."
++ Many clients prefer AW.
+

@@ -23,7 +23,8 @@ fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
 ## Goals
 
 + Present a few ways of calculating internal rate of return with cautions.
-+ Explain why the IRR
++ Explain why the IRR criteria is different for loans and investments.
++ Explain the quirks of the exclusive choice procedure.
 
 
 ## What is Internal Rate of Return?
@@ -39,7 +40,7 @@ $$PW = A_0 + \frac{A_1}{(1+i)} + \frac{A_2}{(1+i)^2} + \dots +  \frac{A_N}{(1+i)
 
 + Should look like a polynomial
 + Internal rates of return are the roots of this polynomial
-+ You should remember, you can have more than one root.
++ You can have more than one root.
 
 ## Example One Root
 $$PW = -10 + \frac{15}{(1+i)^3}$$
@@ -69,8 +70,8 @@ Year| A | B |
 1   |10 |10  |
 2   |10  |-5 | 
 
-+ A Has only one sign change and therefore at most one positive real root, IRR.
-+ B has two sign changes and therefore *at most* two positive real roots, IRRs.
++ A Has only one sign change and therefore at most one IRR, i.e., one positive real root.
++ B has two sign changes and therefore *at most* two positive IRRs, i.e, two positive real roots.
 
 ## Multiple IRRs
 This has IRRs at 10%, 30% and 50%
@@ -348,7 +349,7 @@ This initializes a loop and creates a series  of tournaments.
 + If Incremental IRR $\geq$ MARR, Eliminate BC and set C as BC.
 + Else, Eliminate C.
 
-The uniqueness of IRRs and the ordering by initial investment, coupled with only have costs in period zero, allows the easy comparison.
+The uniqueness of IRRs and the ordering by initial investment, coupled with only allowing costs in period zero, allows the easy comparison.
 
 ## Example with Computation of All Values
 
@@ -381,6 +382,9 @@ IRR |`r IRRA`| `r IRRB`| `r IRRC`|
 Remember $IRR = \left( \frac{-A_N}{A_0} \right)^ {\frac{1}{N}} - 1$ when you only have values in time zero and one other time period.
 
 
+Try computing IRR(B-A) and IRR(C-A).
+
+ 
 ## Incremental IRRs
 
 ```{r}
@@ -405,6 +409,8 @@ Year| A | C |C-A  |
 2   | 2  |  10 | 8  |
 IRR |`r IRRA`| `r IRRC`| `r AC`|
 
+Try IRR(C-B)
+
 ## Incremental IRRs (Con't)
 
 
@@ -426,6 +432,8 @@ C     |`r IRRC` |     |       |       |
 
 The other half of the incremental IRR matrix is often not given because it is symmetric.
 
+Find the best asset when the MARR is 15%.
+
 ## MARR of 15%
 
 Asset | IRR     | A   | B     |   C   |
@@ -441,8 +449,25 @@ C     |`r IRRC` |     |       |       |
     + IRR(C-B) = `r BC` < MARR, toss C.
 
 B is the best asset at 15%.
+
+## Arrow Notation Explained
+
+![](ArrowDiagram.png)
      
+
      
+## Arrow Notation  MARR 15%
+
+Asset | IRR     | A   | B     |   C   |
+----  |----     |---- |-----  |-----  |
+A     |`r IRRA` |     |`r AB` |`r AC` |
+B     |`r IRRB` |     |       |`r BC` |
+C     |`r IRRC` |     |       |       |
+
+
+![](15Percent.png)
+
+
 ## MARR of 20%
 
 Asset | IRR     | A   | B     |   C   |
@@ -458,7 +483,65 @@ C     |`r IRRC` |     |       |       |
 
 B is the best asset at 20%.
 
+
+## Arrow Notation MARR 20%
+
+
+Asset | IRR     | A   | B     |   C   |
+----  |----     |---- |-----  |-----  |
+A     |`r IRRA` |     |`r AB` |`r AC` |
+B     |`r IRRB` |     |       |`r BC` |
+C     |`r IRRC` |     |       |       |
+
+
+![](20Percent.png)
+
 ## Further Intuition on Why the Algorithm works.
+
+![](Setup.png)
+
+
+## Describe Assets
+
+
+![](theassets.png)
+
+
+## Eliminate Unacceptable
+
+
+![](lessthanmarr.png)
+
+
+## The Loop 
+
+
+![](ac.png)
+
+
+## Loop (Cont)
+
+
+![](cd.png)
+
+
+
+## Loop (Cont)
+
+![](ce.png)
+
+
+
+## The Last Asset Standing
+
+![](cf.png)
+
+
+## More Examples
+
++ Examples are randomly generated.
++ If you want, download or clone, and knit.  
++ Correct answer and initial ordering are produced but not the steps or arrow diagrams.
 
 
 ## Larger Example
@@ -598,5 +681,11 @@ kable(round(cbind(IRR, AO,  IncIRR*100),2))
 The acceptable assets are: `r paste(Acceptable(MARRS[2]),  collapse=", " )` and the best is `r BestAsset(MARRS[2])`.
 
 
+## How to Study
 
-          
++ Worked Examples are at the bottom of this page. 
++ Examples ask you to
+    + Calculate IRR for simple asset.
+    + Calculate and apply AW criteria
+    + Apply PW criteria
+    + Use the IRR procedure

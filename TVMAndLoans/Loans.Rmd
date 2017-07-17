@@ -220,7 +220,7 @@ $\left( 1 +\frac{.07}{7}  \right)^{14} -1 = `r (1+.07/7)^14 -1` = i_e$
 
 
 Payments:
-$10000 (A|P, i = i_e, 20) = `r agivenp(10000,(1+.07/7)^14 -1,20)`$
+$10000 (A|P, i = i_e, 20) = `r Acc(agivenp(10000,(1+.07/7)^14 -1,20))`$
 
 
 ## Simpler Example with Payment Details
@@ -228,7 +228,7 @@ $10000 (A|P, i = i_e, 20) = `r agivenp(10000,(1+.07/7)^14 -1,20)`$
 \$10,000 at 10\% per month, compounded monthly, for three monthly payments.
 
 What are the payments?
-$10000 (A|P, i = .1, 3) = `r agivenp(10000,.1,3)`$
+$10000 (A|P, i = .1, 3) = `r Acc(agivenp(10000,.1,3))`$
 
 ## Amortization Tables
 
@@ -285,7 +285,7 @@ Yes, there is a little rounding.
 
 + From Table before, balance remaining after one payment is, `r FinFormat(B1)`.
 
-+ $`r FinFormat(PMT)`(P|A, i =.1, 2) = `r pgivena(PMT, .1, 2)`$
++ $`r FinFormat(PMT)`(P|A, i =.1, 2) = `r Acc(pgivena(PMT, .1, 2))`$
 
 
 ## Refi vs Interest rate change
@@ -302,8 +302,8 @@ Yes, there is a little rounding.
   
 ## Compare a refi at 5\% vs interest reduction to 5\% after one payment.
 
-+ Refi: $`r B1`(A|P, i = .05, 3 ) = `r agivenp(B1,.05,3)`$
-+ ARM: $`r B1`(A|P, i = .05, 2 ) = `r agivenp(B1,.05,2)`$
++ Refi: $`r Acc(B1)`(A|P, i = .05, 3 ) = `r Acc(agivenp(B1,.05,3))`$
++ ARM: $`r Acc(B1)`(A|P, i = .05, 2 ) = `r Acc(agivenp(B1,.05,2))`$
 
 + In short:
     + Refi can lower your rate and extend the term resulting in lower payments.
@@ -325,15 +325,15 @@ Yes, there is a little rounding.
 
 ## Compare and interest only mortgage vs amortizing
 
-Start with the same 6\% interest rate on a 30-year \$200,000 mortgage.
+Start with the same 6\% interest rate on a 30-year \$`r Acc(200000)` mortgage.
 
 + The effective interest rate per payment period is $\frac{.06}{12}= .5\%$
 
-+ Payment on amortizing loan is $200000 (A|P, i = .5\%, 360) = `r agivenp(200000,.005,360)`$.
-+ Payment on interest only is $200000 (.005) = `r 200000*.005`$.
++ Payment on amortizing loan is $`r Acc(200000)` (A|P, i = .5\%, 360) = `r Acc(agivenp(200000,.005,360))`$.
++ Payment on interest only is $`r Acc(200000)` (.005) = `r Acc(200000*.005)`$.
 
 
-+ Note that the payments are lower for interest only, but they still owe the original \$200000 after making all those payments.
++ Note that the payments are lower for interest only, but they still owe the original \$`r Acc(200000)` after making all those payments.
 
 ## Typical Amatorization Table for Interest Only Loan
 
@@ -374,9 +374,9 @@ Solution: Menu Contract
 
 ## Menu Contract
 
-+ Two types of people Short-timers and long-timers.
++ Two types of people Short-timers and Long-timers.
 + Bank can't tell the difference.
-+ A pooling contract, short-timers and long-timers getting the same rate is inefficient.
++ A pooling contract, Short-timers and Long-timers getting the same rate is inefficient.
 + Points
     + Give the bank money now in exchange for lower payments.
     + Lower payments are more valuable to the borrower when they are a long-timer.
@@ -388,11 +388,11 @@ Ignoring time value of money ...
 You can Pay \$15 for a \$1 reduction in annual payments. 
 
 + Long-timer (30-years)
-    + Take it and save \$30 - \$15 = \$15 dollars  
+    + Take it and save. \$30 - \$15 = \$15 dollars  
 + Short-timer (5-years)
-    + Take it and be worse off \$5 - \$15 = - \$10
+    + Take it and be worse off. \$5 - \$15 = - \$10
 
-Only real long timers will pay the point.  They credibly reveal they are a long-timer.    
+Only real Long-timers will pay the point.  They credibly reveal they are a Long-timer.    
 
 ## How to Study
 

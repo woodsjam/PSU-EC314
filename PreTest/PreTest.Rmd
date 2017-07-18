@@ -27,7 +27,7 @@ This is just a pre-test to see where everyone is on math, accounting and finance
 3. Set up and solve a system of equations to answer this question.  A theater sells adult tickets for \$8 and children’s tickets for \$5.  If a total of $236 was taken in on sales of 34 total tickets, how many adult tickets and how many children’s tickets were sold?
 
 \vspace{2 in}
-
+\newpage
 ## Accounting Concepts
 
 1. Which of the following is _not_ an asset?

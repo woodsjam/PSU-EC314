@@ -1,13 +1,16 @@
 ---
-title: "Time Value of Money and Loans"
+title: "Time Value of Money"
 author: "James Woods"
-date: ""
-output: beamer_presentation
+date: ''
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+  beamer_presentation: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-
+options(scipen=999)
 
 Acc<-function(x){format(x,nsmall=2,digits=2,big.mark=',',scientific=FALSE)}
 pgivena<-function(a,i,n){a*((1+i)^n -1)/(i*(1+i)^n)}
@@ -21,19 +24,194 @@ fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
 
 ```
 
+## Time Value of Money Goals
+
++ Create a logical basis for comparing costs and benefits in different time periods.
++ Introduce a common notation that engineers, and many economists use, for these calculations.
++ Set the basis for:
+    + Loans 
+    + Investment criteria
+    
+## Assumptions
+
+These are demonstrably false but give us tractable methods.
+
++ Costs and benefits of equal size have equal value in all time periods. _Can evaluate without worrying about wealth or taste changes._
++ The value of costs and benefits is independent of costs and benefits  in other time periods. _No habit, addiction or hangovers._
++ Benefits offset costs. _Ever fought a parking ticket?_
++ Future values are known with certainty. _Math is easy_
+
+## What it looks like
+
+$$\sum x_n d(n)$$
+
++ $d(n)$ is a discounting function.  
++ Many are possible but only a few are time consistent.
+    + $d(n) = \frac{1}{(1+r)^n}$ for discrete time.
+    + $d(n) = \frac{1}{e^{r n}}$ for continuous time.
+    
+## Example of Time Inconsistency
+
+Back in the day I did this in class with real beer.  Now, it's a policy violation.
+
++ Chose 6-pack of beer a month and a day from now or 1 beer a month from now.
++ A beer right now or a 6-pack tomorrow.
++ Many of you changed your mind.
+
+
+## Integer time
+
++ Will say "Time 1", "Time zero" because "1st time period is confusing"
++ "Now" means time zero.
++ Intervals are half open on the right, e.g., $[0,1)$
++ Jan 1, 1908 and Dec 31, 1908 are in the same period, but Jan 1, 1909 is not, when the unit of analysis is a year.
+
+## Notes on the interest rate
+
++ We will treat the interest rate as a simple  thing until loans.
++ The rate is always just the per period rate.
++ Later we will get into:
+    + The nominal period.
+    + Compounding period.
+    + Nominal statement.
+    + Effective interest rates.
+
+## Time Consistent  Integer Time Discounting
+
+$$F= P (1+i)^N$$
+
+Symbolic notation depends on context.
+
++ i = The interest rate
++ P = Present worth *or* some value in time zero.
++ N = N time periods from Now *or* Time N
++ F = Future Value *or* Present Value in time N *or* A value in time N.
+
+We will have a full list later.
+
+## Easy Future Value Calculation
+
+"If you deposit  $26 into an account that earns 2% a month, how much will be in the account after 500 months?"
+
+$$F = 26(1+.02)^{500} = `r 26*(1+.02)^500`$$
+
++ "how much will be in the account after" is a good signal for future value.
++ 100ths of a percent is more than adequate for calculations.
++ Usually, cents is close enough.
++ D2L questions have a tolerance.
++ Most common mistakes:
+    + $26(1+.02)^{500/12}$
+    + $26(1+.2)^{500}$
+
+## Easy Present Worth Calculation
+
+"How much would you have to deposit now into an account that earns 10% per year to have 100K in 10 years?"
+
+$$P = \frac{100K}{(1+.1)^{10}} = `r 100/1.1^10`K$$
+
++ "How much would you have to deposit now" is a present worth indicator.
+
+## Graphical Notation
+
+![](Sketch.png)
+
+
+## Comments on Graphical Notation
+
++ Up vectors are cash inflow.  
++ Down are cash outflow.
++ Magnitude is size of cash flows.
++ Cash flow in any period is $A_n$.
+
+## Symbols Used in Symbolic (Factor) Notation
+
++ $A_n$ = Cost or benefit in time n
++ $n$ = Arbitrary time period
++ $N$ = Usually but not always the last time period
++ $P$ = Present worth in time zero
++ $P_n$ = Present worth in time n.
++ $A$ = Used in constant series to indicate same value for time 1 to N.
++ $G$ = Used in linear gradient series to indicate the change in cash flow from time 1 to N.
++ $g$ = Used in geometric gradient series to indicate the percent change in cash flow  from time 1 to N.
+
+## What is factor notation?
+
+It is a functional representation of common cash flow patterns:
+
++ Constant Series, $A_{n+1} = A_n, \forall n = 1 \dots N$
++ Linear Gradient, $A_{n+1} = A_n + G, A_1=0, \forall n = 1 \dots N$
++ Geometric Gradient, $A_{n+1} = A_n (1+g), \forall n = 1 \dots N$
+
+There are other notations in use, e.g. actuarial notation.
+
+![By Delimata - Own work, GFDL, https://commons.wikimedia.org/w/index.php?curid=4312450](https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Actuarial_notation.svg/219px-Actuarial_notation.svg.png){width=20% }
+
+## Factor Notation
+
++ It is a short-hand for the closed form representations of present and future worth for the common patterns
++ Example
+    $$10(P|A, i= 10\%, 5) = 10 \left[ \frac{(1 + .1)^5 -1}{.1 (1+.1)^5}\right] = `r pgivena(10, .1, 5)`$$
+
+The things in the parentheses are a substitute for the things in the square brackets.
+
+## Mostly overkill for this class but ...
+
++ In the real world the problems are harder. http://web.pdx.edu/~woodsj/Teaching/PDC_PSU_revised%20final%20report_07-2009.pdf (Page 90).
++ Explains the shapes better than the algebraic expression.
++ Factor notation makes it easier to do parametric studies, i.e., Spider Graphs.
+
+## Sample Spider Graph
+
+![](http://tornadocharts.com/wp-content/uploads/sites/2/2015/06/sensit-sensitivity-analysis-spider-chart.gif)
+
+
+## The Key
+
+$$Looking~For = Number(Looking~For|What~is~number, i, How ~Long)$$
+
++ A big list is here http://ec314-pdx-edu.wikidot.com/annotated-equations-sheet
++ Hint, if you know $(P|X)$,  $(F|X) = (P|X) (1+r)^N$
+
+## Wait, closed form notation?
+
++ Remember the tricks from sequences and series?  Many work for finite sequences.
++ Closed form has advantage over brute force (We do that next) in that if you mess it up, it looks stupid. 
++ There are also tables of pre-calculated values which are useful for the PE exam.
+
+## Present Worth Three Ways
+```{r fig.width=3, fig.height=1.5, fig.align='center'}
+library(ggplot2)
+cf <- data.frame(y = 10 * c(0,1,1,1,1,1))
+cf$x = 0:(length(cf$y) - 1)
+print(ggplot(cf,aes(x,y,label = y)) + geom_bar(stat = "Identity",color = 'gray',fill = 'gray') + xlab("Period") + ylab("Cash Flow") + geom_text() + scale_y_discrete())
+```
+  + Brute force: $\sum_{n=1}^{5} \frac{10}{(1+.1)^n}$
+  + Tabular: $10 * `r pgivena(1, .1, 5)`$
+  + Closed form: $10(P|A, i = 10\%, 5) = 10 \frac{( 1+.1)^5 - 1}{.1 (1+.1)^5}$ 
+  + Either way you should get `r pgivena(10, .1, 5)`.  
+
+
+## Comments on Three Methods
+
++ Brute force always works but when you make a mistake it hides.
++ Now try $10(P|A, i =.1, 300)$ by brute force.
++ Tables don't exist for all interest rates but it was way faster on the PE, which is a speed test.
++ Closed form looks stupid if you have made a mistake, but easy to make a mistake.
+
+I tend to use brute force when it is five or fewer values.
 
 ## Easy Cash Flow to Factor Notation
 
-```{r fig.width=3, fig.height=2, fig.align='center'}
+```{r fig.width=3, fig.height=1.5, fig.align='center'}
 library(ggplot2)
-cf <- data.frame(y=c(0,1,1,1,1,1))
-cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
+cf <- data.frame(y = c(0,1,1,1,1,1))
+cf$x = 0:(length(cf$y) - 1)
+print(ggplot(cf,aes(x,y,label = y)) + geom_bar(stat = "Identity",color = 'gray',fill = 'gray') + xlab("Period") + ylab("Cash Flow") + geom_text() + scale_y_discrete())
 ```
 Find representation of Present Worth in factor notation
 
 ## Answer
-```{r fig.width=3, fig.height=2, fig.align='center'}
+```{r fig.width=3, fig.height=1.5, fig.align='center'}
 library(ggplot2)
 cf <- data.frame(y=c(0,1,1,1,1,1))
 cf$x=0:(length(cf$y)-1)
@@ -46,12 +224,8 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 
 $$1 (P|A, i, 5)$$
 
-## Just to be clear about factor notation
-
-$$Looking~For = Number(Looking~For|What is number, i, How Long)$$
-
 ## Try this
-```{r fig.width=3, fig.height=2, fig.align='center'}
+```{r fig.width=3, fig.height=1.5, fig.align='center'}
 library(ggplot2)
 cf <- data.frame(y=c(0,0,1,2,3,4))
 cf$x=0:(length(cf$y)-1)
@@ -60,7 +234,7 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 
 
 ## Linar Gradient is Tricky
-```{r fig.width=3, fig.height=2, fig.align='center'}
+```{r fig.width=3, fig.height=1.5, fig.align='center'}
 library(ggplot2)
 cf <- data.frame(y=c(0,0,1,2,3,4))
 cf$x=0:(length(cf$y)-1)
@@ -73,6 +247,26 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 
 $$ 1(P|G,i,5)$$
 
+## The Geometric Gradient is for growth.
+
+```{r fig.width=3, fig.height=1.5, fig.align='center'}
+library(ggplot2)
+cf <- data.frame(y=c(0,40,20,10,5,2.5))
+cf$x=0:(length(cf$y)-1)
+print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
+```
+
+$$ 40(P|A_1,i, g =- 50\%, 5)$$
+
+## Geometric Gradient
+
++ Pretty common in the wild.
++ I tend to give easy g values, 100\%, -50\%, 10%, that are easy to spot graphically.
++ Two closed form equations.
+
+$$P=A_{1}\left(\frac{1-(1+g)^{N}(1+i)^{-N}}{i-g}\right)$$
+
+$$P=A_{1}\left(\frac{N}{1+i}\right)\,(if : i = g)$$
 
 ## Now lets put two things together
 
@@ -339,7 +533,7 @@ $$\frac{12(P|A, i, 6)}{(1+i)^1} + \frac{-2 (P|G, i, 6)}{(1+i)^1}$$
 
 + Look for shapes constant, geometric gradient and linear gradient.
 
-+ Count for the N.  Remember to add one for the pot only on linear gradient.
++ Count for the N.  Remember to add one for the pot *only* on linear gradient.
 
 + Sum of N and exponent is equal to the time period where you last see the cash flow
 
@@ -404,249 +598,6 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 + Kill trees. Work lots of problems.  Everything after this depends on understanding TVM.
 + Drill and Kill the examples and the videos at bottom of the page. http://ec314-pdx-edu.wikidot.com/q2:time-value-of-money
 + When evaluating these expressions, try to do all the work in the calculator in one operation.  Sometimes rounding and truncation errors are bad with large interest rates.
++ Go forwards, factor notation to cash flow diagram, and backwards, cash flow to factor.
 
 
-## First Application of TVM: Loans
-
-+ Been dealing with the interest rate as the per period rate.
-+ We could move value in time but could not change the unit of analysis, the definition of a period.
-+ Effective interest rates allows us to stretch and compress time scales, and
-+ Adapt the interest rate to the unit of analysis we want to use.
-
-## Basics of Effective Interest Rates
-
-+ Interest rates have three components:
-    + Nominal statement
-    + Nominal Period
-    + Compounding period
-    
-+ The final component 'Desired Effective Period' depends on the problem you are trying to solve.
-    + For loans, you want the effective rate per payment period.
-    + For general interest rate comparisons, you want an annual rate most of the time.
-    + Others are problem specific.
-    
-## General Form
-
-$$ \left( 1 + \frac{Nominal}{\# ~Compounding ~in ~Nominal ~Period} \right)^{\# Compounding ~in ~Desired} -1$$
-
-Example: Effective annual rate for 2\% per month compounded daily
-
-$$ \left( 1+ \frac{.02}{30}  \right)^{365} -1 = `r (1+.02/30)^365 -1` $$
-
-
-## Application to Time Value of Money Calcs
-
-```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
-library(ggplot2)
-cf <- data.frame(y=c(0,0,5,0,5,0,5,0,5,0,5) )
-cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
-```
-
-Not a constant series but you can find PW with brute force with interest at 10\% per period compounded each period.
-
-$$ P= \frac{5}{(1+.1)^{2}} + \frac{5}{(1+.1)^{4}}+\frac{5}{(1+.1)^{6}}+\frac{5}{(1+.1)^{8}}+\frac{5}{(1+.1)^{10}}$$
-
-## Reframe the problem
-
-Find the 2-Period interest rate
-
-$$ \left( 1 + \frac{.1}{1} \right)^2 -1 =`r 1.1^2 -1` = i_2$$
-
-and rewrite as a constant series
-
-$$P = 5 (P|A, i= i_2, 5)$$
-
-Try the two calculations, brute force and this.  They give the same result `r pgivena(5,.21,5)`.
-
-## But Lets Get Into Loans
-
-There is a bewildering number  of  parameters  for loans.  
-
-+ How interest is treated:
-    + Simple interest -- Which we will not address
-    + Amortizing -- which uses $(P|A)$ and is common.
-
-+ How interest is paid
-    + Interest only -- you owe what your borrowed at the end.
-    + Fully Amortizing -- you owe nothing at the end.
-    + Other -- Negative and partial amortizing
-
-+ Stability of interest rates and how changes are implemented
-    + Fixed rate loans
-    + Adjustable rate loans
-    + Refinance
-    
-And many conventions on how loans and interest rates are described.
-
-
-## Example Convention
-
-"I took out a 3.5\% mortgage". 
-
-+ That means that they took out a 30-year fixed rate mortgage where the interest rate is 3.5\% per year compounded monthly with monthly payments.  
-
-+ They told you the nominal rate but all the other parameters are by convention.
-
-
-## Lets take out and pay off some loans
-
-+ Our loan examples will typically have high rates, so you can see the effects of changes on the interest rates.
-+ The terms may be goofy, weekly payments compounded daily.
-+ Usually a small number of payments to keep everything on one slide.
-
-## How to Calculate Payments on Amortizing Loan
-
-$$Payment = Principal (A|P, i = i_e, \#~Payments)$$
-
-$i_e$ is the effective interest rate per payment period.
-
-## Example
-
-Borrow 10,000 at 7\% per week compounded daily with biweekly payments for 10 months.
-
-
-
-Effective interest rate per payment period:
-$\left( 1 +\frac{.07}{7}  \right)^{14} -1 = `r (1+.07/7)^14 -1` = i_e$
-
-
-
-Payments:
-$10000 (A|P, i = i_e, 20) = `r agivenp(10000,(1+.07/7)^14 -1,20)`$
-
-
-## Simpler Example with Payment Details
-
-\$10,000 at 10\% per month, compounded monthly, for three monthly payments.
-
-What are the payments?
-$10000 (A|P, i = .1, 3) = `r agivenp(10000,.1,3)`$
-
-## Amortization Tables
-
-+ They show for each payment
-    + The payment
-    + The interest expense  -- important since this goes on the incomes statement and reduces taxes.
-    + The principal payment -- Does not reduces taxes or go on income statement but it does reduce cash flow.
-    + Balance -- How much you owe after the payment.
-    
-+ How you get them:
-    + Payments are always the same
-    + Interest expense is the balance remaining times the effective interest rate per payment period.
-    + Principal payment is the payment less the interest expense.
-    + Balance remaining is the previous balance remaining less then principal payment.
-    
-    
-## For the loan
-
-```{r}
-FinFormat <- function(x) format(x, digits=2, decimal.mark=".",   big.mark=",", small.interval=3)
-
-PMT <- agivenp(10000,.1,3)
-i1 <- 10000*.1
-P1 <- PMT -i1
-B1 <- 10000-P1
-
-i2 <- B1*.1
-P2 <- PMT -i2
-B2 <- B1-P2
-
-i3 <- B2*.1
-P3 <- PMT - i3
-B3 <- B2-P3
-
-
-```
-
-Payment Number | Payment          | Interest  | Principal | Balance
----------------|---------         |---------- |-----------|--------
-0              |                  |                 |                 |`r FinFormat(10000)`
-1              |`r FinFormat(PMT)`|`r FinFormat(i1)`|`r FinFormat(P1)`|`r FinFormat(B1)`
-2              |`r FinFormat(PMT)`|`r FinFormat(i2)`|`r FinFormat(P2)`|`r FinFormat(B2)`
-3              |`r FinFormat(PMT)`|`r FinFormat(i3)`|`r FinFormat(P3)`|`r FinFormat(B3)`
-
-
-
-Yes, there is a little rounding.
-
-## You can also find balance remaining with (P|A)
-
-+ The balance remaining on an amortizing loan is always equal to the present worth of the remaining payments.
-
-+ From Table before, balance remaining after one payment is, `r FinFormat(B1)`.
-
-+ $`r FinFormat(PMT)`(P|A, i =.1, 2) = `r pgivena(PMT, .1, 2)`$
-
-
-## Refi vs Interest rate change
-
-+ Refinance means taking out a whole new loan with a different interest rate.
-    + If you refinance your mortgage, 360 payments, after making 120 payments, your new payments are based on the current balance remaining and the new rate, but it resets the number of payments
-    + You have 360 payments to pay off the loan.
-
-+ If the interest rate changes, such as when you have an ARM loan.
-    + You calculate the new payments based on the new rate and current balance remaining, but the number of remaining payments stays the same
-    + You would still have only 240 payment left.
-    
-
-  
-## Compare a refi at 5\% vs interest reduction to 5\% after one payment.
-
-+ Refi: $`r B1`(A|P, i = .05, 3 ) = `r agivenp(B1,.05,3)`$
-+ ARM: $`r B1`(A|P, i = .05, 2 ) = `r agivenp(B1,.05,2)`$
-
-+ In short:
-    + Refi can lower your rate and extend the term resulting in lower payments.
-    + Lowering an interest rate reduces the rate but does not decrease the remaining term.  Payments are lower but by not as much as a refi.
-    
-
-## What about Interest Only Loans?
-
-+ There are good use cases.  
-+ They are great if:
-    + You are trying to conserve cash
-    + You do not intend to make all the payments on the loan.
-    + You are financing an asset that _will_ appreciate in value.
-    
-+ Having to pay back what you borrowed after making a lot of payments can come as a surprise.
-    + Modern terminology is 'balloon payment'
-    + Old terminology is 'bullet'
-
-
-## Compare and interest only mortgage vs amortizing
-
-Start with the same 6\% interest rate on a 30-year \$200,000 mortgage.
-
-+ The effective interest rate per payment period is $\frac{.06}{12}= .5\%$
-
-+ Payment on amortizing loan is $200000 (A|P, i = .5\%, 360) = `r agivenp(200000,.005,360)`$.
-+ Payment on interest only is $200000 (.005) = `r 200000*.005`$.
-
-
-+ Note that the payments are lower for interest only, but they still owe the original \$200000 after making all those payments.
-
-## Typical Amatorization Table for Interest Only Loan
-
-Payment Number | Payment          | Interest  | Principal | Balance
----------------|---------         |---------- |-----------|--------
-0              |                  |                 |                 |`r FinFormat(10000)`
-1              |`r FinFormat(10000*.1)`|`r FinFormat(10000*.1)`|`r FinFormat(0)`|`r FinFormat(10000)`
-2              |`r FinFormat(10000*.1)`|`r FinFormat(10000*.1)`|`r FinFormat(0)`|`r FinFormat(10000)`
-3              |`r FinFormat(10000*.1)`|`r FinFormat(10000*.1)`|`r FinFormat(10000)`|`r FinFormat(0)`
-
-
-There are multiple conventions on where to put the bullet.  I like it there but others have a separate line or column for the principal repayment.  The disadvantage is that it blows the usual definition of principal payment as the payment less interest expense.
-
-
-<!-- ##  There Ends the Material for the Midterm -->
-
-<!-- + Bring ID, calculator and writing implement -->
-<!-- + No notes -->
-<!-- + You have seen the equations sheet. -->
-<!-- + Bags at the sides. -->
-<!-- + Phones and smart watches in bags -->
-<!-- + Seating chart will be up on screen -->
-
-
-<!-- Questions? -->

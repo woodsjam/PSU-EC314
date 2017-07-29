@@ -293,6 +293,8 @@ The solution is two sets of books.
     + Salvage value of zero makes uniform tables possible.
     + Simplifies the depreciation calculations.
 
+Depreciation recapture and gains taxes are in a later set of slides.
+
 ## A Note on Time Conventions
 
 There are three:
@@ -313,3 +315,145 @@ Mid-year:
     + Advantage to buyer to have an earlier date.
 + Real estate is strange and big.
 + Mid-quarter is there to keep exploiting the obvious tax savings of buying lots of assets at the end of the year and getting half a year of depreciation.
+
+## Mid-Quarter Convention
+
++ No matter when you buy or sell the asset in a quarter, you get half a quarter of depreciation.
++ If you purchase too many assets in the last quarter of the year, they automatically convert to mid-quarter.
+    + If you purchase too many, say 5-year assets, at the end of the year you get 1.5 months of depreciation rather than 6 months.
+    + You can elect to depreciate assets on a mid-quarter basis.
++ Why elect?
+    + You know what quarter you will sell the asset.
+    + Buy in first quarter of a year and sell in the last quarter.
+    + Mid-quarter gives more tax advantages than mid-year.
+
+We will not do mid-quarter in class.
+
+## Mid-Month
+
+Used only for real estate.
+
++ No matter when you buy the property in a month, you get half a month of depreciation for that month.
++ Buy a rental home in Feb, get 10.5 months of depreciation.
++ Sell a rental home in Feb, get 1.5 months of depreciation.
++ Note that only the structure, not the land, depreciates.
+
+Real property is usually 27.5 years, for residential, or 39 years, for commercial, property but it gets complicated fast.  *We don't do this in class.*
+
+## Warnings
+
++ Depreciation get complicated fast.
+    + What happens if you make some major modifications to an asset which extends its life?
+    + What if you add a new roof to a fully depreciated structure?
++ Hire a pro to handle this.
+
++ What we will do in class
+    + Asset purchases and sale.
+    + No modifications to asset life or value, marking to market.
+    + No reductions in value that are not-depreciation.
+    + Assume book depreciation and tax depreciation are the same.
+    + Nothing agricultural.
+    + *Later* very simple tax treatment.
+
+## How To Depreciate Under MACRS (Step 1)
+
++ Identify the asset class of what you are depreciating.
++ There are tables for this.
+    + Table B2 https://www.irs.gov/publications/p946/ar02.html#d0e10880
+    + You want GDS.  
+    + ADS is agricultural.
++ Some of this is strange. Check out the nuclear train. https://www.irs.gov/publications/p946/13081f37.html 
++ Each industry tends to have its own section with common asset lives.
++ Short lives
+    + By design as a tax break.
+    + Assets that last between 10-15 years tend to be 7 year assets and so on.
+    
+## For questions
+
++ I tend to give either a description of an asset with an asset class, i.e, "Depreciate the barge, a 10-year asset."
++ Or, give something common, like a car, which is a 5-year asset.
++ You can find a full mid-year convention table here http://ec314-pdx-edu.wikidot.com/macrs
+
+
+## The Tables (Subset Shown)
+
+|Year |Class |3|5|7|
+|----|----|----|----|----|
+| 1 | | 33.33 | 20.00 | 14.29 |
+| 2 | | 44.45 | 32.00 | 24.49 |
+| 3 | | 14.81\* | 19.20 | 17.49 |
+| 4 | | 7.41 |11.52\*| 12.49 |
+| 5 | | | 11.52 | 8.93\* |
+| 6 | | | 5.76 | 8.92 |
+| 7 | | | | 8.93 |
+| 8 | | | | 4.46 |
+
++ Values in the table are the percent of cost basis to take as depreciation that year.
++ Half-year convention is built in.  First and last years are half years.
++ Time convention is different from TVM. "Now" is year 1, not year 0
+
+## The Tables (Con't)
+
+|Year |Class |3|5|7|
+|----|----|----|----|----|
+| 1 | | 33.33 | 20.00 | 14.29 |
+| 2 | | 44.45 | 32.00 | 24.49 |
+| 3 | | 14.81\* | 19.20 | 17.49 |
+| 4 | | 7.41 |11.52\*| 12.49 |
+| 5 | | | 11.52 | 8.93\* |
+| 6 | | | 5.76 | 8.92 |
+| 7 | | | | 8.93 |
+| 8 | | | | 4.46 |
+
++ Salvage is zero.  The percent depreciation adds to 100\%.
++ The "\*" indicates when the double declining balance switched to straight line.  Interesting but useless.
+
+## Depreciate an Asset (Hold till the end)
+
+10K, 5-year asset.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+library(dplyr)
+library(stargazer)
+Year <- 1:6
+Cost <- 10000
+MACRS <- c(.2, .32, .192, .1152, .1152, .0576)
+Depreciation <- Cost * MACRS
+BookValue <- Cost - cumsum(Depreciation)
+
+FullLife <- as.data.frame(cbind(Year, MACRS, Depreciation, BookValue))
+
+stargazer(FullLife, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE)
+
+```
+
+## Sell the asset in year 4
+
+
+Get half the usual depreciation in the year of sale.  Literally, divide by 2, no matter what year, even year 6 of a five-year asset.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+library(dplyr)
+library(stargazer)
+Year <- 1:4
+Cost <- 10000
+MACRS <- c(.2, .32, .192, .1152/2)
+Depreciation <- Cost * MACRS
+BookValue <- Cost - cumsum(Depreciation)
+
+FullLife <- as.data.frame(cbind(Year, MACRS, Depreciation, BookValue))
+
+stargazer(FullLife, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE)
+
+```
+
+The person that bought it starts with a new cost basis back at year 1.
+
+## Keep in Mind
+
++ In real life, you will use straight line for financial purposes.
++ This material, with the tables, is for tax depreciation.
++ Keep it simple, $Number~in~table * Cost~basis$
++ Dealing with the tax consequence of selling the asset for something other than book value will be addressed later once we hit taxes.

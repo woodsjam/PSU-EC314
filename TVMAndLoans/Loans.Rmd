@@ -335,7 +335,7 @@ Start with the same 6\% interest rate on a 30-year \$`r Acc(200000)` mortgage.
 
 + Note that the payments are lower for interest only, but they still owe the original \$`r Acc(200000)` after making all those payments.
 
-## Typical Amatorization Table for Interest Only Loan
+## Typical Amortization Table for Interest Only Loan
 
 Payment Number | Payment          | Interest  | Principal | Balance
 ---------------|---------         |---------- |-----------|--------

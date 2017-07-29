@@ -197,7 +197,7 @@ Year| A | B |
 ## Common Practice  for Non-conforming Assets
 
 + Two general options:
-    + Repeat purchases followed by an equipment lease for the remaing time.
+    + Repeat purchases followed by an equipment lease for the remaining time.
     + Repeat purchases followed by salvage/sale of asset before end of life.
 + Calculate PW based on these patterns and convert to AW.
 + Example:  5 Year asset and 12 year planning horizon
@@ -207,7 +207,7 @@ Year| A | B |
     
 ## Backyard Aquaculture
 
-The idea was to add Tillapia to the composting and garden cycle. MARR of 10%
+The idea was to add Tilapia to the composting and garden cycle. MARR of 10%
 
 + Choice of two pumps to keep water moving.
     + Pump 1: 7 year life, $100.
@@ -221,7 +221,7 @@ The idea was to add Tillapia to the composting and garden cycle. MARR of 10%
 + Note implied planning horizon is 35 years.
 + AW Calculations
     + $AW(Pump 1) = 100 (A|P, i = .1, 7) = `r Acc(agivenp(100, .1, 7))`
-    + $AW(Pump 2) = 75 (A|P, i = .1, 5) = `r Acc(agivenp(100, .1, 5))`
+    + $AW(Pump 2) = 75 (A|P, i = .1, 5) = `r Acc(agivenp(75, .1, 5))`
     
 + Interpretation
     + Pump 1 provides pumping services at a cost of \$`r Acc(agivenp(100, .1, 7))` per year.

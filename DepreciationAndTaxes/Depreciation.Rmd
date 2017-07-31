@@ -98,10 +98,11 @@ Assets used for business purposes that have a determinable life of greater than 
     + etc.
 
 Example:  Buy a charter sailboat
-    + Cost of the boat: 250K
-    + Transport it from SFO to PDX: 10K
-    + Repairs to electrical: 5K
-    + Cost basis: 265K
+    
++ Cost of the boat: 250K
++ Transport it from SFO to PDX: 10K
++ Repairs to electrical: 5K
++ Cost basis: 265K
 
 
 ## Salvage Value
@@ -122,7 +123,7 @@ Example:  Buy a charter sailboat
     + The roof is fixed on April 1st.
     + First rented on May 1st.
     
-The service data is April 1st, when it is able to be used.
+The service date is April 1st, when it is able to be used.
 
 ## Service Life
 
@@ -145,10 +146,10 @@ The common approaches are:
 + Straight line
 + Declining balance methods.
 
-## Key Term Book Value
+## Key Term:  Book Value
 
 + Depreciation: Reduction in value each year.
-+ Book Value: Cos basis less accumulated depreciation.
++ Book Value: Cost basis less accumulated depreciation.
 
 ## Straight Line Depreciation
 
@@ -253,7 +254,7 @@ Year| Depreciation              | Book Value|
 We are not going to do this in class. We will focus on tax depreciation through the Modified Accelerated Cost Recovery System (*MACRS*)
 
 
-If declining balance will not get you to salvage value, you switch to straight line from declining balance when straight line -- at current book value and remaining life -- is greater than declining balance.
+If declining balance will not get you to salvage value, you switch to straight line from declining balance when straight line depreciation -- at current book value and remaining life -- is greater than declining balance declining balance depreciation.
 
 ## Book vs Tax Depreciation
 
@@ -263,10 +264,10 @@ If declining balance will not get you to salvage value, you switch to straight l
 
 ## Why Two Sets of Books
 
-+ Accountants have two tasks:
++ Accountants have two objectives:
     + Accurately convey the state of the business.
     + Minimize taxes.
-+ They can't do both at the same time:
++ They can't achieve both at the same time:
     + IRS says a car lasts 5 years.
     + You know it will last 15.
     + Either pay more taxes or give bad information to shareholders and management.
@@ -324,8 +325,8 @@ Mid-year:
     + You can elect to depreciate assets on a mid-quarter basis.
 + Why elect?
     + You know what quarter you will sell the asset.
-    + Buy in first quarter of a year and sell in the last quarter.
-    + Mid-quarter gives more tax advantages than mid-year.
+    + Buy in first quarter of a year and sell in the last quarter of the next.
+    + Mid-quarter gives more depreciation (21 months) than mid-year (12 Months).
 
 We will not do mid-quarter in class.
 

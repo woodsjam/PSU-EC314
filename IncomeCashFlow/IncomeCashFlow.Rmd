@@ -1,0 +1,243 @@
+---
+title: "Income and Cash Flow Statments"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Goals
+
++ Make what you learned about taxes and depreciation understandable to others.
++ Use accounting conventions to convey your cash flow projections.
+
+## Background
+
++ We will be focusing on the cash flow effects of some investment.
++ We will not be looking at the whole business, just the thing that changed.
++ We are looking at a counterfactual, "How would cash flow change?"
+
+## The Example Counterfactuals
+
++ How would cash flow change if we purchased a new inventory managment system that reduces our need for inventory?
++ How would cash flow change if we purchased a new delivery truck with a loan?  
++ Is cash flow better than without the loan?
+
+## Sign Conventions Revenue
+
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	&	&\\
+		Interest	&	&	&\\
+		Depreciation	&	&	&\\
+        \hline
+		Taxable Income	&	&	&\\
+		Tax	&	&	&\\
+        \hline
+		Net Income	&	&	&\\
+\end{tabular}
+\end{table}
+
+More revenue than current plan in year zero and less revenue than current plan in year one.
+
+## Sign Conventions Expenses
+
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	50& (700)	&\\
+		Interest	&	&	&\\
+		Depreciation	&	&	&\\
+        \hline
+		Taxable Income	&	&	&\\
+		Tax	&	&	&\\
+        \hline
+		Net Income	&	&	&\\
+\end{tabular}
+\end{table}
+
+More expenses than current plan in year zero and fewer expenses than current plan in year one.
+
+
+
+## Sign Conventions Interest
+
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	50& (700)	&\\
+		Interest	&	&	300&\\
+		Depreciation	&	&	&\\
+        \hline
+		Taxable Income	&	&	&\\
+		Tax	&	&	&\\
+        \hline
+		Net Income	&	&	&\\
+\end{tabular}
+\end{table}
+
+Increase in interest expense, relative to current plan, in year 1.  Note that this is just the interst expense, not a full loan payment.
+
+
+## Sign Conventions Depreciation
+
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	50& (700)	&\\
+		Interest	&	&	300&\\
+		Depreciation	&	4000&	3200&\\
+        \hline
+		Taxable Income	&	&	&\\
+		Tax	&	&	&\\
+        \hline
+		Net Income	&	&	&\\
+\end{tabular}
+\end{table}
+
+If you replaced an asset with one that cost less, and had less depreciation in years zero and one, then you would see negative values.
+
+
+## Taxable Income
+
+Subtract your expenses from your revenue.
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	50& (700)	&\\
+		Interest	&	&	300&\\
+		Depreciation	&	4000&	3200&\\
+        \hline
+		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -3000 -3200)`)	&\\
+		Tax	&	&	&\\
+        \hline
+		Net Income	&	&	&\\
+\end{tabular}
+\end{table}
+
+
+Year 0 Taxable Income = 100 -50 -4000
+
+Year 1 Taxable Income = -5000 - (-700) -300 - 3200
+
+## Tax
+
+Apply your tax rate (40\%) to the Taxable Income. Note that increases in taxes are positive but decreases in taxes are shown as a negative.
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	50& (700)	&\\
+		Interest	&	&	300&\\
+		Depreciation	&	4000&	3200&\\
+        \hline
+		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -3000 -3200)`)	&\\
+				Tax	&	(`r -(100 - 50 -4000)*.4`)&	(`r -(-500 +700 -3000 -3200)*.4`)&\\
+        \hline
+		Net Income	&	&	&\\
+\end{tabular}
+\end{table}
+
+This says that your taxes will be *lower* because of the action you are taking.
+
+## Net Income
+
+Subtract Tax from Taxable Income to get Net Income, i.e., profits.
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	50& (700)	&\\
+		Interest	&	&	300&\\
+		Depreciation	&	4000&	3200&\\
+        \hline
+		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -3000 -3200)`)	&\\
+				Tax	&	(`r -(100 - 50 -4000)*.4`)&	(`r -(-500 +700 -3000 -3200)*.4`)&\\
+        \hline
+		Net Income &	(`r -(100 - 50 -4000)*.6`)&	(`r -(-500 +700 -3000 -3200)*.6`)&\\
+\end{tabular}
+\end{table}
+
+This says that our profits are lower than they would be otherwise.
+
+## Cash Flow
+
+Cash from operations is just copied from the income statement
+
+\begin{table}
+\begin{tabular}{l||c|c||p{3cm}}
+        \multicolumn{4}{c}{Cash Flow Statement}\\
+  &Year 0  &Year 1  &Note\\        
+	Operations&	&	&\\
+	\hspace{.25in}Net Income	&	(`r NI0 <- -(100 - 50 -4000)*.6; NI0`)&	(`r NI1 <- -(-500 +700 -3000 -6400)*.6; NI1`)&\\
+	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	Investments	&	&	&\\
+			&	&	&\\
+\hspace{.25in}Working Capital	&	&	&\\
+		\hspace{.25in}Gains Tax	&	&	&\\
+			&	&	&\\
+        
+	Finance	&	&	&\\
+			&	&	&\\
+        \hline
+		Net Cash Flow	&	&	&\\
+\end{tabular}
+\end{table}
+
+Keep in mind that the convention is cash inflows are postive and cash outflows are negative.
+
+
+
+## Asset Purchase
+
+The Asset is a 20K, 5-Year Asset
+
+\begin{table}
+\begin{tabular}{l||c|c||p{3cm}}
+        \multicolumn{4}{c}{Cash Flow Statement}\\
+  &Year 0  &Year 1  &Note\\        
+	Operations&	&	&\\
+	\hspace{.25in}Net Income	&	(`r NI0`)&	(`r NI1`)&\\
+	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	Investments	&	&	&\\
+\hspace{.25in}The Asset			&(20000)	&	&\\
+\hspace{.25in}Working Capital	&	&	&\\
+		\hspace{.25in}Gains Tax	&	&	&\\
+			&	&	&\\
+        
+	Finance	&	&	&\\
+			&	&	&\\
+        \hline
+		Net Cash Flow	&	&	&\\
+\end{tabular}
+\end{table}
+
+Outflows of cash are negative. Note depreciation reflects sale in year 1.

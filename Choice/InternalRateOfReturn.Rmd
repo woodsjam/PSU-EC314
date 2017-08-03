@@ -302,8 +302,8 @@ This procedure has a lot of caveats
 Year| A | B |B-A|
 ----|---|---|---|
 0   | -1 | -1000 |-999|
-1   |2 |1110  |1109|
-IRR|   |   |`r 1109/999 -1`|
+1   |2 |1110  |1108|
+IRR|   |   |`r 1108/999 -1`|
 
 $$IRR(B-A)\neq IRR(B) - IRR(A)$$
 

@@ -535,7 +535,7 @@ Working Capital | 0   |-200 |300  |0    |100  |
 
 + This is just a way of presenting the things that you have already done using accounting conventions.
 + Understandable by everyone that knows the conventions.
-+ Only a few transactions:
++ Only a few transactions that I mix and match:
     + Increase/Decrease in revenue
     + Increase/Decrease in sales
     + Asset purchase/sale with gains tax

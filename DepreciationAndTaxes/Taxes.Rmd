@@ -63,7 +63,7 @@ Most of these pass through income to be taxed at the individual rate of the pers
 Corporations have a separate income tax that must be paid.  Dividends granted to shareholder are then taxed again as the shareholders income.
 
 + \$1000 in taxable earnings
-+ -\$3000 in corporate tax
++ -\$300 in corporate tax
 + \$700 distributed as dividends
 + \$700 in dividend earning
 + -\$245 in personal tax

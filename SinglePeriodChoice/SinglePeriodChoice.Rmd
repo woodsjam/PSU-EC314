@@ -1,0 +1,19 @@
+---
+title: "Single Period Choice"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Goals
+
++ Quick introduction to the problem of the firm.
++ Cost function descriptions
++ The concept of a volume index
++ Solutions to the three single period problems:
+    + Break-Even
+    + Make vs Buy
+    + Optimal Pace

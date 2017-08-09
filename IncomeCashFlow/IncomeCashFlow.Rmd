@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 + How would cash flow change if we purchased a new delivery truck with a loan?  
 + Is cash flow better than without the loan?
 
-## Sign Conventions Revenue
+## Sign Conventions: Revenue
 
 
 \begin{table}[h]
@@ -46,7 +46,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 More revenue than current plan in year zero and less revenue than current plan in year one.
 
-## Sign Conventions Expenses
+## Sign Conventions: Expenses
 
 
 \begin{table}[h]
@@ -70,7 +70,7 @@ More expenses than current plan in year zero and fewer expenses than current pla
 
 
 
-## Sign Conventions Interest
+## Sign Conventions: Interest
 
 
 \begin{table}[h]
@@ -93,7 +93,7 @@ More expenses than current plan in year zero and fewer expenses than current pla
 Increase in interest expense, relative to current plan, in year 1.  Note that this is just the interest expense, not a full loan payment.
 
 
-## Sign Conventions Depreciation
+## Sign Conventions: Depreciation
 
 
 \begin{table}[h]
@@ -116,7 +116,7 @@ Increase in interest expense, relative to current plan, in year 1.  Note that th
 If you replaced an asset with one that cost less, and had less depreciation in years zero and one, then you would see negative values.
 
 
-## Taxable Income
+## Sign Conventions: Taxable Income
 
 Subtract your expenses from your revenue.
 
@@ -130,7 +130,7 @@ Subtract your expenses from your revenue.
 		Interest	&	&	300&\\
 		Depreciation	&	4000&	3200&\\
         \hline
-		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -3000 -3200)`)	&\\
+		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -300 -3200)`)	&\\
 		Tax	&	&	&\\
         \hline
 		Net Income	&	&	&\\
@@ -142,7 +142,7 @@ Year 0 Taxable Income = 100 -50 -4000
 
 Year 1 Taxable Income = -5000 - (-700) -300 - 3200
 
-## Tax
+## Sign Conventions: Tax
 
 Apply your tax rate (40\%) to the Taxable Income. Note that increases in taxes are positive but decreases in taxes are shown as a negative.
 
@@ -156,8 +156,8 @@ Apply your tax rate (40\%) to the Taxable Income. Note that increases in taxes a
 		Interest	&	&	300&\\
 		Depreciation	&	4000&	3200&\\
         \hline
-		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -3000 -3200)`)	&\\
-				Tax	&	(`r -(100 - 50 -4000)*.4`)&	(`r -(-500 +700 -3000 -3200)*.4`)&\\
+		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -300 -3200)`)	&\\
+				Tax	&	(`r -(100 - 50 -4000)*.4`)&	(`r -(-500 +700 -300 -3200)*.4`)&\\
         \hline
 		Net Income	&	&	&\\
 \end{tabular}
@@ -165,7 +165,7 @@ Apply your tax rate (40\%) to the Taxable Income. Note that increases in taxes a
 
 This says that your taxes will be *lower* because of the action you are taking.
 
-## Net Income
+## Sign Conventions: Net Income
 
 Subtract Tax from Taxable Income to get Net Income, i.e., profits.
 
@@ -179,10 +179,10 @@ Subtract Tax from Taxable Income to get Net Income, i.e., profits.
 		Interest	&	&	300&\\
 		Depreciation	&	4000&	3200&\\
         \hline
-		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -3000 -3200)`)	&\\
-				Tax	&	(`r -(100 - 50 -4000)*.4`)&	(`r -(-500 +700 -3000 -3200)*.4`)&\\
+		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -300 -3200)`)	&\\
+				Tax	&	(`r -(100 - 50 -4000)*.4`)&	(`r -(-500 +700 -300 -3200)*.4`)&\\
         \hline
-		Net Income &	(`r -(100 - 50 -4000)*.6`)&	(`r -(-500 +700 -3000 -3200)*.6`)&\\
+		Net Income &	(`r -(100 - 50 -4000)*.6`)&	(`r -(-500 +700 -300 -3200)*.6`)&\\
 \end{tabular}
 \end{table}
 
@@ -197,7 +197,7 @@ Cash from operations is just copied from the income statement
         \multicolumn{4}{c}{Cash Flow Statement}\\
   &Year 0  &Year 1  &Note\\        
 	Operations&	&	&\\
-	\hspace{.25in}Net Income	&	(`r NI0 <- -(100 - 50 -4000)*.6; NI0`)&	(`r NI1 <- -(-500 +700 -3000 -6400)*.6; NI1`)&\\
+	\hspace{.25in}Net Income	&	(`r NI0 <- -(100 - 50 -4000)*.6; NI0`)&	(`r NI1 <- -(-500 +700 -300 -6400)*.6; NI1`)&\\
 	\hspace{.25in}Depreciation	&	4000&	3200&\\
 	Investments	&	&	&\\
 			&	&	&\\
@@ -216,7 +216,7 @@ Keep in mind that the convention is cash inflows are positive and cash outflows 
 
 
 
-## Asset Purchase
+## Sign Conventions: Asset Purchase
 
 The Asset is a 20K, 5-Year Asset
 
@@ -243,7 +243,7 @@ The Asset is a 20K, 5-Year Asset
 Outflows of cash are negative. Note depreciation reflects sale in year 1.
 
 
-## Asset Sale
+## Sign Conventions: Asset Sale
 
 Sell the asset in year 1 for 19000
 
@@ -270,7 +270,7 @@ Sell the asset in year 1 for 19000
 Inflows of cash are positive.
 
 
-## Asset Sale
+## Sign Conventions: Asset Sale
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 Book <- 20000 - 4000 - 3200
@@ -303,7 +303,7 @@ Gains tax has opposite sign convention.  Positive means pay.
 Book Value = 20000 - 4000 - 3200 = 12800
 
 
-## Gains Tax
+## Sign Conventions: Gains Tax
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 Book <- 20000 - 4000 - 3200
@@ -336,7 +336,7 @@ Gains tax has opposite sign convention.  Positive means pay.
 $Gains~Tax = (Salvage - Book~Value) Tax~Rate =$
 
 
-## Net Cash Flow
+## Sign Conventions: Net Cash Flow
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 
@@ -513,7 +513,7 @@ Payment Number | Payment          | Interest  | Principal | Balance
 
 These are common:
 
-+ Increases in sales necessities a larger inventory (Working Capital)
++ Increases in sales necessitates a larger inventory (Working Capital)
 + More sales mean greater average invoices outstanding.
 
 The logic is tricky only in the sense that you are showing the changes in these levels as cash flows.

@@ -7,10 +7,6 @@ output: beamer_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-
-## Goals
-
-
 ## Our Environments
 
 + Unconstrained Choice: Pick the _acceptable_ assets. 
@@ -21,12 +17,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## There is a general statement of the problem
 
-+ Our environments can be interpreted as a mixed integer programming problem.
++ Our environments can be interpreted as mixed integer programming problems with various constraints.
 + You get the good stuff in ETM 535/635, Advanced Engineering Economics
 + The solutions are NP-Hard
     + Translate from technical, adding more options requires more time to find a solution than adding the previous option.
     + Except for trivial problems, you need a heuristic.
-+ Heuristics are specialized rules and techniques that find a solution.
++ Heuristics are specialized rules and techniques that find a solution. There are some general categories:
     + Simulated annealing
     + Ant Colony optimization
     + Genetic Algorithms
@@ -62,6 +58,43 @@ knitr::opts_chunk$set(echo = FALSE)
     + Another MARR for bank loans
     + Another MARR for new stock and bond issuance.
 
+
+## There is a usual order  for the sources of funds
+
+The order  is based upon uncertainty about results.
+
++ Less certain results require a higher  MARR
++ More certain results require a lower MARR
+
+Put another way, risky investments require a higher risk premium.
+
+## Why Retained Earnings Require the Lowest MARR
+
++ These are internal funds that are controlled by internal people.
++ They know you.  They know the projects you usually work on.
++ They know the details of the business.
++ They have less uncertainty about those details than an outsider.
+
+Less uncertainty about the result, lower MARR.
+
+## Why a lender sees more uncertainty
+
++ Lenders tend to specialize in industries.
++ They know the industry well but have less knowledge about the insides of your firm.
++ They don't have full details on the team.
++ They have not worked shoulder to shoulder.
+
+They have more uncertainty than insiders and therefore have a higher MARR.
+
+## Why Capital Markets (Stocks and Bonds) have the highest MARR
+
++ Many of you own stock, even in a mutual fund or retirement fund.
++ Pick a random stock.
++ Where is the headquarters or the nearest location?
++ You don't know much.  You have more uncertainty.
+
+You have more uncertainty than a banker because you know less about the firm and the project.  Because of that you will have a higher MARR.
+
 ## Distinguishing Divisible and Indivisible Assets
 
 + Divisible assets
@@ -86,14 +119,15 @@ No change in  IRR dependent on  scale, but this often happens in real life.
 + Not a continuous problem that can be solved by calculus but you can use calc style logic.
 + Your objective is to maximize *net* benefits, i.e., benefits less costs.
 + In calc land you would set up a net benefit function, differentiate, set it equal to zero and solve.
-+ But, that net benefit function has to have the right shape, e.g., $NB''<0$, to be sure that your local extrema is a max and the local max.
-+ For this problem move around the funds and the assets to make sure that it has the right shape for a maximum global net benefit.
++ But, that net benefit function has to have the right shape, e.g., $NB''<0$, to be sure that your local extrema is a max and the global max.
++ For this problem, move around the funds and the assets to make sure that it has the right shape for a global maximum  net benefit.
 
 
 ## Getting the right shape of net benefit function.
 
 + Order your assets from highest IRR to lowest IRR.
 + Order your funds from lowest MARR to highest MARR.
+
 ![](BenAndCosts.png)
 
 
@@ -159,7 +193,7 @@ IRR   | 20%   | 10%   | 12% | 8%    |
 $A_0$ | 6     | 5     | 4   | 7     |
 
 + MARR = 9%
-+ Note that this is just the IRR criteria.  Buy if the IRR is greater than MARR, i.e., A, B and C.
++ Note that this is just the IRR criteria, "Buy if the IRR is greater than MARR"", i.e., A, B and C.
 
 
 ## Limited Retained Earnings
@@ -181,14 +215,14 @@ IRR   | 20%   | 12%   | 10% | 8%    |
 $A_0$ | 6     | 4     | 5   | 7     |
 
 + Use $10 of the retained  earnings to buy all of A and C.
-+ Use the remaining $2 to buy 2/5  of B, the part where the $IRR>MARR$.
-+ Don't use the remainder  of the loan to buy remainder of B or D.
++ Use the remaining \$2 to buy 2/5  of B, the part where the $IRR>MARR$.
++ Don't use the the loan to buy remainder of B or D.
 
 
 
 ## Indivisible Assets
 
-+ If follows the same rules but cost of funds can get complicated.
++ It follows the same rules but cost of funds can get complicated.
 + The cost of funds is the weighted average of the funds used.
     + Example: \$7 at 3\% and \$3 at 10\%.
     + $\frac{7}{10} 3\% + \frac{3}{10} 10\% = 5.1\%$
@@ -282,7 +316,7 @@ You can't calculate the IC funds until you know if the previous asset was purcha
     + the rate on your savings.
 + Or, in large organizations when you have separate operating and capital budgets with no ability to transfer.
     + Does not apply in a use it or lose it environment (UIOLI).
-    + Very common but assumes that higher ups understand long term needs more than lower downs.
+    + Very common, but assumes that higher ups understand long term needs more than lower downs.
     + In UIOLI you buy dumb things
     
 ## The Heuristic

@@ -17,3 +17,25 @@ knitr::opts_chunk$set(echo = FALSE)
     + Break-Even
     + Make vs Buy
     + Optimal Pace
+    
+## Types of Costs
+
+## Contrasts between Economists and Accountants
+
+## Volume Index
+
+## Simplifed Assumptions for this Class
+
+## Derived Costs
+
+## Average Costs
+
+## Incremental Costs
+
+## Real Life Average Costs
+
+## Break-Even Problem
+
+## Make vs Buy Problem
+
+## Optimal Pace Problem

@@ -67,11 +67,11 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Warnings: You Have Seen Sensitivity Analysis
 +  Recall the PW diagrams we used in learning IRR?
 +  Shows how PW changes with changes in MARR. 
-    $PW = +10 + \frac{15}{(1+r)}$
+    $PW = -10 + \frac{15}{(1+r)}$
     
 ```{r PWFunction, fig.height=4}
 
-curve(+10 + 15 / (1 + x), 0, 1, ylab = "PW", xlab = "MARR"  )
+curve(-10 + 15 / (1 + x), 0, 1, ylab = "PW", xlab = "MARR"  )
 curve(0 * x, 0,1, add = TRUE)
 
 ```

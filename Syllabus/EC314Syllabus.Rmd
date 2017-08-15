@@ -1,5 +1,5 @@
 ---
-title: "Syllabus EC314 Summer 2017"
+title: "Syllabus EC314 Fall 2017"
 author: "James Woods"
 date: ""
 output: pdf_document
@@ -24,11 +24,11 @@ A brief assessment that includes math skills from MTH 70 and 95 will be given on
 
 ## Key Dates
 
-+ Final Exam: August 17th from 4:30 -- 6:50
-+ Midterm Exam: July 25th
++ Final Exam: December 4th from 8:00 -- 9:50
++ Midterm Exam: October 23rd
 <!-- + Midterm 1: April 26th -->
 <!-- + Midterm 2: May 17th -->
-<!-- + Last day to drop or change grade option: May 21st. -->
++ Last day to drop or change grade option: November 12th.
 
 Exams will be given on those days and at those times only.  I do not give make up, early or late exams.  
 
@@ -36,7 +36,7 @@ If you have a DRC compensation and would normally schedule an exam in the testin
 
 # Contact Information
 
-Communication will be handled through slack https://ec314summer17.slack.com/. You should have received an invitation, if not, just go to that URL and use your @pdx.edu email to sign up. There are reasonable help documents to get you started. https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users
+Communication will be handled through slack https://ec314fall17.slack.com. You should have received an invitation, if not, just go to that URL and use your @pdx.edu email to sign up. There are reasonable help documents to get you started. https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users
 
 Slack will be used for IM, email and forum style communication.  It even handles phone calls. If you have a question about course material or the course itself, ask in one of the channels. If you have a personal message that is not intended for others, send a direct message. The group has global do not disturb hours of 10pm -8am.  If you would like something different, alter your personal settings.
 
@@ -48,10 +48,10 @@ I will not react to questions in the two days prior to an exam  under most circu
 Office Hours:
 
 + My office is in CH 241-O.
-+ Drop in office hours are Tuesday 3:00-4:00  through the last week of class. There is no need to make an appointment for these hours -- just come.
++ Drop in office hours are Monday 2:30-3:30  through the last week of class. There is no need to make an appointment for these hours -- just come.
 + If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 20 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points.  
 
-Office hours for David Hong, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack.
+Office hours for XXXX, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack.
 
 
 # Textbook and Other Resources

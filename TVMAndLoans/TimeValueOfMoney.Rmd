@@ -3,9 +3,9 @@ title: "Time Value of Money"
 author: "James Woods"
 date: ''
 output:
-  slidy_presentation: default
-  ioslides_presentation: default
   beamer_presentation: default
+  ioslides_presentation: default
+  slidy_presentation: default
 ---
 
 ```{r setup, include=FALSE}
@@ -233,7 +233,7 @@ print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gr
 ```
 
 
-## Linar Gradient is Tricky
+## Linear Gradient is Tricky
 ```{r fig.width=3, fig.height=1.5, fig.align='center'}
 library(ggplot2)
 cf <- data.frame(y=c(0,0,1,2,3,4))

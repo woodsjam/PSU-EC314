@@ -58,7 +58,7 @@ Some rules may be odd because of:
 + The planning horizon
 + The preferred criteria
 
-## Two Envioronments
+## Two Environments
 
 We only work with four environments in this class, two now and two later.  
 
@@ -397,12 +397,12 @@ Hints:
     + The 30-year loan is a better deal given your MARR of 8% compounded monthly.
     + If it was 1% compounded monthly you would prefer the 15-year loan
         + `r Acc(agivenp(100000, .03/12, 15*12))` (P|A, i = .01/12, 15(12)) = `r Acc(pgivena(agivenp(100000, .03/12, 15*12), .01/12, 15*12))`
-        + `r Acc(agivenp(100000, .04, 30))` (P|A, i = .01/12, 30(12)) = `r Acc(pgivena(agivenp(100000, .04/12, 30*12), .01/12, 30*12))`
+        + `r Acc(agivenp(100000, .04/12, 30*12))` (P|A, i = .01/12, 30(12)) = `r Acc(pgivena(agivenp(100000, .04/12, 30*12), .01/12, 30*12))`
       
 ## Note
   
   + IRL We use net cash flow instead of the payment to take into account tax effects.
-  + The MARR changes the which choice is best.
+  + The MARR changes which choice is best.
   + The higher the MARR the greater preference for accepting more costs as long as those costs are pushed into the future.
   
 ## Real Life Example
@@ -470,7 +470,7 @@ curve(x*0 + 1500, from = .01 , to = .1  , add = TRUE, col = "violet")
 ```
 
 
-## What Happened In Reallity
+## What Happened In Reality
 
 + The PVC option was cheaper.
 + We considered the politics of replacing a 40-year roof that failed in less than 10 years with identical roof with promises that it would be done correctly.

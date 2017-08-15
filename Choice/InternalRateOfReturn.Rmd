@@ -156,8 +156,8 @@ curve(0 * x, 0, .6, add = TRUE)
 
 + PW is zero at `r OneIRR(c(-10,0,15))`.
 + Is investment shaped, costs now and benefits later.
-+ If MARR is less than that PW>0 and a good asset.
-+ If MARR is greater than that PW<0 and not good.
++ If MARR is less than IRR, PW>0 and a good asset.
++ If MARR is greater than IRR, PW<0 and not good.
 
 
 ## Gives 10 Now and Costs 15 in time 2
@@ -170,8 +170,8 @@ curve(0 * x, 0, .6, add = TRUE)
 
 + PW is zero at `r OneIRR(c(10,0,-15))`.
 + Is loan shaped, benefits now and costs later.
-+ If MARR is less than that PW>0 and a bad asset.
-+ If MARR is greater than that PW<0 and good asset.
++ If MARR is less than IRR, PW>0 and a bad asset.
++ If MARR is greater than IRR, PW<0 and good asset.
 
 
 ## Summary Unconstrained Choice Criteria
@@ -302,8 +302,8 @@ This procedure has a lot of caveats
 Year| A | B |B-A|
 ----|---|---|---|
 0   | -1 | -1000 |-999|
-1   |2 |1110  |1109|
-IRR|   |   |`r 1109/999 -1`|
+1   |2 |1110  |1108|
+IRR|   |   |`r 1108/999 -1`|
 
 $$IRR(B-A)\neq IRR(B) - IRR(A)$$
 

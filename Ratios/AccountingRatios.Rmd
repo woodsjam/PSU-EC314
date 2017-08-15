@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 + A way of using the definitions you just learned again to make them more solid.
 + Give us the U in EC314U by adding a topic of general interest.
-+ View ratios as a non-probablistic expression of risk. 
++ View ratios as a non-probabilistic expression of risk. 
 + Point out other uses of the ratios.
 
 

@@ -125,7 +125,7 @@ $$IC(q) = C(q+1) - C(q) = (F + \alpha q + \alpha) -(F + \alpha q )$$
 + Sometimes you have choices
     + 500 plates
     + 300 tickets
-    + \$2500 in food costs (Yes, quantity is sometimes measure like this.)
+    + \$2500 in food costs (Yes, quantity is sometimes measured like this.)
 + Sometimes you have to combine more than one measure
     + Gross Domestic Product
     + kW, kWh
@@ -135,7 +135,7 @@ $$IC(q) = C(q+1) - C(q) = (F + \alpha q + \alpha) -(F + \alpha q )$$
 + Ideally, your volume index will be highly correlated with both costs and benefits (Costs and Revenue)
     + Not always the case
     + Often get one but not the other.
-+ Uncertainty about costs and/or benefits will be small for a known value of volume index.    
++ Ideally, uncertainty about costs and/or benefits will be small for a known value of volume index.    
 
 ## Example
 
@@ -152,7 +152,7 @@ I picked number of  insured vehicles.
 
 ## Refinements
 
-+ Large uncertainty for number of  vehicles
++ Large uncertainty for length of trip
 + Missed a lot:
     + Urban vs Rural: Lots of small accidents vs few catastrophic.
     + Sources of the cost per claim
@@ -248,6 +248,15 @@ How often do you go to class?
 + 6 days a week:  $C_M = 100$, $C_D= 5(24)=120$
 
 You have to really think about uncertainty if you go 5 days a week, $C_M = C_D$.
+
+## A Few Warnings
+
++ Be sure to sensitivity test this.
+    + If your likely volume is not near the volume where the costs are the same -- relax.
+    + If the differences between the two technologies are about the same over a likely range -- relax.
+
+Otherwise, You need more certainty about the volume to make a choice.
+
 
 ## Optimal Pace Problem
 

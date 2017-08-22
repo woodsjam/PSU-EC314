@@ -14,6 +14,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This course will examine the tools required to analyze expenditures that yield benefits over time -- investments. The use of accounting documents and a focus on the time value of money will allow students to analyze choices in a variety of security, loan, and equipment investment decisions. The main objectives are to prepare engineers for their PE and FE exams and to provide engineers, economists and others with a shared language and understanding of basic finance topics.
 
+This is a hybrid class.  It is expected that you will have completed all reading, including watching the videos in the course wiki, before the start of class.  If you can't commit to this workload, please consider enrolling in the Winter or Spring sessions, which will be taught as a traditional in-person class.
+
+
 ## Prerequisites
 
 There are no prerequisites for this course. However, a reasonable math
@@ -141,14 +144,21 @@ Your grade in the class will be based on your performance on the midterms and th
 <!-- + Midterm 1 (30%) -->
 <!-- + Midterm 2 (30%) -->
 
-+ Final Exam (60%)
++ Final Exam (50%)
 + Midterm (40%)
++ In-class quizzes (10%)
 
 The quizzes in D2L are not part of your grade, except as noted below, but you will be hard pressed to pass the class without spending significant time with the material.
 
 Course grades will be based on class rank with cut points between letter grades determined by gaps in the distribution.  
 
-## In-class Exams
+## In-class quizzes
+
+These quizzes will be given at the start of class.  They are intended to be a check on if you completed the required reading, including videos in the class wiki, before the start of class.  
+
+They are graded on a pass/no-pass basis and will include very simple questions about the course material.  They will not be returned but a key will be provided. 
+
+## Exams
 
 D2L has samples of exams to get you familiar with the style of the questions. The keys will have a few errors, but the errors are frequently noted in the errata page.
 
@@ -156,34 +166,6 @@ Students will be assigned seats and photo ID will be required for all exams. You
 
 The seating chart for the exam will be released on slack just before the exam to make it easier to find your seat.
 
-## Consequences for Low Scores on Midterms
-
-After each midterm the instructor will announce a cut score for the exam.  If your exam score is equal to or less than the cut score, you will be notified on your returned exam and as a feedback on your grade in D2L. This will trigger additional requirements. Not picking up your exam or reviewing your grades in D2L will not excuse you from these requirements. 
-
-1. You must meet with the instructor or graduate assistant _at least a week before the next exam_ to discuss the exam, course material and how to study for the next exam. Given the volume of appointment slots, scheduling conflicts are not a valid excuse.
-
-1. You will be assigned d2l quizzes covering the material on the exam with the poor score. These quizzes will all start with "REQUIRED" and are different from the voluntary quizzes for grading purposes. These quizzes must be taken and passed with a score of 60\% or better by the due date listed on each quiz. Note that you may take them as many times as you wish.
-
-1. You will be assigned d2l quizzes covering material on the next exam.  You will be required to pass each with a 60\% score or better by the listed due date. These quizzes will all start with "REQUIRED" and are different from the voluntary quizzes for grading purposes. Note that you may take them as many times as you wish.
-
-1. A brief written assignment will be made available to you at the end of each class.  You must pick up and complete the assignment, returning it at the beginning of the next class.  These assignments will be graded on a pass/non-pass basis with fairly low standard.  You must pass 60% of the assignments (rounded down). Nobody other than you will be able to pick up or drop off assignments.
-
-<!-- 1. Your next exam will include additional _remedial_ questions.  These questions will be graded first on a pass/no pass basis with a fairly low standard. If these questions are not passed, the remainder of the exam will not be graded and you will receive a score of zero. -->
-
-
-*Failure to complete these requirements will result in a score of zero on the next exam.*  
-
-The intent of these rules is to force students to refocus on the material so that they will be more successful in the class.
-
-Just because your grade is above the cut score does not mean that you have received a passing grade.
-
-## Voluntary Commitment to "Consequences for Low Scores on Midterms"
-
-Students may volunteer to be treated as if they had a low score, mandatory online quizzes, daily homework and a required meeting from the start of the course. This can help you commit to coming to class every day and engaging with the material on a regular basis.
-
-You will be able to commit to these requirements through a quiz that will be available the first week of class and after the midterm. 
-
-Please note that failure to satisfy the requirements will result in the same penalties -- a zero on the next exam.
 
 ## Practice D2L Quizzes
 

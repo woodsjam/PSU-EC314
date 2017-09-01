@@ -146,17 +146,19 @@ Your grade in the class will be based on your performance on the midterms and th
 
 + Final Exam (50%)
 + Midterm (40%)
-+ In-class quizzes (10%)
++ In-class quizzes and Class Rules D2L Quiz (10%)
 
 The quizzes in D2L are not part of your grade, except as noted below, but you will be hard pressed to pass the class without spending significant time with the material.
 
-Course grades will be based on class rank with cut points between letter grades determined by gaps in the distribution.  
+Course grades will be based on class rank with cut points between letter grades determined by gaps in the distribution.  Note that the exams are required.
 
-## In-class quizzes
+## In-class quizzes and Class Rules D2L Quiz
 
 These quizzes will be given at the start of class.  They are intended to be a check on if you completed the required reading, including videos in the class wiki, before the start of class.  
 
 They are graded on a pass/no-pass basis and will include very simple questions about the course material.  They will not be returned but a key will be provided. 
+
+In addition to the in class quizzes there is one required D2L quiz covering the syllabus and how to use D2L. There is a separate deadline for this in D2L.
 
 ## Exams
 

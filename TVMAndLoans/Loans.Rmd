@@ -19,6 +19,7 @@ pgivengrow<-function(a1,g,i,n){a1*(1-(1+g)^n*(1+i)^(-n))/(i-g)}
 fgivena<-function(a,i,n){pgivena(a,i,n)*(1+i)^n}
 fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
 
+source("TVM.R")
 ```
 
 
@@ -142,10 +143,12 @@ If it is a multiple of the compounding period, use the math.  If not, read the c
 ## Application to Time Value of Money Calcs
 
 ```{r fig.width=3, fig.height=2, fig.align='center', warning=FALSE}
-library(ggplot2)
-cf <- data.frame(y=c(0,0,5,0,5,0,5,0,5,0,5) )
-cf$x=0:(length(cf$y)-1)
-print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
+# library(ggplot2)
+# cf <- data.frame(y=c(0,0,5,0,5,0,5,0,5,0,5) )
+# cf$x=0:(length(cf$y)-1)
+# print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
+
+CF_Diagram(c(0,0,5,0,5,0,5,0,5,0,5))
 ```
 
 Not a constant series but you can find PW with brute force with interest at 10\% per period compounded each period.

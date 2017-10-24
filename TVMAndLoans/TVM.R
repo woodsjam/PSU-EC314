@@ -156,6 +156,25 @@ CombinedCashFlow<-function(ListofTVM){
 
 
 ##
-Singleton(10,5)
-CombinedCashFlow(list(Singleton(A=10,N=5),Singleton(A=10,N=6)))
+# Singleton(10,5)
+# CombinedCashFlow(list(Singleton(A=10,N=5),Singleton(A=10,N=6)))
 
+
+library(ggplot2)
+library(scales)
+
+CF_Diagram <- function(values){
+  LastTime <- length(values) - 1 
+  values[values == 0 ] <- NA
+  CFs <- data.frame(x1 = 0:LastTime, x2 = 0, y1 = 0:LastTime, y2 = values )
+  ggplot(CFs , aes(x = x1, y = x2, xend = y1, yend = y2, label = y2))  +
+    geom_segment( arrow = arrow(length = unit(.15, "cm"))) + 
+    geom_text( aes(y = y2), nudge_x = .40) + xlab("Time") + 
+    ylab("Cash Flow") + 
+    scale_x_continuous(breaks = 0:LastTime) +
+    theme_classic() + theme(axis.line=element_blank()) +
+    geom_segment(aes(x = 0, y = 0, xend = LastTime +1, yend = 0),
+                 arrow = arrow(length = unit(0.15, "cm")))
+}  
+
+# CF_Diagram(c(3,5,-9, 4, 8, 0,0,7))

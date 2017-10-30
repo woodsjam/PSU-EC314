@@ -163,7 +163,7 @@ CombinedCashFlow<-function(ListofTVM){
 library(ggplot2)
 library(scales)
 
-CF_Diagram <- function(values){
+CF_Diagram <- function(values, start = 0 ){
   LastTime <- length(values) - 1 
   values[values == 0 ] <- NA
   CFs <- data.frame(x1 = 0:LastTime, x2 = 0, y1 = 0:LastTime, y2 = values )
@@ -171,10 +171,10 @@ CF_Diagram <- function(values){
     geom_segment( arrow = arrow(length = unit(.15, "cm"))) + 
     geom_text( aes(y = y2), nudge_x = .40) + xlab("Time") + 
     ylab("Cash Flow") + 
-    scale_x_continuous(breaks = 0:LastTime) +
+    scale_x_continuous(breaks = 0:LastTime, labels = start:(start+LastTime)) +
     theme_classic() + theme(axis.line=element_blank()) +
     geom_segment(aes(x = 0, y = 0, xend = LastTime +1, yend = 0),
                  arrow = arrow(length = unit(0.15, "cm")))
 }  
 
-# CF_Diagram(c(3,5,-9, 4, 8, 0,0,7))
+#CF_Diagram(c(3,5,-9, 4, 8, 0,0,7), -3)

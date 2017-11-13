@@ -241,7 +241,7 @@ R5 <- round((1.1)^5-1,4)
 ```
     + Effective 5-year rate: $(1+\frac{.1}{1})^5 -1 = `r R5`$
 
-    + $PW(Pump~2| 35 Years) = 75 + \frac{75(P|A, i = `r R5`, 6)}{(1+ `r R5`)} = `r Acc(75 + pgivena(75, R5, 6))`$
+    + $PW(Pump~2| 35 Years) = 75 + \frac{75(P|A, i = `r R5`, 6)}{(1+ `r R5`)} = `r Acc(75 + pgivena(75, R5, 6)/(1+ R5))`$
     
     
 Notice that Pump 2 provides pumping services at the lowest cost.

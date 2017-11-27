@@ -48,7 +48,7 @@ knitr::opts_chunk$set(echo = FALSE)
 + We will be using some specialized heuristics to find the best sets of assets in the new environments.
 + The two/three heuristics have some fragile points.
     + Increasing cost of funds has trouble when an indivisible asset (defined later), that could be funded by a blend of funds from two sources is rejected and the next asset can be funded by  a  single source of funds.
-    + The capital budgeting problem is exhaustive search and the solution requires $2^N -1$ comparisons.
+    + The capital budgeting problem is exhaustive search and the solution requires $2^N -1$ evaluations.
 
 ## Increasing Cost of Funds
 
@@ -71,7 +71,7 @@ Put another way, risky investments require a higher risk premium.
 ## Why Retained Earnings Require the Lowest MARR
 
 + These are internal funds that are controlled by internal people.
-+ They know you.  They know the projects you usually work on.
++ They know you. They know the projects you usually work on.
 + They know the details of the business.
 + They have less uncertainty about those details than an outsider.
 
@@ -93,13 +93,13 @@ They have more uncertainty than insiders and therefore have a higher MARR.
 + Where is the headquarters or the nearest location?
 + You don't know much.  You have more uncertainty.
 
-You have more uncertainty than a banker because you know less about the firm and the project.  Because of that you will have a higher MARR.
+You have more uncertainty than a banker because you know less about the firm and the project.  Because of that, you will have a higher MARR.
 
 ## Distinguishing Divisible and Indivisible Assets
 
 + Divisible assets
     + You can take some or all.
-    + Does not mean any fraction but close.
+    + Does not mean any fraction, but close.
     + Think of an apartment complex where you get to chose the number of units.
 + Indivisible Assets
     + You can take all or none.
@@ -116,7 +116,7 @@ No change in  IRR dependent on  scale, but this often happens in real life.
 
 ## Logic of the heuristic
 
-+ Not a continuous problem that can be solved by calculus but you can use calc style logic.
++ Not a continuous problem that can be solved by calculus, but you can use calc style logic.
 + Your objective is to maximize *net* benefits, i.e., benefits less costs.
 + In calc land you would set up a net benefit function, differentiate, set it equal to zero and solve.
 + But, that net benefit function has to have the right shape, e.g., $NB''<0$, to be sure that your local extrema is a max and the global max.
@@ -373,7 +373,7 @@ AB with \$1 left over is the best combination.
 
 You often have capital budgeting/ combinatorial optimization problems in government budgets.
 
-+ Your high IRR project is not funded but other larger lower  IRR projects are funded.
++ Your high IRR project is not funded, but other larger -- lower  IRR -- projects are funded.
 + Your project would have 'bumped' one of the larger projects.
 + Don't argue against the other projects/programs, argue for a larger overall budget.
 

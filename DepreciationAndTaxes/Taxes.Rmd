@@ -317,6 +317,10 @@ GainsTax <- c(0,0,0,0,0,0, 1000 * .4)
 NetCash <- FullSale$AfterTax - GainsTax
 GainsTable <- as.data.frame(cbind(FullSale, GainsTax, NetCash))
 
+
+GainsTable$NetCash[7] <- GainsTable$NetCash[7] + 1000
+
+
 stargazer(GainsTable, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE, digits = 0)
 
 ```

@@ -1,5 +1,5 @@
 ---
-title: "Syllabus EC314 Fall 2017"
+title: "Syllabus EC314 Winter 2018"
 author: "James Woods"
 date: ""
 output: pdf_document
@@ -14,8 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This course will examine the tools required to analyze expenditures that yield benefits over time -- investments. The use of accounting documents and a focus on the time value of money will allow students to analyze choices in a variety of security, loan, and equipment investment decisions. The main objectives are to prepare engineers for their PE and FE exams and to provide engineers, economists and others with a shared language and understanding of basic finance topics.
 
-This is a hybrid class.  It is expected that you will have completed all reading, including watching the videos in the course wiki, before the start of class.  If you can't commit to this workload, please consider enrolling in the Winter or Spring sessions, which will be taught as a traditional in-person class.
-
+Given the high probability of snow days this term, class will still meet online via a YouTube live stream.  Details will be posted on slack, see below, if needed.
 
 ## Prerequisites
 
@@ -27,11 +26,10 @@ A brief assessment that includes math skills from MTH 70 and 95 will be given on
 
 ## Key Dates
 
-+ Final Exam: December 4th from 8:00 -- 9:50
-+ Midterm Exam: October 23rd
-<!-- + Midterm 1: April 26th -->
-<!-- + Midterm 2: May 17th -->
-+ Last day to drop or change grade option: November 12th.
++ Final Exam: March 22nd from 8:00 -- 9:50
++ Midterm 1: Feb 1st
++ Midterm 2: March 1st
++ Last day to drop or change grade option: February 25th.
 
 Exams will be given on those days and at those times only.  I do not give make up, early or late exams.  
 
@@ -39,7 +37,7 @@ If you have a DRC compensation and would normally schedule an exam in the testin
 
 # Contact Information
 
-Communication will be handled through slack https://ec314fall17.slack.com. You should have received an invitation, if not, just go to that URL and use your @pdx.edu email to sign up. There are reasonable help documents to get you started. https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users
+Communication will be handled through slack https://ec314winter18.slack.com. You should have received an invitation, if not, just go to that URL and use your @pdx.edu email to sign up. There are reasonable help documents to get you started. https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users
 
 Slack will be used for IM, email and forum style communication.  It even handles phone calls. If you have a question about course material or the course itself, ask in one of the channels. If you have a personal message that is not intended for others, send a direct message. The group has global do not disturb hours of 10pm - 8am.  If you would like something different, alter your personal settings.
 
@@ -51,8 +49,8 @@ I will not react to questions in the two days prior to an exam  under most circu
 Office Hours:
 
 + My office is in CH 241-O.
-+ Drop in office hours are Monday 2:30-3:30  through the last week of class. There is no need to make an appointment for these hours -- just come.
-+ If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 20 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points.  
++ Drop in office hours are Thursday 12:00-1:00  through the last week of class. There is no need to make an appointment for these hours -- just come.
++ If you can’t attend regular office hours, please check my calendar https://goo.gl/6vGvMF. I will make a limited number of 20 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points.  
 
 Office hours for Kevin Payne, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack.
 
@@ -140,12 +138,9 @@ assistance.  You and I are both customers. I have no special status.
 
 Your grade in the class will be based on your performance on the midterms and the final exam.  
 
-<!-- + Final Exam (40%) -->
-<!-- + Midterm 1 (30%) -->
-<!-- + Midterm 2 (30%) -->
-
-+ Final Exam (50%)
-+ Midterm (40%)
++ Final Exam (40%)
++ Midterm 1 (25%)
++ Midterm 2 (25%)
 + In-class quizzes and Class Rules D2L Quiz (10%)
 
 The quizzes in D2L are not part of your grade, except as noted below, but you will be hard pressed to pass the class without spending significant time with the material.
@@ -154,7 +149,7 @@ Course grades will be based on class rank with cut points between letter grades 
 
 ## In-class quizzes and Class Rules D2L Quiz
 
-These quizzes will be given at the start of class.  They are intended to be a check on if you completed the required reading, including videos in the class wiki, before the start of class.  
+There is a 50% chance of a quiz at the start of class. They are intended to be a check on if you completed the required reading, including videos in the class wiki, before the start of class.  
 
 They are graded on a pass/no-pass basis and will include very simple questions about the course material.  They will not be returned but a key will be provided. 
 

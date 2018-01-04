@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 + Point out other uses of the ratios.
 
 
+
 ## The Ratios
 
 https://prezi.com/gz6nmvsbjrz7/accounting-ratios/

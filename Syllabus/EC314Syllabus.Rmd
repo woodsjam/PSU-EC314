@@ -145,7 +145,7 @@ Your grade in the class will be based on your performance on the midterms and th
 
 The quizzes in D2L are not part of your grade, except as noted below, but you will be hard pressed to pass the class without spending significant time with the material.
 
-Course grades will be based on class rank with cut points between letter grades determined by gaps in the distribution.  Note that the exams are required.
+Course grades will be based on class rank with cut points between letter grades determined by gaps in the distribution.  Note that the exams are required. Not attending an exam will result in a failing grade.
 
 ## In-class quizzes and Class Rules D2L Quiz
 

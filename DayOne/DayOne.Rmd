@@ -1,0 +1,27 @@
+---
+title: "EC 314 Public and Private Investment Analysis"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Plan for the Day
+
++ Walk through the syllabus
++ Walk through tools and resources
++ Take a pre-test
++ Talk a little about accounting as time permits
+
+
+# Syllabus
+
+You can find the syllabus here. (https://github.com/woodsjam/PSU-EC314/blob/Winter2018/Syllabus/EC314Syllabus.Rmd
+)
+
+Almost all the slides will also be on github. (https://github.com/woodsjam/PSU-EC314/tree/Winter2018)
+
++ Download them before each class if you like but they are not a subsitute for coming to class.
+
+#

@@ -1,0 +1,545 @@
+---
+title: "Income and Cash Flow Statments"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Goals
+
++ Make what you learned about taxes and depreciation understandable to others.
++ Use accounting conventions to convey your cash flow projections.
+
+## Background
+
++ We will be focusing on the cash flow effects of some investment.
++ We will not be looking at the whole business, just the thing that changed.
++ We are looking at a counter-factual, "How would cash flow change?"
+
+## The Example Counter-factual
+
++ How would cash flow change if we purchased a new inventory management system that reduces our need for inventory?
++ How would cash flow change if we purchased a new delivery truck with a loan?  
++ Is cash flow better than without the loan?
+
+## Sign Conventions: Revenue
+
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	&	&\\
+		Interest	&	&	&\\
+		Depreciation	&	&	&\\
+        \hline
+		Taxable Income	&	&	&\\
+		Tax	&	&	&\\
+        \hline
+		Net Income	&	&	&\\
+\end{tabular}
+\end{table}
+
+More revenue than current plan in year zero and less revenue than current plan in year one.
+
+## Sign Conventions: Expenses
+
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	50& (700)	&\\
+		Interest	&	&	&\\
+		Depreciation	&	&	&\\
+        \hline
+		Taxable Income	&	&	&\\
+		Tax	&	&	&\\
+        \hline
+		Net Income	&	&	&\\
+\end{tabular}
+\end{table}
+
+More expenses than current plan in year zero and fewer expenses than current plan in year one.
+
+
+
+## Sign Conventions: Interest
+
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	50& (700)	&\\
+		Interest	&	&	300&\\
+		Depreciation	&	&	&\\
+        \hline
+		Taxable Income	&	&	&\\
+		Tax	&	&	&\\
+        \hline
+		Net Income	&	&	&\\
+\end{tabular}
+\end{table}
+
+Increase in interest expense, relative to current plan, in year 1.  Note that this is just the interest expense, not a full loan payment.
+
+
+## Sign Conventions: Depreciation
+
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	50& (700)	&\\
+		Interest	&	&	300&\\
+		Depreciation	&	4000&	3200&\\
+        \hline
+		Taxable Income	&	&	&\\
+		Tax	&	&	&\\
+        \hline
+		Net Income	&	&	&\\
+\end{tabular}
+\end{table}
+
+If you replaced an asset with one that cost less, and had less depreciation in years zero and one, then you would see negative values.
+
+
+## Sign Conventions: Taxable Income
+
+Subtract your expenses from your revenue.
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	50& (700)	&\\
+		Interest	&	&	300&\\
+		Depreciation	&	4000&	3200&\\
+        \hline
+		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -300 -3200)`)	&\\
+		Tax	&	&	&\\
+        \hline
+		Net Income	&	&	&\\
+\end{tabular}
+\end{table}
+
+
+Year 0 Taxable Income = 100 -50 -4000
+
+Year 1 Taxable Income = -5000 - (-700) -300 - 3200
+
+## Sign Conventions: Tax
+
+Apply your tax rate (40\%) to the Taxable Income. Note that increases in taxes are positive but decreases in taxes are shown as a negative.
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	50& (700)	&\\
+		Interest	&	&	300&\\
+		Depreciation	&	4000&	3200&\\
+        \hline
+		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -300 -3200)`)	&\\
+				Tax	&	(`r -(100 - 50 -4000)*.4`)&	(`r -(-500 +700 -300 -3200)*.4`)&\\
+        \hline
+		Net Income	&	&	&\\
+\end{tabular}
+\end{table}
+
+This says that your taxes will be *lower* because of the action you are taking.
+
+## Sign Conventions: Net Income
+
+Subtract Tax from Taxable Income to get Net Income, i.e., profits.
+
+\begin{table}[h]
+\begin{tabular}{l||c|c||p{3cm}}
+\multicolumn{4}{c}{Income Statement}\\
+  &Year 0  &Year 1  &Note\\
+\hline
+		Operating Revenue	&	100 & (500)	&\\
+		Operating Expenses	&	50& (700)	&\\
+		Interest	&	&	300&\\
+		Depreciation	&	4000&	3200&\\
+        \hline
+		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -300 -3200)`)	&\\
+				Tax	&	(`r -(100 - 50 -4000)*.4`)&	(`r -(-500 +700 -300 -3200)*.4`)&\\
+        \hline
+		Net Income &	(`r -(100 - 50 -4000)*.6`)&	(`r -(-500 +700 -300 -3200)*.6`)&\\
+\end{tabular}
+\end{table}
+
+This says that our profits are lower than they would be otherwise.
+
+## Cash Flow
+
+Cash from operations is just copied from the income statement
+
+\begin{table}
+\begin{tabular}{l||c|c||p{3cm}}
+        \multicolumn{4}{c}{Cash Flow Statement}\\
+  &Year 0  &Year 1  &Note\\        
+	Operations&	&	&\\
+	\hspace{.25in}Net Income	&	(`r NI0 <- -(100 - 50 -4000)*.6; NI0`)&	(`r NI1 <- -(-500 +700 -300 -6400)*.6; NI1`)&\\
+	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	Investments	&	&	&\\
+			&	&	&\\
+\hspace{.25in}Working Capital	&	&	&\\
+		\hspace{.25in}Gains Tax	&	&	&\\
+			&	&	&\\
+        
+	Finance	&	&	&\\
+			&	&	&\\
+        \hline
+		Net Cash Flow	&	&	&\\
+\end{tabular}
+\end{table}
+
+Keep in mind that the convention is cash inflows are positive and cash outflows are negative.
+
+
+
+## Sign Conventions: Asset Purchase
+
+The Asset is a 20K, 5-Year Asset
+
+\begin{table}
+\begin{tabular}{l||c|c||p{3cm}}
+        \multicolumn{4}{c}{Cash Flow Statement}\\
+  &Year 0  &Year 1  &Note\\        
+	Operations&	&	&\\
+	\hspace{.25in}Net Income	&	(`r NI0`)&	(`r NI1`)&\\
+	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	Investments	&	&	&\\
+\hspace{.25in}The Asset			&(20000)	&	&\\
+\hspace{.25in}Working Capital	&	&	&\\
+		\hspace{.25in}Gains Tax	&	&	&\\
+			&	&	&\\
+        
+	Finance	&	&	&\\
+			&	&	&\\
+        \hline
+		Net Cash Flow	&	&	&\\
+\end{tabular}
+\end{table}
+
+Outflows of cash are negative. Note depreciation reflects sale in year 1.
+
+
+## Sign Conventions: Asset Sale
+
+Sell the asset in year 1 for 19000
+
+\begin{table}
+\begin{tabular}{l||c|c||p{3cm}}
+        \multicolumn{4}{c}{Cash Flow Statement}\\
+  &Year 0  &Year 1  &Note\\        
+	Operations&	&	&\\
+	\hspace{.25in}Net Income	&	(`r NI0`)&	(`r NI1`)&\\
+	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	Investments	&	&	&\\
+\hspace{.25in}The Asset			&(20000)	&	19000&\\
+\hspace{.25in}Working Capital	&	&	&\\
+		\hspace{.25in}Gains Tax	&	&	&\\
+			&	&	&\\
+        
+	Finance	&	&	&\\
+			&	&	&\\
+        \hline
+		Net Cash Flow	&	&	&\\
+\end{tabular}
+\end{table}
+
+Inflows of cash are positive.
+
+
+## Sign Conventions: Asset Sale
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+Book <- 20000 - 4000 - 3200
+Gains <- (19000 - Book) * .4
+```
+
+
+Gains tax has opposite sign convention.  Positive means pay.  
+
+\begin{table}
+\begin{tabular}{l||c|c||p{3cm}}
+        \multicolumn{4}{c}{Cash Flow Statement}\\
+  &Year 0  &Year 1  &Note\\        
+	Operations&	&	&\\
+	\hspace{.25in}Net Income	&	(`r NI0`)&	(`r NI1`)&\\
+	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	Investments	&	&	&\\
+\hspace{.25in}The Asset			&(20000)	&	19000&\\
+\hspace{.25in}Working Capital	&	&	&\\
+		\hspace{.25in}Gains Tax	&	&	&\\
+			&	&	&\\
+        
+	Finance	&	&	&\\
+			&	&	&\\
+        \hline
+		Net Cash Flow	&	&	&\\
+\end{tabular}
+\end{table}
+
+Book Value = 20000 - 4000 - 3200 = 12800
+
+
+## Sign Conventions: Gains Tax
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+Book <- 20000 - 4000 - 3200
+Gains <- (19000 - Book) * .4
+```
+
+
+Gains tax has opposite sign convention.  Positive means pay.  
+
+\begin{table}
+\begin{tabular}{l||c|c||p{3cm}}
+        \multicolumn{4}{c}{Cash Flow Statement}\\
+  &Year 0  &Year 1  &Note\\        
+	Operations&	&	&\\
+	\hspace{.25in}Net Income	&	(`r NI0`)&	(`r NI1`)&\\
+	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	Investments	&	&	&\\
+\hspace{.25in}The Asset			&(20000)	&	19000&\\
+\hspace{.25in}Working Capital	&	&	&\\
+		\hspace{.25in}Gains Tax	&	&`r Gains`	&\\
+			&	&	&\\
+        
+	Finance	&	&	&\\
+			&	&	&\\
+        \hline
+		Net Cash Flow	&	&	&\\
+\end{tabular}
+\end{table}
+
+$Gains~Tax = (Salvage - Book~Value) Tax~Rate =$
+
+
+## Sign Conventions: Net Cash Flow
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+
+Cash1 <- -2370 + 4000 - 20000
+Cash2 <- -5520 + 3200 + 19000 - 2480
+
+```
+
+Add up cash but remember gains tax must be subtracted.
+
+\begin{table}
+\begin{tabular}{l||c|c||p{3cm}}
+        \multicolumn{4}{c}{Cash Flow Statement}\\
+  &Year 0  &Year 1  &Note\\        
+	Operations&	&	&\\
+	\hspace{.25in}Net Income	&	(`r NI0`)&	(`r NI1`)&\\
+	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	Investments	&	&	&\\
+\hspace{.25in}The Asset			&(20000)	&	19000&\\
+\hspace{.25in}Working Capital	&	&	&\\
+		\hspace{.25in}Gains Tax	&	&`r Gains`	&\\
+			&	&	&\\
+        
+	Finance	&	&	&\\
+			&	&	&\\
+        \hline
+		Net Cash Flow	&	(18370)& 14200	&\\
+\end{tabular}
+\end{table}
+
+
+## Two More Conventions
+
+We still need to show how to treat loans and working capital.
+
++ Loans
+    + Funding recorded on cash flow
+    + Payments are split into interest expense (Income Statement) and principal payment (Cash Flow Statement)
++ Working Capital Changes
+    + Changes in inventory level  and changes in average accounts receivable.
+    + Record how the level changes from period to period.
+    
+
+## From the Loans Slides
+
+```{r include=FALSE}
+FinFormat <- function(x) format(x, digits=2, decimal.mark=".",   big.mark=",", small.interval=3)
+
+
+Acc<-function(x){format(x,nsmall=2,digits=2,big.mark=',',scientific=FALSE)}
+pgivena<-function(a,i,n){a*((1+i)^n -1)/(i*(1+i)^n)}
+pgiveng<-function(g,i,n){g*( (1+i)^n -(i*n) -1  )/(i^2*(1+i)^n)}
+agivenp<-function(p,i,n){p*(i*(1+i)^n)/((1+i)^n -1)}
+pgivengrow<-function(a1,g,i,n){a1*(1-(1+g)^n*(1+i)^(-n))/(i-g)}
+
+
+fgivena<-function(a,i,n){pgivena(a,i,n)*(1+i)^n}
+fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
+
+PMT <- agivenp(10000,.1,3)
+i1 <- 10000*.1
+P1 <- PMT -i1
+B1 <- 10000-P1
+
+i2 <- B1*.1
+P2 <- PMT -i2
+B2 <- B1-P2
+
+i3 <- B2*.1
+P3 <- PMT - i3
+B3 <- B2-P3
+
+
+```
+
+This is the amortization table for a \$10,000, 10\% per year loan with three annual payments.
+
+Payment Number | Payment          | Interest  | Principal | Balance
+---------------|---------         |---------- |-----------|--------
+0              |                  |                 |                 |`r FinFormat(10000)`
+1              |`r FinFormat(PMT)`|`r FinFormat(i1)`|`r FinFormat(P1)`|`r FinFormat(B1)`
+2              |`r FinFormat(PMT)`|`r FinFormat(i2)`|`r FinFormat(P2)`|`r FinFormat(B2)`
+3              |`r FinFormat(PMT)`|`r FinFormat(i3)`|`r FinFormat(P3)`|`r FinFormat(B3)`
+
++ Payments are given by $10000 (A|P, i = .1, 3) = `r Acc(agivenp(10000,.1,3))`$
++ Interest expense is the balance remaining times the effective interest rate per payment period.
++ Principal payment is the payment less the interest expense.
++ Balance remaining is the previous balance remaining less then principal payment.
+
+
+## From the Loans Slides
+
+```{r include=FALSE}
+FinFormat <- function(x) format(x, digits=2, decimal.mark=".",   big.mark=",", small.interval=3)
+
+
+Acc<-function(x){format(x,nsmall=2,digits=2,big.mark=',',scientific=FALSE)}
+pgivena<-function(a,i,n){a*((1+i)^n -1)/(i*(1+i)^n)}
+pgiveng<-function(g,i,n){g*( (1+i)^n -(i*n) -1  )/(i^2*(1+i)^n)}
+agivenp<-function(p,i,n){p*(i*(1+i)^n)/((1+i)^n -1)}
+pgivengrow<-function(a1,g,i,n){a1*(1-(1+g)^n*(1+i)^(-n))/(i-g)}
+
+
+fgivena<-function(a,i,n){pgivena(a,i,n)*(1+i)^n}
+fgiveng<-function(g,i,n){pgiveng(g,i,n)*(1+i)^n}
+
+PMT <- agivenp(10000,.1,3)
+i1 <- 10000*.1
+P1 <- PMT -i1
+B1 <- 10000-P1
+
+i2 <- B1*.1
+P2 <- PMT -i2
+B2 <- B1-P2
+
+i3 <- B2*.1
+P3 <- PMT - i3
+B3 <- B2-P3
+
+
+```
+
+Payment Number | Payment          | Interest  | Principal | Balance
+---------------|---------         |---------- |-----------|--------
+0              |                  |                 |                 |`r FinFormat(10000)`
+1              |`r FinFormat(PMT)`|`r FinFormat(i1)`|`r FinFormat(P1)`|`r FinFormat(B1)`
+2              |`r FinFormat(PMT)`|`r FinFormat(i2)`|`r FinFormat(P2)`|`r FinFormat(B2)`
+3              |`r FinFormat(PMT)`|`r FinFormat(i3)`|`r FinFormat(P3)`|`r FinFormat(B3)`
+
++ Loan funding shows in the cash flow statement under finance as a positive number.
++ Interest expenses are shown on the income statement as a positive number.
++ Principal payments are show on the cash flow statement as a negative number.
+
+##  In the Income and Cash Flow Statement
+
+
+\begin{table}[h]
+\begin{small}
+\begin{tabular}{l||c|c|c|c|}
+\multicolumn{5}{c}{Income Statement}\\
+  &Year 0  &Year 1  & Year 2 & Year 3 \\
+\hline
+		Operating Revenue	& & 	& & \\
+		Operating Expenses	&	&	& & \\
+		Interest	&	&	1000&698 &366 \\
+		Depreciation	&	&	& & \\
+        \hline
+		Taxable Income	&0	&(1000)	&(698) &(366) \\
+		Tax	&	0 & (`r 1000*.4`)	&(`r 698*.4`) & (`r 366*.4`) \\
+        \hline
+		Net Income	& 0	&(`r NI1 <- 1000*.6;NI1`)	& (`r NI2 <- 698*.6; NI2`)& (`r NI3 <- 366*.6; NI3`)\\
+
+\end{tabular}
+
+\begin{tabular}{l||c|c|c|c|}
+        \multicolumn{5}{c}{Cash Flow Statement}\\
+  &Year 0  &Year 1  & Year 2 & Year 3 \\
+\hline
+	Operations&	&	& &\\
+	\hspace{.25in}Net Income	& 0	& (`r NI1`) &(`r NI2`) &(`r NI3`)\\
+	\hspace{.25in}Depreciation	&	&	& &\\
+	Investments	&	&	& &\\
+	Finance	&	&	& &\\
+	\hspace{.25in}		Loan	&	10000 &	& &\\
+	\hspace{.25in}		Loan	Payments&	&(3021)	&(3323) &(3656)\\
+        \hline
+		Net Cash Flow	& 10000	& (`r 600 + 3021`)	& (`r 418.8 + 3323`)& (`r 219.6 + 3656`)\\
+\end{tabular}
+
+\end{small}
+\end{table}
+
+## Working Capital Changes
+
+These are common:
+
++ Increases in sales necessitates a larger inventory (Working Capital)
++ More sales mean greater average invoices outstanding.
+
+The logic is tricky only in the sense that you are showing the changes in these levels as cash flows.
+
+## Example Inventory Changes
+
+This shows what happens with average inventory changes from year-to-year.
+
+Year            | 1   | 2   | 3   | 4   | 5   |
+---             |---  |---  |---  |---  |---  |
+Inventory       |1000 |1200 |900  |900  | 800 |
+Working Capital | 0   |-200 |300  |0    |100  | 
+
++ Increases in inventory require more cash, outflows. 
++ Decreases free up cash, inflows.
++ Gets complicated when the current plan has inventory levels changing.  We will not do this (Difference in the differences).
+
+## Summary
+
++ This is just a way of presenting the things that you have already done using accounting conventions.
++ Understandable by everyone that knows the conventions.
++ Only a few transactions that I mix and match:
+    + Increase/Decrease in revenue
+    + Increase/Decrease in sales
+    + Asset purchase/sale with gains tax
+    + Loan and loan repayment.
+    + Working Capital Changes.
+    
++ Worked Examples http://ec314-pdx-edu.wikidot.com/q4:income-and-cash-flow-statements

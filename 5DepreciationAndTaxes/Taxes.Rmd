@@ -69,6 +69,17 @@ Corporations have a separate income tax that must be paid.  Dividends granted to
 + -\$245 in personal tax
 + Net to individual \$455
 
+## New Tax Law
+
+Gives a 20% discount to pass through income, i.e., income not taxed at business level but passed through to you at the personal level.
+
+There are some limitations based on:
+
++ Business salaries
++ Business investments
+
+Set the Federal corporate tax rate to 21%
+
 ## Why you want to be "double taxed"?
 
 If you don't intend to take money out of the business (Grow it).
@@ -91,8 +102,8 @@ This is very similar to how there is a tax reducing way to give money to your ch
     + 650 to grow the business
 + Corporation
     + 1000 taxable income
-    + Less 150 corporate tax (Lowest federal rate)
-    + 850 to grow the business
+    + Less 210 corporate tax (The Federal rate)
+    + 790 to grow the business
 
 ## Protection of Personal Assets
 
@@ -128,19 +139,9 @@ We will treat taxes as a simple percent.
     
 In this class:
 
-+ You will be given a rate, e.g., 35\%.  Like asking accounting what assumed rate to use.
-+ Use a rule of thumb rate, i.e, 40\% or 50\%.  Covers most income  correlated taxes.
-+ Separate Federal and Corporate Taxes, that you turn into a combined tax rate.
++ You will be given a rate, e.g., 30\%.  Like asking accounting what assumed rate to use.
++ Use a rule of thumb rate, i.e, 40\%.  Covers most income  correlated taxes.
 
-
-## Combined Tax Rate (c)
-
-This looks funny because state taxes (S) are an expense on federal taxes (f) and federal is an expense on state.
-
-$$\begin{split}(1-s)(1-f) = (1-c)\\
-1 - s -f + sf =(1-c)\\
-c = s + f - sf
-\end{split}$$
 
 ## Tax Incentives to Replace Assets
 

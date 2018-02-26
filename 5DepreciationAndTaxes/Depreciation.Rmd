@@ -146,6 +146,7 @@ The common approaches are:
 + Straight line
 + Declining balance methods.
 
+
 ## Key Term:  Book Value
 
 + Depreciation: Reduction in value each year.

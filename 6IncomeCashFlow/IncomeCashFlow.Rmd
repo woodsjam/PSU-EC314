@@ -138,9 +138,9 @@ Subtract your expenses from your revenue.
 \end{table}
 
 
-Year 0 Taxable Income = 100 -50 -4000
+Year 0 Taxable Income = 100 -50 - 4000
 
-Year 1 Taxable Income = -5000 - (-700) -300 - 3200
+Year 1 Taxable Income = -500 - (-700) -300 - 3200
 
 ## Sign Conventions: Tax
 
@@ -197,7 +197,7 @@ Cash from operations is just copied from the income statement
         \multicolumn{4}{c}{Cash Flow Statement}\\
   &Year 0  &Year 1  &Note\\        
 	Operations&	&	&\\
-	\hspace{.25in}Net Income	&	(`r NI0 <- -(100 - 50 -4000)*.6; NI0`)&	(`r NI1 <- -(-500 +700 -300 -6400)*.6; NI1`)&\\
+	\hspace{.25in}Net Income	&	(`r NI0 <- -(100 - 50 -4000)*.6; NI0`)&	(`r NI1 <- -(-500 +700 -300 -3200)*.6; NI1`)&\\
 	\hspace{.25in}Depreciation	&	4000&	3200&\\
 	Investments	&	&	&\\
 			&	&	&\\

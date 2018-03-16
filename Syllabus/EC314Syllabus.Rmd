@@ -1,5 +1,5 @@
 ---
-title: "Syllabus EC314 Winter 2018"
+title: "Syllabus EC314 Spring 2018"
 author: "James Woods"
 date: ""
 output: pdf_document
@@ -26,10 +26,11 @@ A brief assessment that includes math skills from MTH 70 and 95 will be given on
 
 ## Key Dates
 
-+ Final Exam: March 22nd from 8:00 -- 9:50
-+ Midterm 1: Feb 1st
-+ Midterm 2: March 1st
-+ Last day to drop or change grade option: February 25th.
++ Final Exam: June 14th from 12:30 -- 2:20
++ Midterm 1: April 25th
++ Midterm 2: May 23rd
++ Last day to drop or change grade option: May 20th.
++ Holiday: May 28th
 
 Exams will be given on those days and at those times only.  I do not give make up, early or late exams.  
 
@@ -37,7 +38,7 @@ If you have a DRC compensation and would normally schedule an exam in the testin
 
 # Contact Information
 
-Communication will be handled through slack https://ec314winter18.slack.com. You should have received an invitation, if not, just go to that URL and use your @pdx.edu email to sign up. There are reasonable help documents to get you started. https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users
+Communication will be handled through slack https://ec314spring18.slack.com. You should have received an invitation, if not, just go to that URL and use your @pdx.edu email to sign up. There are reasonable help documents to get you started. https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users
 
 Slack will be used for IM, email and forum style communication.  It even handles phone calls. If you have a question about course material or the course itself, ask in one of the channels. If you have a personal message that is not intended for others, send a direct message. The group has global do not disturb hours of 10pm - 8am.  If you would like something different, alter your personal settings.
 
@@ -49,7 +50,7 @@ I will not react to questions in the two days prior to an exam  under most circu
 Office Hours:
 
 + My office is in CH 241-O.
-+ Drop in office hours are Thursday 12:00-1:00  through the last week of class. There is no need to make an appointment for these hours -- just come.
++ Drop in office hours are Monday 2:30-3:30  through the last week of class. There is no need to make an appointment for these hours -- just come.
 + If you can’t attend regular office hours, please check my calendar https://goo.gl/6vGvMF. I will make a limited number of 20 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points.  
 
 Office hours for Kevin Payne, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack.

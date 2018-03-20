@@ -14,7 +14,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This course will examine the tools required to analyze expenditures that yield benefits over time -- investments. The use of accounting documents and a focus on the time value of money will allow students to analyze choices in a variety of security, loan, and equipment investment decisions. The main objectives are to prepare engineers for their PE and FE exams and to provide engineers, economists and others with a shared language and understanding of basic finance topics.
 
-Given the high probability of snow days this term, class will still meet online via a YouTube live stream.  Details will be posted on slack, see below, if needed.
 
 ## Prerequisites
 
@@ -51,7 +50,7 @@ Office Hours:
 
 + My office is in CH 241-O.
 + Drop in office hours are Monday 2:30-3:30  through the last week of class. There is no need to make an appointment for these hours -- just come.
-+ If you can’t attend regular office hours, please check my calendar https://goo.gl/6vGvMF. I will make a limited number of 20 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points.  
++ If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 15 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points.  
 
 Office hours for Kevin Payne, the teaching assistant,  will be posted on slack after the first week of class.  We will also post some hours where we will available interactively on slack.
 
@@ -59,7 +58,7 @@ Office hours for Kevin Payne, the teaching assistant,  will be posted on slack a
 # Textbook and Other Resources
 
 Most engineering economics texts have just about the same material, with some small variations and additions. I have assigned Chan S. Park ``Contemporary Engineering Economics
-6ed'' as a convenience to students that have their textbooks paid for by a third party. It contains enough of the accounting material that is normally not included in an engineering economics course, but is included in this one to make it part of a universities studies cluster course. 
+6ed'' (ISBN-10: 0134105591)as a convenience to students that have their textbooks paid for by a third party. It contains enough of the accounting material that is normally not included in an engineering economics course, but is included in this one to make it part of a universities studies cluster course. 
 
 
 I am pretty comfortable with any engineering economics textbook you choose, but it is your responsibility to figure

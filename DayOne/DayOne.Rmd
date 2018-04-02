@@ -24,7 +24,7 @@ Almost all the slides will also be on github. (https://github.com/woodsjam/PSU-E
 
 + Download them before each class if you like but they are not a substitute for coming to class.
 
-# Last Term
+# Fall Term
 
 Here are Fall term's results https://github.com/woodsjam/PSU-EC314/blob/Spring2018/DayOne/CourseSummary.pdf
 

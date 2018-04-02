@@ -17,16 +17,16 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Syllabus
 
-You can find the syllabus here. (https://github.com/woodsjam/PSU-EC314/blob/Winter2018/Syllabus/EC314Syllabus.Rmd
+You can find the syllabus here. (https://github.com/woodsjam/PSU-EC314/blob/Spring2018/Syllabus/EC314Syllabus.Rmd
 )
 
-Almost all the slides will also be on github. (https://github.com/woodsjam/PSU-EC314/tree/Winter2018)
+Almost all the slides will also be on github. (https://github.com/woodsjam/PSU-EC314/tree/Spring2018)
 
 + Download them before each class if you like but they are not a substitute for coming to class.
 
 # Last Term
 
-Here are last term's results https://github.com/woodsjam/PSU-EC314/blob/Winter2018/DayOne/CourseSummary.pdf
+Here are Fall term's results https://github.com/woodsjam/PSU-EC314/blob/Spring2018/DayOne/CourseSummary.pdf
 
 + Note that showing up class helps your grade quite a bit.
 + I also give about 30% As and 30% Bs.
@@ -63,10 +63,11 @@ background, MTH 95, is a practical requirement.
     
 # Key Dates
 
-+ Final Exam: March 22nd from 8:00 -- 9:50
-+ Midterm 1: Feb 1st
-+ Midterm 2: March 1st
-+ Last day to drop or change grade option: February 25th.
++ Final Exam: June 14th from 12:30 -- 2:20
++ Midterm 1: April 25th
++ Midterm 2: May 23rd
++ Last day to drop or change grade option: May 20th.
++ Holiday: May 28th
 
 Exams will be given on those days and at those times only.  I do not give make up, early or late exams.  
 
@@ -86,8 +87,8 @@ Exams will be given on those days and at those times only.  I do not give make u
 # Contact Information
 
 + My office is in CH 241-O.
-+ Drop in office hours are Thursday 12:00-1:00  through the last week of class. There is no need to make an appointment for these hours -- just come.
-+ If you can’t attend regular office hours, please check my calendar https://goo.gl/6vGvMF. I will make a limited number of 20 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points. 
++ Drop in office hours are Monday 2:30-3:30  through the last week of class. There is no need to make an appointment for these hours -- just come.
++ If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 15 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points. 
 
 Meetings can be via phone or even the hangout function in your pdx.edu email.
 
@@ -97,7 +98,7 @@ I will also keep Slack up during office hours to answer questions.
 
 I avoid email since it is a trash heap and a constant distraction.
 
-+ The class will use slack https://ec314winter18.slack.com
++ The class will use slack https://ec314spring18.slack.com
 + Handles direct messages, forum style responses.
 + You should be able to sign up with your pdx.edu account
 + Can access via webpage, apps in Android and iOS.
@@ -138,7 +139,7 @@ The table of contents for the 6th edition (https://s3-us-west-2.amazonaws.com/wo
 
 # D2L
 
-I will assume you know how  to work D2L. https://d2l.pdx.edu/d2l/home/679995
+I will assume you know how  to work D2L. https://d2l.pdx.edu/d2l/home/694760
 
 + Calendar on left
 + Links in the middle
@@ -216,7 +217,7 @@ Please play this straight.
     
 It is rare for people to do poorly if they show up and actually do the work.
 
-# Distribution from last term
+# Distribution from Fall term
 
 ![](MidtermDist.png)
 

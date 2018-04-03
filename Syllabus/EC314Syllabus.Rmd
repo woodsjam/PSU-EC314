@@ -214,6 +214,16 @@ Course topics were developed based on the need for students to pass the PE and F
 
 # Other Rules
 
++ Please be aware that federal, state, and PSU policies require faculty members to report any instances of sexual harassment, sexual violence and/or other forms of prohibited discrimination. Similarly, PSU faculty are required to file a report if they have reasonable cause to believe that a child with whom they come into contact has suffered abuse, or that any person with whom they come into contact has abused a child. If you would rather share information about these experiences with an employee who does not have these reporting responsibilities and can keep the information confidential, please contact one of the following campus resources (or visit https://www.pdx.edu/sexual-assault/get-help):
+
+    + Women’s Resource Center (503-725-5672)
+    + Queer Resource Center (503-725-9742)
+    + Center for Student Health and Counseling (SHAC): 1880 SW 6th Ave, (503) 725-2800
+    + Student Legal Services: 1825 SW Broadway, (SMSU) M343, (503) 725-4556
+
+    For more information about the applicable regulations please complete the required student module Creating a Safe Campus in your D2L.
+
+
 + Begging for grades will result in an immediate lowering of your course grade by a full letter grade.
   
 + When completing online quizzes or other assignments, you may use your book, wiki, calculator, spreadsheets, notes, or other resources as long as it is not another student or person.  *The work must be authentically and genuinely your own. In other words, if you are copying answers you found online, it is not your work.*
@@ -229,10 +239,14 @@ Course topics were developed based on the need for students to pass the PE and F
     + Practice personal and academic integrity and expect it from others
     + Promote the diversity of opinions, ideas, and backgrounds, which is the lifeblood of a university
 
-   For additional information, please see the Office of Affirmative Action \& Equal Opportunity at http://www.pdx.edu/diversity/affirmative-action.
+    For additional information, please see the Office of Affirmative Action \& Equal Opportunity at http://www.pdx.edu/diversity/affirmative-action.
 
 
-+ Accommodations are collaborative efforts between students, faculty, and the Disability Resource Center.  If you have a documented disability and require accommodation, you must arrange to meet with the course instructor prior to or within the first week of the term.  The documentation of your disability must come in writing from the Disability Resource Center (Faculty letter).  Students who believe they are eligible for accommodations but who have not yet obtained approval through the DRC should contact the DRC immediately.  Reasonable and appropriate accommodations will be provided for students with documented disabilities.  For more information on the Disability Resource Center, please see http://www.drc.pdx.edu/. 
++ Accommodations are collaborative efforts between students, faculty, and the Disability Resource Center.  If you have a documented disability and require accommodation, you must arrange to meet with the course instructor prior to or within the first week of the term.  The documentation of your disability must come in writing from the Disability Resource Center (Faculty letter).  
+
++ PSU values diversity and inclusion; we are committed to fostering mutual respect and full participation for all students. My goal is to create a learning environment that is equitable, useable, inclusive, and welcoming. If any aspects of instruction or course design result in barriers to your inclusion or learning, please notify me. The Disability  Resource Center (DRC) provides reasonable accommodations for students who encounter barriers in the learning environment. 
+
+    If you have, or think you may have, a disability that may affect your work in this class and feel you need accommodations, contact the Disability Resource Center to schedule an appointment and initiate a conversation about reasonable accommodations. The DRC is located in 116 Smith Memorial Student Union, 503-725-4150, drc@pdx.edu, https://www.pdx.edu/drc.
 
 + Academic honesty is expected and required of students enrolled in this course.  Suspected academic dishonesty in this course will be handled according to the procedures set out in the Student Code of Conduct.
 

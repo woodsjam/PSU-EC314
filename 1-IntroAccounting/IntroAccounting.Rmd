@@ -23,7 +23,7 @@ Enough knowledge to read the basic documents but not enough to create them.
 
 ## Warnings
 
-+ Will feel like drinking from firehouse if you have no background but same pace as intro accounting.
++ Will feel like drinking from fire hose if you have no background but same pace as intro accounting.
 + Shortcuts/simplifications to get set up for cash flow forecasts.
     + Barrier between income statement and balance sheet. Revenue and expenses not immediately reflected.
     + Forget about contra accounts.

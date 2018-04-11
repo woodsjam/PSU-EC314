@@ -1,0 +1,129 @@
+---
+title: "Transactions Review"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Some times the in-class quiz does not go so well ...
+
+Lets take a look at a few transactions
+
+## Hints
+
++ Identify the transaction type first.
++ If you worked the flash cards, you this is easy.
++ Make sure your balance sheet balances.  
++ If you have only one arrow on the balance sheet, it is wrong.
++ Follow the echo and get it categorized
+    + Income statement changes show in Cash from operations
+    + Asset changes show in cash from investments
+    + Liability and Owner Equity Changes show in cash from finance
+
+## Pay a Loan
+
+Just assume there is no interest for now.
+
+\begin{center}
+\begin{tabular}{|p{.75 in} |p{.75 in}|  p{.75 in}|}
+\hline 
+Rev  & Assets & Operations \\
+&&\\
+&&\\
+\hline
+Expense & Liabilities & Investments\\
+&&\\
+&&\\
+\hline
+ & OE & Finance\\
+&&\\
+&&\\
+\hline
+\end{tabular}
+\end{center}
+
+
+## Revenue Increases
+
+\begin{center}
+\begin{tabular}{|p{.75 in} |p{.75 in}|  p{.75 in}|}
+\hline 
+Rev  & Assets & Operations \\
+&&\\
+&&\\
+\hline
+Expense & Liabilities & Investments\\
+&&\\
+&&\\
+\hline
+ & OE & Finance\\
+&&\\
+&&\\
+\hline
+\end{tabular}
+\end{center}
+
+
+## Owner Decreases Investment
+
+\begin{center}
+\begin{tabular}{|p{.75 in} |p{.75 in}|  p{.75 in}|}
+\hline 
+Rev  & Assets & Operations \\
+&&\\
+&&\\
+\hline
+Expense & Liabilities & Investments\\
+&&\\
+&&\\
+\hline
+ & OE & Finance\\
+&&\\
+&&\\
+\hline
+\end{tabular}
+\end{center}
+
+
+## Delivery With an Invoice
+
+\begin{center}
+\begin{tabular}{|p{.75 in} |p{.75 in}|  p{.75 in}|}
+\hline 
+Rev  & Assets & Operations \\
+&&\\
+&&\\
+\hline
+Expense & Liabilities & Investments\\
+&&\\
+&&\\
+\hline
+ & OE & Finance\\
+&&\\
+&&\\
+\hline
+\end{tabular}
+\end{center}
+
+## Categorize these
+
+Some people don’t appreciate the nature around them. A service that provides guided tours of the Columbia river gorge trails seems like a good idea.
+
+1. Every business needs start up funds. Empty your personal savings and retirement into your business account.
+
+2. Great weather means an uptick in sales.
+
+3. You need to sell one of the two vans. There is not enough business to support it. We need the cash too.
+
+4. You qualified for a Small Business Administration 7(a) Loan. Good thing too. We need the cash flow.
+
+5. Cut more expenses by cutting your scheduler. You can handle that yourself.
+
+6. Take delivery of some branded rain jackets. You paid cash, so there is nothing complicated.
+
+7. First SBA loan payment is due.
+
+8. Gas prices head up. Running the van just got more expensive.

@@ -50,7 +50,7 @@ $$\sum x_n d(n)$$
 + Many are possible but only a few are time consistent.
     + $d(n) = \frac{1}{(1+r)^n}$ for discrete time.
     + $d(n) = \frac{1}{e^{r n}}$ for continuous time.
-    
+
 ## Example of Time Inconsistency
 
 Back in the day I did this in class with real beer.  Now, it's a policy violation.
@@ -58,7 +58,6 @@ Back in the day I did this in class with real beer.  Now, it's a policy violatio
 + Chose 6-pack of beer a month and a day from now or 1 beer a month from now.
 + A beer right now or a 6-pack tomorrow.
 + Many of you changed your mind.
-
 
 ## Integer time
 
@@ -171,7 +170,19 @@ The things in the parentheses are a substitute for the things in the square brac
 $$Looking~For = Number(Looking~For|What~is~number, i, How ~Long)$$
 
 + A big list is here http://ec314-pdx-edu.wikidot.com/annotated-equations-sheet
++ Basic Present Worth Examples for Common Shapes
+    + $P = 3 (P|A, i= 10\%, 5 )$
+    + $P = 2 (P|G, i= 10\%, 4 )$
+    + $P = 10 (P|A_1, i= 10\%, 10 )$
 + Hint, if you know $(P|X)$,  $(F|X) = (P|X) (1+r)^N$
+
+## Step Through For Basics
+
+$$Looking~For = Number(Looking~For|What~is~number, i, How ~Long)$$
+
++$P = How~tall(P|A, i, How~Long)$
++$P = Change~From~Last(P|G, i, Non-zero + One)$
++$P = Time~1~Value(P|A_1, i, How~Long)$
 
 ## Wait, closed form notation?
 
@@ -181,20 +192,15 @@ $$Looking~For = Number(Looking~For|What~is~number, i, How ~Long)$$
 
 ## Present Worth Three Ways
 ```{r fig.width=3, fig.align='center', fig.height=1.5, message=FALSE, warning=FALSE}
-# library(ggplot2)
-# cf <- data.frame(y = 10 * c(0,1,1,1,1,1))
-# cf$x = 0:(length(cf$y) - 1)
-# print(ggplot(cf,aes(x,y,label = y)) + geom_bar(stat = "Identity",color = 'gray',fill = 'gray') + xlab("Period") + ylab("Cash Flow") + geom_text() + scale_y_discrete())
-# 
 
 CF_Diagram(10 * c(0,1,1,1,1,1))
 
 
 ```
   + Brute force: $\sum_{n=1}^{5} \frac{10}{(1+.1)^n}$
-  + Tabular: $10 * `r pgivena(1, .1, 5)`$
+  + Tabular: $10 * `r round(pgivena(1, .1, 5),4)`$
   + Closed form: $10(P|A, i = 10\%, 5) = 10 \frac{( 1+.1)^5 - 1}{.1 (1+.1)^5}$ 
-  + Either way you should get `r pgivena(10, .1, 5)`.  
+  + Either way you should get `r round(pgivena(10, .1, 5),2)`.  
 
 
 ## Comments on Three Methods
@@ -202,6 +208,7 @@ CF_Diagram(10 * c(0,1,1,1,1,1))
 + Brute force always works but when you make a mistake it hides.
 + Now try $10(P|A, i =.1, 300)$ by brute force.
 + Tables don't exist for all interest rates but it was way faster on the PE, which is a speed test.
++ Tables have limited digits.  Don't use them for large values
 + Closed form looks stupid if you have made a mistake, but easy to make a mistake.
 
 I tend to use brute force when it is five or fewer values.
@@ -209,10 +216,6 @@ I tend to use brute force when it is five or fewer values.
 ## Easy Cash Flow to Factor Notation
 
 ```{r fig.width=3, fig.height=1.5, fig.align='center', message=FALSE, warning=FALSE}
-# library(ggplot2)
-# cf <- data.frame(y = c(0,1,1,1,1,1))
-# cf$x = 0:(length(cf$y) - 1)
-# print(ggplot(cf,aes(x,y,label = y)) + geom_bar(stat = "Identity",color = 'gray',fill = 'gray') + xlab("Period") + ylab("Cash Flow") + geom_text() + scale_y_discrete())
 
 CF_Diagram(c(0,1,1,1,1,1))
 
@@ -237,10 +240,6 @@ $$1 (P|A, i, 5)$$
 
 ## Try this
 ```{r fig.width=3, fig.height=1.5, fig.align='center', message=FALSE, warning=FALSE}
-# library(ggplot2)
-# cf <- data.frame(y=c(0,0,1,2,3,4))
-# cf$x=0:(length(cf$y)-1)
-# print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 
 CF_Diagram(c(0,0,1,2,3,4))
 ```
@@ -248,10 +247,6 @@ CF_Diagram(c(0,0,1,2,3,4))
 
 ## Linear Gradient is Tricky
 ```{r fig.width=3, fig.height=1.5, fig.align='center', message=FALSE, warning=FALSE}
-# library(ggplot2)
-# cf <- data.frame(y=c(0,0,1,2,3,4))
-# cf$x=0:(length(cf$y)-1)
-# print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 
 CF_Diagram(c(0,0,1,2,3,4))
 
@@ -266,10 +261,6 @@ $$ 1(P|G,i,5)$$
 ## The Geometric Gradient is for growth.
 
 ```{r fig.width=3, fig.height=1.5, fig.align='center', message=FALSE, warning=FALSE}
-# library(ggplot2)
-# cf <- data.frame(y=c(0,40,20,10,5,2.5))
-# cf$x=0:(length(cf$y)-1)
-# print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 
 CF_Diagram(c(0,40,20,10,5,2.5))
 ```
@@ -289,24 +280,12 @@ $$P=A_{1}\left(\frac{N}{1+i}\right)\,(if : i = g)$$
 ## Now lets put two things together
 
 ```{r fig.width=3, fig.height=2, fig.align='center', message=FALSE, warning=FALSE}
-# library(ggplot2)
-# cf <- data.frame(y=c(0,0,1,2,3,4) + c(0,4,4,4,4,4))
-# cf$x=0:(length(cf$y)-1)
-# print(ggplot(cf,aes(x,y,label=y))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 
 CF_Diagram(c(0,0,1,2,3,4) + c(0,4,4,4,4,4))
 ```
 
 ## You should see this as
 ```{r fig.width=3, fig.height=1.5, fig.align='center', message=FALSE, warning=FALSE}
-# library(ggplot2)
-# cf <- data.frame(y=c(0,0,1,2,3,4) + c(0,4,4,4,4,4))
-# cf$x=0:(length(cf$y)-1)
-# cf$LG <- c(0,0,1,2,3,4)
-# cf$C <- c(0,4,4,4,4,4)
-# print(ggplot(cf,aes(x,C,label=C))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
-# 
-# print(ggplot(cf,aes(x,LG,label=LG))+geom_bar(stat="Identity",color='gray',fill='gray')+xlab("Period")+ylab("Cash Flow")+geom_text() + scale_y_discrete())
 
 CF_Diagram(c(0,4,4,4,4,4))
 

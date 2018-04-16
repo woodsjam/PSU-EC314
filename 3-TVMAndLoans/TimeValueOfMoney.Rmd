@@ -180,9 +180,9 @@ $$Looking~For = Number(Looking~For|What~is~number, i, How ~Long)$$
 
 $$Looking~For = Number(Looking~For|What~is~number, i, How ~Long)$$
 
-+$P = How~tall(P|A, i, How~Long)$
-+$P = Change~From~Last(P|G, i, Non-zero + One)$
-+$P = Time~1~Value(P|A_1, i, How~Long)$
++ $P = How~tall(P|A, i, How~Long)$
++ $P = Change~From~Last(P|G, i, Non-zero + One)$
++ $P = Time~1~Value(P|A_1, i, How~Long)$
 
 ## Wait, closed form notation?
 

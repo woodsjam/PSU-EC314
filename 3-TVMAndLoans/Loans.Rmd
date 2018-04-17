@@ -48,7 +48,7 @@ $$ \left( 1 + \frac{Nominal}{\# ~Compounding ~in ~Nominal ~Period} \right)^{\# C
 
 Example: Effective annual rate for 2\% per month compounded daily
 
-$$ \left( 1+ \frac{.02}{30}  \right)^{365} -1 = `r (1+.02/30)^365 -1` $$
+$$ \left( 1+ \frac{.02}{30}  \right)^{365} -1 = `r round((1+.02/30)^365 -1,4)` $$
 
 ## A Note on Time
 
@@ -77,11 +77,11 @@ $$ \left( 1+ \frac{.02}{30}  \right)^{365} -1 = `r (1+.02/30)^365 -1` $$
 Effective Annual Rate
 
 + 12\% per year compounded yearly 
-    + $\left( 1+ \frac{.12}{1}  \right)^{1} -1 = `r (1+.12/1)^1 -1`$
+    + $\left( 1+ \frac{.12}{1}  \right)^{1} -1 = `r round((1+.12/1)^1 -1,4)`$
 + 12\% per year compounded monthly 
-    + $\left( 1+ \frac{.12}{12}  \right)^{12} -1 = `r (1+.12/12)^12 -1`$
+    + $\left( 1+ \frac{.12}{12}  \right)^{12} -1 = `r round((1+.12/12)^12 -1,4)`$
 + 12\% per year compounded daily 
-    + $\left( 1+ \frac{.12}{365}  \right)^{365} -1 = `r (1+.12/365)^365 -1`$
+    + $\left( 1+ \frac{.12}{365}  \right)^{365} -1 = `r round((1+.12/365)^365 -1,4)`$
 
 
 ## Keep in mind
@@ -95,23 +95,23 @@ If it is a multiple of the compounding period, use the math.  If not, read the c
 12\% per year compounded daily 
 
 + Effective Monthly Rate
-    + $\left( 1+ \frac{.12}{365}  \right)^{30} -1 = `r (1+.12/365)^30 -1`$
+    + $\left( 1+ \frac{.12}{365}  \right)^{30} -1 = `r round((1+.12/365)^30 -1,4)`$
 
 + Effective (Annual) Rate 
-    + $\left( 1+ \frac{.12}{365}  \right)^{365} -1 = `r (1+.12/365)^365 -1`$
+    + $\left( 1+ \frac{.12}{365}  \right)^{365} -1 = `r round((1+.12/365)^365 -1,4)`$
 
 + Effective Decadal Rate
-    + $\left( 1+ \frac{.12}{365}  \right)^{3650} -1 = `r (1+.12/365)^3650 -1`$
+    + $\left( 1+ \frac{.12}{365}  \right)^{3650} -1 = `r round((1+.12/365)^3650 -1,4)`$
 
 ## Off-Beat Examples
 
 + Effective monthly rate of 18% per year compounded daily.
-    + $\left( 1+ \frac{.18}{365}  \right)^{30} -1 = `r (1+.18/365)^30 -1`$
+    + $\left( 1+ \frac{.18}{365}  \right)^{30} -1 = `r round((1+.18/365)^30 -1,4)`$
 + Effective annual rate of 7% per week compounded daily.
-    + $\left( 1+ \frac{.07}{7}  \right)^{365} -1 = `r (1+.07/7)^365 -1`$
+    + $\left( 1+ \frac{.07}{7}  \right)^{365} -1 = `r round((1+.07/7)^365 -1,4)`$
 + Effective monthly rate of a 3% mortgage.
     + Remember, "mortgage" tells you to assume a lot of things in the US.
-    + $\left( 1+ \frac{.03}{12}  \right)^{1} -1 = \frac{.03}{12} = `r .03/12`$
+    + $\left( 1+ \frac{.03}{12}  \right)^{1} -1 = \frac{.03}{12} = `r round(.03/12,4)`$
 
 ## Back to the Pre-test
 
@@ -128,7 +128,7 @@ If it is a multiple of the compounding period, use the math.  If not, read the c
 + Use *year* as your unit of analysis.  
 + Effective interest rate per year is $\left( 1+ \frac{.12}{1}  \right)^{1} -1 = `r .12`$
 + "In account after" indicates future value.
-+ $100 ( 1 + .12 )^{10} = `r 100*(1.12)^10`$
++ $100 ( 1 + .12 )^{10} = `r round(100*(1.12)^10,4)`$
 
 ## Answer 2
 
@@ -137,7 +137,7 @@ If it is a multiple of the compounding period, use the math.  If not, read the c
 + Use *month* as your unit of analysis.  
 + Effective interest rate per month is $\left( 1+ \frac{.12}{12}  \right)^{1} -1 = `r .12/12`$
 + "In account after" indicates future value.
-+ $100 ( 1 + .01 )^{10*12} = `r 100*(1.01)^(10*12)`$
++ $100 ( 1 + .01 )^{10*12} = `r round(100*(1.01)^(10*12),4)`$
 
 
 ## Application to Time Value of Money Calcs
@@ -165,7 +165,7 @@ and rewrite as a constant series
 
 $$P = 5 (P|A, i= i_2, 5)$$
 
-Try the two calculations, brute force and this.  They give the same result `r pgivena(5,.21,5)`.
+Try the two calculations, brute force and this.  They give the same result `r round(pgivena(5,.21,5),4)`.
 
 
 
@@ -218,7 +218,7 @@ Borrow 10,000 at 7\% per week compounded daily with biweekly payments for 10 mon
 
 
 Effective interest rate per payment period:
-$\left( 1 +\frac{.07}{7}  \right)^{14} -1 = `r (1+.07/7)^14 -1` = i_e$
+$\left( 1 +\frac{.07}{7}  \right)^{14} -1 = `r round((1+.07/7)^14 -1,4)` = i_e$
 
 
 
@@ -348,7 +348,7 @@ Payment Number | Payment          | Interest  | Principal | Balance
 3              |`r FinFormat(10000*.1)`|`r FinFormat(10000*.1)`|`r FinFormat(10000)`|`r FinFormat(0)`
 
 
-There are multiple conventions on where to put the bullet.  I like it there but others have a separate line or column for the principal repayment.  The disadvantage is that it blows the usual definition of principal payment as the payment less interest expense.
+There are multiple conventions on where to put the bullet.  I like it there, but others have a separate line or column for the principal repayment.  The disadvantage is that it blows the usual definition of principal payment as the payment less interest expense.
 
 ## What is a "point"
 

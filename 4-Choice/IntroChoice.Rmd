@@ -426,7 +426,7 @@ Numbers have been changed to make it simpler and more interesting. IRL the PVC r
 
 ## Cash Flow Diagram
 
-![](PVCRoof)
+![](PVCRoof.png)
 
 ## Notes on figure
 

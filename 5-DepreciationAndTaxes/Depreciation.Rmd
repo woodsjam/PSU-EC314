@@ -69,7 +69,7 @@ Example:  The Banner
 + A banner lasts three years.
 + The PEF board ran an auction, allocated the full cost to the first year.
 + They almost didn't have a second year.
-+ 2017 was the 14th year.
++ 2018 was the 15th year.
 
 ## What to Depreciate
 

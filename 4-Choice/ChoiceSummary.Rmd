@@ -1,0 +1,115 @@
+---
+title: "Choice Summary"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Goals
+
++ Be able to make a *financial* argument for the choice of one asset over another.
++ Be able to use all the criteria depending on client needs.
++ Do some calculator practice.
++ The third tent pole "Choice" http://ec314-pdx-edu.wikidot.com/q3:choice
+
+
+## What We Did
+
++ Massive Time Value of Money Calculations using the factor notation learned before.
++ Identification of the Minimum Acceptable Rate of Return (MARR) as the interest rate that we use for Time Value of Money calculations.
+    + Slight confusion when  dealing with loans but those interest rates are used to produce cash flows, not evaluate them.
+    + MARR is not used to calculate loan payments.
+
+## What We Did (Con't)
+
+Identification of two environments
+    
++ Unconstrained
+    + As many as you with but not more than one of any choice.
+    + "Acceptable"
+    + "Which assets?"
+    
++ Exclusive 
+    + At most one
+    + "Best"
+    + "Which asset?"
+
+## The Three Consistent Tests
+
++ Present Worth
+    + Life-cycle cost and benefits ($)
+    + Unconstrained: If $PW \geq 0$ get it.
+    + Exclusive: Choose largest PW
++ Annual Worth
+    + Per-period costs and benefits ($)
+    + Unconstrained: If $AW \geq 0$ get it.
+    + Exclusive: If assets have the same life, choose asset with largest AW
++ Internal Rate of Return
+    + Per-period costs *or* benefits (%)
+    + Unconstrained:  If a single IRR exists ...
+        + If investment, get it if $IRR \geq MARR$.
+        + If loan, get it if $IRR \leq MARR$.
+    + Exclusive: IRR Procedure (Later in Class)
+
+## Key Intuition on Unconstrained Choice
+
+You are trying to make the case that the specific asset that you are looking at does better than the opportunity cost of funds  -- MARR.
+
+That opportunity cost could be:
+
++ A loan: If you don't fund the asset, you have a smaller loan.
++ Money in an account:  If you don't fund the asset, money in the account still earns interest.
++ The usual return on assets:  If you don't fund the asset, you can still do what you usually do and get that rate of return.
+
+## Comments on the Tests
+
+Present Worth
+
++ Your preferred method.
++ Do this when things get hard.
++ Great for questions about delay 
+    + Should you put it off even if it makes it more expensive.
++ Clients hate it because it is unintuitive.
++ Later -- will be best for capital budgeting, limited year zero cash flow, problems.
+
+## Comments on the Tests
+
+Annual Worth
+
++ Clients preferred method
++ Requires you to make a present worth calculation and then convert.
++ Great for questions about repeated purchases
++ Clients tend to like this because it fits their conception of problems.
++ Many names for this number.  You have to ask what they mean just to be sure.
++ Be careful of:
+    + The IF, same life, when interpreting in the non-repeat purchase case.
+    + Describing the per period costs when asset lives are not factors of the planning horizon.
+    
+## Comments on the Tests
+
+Internal Rate of Return
+
++ Clients with financial background prefer this, but rarely do they understand that there can be multiple answers.
++ Computationally most complex
+    + In real life -- Root finding.
+    + In exams, it is easy, $\left( - \frac{A_N}{A_0}  \right)^{\frac{1}{N}} - 1$, but only works with two values.
++ Sometimes you need to omit answers so client is not confused
++ Be careful of:
+    + The IF, loan vs investment, the criteria flips.  High IRR is good for investments and low IRR is good for loans
+    + That procedure should not be used in the real world.
+
+## How to Drill and Kill
+
++ One of the tent poles http://ec314-pdx-edu.wikidot.com/q3:choice
++ Worked examples https://drive.google.com/drive/u/0/folders/0B3ilawp4z7olSUVpa2VPQWtYem8
++ Pay attention to the IRR procedure because that is what people mess up most.
++ PW and AW are easy as long as you can spot the key indicator phrase, "service life".
++ Environment is easy to spot with:
+    + Asset or best = Exclusive
+    + Assets or acceptable = Unconstrained
+
+
+

@@ -69,6 +69,13 @@ Corporations have a separate income tax that must be paid.  Dividends granted to
 + -\$245 in personal tax
 + Net to individual \$455
 
+
+## Just a Few Warnings  
+
++ I will try to stay out of the politics.
++ Economists give lots of "second-best" solutions since the best is politically impossible.
+
+
 ## New Tax Law
 
 Gives a 20% discount to pass through income, i.e., income not taxed at business level but passed through to you at the personal level.
@@ -80,6 +87,37 @@ There are some limitations based on:
 
 Set the Federal corporate tax rate to 21%
 
+
+## This Reform Was ... odd
+
++ The last major tax reform was 1986.
+    + That reform passed in the Senate 97-3
+        + Truly bipartisan
+        + Revenue neutral simplification
+        + Reduction in rates.
++ This was a party line vote.
++ Without support from both major parties, it creates uncertainty about future rates.
+    + More likely that there will be changes if either house flips.
+    + May actually stifle the positive effects.
+    + Makes it hard to round support for fixes.
+    
+## Some Principles of Taxation
+
++ Higher taxes on what you don't want and lower taxes, or subsidies, on what you don't want.
+    + So treat labor income and capital income the same or you will see gaming to reduce taxes.
+    + Treat foreign and domestic earnings the same or, again, gaming to reduce rates.
++ Discourage gaming of where you book income.
+
+## The new rules violate principles
+
++ Lower rate on capital earnings than labor.
++ Lower rate on foreign business earnings than domestic.
++ Fun things with pass through income will encourage some creative accounting.
+    + Lawyers generally don't get the reduction in pass through.
+    + If, the form a law group and an intellectual property group.
+    + The law group gets no pass through reduction but if they pay the intellectual property group, almost, all those gains for using the intellectual property -- they can.
+
+    
 ## Why you want to be "double taxed"?
 
 If you don't intend to take money out of the business (Grow it).

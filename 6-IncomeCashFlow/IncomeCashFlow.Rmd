@@ -104,7 +104,7 @@ Increase in interest expense, relative to current plan, in year 1.  Note that th
 		Operating Revenue	&	100 & (500)	&\\
 		Operating Expenses	&	50& (700)	&\\
 		Interest	&	&	300&\\
-		Depreciation	&	4000&	3200&\\
+		Depreciation	&	4000&	1600&\\
         \hline
 		Taxable Income	&	&	&\\
 		Tax	&	&	&\\
@@ -113,7 +113,7 @@ Increase in interest expense, relative to current plan, in year 1.  Note that th
 \end{tabular}
 \end{table}
 
-If you replaced an asset with one that cost less, and had less depreciation in years zero and one, then you would see negative values.
+If you replaced an asset with one that cost less, and had less depreciation in years zero and one, then you would see negative values.  Note that we have half the usual depreciation because we are selling the asset in year 1.
 
 
 ## Sign Conventions: Taxable Income
@@ -128,9 +128,9 @@ Subtract your expenses from your revenue.
 		Operating Revenue	&	100 & (500)	&\\
 		Operating Expenses	&	50& (700)	&\\
 		Interest	&	&	300&\\
-		Depreciation	&	4000&	3200&\\
+		Depreciation	&	4000&	1600&\\
         \hline
-		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -300 -3200)`)	&\\
+		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -300 -1600)`)	&\\
 		Tax	&	&	&\\
         \hline
 		Net Income	&	&	&\\
@@ -140,7 +140,7 @@ Subtract your expenses from your revenue.
 
 Year 0 Taxable Income = 100 -50 - 4000
 
-Year 1 Taxable Income = -500 - (-700) -300 - 3200
+Year 1 Taxable Income = -500 - (-700) -300 - 3200/2
 
 ## Sign Conventions: Tax
 
@@ -154,10 +154,10 @@ Apply your tax rate (40\%) to the Taxable Income. Note that increases in taxes a
 		Operating Revenue	&	100 & (500)	&\\
 		Operating Expenses	&	50& (700)	&\\
 		Interest	&	&	300&\\
-		Depreciation	&	4000&	3200&\\
+		Depreciation	&	4000&	1600&\\
         \hline
-		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -300 -3200)`)	&\\
-				Tax	&	(`r -(100 - 50 -4000)*.4`)&	(`r -(-500 +700 -300 -3200)*.4`)&\\
+		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -300 -1600)`)	&\\
+				Tax	&	(`r -(100 - 50 -4000)*.4`)&	(`r -(-500 +700 -300 -1600)*.4`)&\\
         \hline
 		Net Income	&	&	&\\
 \end{tabular}
@@ -177,12 +177,12 @@ Subtract Tax from Taxable Income to get Net Income, i.e., profits.
 		Operating Revenue	&	100 & (500)	&\\
 		Operating Expenses	&	50& (700)	&\\
 		Interest	&	&	300&\\
-		Depreciation	&	4000&	3200&\\
+		Depreciation	&	4000&	1600&\\
         \hline
-		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -300 -3200)`)	&\\
-				Tax	&	(`r -(100 - 50 -4000)*.4`)&	(`r -(-500 +700 -300 -3200)*.4`)&\\
+		Taxable Income	&	(`r -(100 - 50 -4000)`)& (`r -(-500 +700 -300 -1600)`)	&\\
+				Tax	&	(`r -(100 - 50 -4000)*.4`)&	(`r -(-500 +700 -300 -1600)*.4`)&\\
         \hline
-		Net Income &	(`r -(100 - 50 -4000)*.6`)&	(`r -(-500 +700 -300 -3200)*.6`)&\\
+		Net Income &	(`r -(100 - 50 -4000)*.6`)&	(`r -(-500 +700 -300 -1600)*.6`)&\\
 \end{tabular}
 \end{table}
 
@@ -197,8 +197,8 @@ Cash from operations is just copied from the income statement
         \multicolumn{4}{c}{Cash Flow Statement}\\
   &Year 0  &Year 1  &Note\\        
 	Operations&	&	&\\
-	\hspace{.25in}Net Income	&	(`r NI0 <- -(100 - 50 -4000)*.6; NI0`)&	(`r NI1 <- -(-500 +700 -300 -3200)*.6; NI1`)&\\
-	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	\hspace{.25in}Net Income	&	(`r NI0 <- -(100 - 50 -4000)*.6; NI0`)&	(`r NI1 <- -(-500 +700 -300 -1600)*.6; NI1`)&\\
+	\hspace{.25in}Depreciation	&	4000&	1600&\\
 	Investments	&	&	&\\
 			&	&	&\\
 \hspace{.25in}Working Capital	&	&	&\\
@@ -226,7 +226,7 @@ The Asset is a 20K, 5-Year Asset
   &Year 0  &Year 1  &Note\\        
 	Operations&	&	&\\
 	\hspace{.25in}Net Income	&	(`r NI0`)&	(`r NI1`)&\\
-	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	\hspace{.25in}Depreciation	&	4000&	1600&\\
 	Investments	&	&	&\\
 \hspace{.25in}The Asset			&(20000)	&	&\\
 \hspace{.25in}Working Capital	&	&	&\\
@@ -253,7 +253,7 @@ Sell the asset in year 1 for 19000
   &Year 0  &Year 1  &Note\\        
 	Operations&	&	&\\
 	\hspace{.25in}Net Income	&	(`r NI0`)&	(`r NI1`)&\\
-	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	\hspace{.25in}Depreciation	&	4000&	1600&\\
 	Investments	&	&	&\\
 \hspace{.25in}The Asset			&(20000)	&	19000&\\
 \hspace{.25in}Working Capital	&	&	&\\
@@ -273,7 +273,7 @@ Inflows of cash are positive.
 ## Sign Conventions: Asset Sale
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
-Book <- 20000 - 4000 - 3200
+Book <- 20000 - 4000 - 3200/2
 Gains <- (19000 - Book) * .4
 ```
 
@@ -286,7 +286,7 @@ Gains tax has opposite sign convention.  Positive means pay.
   &Year 0  &Year 1  &Note\\        
 	Operations&	&	&\\
 	\hspace{.25in}Net Income	&	(`r NI0`)&	(`r NI1`)&\\
-	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	\hspace{.25in}Depreciation	&	4000&	1600&\\
 	Investments	&	&	&\\
 \hspace{.25in}The Asset			&(20000)	&	19000&\\
 \hspace{.25in}Working Capital	&	&	&\\
@@ -300,13 +300,13 @@ Gains tax has opposite sign convention.  Positive means pay.
 \end{tabular}
 \end{table}
 
-Book Value = 20000 - 4000 - 3200 = 12800
+Book Value = 20000 - 4000 - 3200/2 = 14400
 
 
 ## Sign Conventions: Gains Tax
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
-Book <- 20000 - 4000 - 3200
+Book <- 20000 - 4000 - 3200/2
 Gains <- (19000 - Book) * .4
 ```
 
@@ -319,7 +319,7 @@ Gains tax has opposite sign convention.  Positive means pay.
   &Year 0  &Year 1  &Note\\        
 	Operations&	&	&\\
 	\hspace{.25in}Net Income	&	(`r NI0`)&	(`r NI1`)&\\
-	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	\hspace{.25in}Depreciation	&	4000&	1600&\\
 	Investments	&	&	&\\
 \hspace{.25in}The Asset			&(20000)	&	19000&\\
 \hspace{.25in}Working Capital	&	&	&\\
@@ -341,7 +341,7 @@ $Gains~Tax = (Salvage - Book~Value) Tax~Rate =$
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 
 Cash1 <- -2370 + 4000 - 20000
-Cash2 <- -5520 + 3200 + 19000 - 2480
+Cash2 <- -5520 + 3200/2 + 19000 - ((19000 - Book)*.4) 
 
 ```
 
@@ -353,7 +353,7 @@ Add up cash but remember gains tax must be subtracted.
   &Year 0  &Year 1  &Note\\        
 	Operations&	&	&\\
 	\hspace{.25in}Net Income	&	(`r NI0`)&	(`r NI1`)&\\
-	\hspace{.25in}Depreciation	&	4000&	3200&\\
+	\hspace{.25in}Depreciation	&	4000&	1600&\\
 	Investments	&	&	&\\
 \hspace{.25in}The Asset			&(20000)	&	19000&\\
 \hspace{.25in}Working Capital	&	&	&\\
@@ -363,7 +363,7 @@ Add up cash but remember gains tax must be subtracted.
 	Finance	&	&	&\\
 			&	&	&\\
         \hline
-		Net Cash Flow	&	(18370)& 14200	&\\
+		Net Cash Flow	&	(18370)& `r Cash2`	&\\
 \end{tabular}
 \end{table}
 

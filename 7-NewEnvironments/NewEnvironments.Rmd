@@ -19,9 +19,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 + Our environments can be interpreted as mixed integer programming problems with various constraints.
 + You get the good stuff in ETM 535/635, Advanced Engineering Economics
-+ The solutions are NP-Hard
-    + Translate from technical, adding more options requires more time to find a solution than adding the previous option.
-    + Except for trivial problems, you need a heuristic.
++ Except for trivial problems, you need a heuristic.
 + Heuristics are specialized rules and techniques that find a solution. There are some general categories:
     + Simulated annealing
     + Ant Colony optimization
@@ -35,6 +33,7 @@ knitr::opts_chunk$set(echo = FALSE)
     + Random bounces in parameter space.
     + More  likely to keep those that have smaller evaluations of the objective function than large.
     + Sizes of bounces get smaller over time.
+    + Chances of keeping a worse outcome fall over time.
     + Wikipedia has a great graphic https://en.wikipedia.org/wiki/Simulated_annealing#/media/File:Hill_Climbing_with_Simulated_Annealing.gif
 + Genetic Algorithms
     + Like simulated annealing but

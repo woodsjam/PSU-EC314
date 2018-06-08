@@ -296,7 +296,7 @@ You can't calculate the IC funds until you know if the previous asset was purcha
 
 + Buy A since $IRR > MARR_{RE}$
 + Buy C since $IRR > MARR_{RE}$
-+ Do not Buy B since $IRR > MARR_{\frac{2}{5} RE + \frac{3}{5} Loan}$
++ Do not Buy B since $IRR < MARR_{\frac{2}{5} RE + \frac{3}{5} Loan}$
 + Do not buy D since $IRR < MARR_{\frac{2}{7} RE + \frac{5}{7} Loan}$
 
 

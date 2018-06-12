@@ -94,16 +94,16 @@ Set the Federal corporate tax rate to 21%
     + That reform passed in the Senate 97-3
         + Truly bipartisan
         + Revenue neutral simplification
-        + Reduction in rates.
+        + Reduction in rates with a wider base
 + This was a party line vote.
 + Without support from both major parties, it creates uncertainty about future rates.
-    + More likely that there will be changes if either house flips.
+    + More likely that there will be changes if either house or senate flips.
     + May actually stifle the positive effects.
-    + Makes it hard to round support for fixes.
+    + Makes it hard to round up support for fixes.
     
 ## Some Principles of Taxation
 
-+ Higher taxes on what you don't want and lower taxes, or subsidies, on what you don't want.
++ Higher taxes on what you don't want and lower taxes, or subsidies, on what you do want.
     + So treat labor income and capital income the same or you will see gaming to reduce taxes.
     + Treat foreign and domestic earnings the same or, again, gaming to reduce rates.
 + Discourage gaming of where you book income.
@@ -111,12 +111,15 @@ Set the Federal corporate tax rate to 21%
 ## The new rules violate principles
 
 + Lower rate on capital earnings than labor.
+    + We had this with the long-term capital gains
+    + Now this is regular.
 + Lower rate on foreign business earnings than domestic.
 + Fun things with pass through income will encourage some creative accounting.
     + Lawyers generally don't get the reduction in pass through.
     + If, the form a law group and an intellectual property group.
     + The law group gets no pass through reduction but if they pay the intellectual property group, almost, all those gains for using the intellectual property -- they can.
 
+## Back to the lecture
     
 ## Why you want to be "double taxed"?
 
@@ -265,6 +268,7 @@ A household would look at the PW of the payments to evaluate if it was a good lo
 LoanPart <- SampleLoan[,1:3]
 LoanPart$TaxSavings <- LoanPart$Interest * .4
 LoanPart$AfterTax <- LoanPart$Payment - LoanPart$TaxSavings
+
 stargazer(LoanPart, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE, digits = 0)
 ```
 
@@ -279,7 +283,17 @@ The tax advantages mean that businesses will often borrow at a higher rate than 
 + Quick rule of thumb if $Loan~Rate(1-c)<MARR$, take the loan
     + Approximation only works with moderate interest rates
     + Longish loan periods.
-    
+
+## Interaction with Latest Tax Reform
+
++ Suppose you made a decision to borrow several years ago based on the tax rates at the time.
++ A big part of the decision to borrow was because interest is an expense and lowers taxes.
++ Now, the tax rate fell
+    + The tax savings from interest falls.
+    + Approximate after-tax rate originally, with 35\% tax, $5\%(1 - .35 )= `r round(100*(.05*(1-.35)),2)`\%$
+    + Approximate after-tax rate with 21/% tax, $5\%(1 - .21 )= `r round(100*(.05*(1-.21)),2)`\%$
+
+Overall lower taxes, but this altered the trade-offs between equity and debt fueled growth.    
     
 ## Summary of Incentives
 
@@ -382,8 +396,7 @@ FullLife <- as.data.frame(cbind(Year, MACRS, Depreciation, BookValue))
 stargazer(FullLife, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE)
 
 ```
-
-Aim for for sale for more than book value, $5,000, and less than book value, \$1,000.
+Two examples: sale for more than book value, $5,000 and; less than book value, \$1,000.
 
 ## Sell for \$5,000, i.e., more than book
 

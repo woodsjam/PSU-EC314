@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = FALSE)
 + Walk through the syllabus
 + Walk through tools and resources
 + Take a pre-test
-+ Talk a little about accounting as time permits
++ Talk about accounting as time permits
 
 
 # Syllabus
@@ -24,15 +24,15 @@ Almost all the slides will also be on github. (https://github.com/woodsjam/PSU-E
 
 + Download them before each class if you like but they are not a substitute for coming to class.
 
-# Fall Term
+# Spring Term
 
-Here are Fall term's results https://github.com/woodsjam/PSU-EC314/blob/Spring2018/DayOne/CourseSummary.pdf
+Here are final exam and course grade results https://github.com/woodsjam/PSU-EC314/blob/Spring2018/DayOne/CourseSummary.pdf
 
-+ Note that showing up class helps your grade quite a bit.
-+ I also give about 30% As and 30% Bs.
++ I give about 30% As and 30% Bs.
 + The remaining grades are typically self-inflicted by
     + Not showing up to class
     + Trying to cram the night before on a topic outside your major.
+
 
 # Course Description
 

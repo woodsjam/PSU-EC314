@@ -17,10 +17,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Syllabus
 
-You can find the syllabus here. (https://github.com/woodsjam/PSU-EC314/blob/Spring2018/Syllabus/EC314Syllabus.Rmd
+You can find the syllabus here. (https://github.com/woodsjam/PSU-EC314/blob/Suumer2018/Syllabus/EC314Syllabus.Rmd
 )
 
-Almost all the slides will also be on github. (https://github.com/woodsjam/PSU-EC314/tree/Spring2018)
+Almost all the slides will also be on github. (https://github.com/woodsjam/PSU-EC314/tree/Summer2018)
 
 + Download them before each class if you like but they are not a substitute for coming to class.
 
@@ -63,32 +63,30 @@ background, MTH 95, is a practical requirement.
     
 # Key Dates
 
-+ Final Exam: June 14th from 12:30 -- 2:20
-+ Midterm 1: April 25th
-+ Midterm 2: May 23rd
-+ Last day to drop or change grade option: May 20th.
-+ Holiday: May 28th
++ Final Exam: August 16th from 4:30 -- 6:50
++ Midterm 1: July 17th
++ Midterm 2: August 7th
 
 Exams will be given on those days and at those times only.  I do not give make up, early or late exams.  
 
 + My experience has been that can't make the exam are using any excuse to get more time to prepare.
 + I never give the same exam.
-    + It takes me a 8 hours to create and grade a makeup for you.
-    + I only have 6 weekend days off this term and I don't want to give them up.
-
++ It takes me a 8 hours to create and grade a makeup for you.
+    
 # DRC Folks
 
-> If you have a DRC compensation and would normally schedule an exam in the testing center, you must schedule your exam on the day of the exam and start at the same time as the rest of the class.
+> If you have a DRC compensation and would normally schedule an exam in the testing center, you must schedule your exam on the day of the exam such that you finish your exam at 5pm.
 
 + Schedule now.  Do not wait.
-+ Make sure your start time is 8am on the day of the exam.
++ Adjust the start time based on your compensation.
 
 
 # Contact Information
-
 + My office is in CH 241-O.
-+ Drop in office hours are Monday 2:30-3:30  through the last week of class. There is no need to make an appointment for these hours -- just come.
-+ If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 15 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points. 
++ Drop in office hours are Tues 3:00-4:00  through the last week of class. There is no need to make an appointment for these hours -- just come.
++ If you can’t attend regular office hours, please check my calendar https://woodsj.youcanbook.me/. I will make a limited number of 15 minute slots available each week. If you make an appointment and fail to show up without first canceling, I will penalize your final exam score two points.  
+
+My in-person office hours may need to be moved to a different location because of construction in Cramer Hall.  
 
 Meetings can be via phone or even the hangout function in your pdx.edu email.
 
@@ -98,7 +96,7 @@ I will also keep Slack up during office hours to answer questions.
 
 I avoid email since it is a trash heap and a constant distraction.
 
-+ The class will use slack https://ec314spring18.slack.com
++ The class will use slack https://ec314summer18.slack.com
 + Handles direct messages, forum style responses.
 + You should be able to sign up with your pdx.edu account
 + Can access via webpage, apps in Android and iOS.
@@ -123,9 +121,7 @@ In short, make it easy for someone to help you.
 
 + Rants and bellyaching put you at the bottom of the queue or off the queue.
 + Night before the exam?  You are on your own.
-+ Set Do Not Disturb times.
-    + Defaults to 10pm -8am
-    + You may miss notification of class cancellation.
++ Set personal Do Not Disturb times.  It is set to 10pm -8am
 
 # Textbook
 
@@ -139,7 +135,7 @@ The table of contents for the 6th edition (https://s3-us-west-2.amazonaws.com/wo
 
 # D2L
 
-I will assume you know how  to work D2L. https://d2l.pdx.edu/d2l/home/694760
+I will assume you know how  to work D2L. https://d2l.pdx.edu/d2l/home/708050
 
 + Calendar on left
 + Links in the middle
@@ -168,23 +164,22 @@ http://ec314-pdx-edu.wikidot.com/outline
 + I did the videos but students did most of the text.
 + Videos are key
 + Key drill and kill under "Essential Skills"
-+ Getting dated.  
-    + If I lose my election, I will start turning it into a book.
-    + Book will be free to PSU students.
++ Getting dated, but this is my last time teaching this course.
     
     
 # Assessments and Grade Policy
 
-+ Final Exam (40%)
-+ Midterm 1 (25%)
-+ Midterm 2 (25%)
+
++ Final Exam (30%)
++ Midterm 1 (30%)
++ Midterm 2 (30%)
 + In-class quizzes and Class Rules D2L Quiz (10%)
 
 Mostly exams with a small slice for in-class quizzes.
 
 + Encourage students to read material before class, 
 + Review the material from the last class, and 
-+ Show up
++ Show up and stay
 
 # In-class quizzes
 
@@ -196,6 +191,7 @@ Please play this straight.
 
 + Don't have someone turn one in for you.
 + Don't pull out your phone to look up answers during the quiz.
++ Just come to class.  It helps so much.
 
 # Exams
 

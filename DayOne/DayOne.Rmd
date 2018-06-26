@@ -17,18 +17,18 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Syllabus
 
-You can find the syllabus here. (https://github.com/woodsjam/PSU-EC314/blob/Suumer2018/Syllabus/EC314Syllabus.Rmd
+You can find the syllabus here. (https://github.com/woodsjam/PSU-EC314/blob/Summer2018/Syllabus/EC314Syllabus.pdf
 )
 
 Almost all the slides will also be on github. (https://github.com/woodsjam/PSU-EC314/tree/Summer2018)
 
-+ Download them before each class if you like but they are not a substitute for coming to class.
++ Download them before each class if you like, but they are not a substitute for coming to class.
 
 # Spring Term
 
-Here are final exam and course grade results https://github.com/woodsjam/PSU-EC314/blob/Spring2018/DayOne/CourseSummary.pdf
+Here are final exam and course grade results https://github.com/woodsjam/PSU-EC314/blob/Summer2018/DayOne/GradeAnalysis.pdf
 
-+ I give about 30% As and 30% Bs.
++ I usually give about 30% As and 30% Bs.
 + The remaining grades are typically self-inflicted by
     + Not showing up to class
     + Trying to cram the night before on a topic outside your major.
@@ -43,6 +43,17 @@ Here are final exam and course grade results https://github.com/woodsjam/PSU-EC3
 + Management often requires these skills.
 + Economists are often expected to know this.
 
+# Who Am I?
+
++ Ph.D. Economist
++ Background in energy and program evaluation consulting going back to the early 90s.
+    + Projects were multidisciplinary. Rarely did a project not involve, economists, engineers and others.
++ Former:
+    + Oregon HECC commissioner
+    + Parkrose School Board Chair
+    + Multiple non-profit boards
+    + County Budget Committees
+    
 # Prerequisites
 
 > There are no prerequisites for this course. However, a reasonable math
@@ -69,9 +80,9 @@ background, MTH 95, is a practical requirement.
 
 Exams will be given on those days and at those times only.  I do not give make up, early or late exams.  
 
-+ My experience has been that can't make the exam are using any excuse to get more time to prepare.
++ My experience has been that "can't" make the exam are using any excuse to get more time to prepare.
 + I never give the same exam.
-+ It takes me a 8 hours to create and grade a makeup for you.
++ It takes me about 8 hours to create and grade a makeup exam.
     
 # DRC Folks
 
@@ -88,7 +99,7 @@ Exams will be given on those days and at those times only.  I do not give make u
 
 My in-person office hours may need to be moved to a different location because of construction in Cramer Hall.  
 
-Meetings can be via phone or even the hangout function in your pdx.edu email.
+Meetings can be via phone or even the hangout/meet function in your pdx.edu email.
 
 I will also keep Slack up during office hours to answer questions.
 
@@ -101,6 +112,9 @@ I avoid email since it is a trash heap and a constant distraction.
 + You should be able to sign up with your pdx.edu account
 + Can access via webpage, apps in Android and iOS.
 + Linked in d2l.
++ Officially supported PSU software
++ Common in industry
++ Many of you already use it.
 
 # Hints on Slack
 
@@ -121,7 +135,7 @@ In short, make it easy for someone to help you.
 
 + Rants and bellyaching put you at the bottom of the queue or off the queue.
 + Night before the exam?  You are on your own.
-+ Set personal Do Not Disturb times.  It is set to 10pm -8am
++ Set personal Do Not Disturb times.  It it defaults to 10pm -8am
 
 # Textbook
 
@@ -193,6 +207,20 @@ Please play this straight.
 + Don't pull out your phone to look up answers during the quiz.
 + Just come to class.  It helps so much.
 
+# Change In Quizzes from Spring Term
+
++ Quizzes *were* given at start of class.
++ New behavior: An additional 20% of students would leave at the break
++ Past relationship between being in class, taking quizzes, and exam grades broke down.
++ For the technical people: 
+    + Instead of a regular regression relationship, taking quizzes acted like a cap on grades, like a frontier regression.
+    + Quizzes represented unobserved half and  full class attendance, not just full.
+    + Quiz pass rates also fell.
+
+# Showing Up and Staying Helps
+
+![](Rplot.pdf)
+
 # Exams
 
 + Sample exams, don't think of them as practice, are in "Syllabus and Sample Exams" module.
@@ -212,14 +240,6 @@ Please play this straight.
     + Not traditional 90/80/70 breakpoints.
     
 It is rare for people to do poorly if they show up and actually do the work.
-
-# Distribution from Fall term
-
-![](MidtermDist.png)
-
-# By Attendance
-
-![](ByAttend.png)
 
 # Other Rules (Short Version)
 

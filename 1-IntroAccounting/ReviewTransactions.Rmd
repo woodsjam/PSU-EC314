@@ -15,7 +15,7 @@ Lets take a look at a few transactions
 ## Hints
 
 + Identify the transaction type first.
-+ If you worked the flash cards, you this is easy.
++ If you worked the flash cards, this is easy.
 + Make sure your balance sheet balances.  
 + If you have only one arrow on the balance sheet, it is wrong.
 + Follow the echo and get it categorized

@@ -82,17 +82,24 @@ Bring an income statement, cash flow statement, and balance sheet for any firm y
 + Not Nike or Intel (Or half the class will bring these)
 + Avoid banks (Balance sheets look funny)
 + Avoid non-us firms (Different sign conventions)
+    + US is different than IFS
+    + We focus on the US
 
-Bring means, paper or provide a link when asked.
+Bring means, paper or provide a link in  slack when asked.
 
 ## Where to Get The Statments
 
 + https://finance.yahoo.com/
+    + Probably the best of the aggregators.
+    + May have parser problems
 + http://www.google.com/finance
+    + Recently gimped.
+    + Very nice API if you work like that.
 
 + https://www.sec.gov/edgar/searchedgar/companysearch.html
 
-Or  go to the company webpages and look for investor relations.
+Or  go to the company webpages and look for "investor relations".
+
 
 ## Quiz!
 
@@ -104,6 +111,10 @@ https://prezi.com/rukunfcbnemy/intro-accounting/
 + Things that change net income changes cash from operations
 + Asset purchases and sales change cash from investments.
 + Borrowing, lending and owner equity changes are reflected in cash from finance.
+
+Beware of the sign conventions
+    + Positive is inflow of cash.
+    + Cash flow is about _cash_, so buying an asset results in decrease in cash from investing activities.
 
 ## How to Drill and Kill the transactions
 

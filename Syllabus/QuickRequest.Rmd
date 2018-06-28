@@ -7,3 +7,7 @@ output: beamer_presentation
 
 Would you like to make money for taking notes? If you are willing to share your notes, you will be paid up to $25 per credit hour to scan and upload your notes to DRC Online. If you're interested go to the DRC homepage: pdx.edu/drc, select DRC Online, and follow the link to sign up as a note taker. You can find answers to most questions by selecting "Note Takers" in the top menu. Please keep in mind that note taking is a confidential service, and do not approach students to talk about it in class. 
 
+
+# You have a quiz on the syllabus due in a few days
+
+Less than 10 people have completed the quiz.  It is due on the 6th.

@@ -93,7 +93,7 @@ We will have a full list later.
 
 "If you deposit  $26 into an account that earns 2% a month, how much will be in the account after 500 months?"
 
-$$F = 26(1+.02)^{500} = `r 26*(1+.02)^500`$$
+$$F = 26(1+.02)^{500} = `r round(26*(1+.02)^500,2)`$$
 
 + "how much will be in the account after" is a good signal for future value.
 + 100ths of a percent is more than adequate for calculations.
@@ -107,7 +107,7 @@ $$F = 26(1+.02)^{500} = `r 26*(1+.02)^500`$$
 
 "How much would you have to deposit now into an account that earns 10% per year to have 100K in 10 years?"
 
-$$P = \frac{100K}{(1+.1)^{10}} = `r 100/1.1^10`K$$
+$$P = \frac{100K}{(1+.1)^{10}} = `r round(100/1.1^10,2)`K$$
 
 + "How much would you have to deposit now" is a present worth indicator.
 
@@ -144,7 +144,7 @@ It is a functional representation of common cash flow patterns:
 
 There are other notations in use, e.g. actuarial notation.
 
-![By Delimata - Own work, GFDL, https://commons.wikimedia.org/w/index.php?curid=4312450](https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Actuarial_notation.svg/219px-Actuarial_notation.svg.png){width=20% }
+![https://en.wikipedia.org/wiki/Actuarial_notation](Actuarial_notation.png){width=20% }
 
 ## Factor Notation
 
@@ -162,7 +162,7 @@ The things in the parentheses are a substitute for the things in the square brac
 
 ## Sample Spider Graph
 
-![](http://tornadocharts.com/wp-content/uploads/sites/2/2015/06/sensit-sensitivity-analysis-spider-chart.gif)
+![](sensit-sensitivity-analysis-spider-chart.png)
 
 
 ## The Key

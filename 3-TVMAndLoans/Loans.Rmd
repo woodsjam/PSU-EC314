@@ -88,6 +88,8 @@ Effective Annual Rate
 
 $$ \left( 1 + \frac{Nominal}{\# ~Compounding ~in ~Nominal ~Period} \right)^{\# Compounding ~in ~Desired} -1$$
 
+This equation is not on your note sheet.
+
 ## Desired Effective Period
 
 If it is a multiple of the compounding period, use the math.  If not, read the contract.
@@ -198,11 +200,13 @@ And many conventions on how loans and interest rates are described.
 
 + They told you the nominal rate but all the other parameters are by convention.
 
++ Yes, there are 15-year mortgages, but unless you state that, the assumption is 30-year.
+
 
 ## Lets take out and pay off some loans
 
 + Our loan examples will typically have high rates, so you can see the effects of changes on the interest rates.
-+ The terms may be goofy, weekly payments compounded daily.
++ The terms may be goofy, e.g., weekly payments compounded daily.
 + Usually a small number of payments to keep everything on one slide.
 
 ## How to Calculate Payments on Amortizing Loan
@@ -293,7 +297,7 @@ Yes, there is a little rounding.
 
 ## Refi vs Interest rate change
 
-+ Refinance means taking out a whole new loan with a different interest rate.
++ Refinance means taking out a whole new loan with a different interest rate. Unless stated, the same term, e.g., 30-years, as the previous loan.
     + If you refinance your mortgage, 360 payments, after making 120 payments, your new payments are based on the current balance remaining and the new rate, but it resets the number of payments
     + You have 360 payments to pay off the loan.
 
@@ -391,8 +395,10 @@ Ignoring time value of money ...
 You can Pay \$15 for a \$1 reduction in annual payments. 
 
 + Long-timer (30-years)
+    + \$30 savings at a cost of \$15
     + Take it and save. \$30 - \$15 = \$15 dollars  
 + Short-timer (5-years)
+    + \$5 savings at a cost of \$15
     + Take it and be worse off. \$5 - \$15 = - \$10
 
 Only real Long-timers will pay the point.  They credibly reveal they are a Long-timer.    

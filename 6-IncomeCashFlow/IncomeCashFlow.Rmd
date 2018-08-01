@@ -24,6 +24,10 @@ knitr::opts_chunk$set(echo = TRUE)
 + How would cash flow change if we purchased a new delivery truck with a loan?  
 + Is cash flow better than without the loan?
 
+## Sign Convention
+
+We will be working through sign conventions using an example \$20,000 investment that is purchased in year zero and sold in year one.
+
 ## Sign Conventions: Revenue
 
 
@@ -90,8 +94,9 @@ More expenses than current plan in year zero and fewer expenses than current pla
 \end{tabular}
 \end{table}
 
-Increase in interest expense, relative to current plan, in year 1.  Note that this is just the interest expense, not a full loan payment.
+Our example did not include a loan.  This is included just to show the sign convention.
 
+Increase in interest expense, relative to current plan, in year 1.  Note that this is just the interest expense, not a full loan payment.
 
 ## Sign Conventions: Depreciation
 
@@ -339,9 +344,10 @@ $Gains~Tax = (Salvage - Book~Value) Tax~Rate =$
 ## Sign Conventions: Net Cash Flow
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
+FinFormat <- function(x) format(x, digits=2, decimal.mark=".",   big.mark=",", small.interval=3)
 
 Cash1 <- -2370 + 4000 - 20000
-Cash2 <- -5520 + 3200/2 + 19000 - ((19000 - Book)*.4) 
+Cash2 <- -5520 + 3200/2 + 19000 - Gains 
 
 ```
 
@@ -363,7 +369,7 @@ Add up cash but remember gains tax must be subtracted.
 	Finance	&	&	&\\
 			&	&	&\\
         \hline
-		Net Cash Flow	&	(18370)& `r Cash2`	&\\
+		Net Cash Flow	&	(18370)& `r FinFormat(Cash2)`	&\\
 \end{tabular}
 \end{table}
 

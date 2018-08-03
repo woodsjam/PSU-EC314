@@ -183,7 +183,7 @@ $A_0$ | 6     | 5     | 4   | 7     |
 
 MARR = 9%
 
-In these kinds of problems we only deal with investments and not loans.  Not tricks on interpreting the IRR.
+In these kinds of problems we only deal with investments and not loans.  No tricks on interpreting the IRR.
 
 ## Easy Answer
 

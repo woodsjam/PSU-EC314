@@ -1,0 +1,13 @@
+{
+    "path" : "~/Teaching/PSU-EC314/7-NewEnvironments",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        },
+        {
+            "ascending" : false,
+            "columnIndex" : 4
+        }
+    ]
+}

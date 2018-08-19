@@ -1,0 +1,592 @@
+[0m[0K]0;:/c/Users/woodsj/Documents/Teaching/PSU-EC314[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0K[?25l$ git com[0K[?25h[?25l$ git co[0K[?25h[?25l$ git c[0K[?25h[?25l$ git[0K[7G[?25h[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hA[0K[?25l
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25ha[0K[17G[?25l$ git commit -a -[0K[?25hm[0K[20G[?25l$ git commit -a -m "[0K[?25hS[0Kl[0Ki[0Kd[0Ke[0K[27G[?25l$ git commit -a -m "Slide f[0K[?25ho[0Kr[0K[31G[?25l$ git commit -a -m "Slide for n[0K[?25ho[0K[?25lt[0K[33G[?25h[34G[?25l$ git commit -a -m "Slide for note[0K[?25h[36G[?25l$ git commit -a -m "Slide for note t[0K[?25ha[0Kk[0Ke[0Kr[0K[42G[?25l$ git commit -a -m "Slide for note taker q[0K[?25h[?25l$ git commit -a -m "Slide for note taker[0K[42G[?25h[?25l$ git commit -a -m "Slide for note taker r[0K[?25he[0Kq[0Ku[0Ke[0Ks[0Kt[0K[50G[?25l$ git commit -a -m "Slide for note taker request f[0K[?25hr[0Ko[0Km[0K[55G[?25l$ git commit -a -m "Slide for note taker request from d[0K[?25hr[0Kc[0K.[0K"[0K[?25l
+[0K[?25h[Summer2018 bfc9b48] Slide for note taker request from drc.[0K[?25l
+ Committer: James Woods <woodsj@psu.ds.pdx.edu>[0K
+Your name and email address were configured automatically based[0K
+on your username and hostname. Please check that they are accurate.[0K
+You can suppress this message by setting them explicitly. Run the[0K
+following command and follow the instructions in your editor to edit[0K
+your configuration file:[0K
+[0K
+    git config --global --edit[0K
+[0K
+After doing this, you may fix the identity used for this commit with:[0K
+[0K
+    git commit --amend --reset-author[0K
+[0K
+ 2 files changed, 9 insertions(+)[0K
+ create mode 100644 Syllabus/QuickRequest.Rmd[0K
+ create mode 100644 Syllabus/QuickRequest.pdf[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K[24G[?25h[?25l
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[?25l
+[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
+   An error occurred while sending the request.[0K
+[0K[?25h[?25lerror: cannot spawn rpostback-askpass: No such file or directory[0K[1G[?25h[?25l
+[0K[?25hUsername for 'https://github.com':[0K[36G[?25lUsername for 'https://github.com': w[0K[?25ho[0Ko[0Kd[0Ks[0Kj[0Ka[0Km[0K[?25l
+[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
+[0K[?25hPassword for 'https://woodsjam@github.com':[0K[45G[?25l
+[0K[?25hCounting objects: 5, done.[0K[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (5/5), done.[0K
+Writing objects: 100% (5/5), 39.35 KiB | 7.87 MiB/s, done.[0K[1G[?25h[?25l
+Total 5 (delta 1), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (1/1), completed with 1 local object.[0K[?25l
+[0K[?25hTo https://github.com/woodsjam/PSU-EC314.git[0K[?25l
+   36bf636..bfc9b48  Summer2018 -> Summer2018[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+]0;:/c/Users/woodsj/Documents/Teaching/PSU-EC314[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25ha[0K[17G[?25l$ git commit -a -[0K[?25hm[0K[20G[?25l$ git commit -a -m "[0K[?25hA[0Kd[0Kd[0Ke[0Kd[0K[27G[?25l$ git commit -a -m "Added n[0K[?25ho[0Kt[0Ke[0K[32G[?25l$ git commit -a -m "Added note a[0K[?25hb[0Ko[0Ku[0Kt[0K[38G[?25l$ git commit -a -m "Added note about q[0K[?25hu[0K[?25li[0K[40G[?25h[41G[?25l$ git commit -a -m "Added note about quiz[0K[?25h[43G[?25l$ git commit -a -m "Added note about quiz b[0K[?25he[0Ki[0Kn[0K[?25lg[0K[47G[?25h[48G[49G[?25l$ git commit -a -m "Added note about quiz being d[0K[?25hu[0Ke[0K[53G[?25l$ git commit -a -m "Added note about quiz being due n[0K[?25he[0Kx[0Kt[0K[58G[?25l$ git commit -a -m "Added note about quiz being due next w[0K[?25he[0Ke[0Kk[0K.[0K"[0K[?25l
+[0K[?25h[Summer2018 82927de] Added note about quiz being due next week.[0K[?25l
+ Committer: James Woods <woodsj@psu.ds.pdx.edu>[0K
+Your name and email address were configured automatically based[0K
+on your username and hostname. Please check that they are accurate.[0K
+You can suppress this message by setting them explicitly. Run the[0K
+following command and follow the instructions in your editor to edit[0K
+your configuration file:[0K
+[0K
+    git config --global --edit[0K
+[0K
+After doing this, you may fix the identity used for this commit with:[0K
+[0K
+    git commit --amend --reset-author[0K
+[0K
+ 2 files changed, 4 insertions(+)[0K
+ rewrite Syllabus/QuickRequest.pdf (89%)[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0K[6G[5G[?25l$ git[0K[?25h[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[?25l
+[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
+   An error occurred while sending the request.[0K
+[0K[?25h[?25lerror: cannot spawn rpostback-askpass: No such file or directory[0K[1G[?25h[?25l
+[0K[?25hUsername for 'https://github.com':[0K[36G[?25lUsername for 'https://github.com': w[0K[?25ho[0Ko[0Kd[0Ks[0Kj[0Ka[0Km[0K[?25l
+error: cannot spawn rpostback-askpass: No such file or directory[0K
+[0K[?25hPassword for 'https://woodsjam@github.com':[0K[45G[?25l
+[0K[?25hCounting objects: 5, done.[0K[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (5/5), done.[0K
+Writing objects:  80% (4/5)[0K[1G[?25hWriting objects: 100% (5/5), 41.86 KiB | 8.37 MiB/s, done.[0K[?25l
+Total 5 (delta 2), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[0K[?25l
+[0K[?25hTo https://github.com/woodsjam/PSU-EC314.git[0K[?25l
+   bfc9b48..82927de  Summer2018 -> Summer2018[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+]0;:/c/Users/woodsj/Documents/Teaching/PSU-EC314[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ a[0K[?25hd[0Kd[0K[7G[6G[?25l$ ad[0K[?25h[?25l$ a[0K[?25h[?25l$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git -[0K[?25h[?25l$ git[0K[8G[?25h[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hA[0K[?25l
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit "[0K[?25hT[0Kr[0Ka[0Kn[0Ks[0Ki[0Kt[0Ki[0Ko[0Kn[0K[26G[?25l$ git commit "Transition t[0K[?25hr[0Ka[0Kn[0Ks[0Ka[0Kc[0Kt[0Ki[0Ko[0Kn[0Ks[0K[39G[?25l$ git commit "Transition transactions s[0K[?25hl[0Ki[0Kd[0Ke[0Ks[0K[?25l$ git commit "Transition transactions slide[0K[?25h[?25l$ git commit "Transition transactions slid[0K[?25h[?25l$ git commit "Transition transactions sli[0K[?25h[?25l$ git commit "Transition transactions sl[0K[?25h[?25l$ git commit "Transition transactions[0K[39G[?25h[?25l$ git commit "Transition transaction[0K[?25h[?25l$ git commit "Transition transactio[0K[37G[?25h[?25l$ git commit "Transition transacti[0K[?25h[?25l$ git commit "Transition transact[0K[?25h[?25l$ git commit "Transition transac[0K[?25h[?25l$ git commit "Transition transa[0K[?25h[?25l$ git commit "Transition trans[0K[?25h[?25l$ git commit "Transition tran[0K[?25h[?25l$ git commit "Transition tra[0K[?25h[?25l$ git commit "Transition tr[0K[?25h[?25l$ git commit "Transition[0K[26G[?25h[25G[?25l$ git commit "Transitio[0K[25G[?25h[24G[?25l$ git commit "Transiti[0K[?25h[?25l$ git commit "Transit[0K[?25h[?25l$ git commit "Transi[0K[?25h[?25l$ git commit "Trans[0K[?25h[?25l$ git commit "Tran[0K[20G[?25h[19G[?25l$ git commit "Tra[0K[?25h[?25l$ git commit "Tr[0K[?25h[?25l$ git commit "T[0K[?25h[?25l$ git commit "[0K[?25hM[0Ko[0Kr[0Ke[0K[20G[?25l$ git commit "More s[0K[?25hl[0Ki[0Kd[0Ke[0Ks[0K[27G[?25l$ git commit "More slides o[0K[?25hn[0K[30G[?25l$ git commit "More slides on t[0K[?25hh[0Ke[0K[34G[?25l$ git commit "More slides on the t[0K[?25hr[0Ka[0Kn[0Ks[0Ka[0Kc[0Kt[0Ki[0Ko[0Kn[0Ks[0K.[0K"[0K[?25l
+[0K[?25herror: pathspec 'More slides on the transactions.' did not match any file(s) known to git.[0K[?25l
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ git commit "More slides on the transactions."[0K[?25h[47G[46G[45G[44G[43G[42G[41G[40G[39G[38G[37G[36G[35G[34G[32G[30G[29G[28G[27G[26G[25G[24G[23G[21G[19G[17G[16G[15G[14G[?25l$ git commit -"More slides on the transactions."[0K[15G[?25h[?25l$ git commit -a"More slides on the transactions."[0K[16G[?25h[?25l$ git commit -a "More slides on the transactions."[0K[17G[?25h[?25l$ git commit -a -"More slides on the transactions."[0K[18G[?25h[?25l$ git commit -a -m"More slides on the transactions."[0K[19G[?25h[?25l$ git commit -a -m "More slides on the transactions."[0K[20G[?25h[?25l
+[0K[?25h[Summer2018 18a1302] More slides on the transactions.[0K[?25l
+ Committer: James Woods <woodsj@psu.ds.pdx.edu>[0K
+Your name and email address were configured automatically based[0K
+on your username and hostname. Please check that they are accurate.[0K
+You can suppress this message by setting them explicitly. Run the[0K
+following command and follow the instructions in your editor to edit[0K
+your configuration file:[0K
+[0K
+    git config --global --edit[0K
+[0K
+After doing this, you may fix the identity used for this commit with:[0K
+[0K
+    git commit --amend --reset-author[0K
+[0K
+ 3 files changed, 138 insertions(+)[0K
+ create mode 100644 1-IntroAccounting/MoreAccounting.Rmd[0K
+ create mode 100644 1-IntroAccounting/MoreAccounting.pdf[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[?25l
+[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
+   An error occurred while sending the request.[0K
+[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
+[0K[?25hUsername for 'https://github.com':[0K[36G[?25lUsername for 'https://github.com': w[0K[?25ho[0Ko[0Kd[0Ks[0Kj[0Ka[0Km[0K[?25l
+error: cannot spawn rpostback-askpass: No such file or directory[0K
+[0K[?25hPassword for 'https://woodsjam@github.com':[0K[45G[?25l
+[0K[?25h[?25lCounting objects: 7, done.[0K[1G[?25h[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (7/7), done.[0K
+Writing objects: 100% (7/7), 65.28 KiB | 7.25 MiB/s, done.[0K
+Total 7 (delta 4), reused 0 (delta 0)[0K
+[0K[?25h[?25lremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[0K[1G[?25h[?25l
+[0K[?25hTo https://github.com/woodsjam/PSU-EC314.git[0K[?25l
+   82927de..18a1302  Summer2018 -> Summer2018[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+]0;:/c/Users/woodsj/Documents/Teaching/PSU-EC314[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-[0KE
+C314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hA[0K[?25l
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-[0KE
+C314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25ha[0K[17G[?25l$ git commit -a -[0K[?25hm[0K[20G[?25l$ git commit -a -m "[0K[?25hd[0Ko[0Kw[0Kn[0Kl[0Ko[0Ka[0Kd[0Ke[0Kd[0K[32G[?25l$ git commit -a -m "downloaded g[0K[?25hr[0Kp[0Kh[0Ki[0Kc[0Ks[0K[?25l$ git commit -a -m "downloaded grphic[0K[?25h[?25l$ git commit -a -m "downloaded grphi[0K[?25h[?25l$ git commit -a -m "downloaded grph[0K[?25h[?25l$ git commit -a -m "downloaded grp[0K[?25h[?25l$ git commit -a -m "downloaded gr[0K[?25ha[0Kp[0Kh[0Ki[0Kc[0Ks[0K[41G[?25l$ git commit -a -m "downloaded graphics a[0K[?25hn[0Kd[0K[45G[?25l$ git commit -a -m "downloaded graphics and f[0K[?25hi[0Kx[0Ke[0Kd[0K[?25l
+[0K[?25h[2G[?25l r[0K[?25ho[0Ku[0Kn[0K[?25l rou[0K[?25hn[0Kd[0Ki[0Kn[0Kg[0K.[0K"[0K[?25l
+[0K[?25h[Summer2018 6bc9749] downloaded graphics and fixe[0Kd[?25l
+ rounding.[0K
+ Committer: James Woods <woodsj@psu.ds.pdx.edu>[0K
+Your name and email address were configured autom[0Ka
+tically based[0K
+on your username and hostname. Please check that [0Kt
+hey are accurate.[0K
+You can suppress this message by setting them exp[0Kl
+icitly. Run the[0K
+following command and follow the instructions in [0Ky
+our editor to edit[0K
+your configuration file:[0K
+[0K
+    git config --global --edit[0K
+[0K
+After doing this, you may fix the identity used f[0Ko
+r this commit with:[0K
+[0K
+    git commit --amend --reset-author[0K
+[0K
+ 5 files changed, 4 insertions(+), 4 deletions(-)[0K
+ create mode 100644 3-TVMAndLoans/Actuarial_notat[0Ki
+on.png[0K
+ rewrite 3-TVMAndLoans/TimeValueOfMoney.pdf (69%)[0K
+ create mode 100644 3-TVMAndLoans/sensit-sensitiv[0Ki
+ty-analysis-spider-chart.png[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-[0KE
+C314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git u[0K[?25h[?25l$ git[0K[7G[?25h[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[?25l
+[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
+   An error occurred while sending the request.[0K
+[0K[?25herror: cannot spawn rpostback-askpass: No such fi[0Kl[?25l
+e or directory[0K
+[0K[?25hUsername for 'https://github.com':[0K[36G[?25lUsername for 'https://github.com': w[0K[?25ho[0Ko[0Kd[0Ks[0Kj[0Ka[0Km[0K[?25l
+error: cannot spawn rpostback-askpass: No such fi[0Kl
+e or directory[0K
+[0K[?25hPassword for 'https://woodsjam@github.com':[0K[45G[?25l
+[0K[?25hCounting objects: 9, done.[0K[?25l
+[0K[?25hDelta compression using up to 4 threads.[0K[?25l
+Compressing objects:  33% (3/9)[0K[1G[?25h[?25lCompressing objects:  77% (7/9)[0K[1G[?25hCompressing objects: 100% (9/9), done.[0K[?25l
+Writing objects:  77% (7/9)[0K[1G[?25h[?25lWriting objects:  88% (8/9)[0K[1G[?25hWriting objects: 100% (9/9), 88.28 KiB | 1.60 MiB[0K/[?25l
+s, done.[0K
+Total 9 (delta 5), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas:  80% (4/5)[0K[40G[1Gremote: Resolving deltas: 100% (5/5), completed w[0Ki[?25l
+th 5 local objects.[0K
+[0K[?25hTo https://github.com/woodsjam/PSU-EC314.git[0K[?25l
+   18a1302..6bc9749  Summer2018 -> Summer2018[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-[0KE
+C314[0;36m (Summer2018)[0m[0K[?25h[?25l
+]0;:/c/Users/woodsj/Documents/Teaching/PSU-EC314[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git -[0K[?25ha[0K[10G[?25l$ git -a -[0K[?25hm[0K[13G[?25l$ git -a -m "[0K[?25hL[0Ki[0Kg[0Kh[0Kt[0K[20G[?25l$ git -a -m "Light e[0K[?25hd[0Ki[0Kt[0Ks[0K[26G[?25l$ git -a -m "Light edits t[0K[?25ho[0K[29G[?25l$ git -a -m "Light edits to l[0K[?25ho[0Ka[0Kn[0Ks[0K[35G[?25l$ git -a -m "Light edits to loans t[0K[?25ho[0K[38G[?25l$ git -a -m "Light edits to loans to c[0K[?25hl[0Ka[0Kr[0Ki[0Kf[0Ky[0K.[0K"[0K[?25l
+[0K[?25hUnknown option: -a[0K[?25l
+usage: git [--version] [--help] [-C <path>] [-c name=value][0K
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path[0K]
+[0K
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare][0K
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>][0K
+           <command> [<args>][0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ git -a -m "Light edits to loans to clarify."[0K[?25h[46G[45G[44G[42G[41G[40G[38G[37G[35G[34G[33G[32G[31G[29G[28G[27G[26G[25G[24G[23G[22G[21G[20G[19G[18G[17G[16G[15G[14G[13G[12G[11G[10G[9G[8G[7G[?25l$ git c-a -m "Light edits to loans to clarify."[0K[8G[?25h[?25l$ git co-a -m "Light edits to loans to clarify."[0K[9G[?25h[?25l$ git com-a -m "Light edits to loans to clarify."[0K[10G[?25h[?25l$ git comm-a -m "Light edits to loans to clarify."[0K[11G[?25h[?25l$ git commi-a -m "Light edits to loans to clarify."[0K[12G[?25h[?25l$ git commit-a -m "Light edits to loans to clarify."[0K[13G[?25h[?25l$ git commit -a -m "Light edits to loans to clarify."[0K[14G[?25h[?25l
+[0K[?25h[Summer2018 323d848] Light edits to loans to clarify.[0K[?25l
+ Committer: James Woods <woodsj@psu.ds.pdx.edu>[0K
+Your name and email address were configured automatically based[0K
+on your username and hostname. Please check that they are accurate.[0K
+You can suppress this message by setting them explicitly. Run the[0K
+following command and follow the instructions in your editor to edit[0K
+your configuration file:[0K
+[0K
+    git config --global --edit[0K
+[0K
+After doing this, you may fix the identity used for this commit with:[0K
+[0K
+    git commit --amend --reset-author[0K
+[0K
+ 2 files changed, 8 insertions(+), 2 deletions(-)[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[?25l
+[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
+   An error occurred while sending the request.[0K
+[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
+[0K[?25h[?25lUsername for 'https://github.com':[0K[1G[?25h[36G[?25lUsername for 'https://github.com': w[0K[?25ho[0Ko[0Kd[0Ks[0Kj[0Ka[0Km[0K[?25l
+error: cannot spawn rpostback-askpass: No such file or directory[0K[1G[?25h[?25l
+[0K[?25hPassword for 'https://woodsjam@github.com':[0K[45G[?25l
+[0K[?25hCounting objects: 5, done.[0K[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (5/5), done.[0K
+Writing objects:  80% (4/5)[0K[1G[?25hWriting objects: 100% (5/5), 5.12 KiB | 582.00 KiB/s, done.[0K[?25l
+Total 5 (delta 4), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[0K[?25l
+[0K[?25hTo https://github.com/woodsjam/PSU-EC314.git[0K[?25l
+   6bc9749..323d848  Summer2018 -> Summer2018[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/c/Users/woodsj/Documents/Teaching/PSU-EC314[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+[?25l[1A[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0K
+[0m$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25ha[0K[17G[?25l$ git commit -a -[0K[?25hm[0K[20G[?25l$ git commit -a -m "[0K[?25hF[0Ki[0Kx[0K[?25l$ git commit -a -m "Fi[0K[?25h[?25l$ git commit -a -m "F[0K[?25h[?25l$ git commit -a -m "[0K[22G[?25h[21G[?25l$ git commit -a -m "Q[0K[?25hu[0Ki[0Kc[0Kk[0K[27G[?25l$ git commit -a -m "Quick f[0K[?25hi[0Kx[0K[31G[?25l$ git commit -a -m "Quick fix t[0K[?25ho[0K[34G[?25l$ git commit -a -m "Quick fix to a[0K[?25h[36G[?25l$ git commit -a -m "Quick fix to a f[0K[?25he[0Kw[0K[40G[?25l$ git commit -a -m "Quick fix to a few e[0K[?25hr[0Kr[0Ko[0Kr[0Ks[0K[47G[?25l$ git commit -a -m "Quick fix to a few errors i[0K[?25hn[0K[50G[?25l$ git commit -a -m "Quick fix to a few errors in I[0K[?25hn[0Kc[0K[?25lo[0K[53G[?25h[54G[?25l$ git commit -a -m "Quick fix to a few errors in Incom[0K[?25he[0KC[0Ka[0Ks[0Kh[0KF[0Kl[0Ko[0Kw[0K[65G[?25l$ git commit -a -m "Quick fix to a few errors in IncomeCashFlow s[0K[?25hl[0Ki[0Kd[0Ke[0Ks[0K.[0K"[0K[?25l
+[0K[?25h[Summer2018 53af0e8] Quick fix to a few errors in IncomeCashFlow slides.[0K[?25l
+ Committer: James Woods <woodsj@psu.ds.pdx.edu>[0K
+Your name and email address were configured automatically based[0K
+on your username and hostname. Please check that they are accurate.[0K
+You can suppress this message by setting them explicitly. Run the[0K
+following command and follow the instructions in your editor to edit[0K
+your configuration file:[0K
+[0K
+    git config --global --edit[0K
+[0K
+After doing this, you may fix the identity used for this commit with:[0K
+[0K
+    git commit --amend --reset-author[0K
+[0K
+ 6 files changed, 16 insertions(+), 2402 deletions(-)[0K
+ delete mode 100644 6-IncomeCashFlow/IncomeCashFlow.log[0K
+ delete mode 100644 6-IncomeCashFlow/IncomeCashFlow.synctex.gz[0K
+ delete mode 100644 6-IncomeCashFlow/IncomeCashFlow.tex[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[7G[?25h[8G[?25l$ git pu[0K[?25hs[0Kh[0K[?25l
+[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
+   An error occurred while sending the request.[0K
+[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
+[0K[?25hUsername for 'https://github.com':[0K[36G[?25lUsername for 'https://github.com': w[0K[?25ho[0Ko[0Kd[0Ks[0Kj[0Ka[0Km[0K[?25l
+[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
+[0K[?25hPassword for 'https://woodsjam@github.com':[0K[45G[?25l
+[0K[?25h[?25lCounting objects: 6, done.[0K[1G[?25h[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (6/6), done.[0K
+Writing objects:  83% (5/6)[0K[1G[?25hWriting objects: 100% (6/6), 8.57 KiB | 797.00 KiB/s, done.[0K[?25l
+Total 6 (delta 4), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[0K[?25l
+[0K[?25hTo https://github.com/woodsjam/PSU-EC314.git[0K[?25l
+   323d848..53af0e8  Summer2018 -> Summer2018[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Summer2018)[0m[0K
+]0;:/c/Users/woodsj/Documents/Teaching/PSU-EC314[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU[0K-
+EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25ha[0K[17G[?25l$ git commit -a -[0K[?25hm[0K[20G[?25l$ git commit -a -m "[0K[?25hs[0Km[0Ka[0Kl[0Kl[0K[27G[?25l$ git commit -a -m "small t[0K[?25hy[0Kp[0Ko[0K[32G[?25l$ git commit -a -m "small typo i[0K[?25hn[0K[35G[?25l$ git commit -a -m "small typo in n[0K[?25he[0Kw[0K[39G[?25l$ git commit -a -m "small typo in new e[0K[?25hn[0Kv[0Ki[0Kr[0Ko[0Kn[0Km[0Ke[0Kn[0K[?25l
+[0K[?25ht[0Ks[0K.[0K"[0K[?25l
+[0K[?25h[Summer2018 0ed0f20] small typo in new environme[0Kn[?25l
+ts.[0K
+ Committer: James Woods <woodsj@psu.ds.pdx.edu>[0K
+Your name and email address were configured auto[0Km
+atically based[0K
+on your username and hostname. Please check that[0K
+they are accurate.[0K
+You can suppress this message by setting them ex[0Kp
+licitly. Run the[0K
+following command and follow the instructions in[0K
+your editor to edit[0K
+your configuration file:[0K
+[0K
+    git config --global --edit[0K
+[0K
+After doing this, you may fix the identity used [0Kf
+or this commit with:[0K
+[0K
+    git commit --amend --reset-author[0K
+[0K
+ 2 files changed, 1 insertion(+), 1 deletion(-)[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU[0K-
+EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[?25l
+[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
+   An error occurred while sending the request.[0K
+[0K[?25herror: cannot spawn rpostback-askpass: No such f[0Ki[?25l
+le or directory[0K
+[0K[?25hUsername for 'https://github.com':[0K[36G[?25lUsername for 'https://github.com': w[0K[?25ho[0Ko[0Kd[0Ks[0Kj[0Ka[0Km[0K[?25l
+error: cannot spawn rpostback-askpass: No such f[0Ki
+le or directory[0K
+[0K[?25hPassword for 'https://woodsjam@github.com':[0K[45G[?25l
+[0K[?25hCounting objects: 5, done.[0K[?25l
+Delta compression using up to 4 threads.[0K[1G[?25h[?25l
+Compressing objects: 100% (5/5), done.[0K
+Writing objects: 100% (5/5), 1.03 KiB | 351.00 K[0Ki
+B/s, done.[0K
+Total 5 (delta 4), reused 0 (delta 0)[0K
+[0K[?25h[?25lremote: Resolving deltas:  75% (3/4)[0K[1G[?25hremote: Resolving deltas: 100% (4/4), completed [0Kw[?25l
+ith 4 local objects.[0K
+[0K[?25h[?25lTo https://github.com/woodsjam/PSU-EC314.git[0K[2G[?25h[?25l
+   53af0e8..0ed0f20  Summer2018 -> Summer2018[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU[0K-
+EC314[0;36m (Summer2018)[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/c/Users/woodsj/Documents/Teaching/PSU-EC314[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Spring[0K2
+015)[0m[0K
+[?25l[2A[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Doc[0Ku
+ments/Teaching/PSU-EC314[0;36m (Spr[0Ki
+ng2015)[0K
+[0m$[0K[3G[?25h[?25l[3A[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (Spring[0K2
+015)[0K
+[0m$[0K
+[0K[1A[3G[?25h[0m[0K]0;:/c/Users/woodsj/Documents/Teaching/PSU-EC314[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (master)[0m[0K
+[?25l$ g[0K[?25hu[0Kt[0K[7G[?25l$ gut c[0K[?25hi[0K[?25l$ gut c[0K[?25h[?25l$ gut[0K[7G[?25h[6G[?25l$ gu[0K[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25h[?25l$ git[0K[7G[?25h[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hA[0K[?25l
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/pcs/debug-breakpoints.pper.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+w[0K[1G[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/pcs/files-pane.pper.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/pcs/find-in-files.pper.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/pcs/packages-pane.pper.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/pcs/source-pane.pper.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/pcs/source-window.pper.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/pcs/windowlayoutstate.pper.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/pcs/workbench-pane.pper.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/persistent-state.[0K
+The file will have its original line endings in your working directory.[0K
+w[0K[1G[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/presentation/presentation-st[0Ka[?25l
+te-v2.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/rmd-outputs.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/per/t/128A2342.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/per/t/67BB7DC4.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/per/t/85B805F0.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/per/t/8D02EAD6.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/per/t/B8EC967A.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/per/t/D6A9A33F.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/10ADF7E3.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/1628C28A.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/17D934D.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/18EA5658.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/213D7A9F.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/24A3D339.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/25751F41.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/2ABA8D90.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/30594EC.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/3228F61A.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/35C0086A.[0K
+The file will have its original line endings in your working directory.[0K
+w[0K[1G[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/4808611.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/4AD1A777.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/4E42D385.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/56BBC8E1.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/57FA867C.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/6D16AB46.[0K
+The file will have its original line endings in your working directory.[0K[27G[?25h[?25l
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/85C7BEEE.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/881653F2.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/914238A6.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/9657B673.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/9C80C830.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/9E14D49F.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/BCBAEEE1.[0K
+The file will have its original line endings in your working directory.[0K
+w[0K[1G[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/C65F5571.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/CB62415B.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/D3B7C2B9.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/D667EB41.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/DEE5634F.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/E0A6156C.[0K[55G[?25h[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/E4634435.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/E49112E4.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/EBC56B1A.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/F18DC85.[0K
+The file will have its original line endings in your working directory.[0K
+w[0K[1G[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/F80F78F1.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/F97B500C.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sdb/prop/INDEX.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/session-persistent-state.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/10ADF7E3.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/14DB2985.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/1628C28A.[0K[1G[?25h[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/17D934D.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/18EA5658.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/1D69317C.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/213D7A9F.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/220AA866.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/24A3D339.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/25751F41.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/2AB65C0A.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/2ABA8D90.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/2D7C67AF.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/2F45C1E2.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/30594EC.[0K[1G[?25h[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/31456946.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/3228F61A.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/35C0086A.[0K
+The file will have its original line endings in your working directory.[0K
+w[0K[1G[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/4808611.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/4AD1A777.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/4E42D385.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/4F632C52.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/4FB8B4C2.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/56BBC8E1.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/57CDDAC.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/57FA867C.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/64D736C6.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/68D2F4E4.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/6D16AB46.[0K[1G[?25h[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/814E27EC.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/85C7BEEE.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/881653F2.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/8CE8DCD2.[0K
+The file will have its original line endings in your working directory.[0K
+w[0K[1G[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/8F9CE445.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/914238A6.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/9657B673.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/975FF372.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/9B726188.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/9C80C830.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/9DB9E211.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/9E14D49F.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/ACD65A4C.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/B5FA875F.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/BC4C8630.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/BCBAEEE1.[0K[1G[?25h[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/C1E7F2AD.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/C65F5571.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/C89075C6.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/CB62415B.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/CC327745.[0K[2G[?25h[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/D3B7C2B9.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/D667EB41.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/DEE5634F.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/E04214C3.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/E0A6156C.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/E1C4060.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/E4634435.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/E49112E4.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/EBC56B1A.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/F18DC85.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/F6281D57.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/F80F78F1.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/F97B500C.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/FAE116F.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/FFB42C93.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/B25B75C9/sources/prop/INDEX.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/shared/notebooks/7C3C48C-IncomeCashFl[0Ko[?25l
+w/1/s/cs1l7p04bk23b/000002.csv.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/shared/notebooks/7C3C48C-IncomeCashFl[0Ko
+w/1/s/csetup_chunk/000002.csv.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/shared/notebooks/paths.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25h[?25la[0K[15G[?25h[16G[17G[?25l$ git commit -a -[0K[?25hm[0K[20G[?25l$ git commit -a -m "[0K[?25hC[0Kl[0Ka[0K[?25l$ git commit -a -m "Cl[0K[?25he[0Ka[0Kn[0Ki[0Kn[0K[?25lg[0K[28G[?25h[29G[30G[?25l$ git commit -a -m "Cleaning u[0K[30G[?25h[31G[?25l$ git commit -a -m "Cleaning up[0K[?25h[33G[?25l$ git commit -a -m "Cleaning up f[0K[?25ho[0Kr[0K[37G[?25l$ git commit -a -m "Cleaning up for m[0K[?25h[?25le[0K[38G[?25h[39G[?25l$ git commit -a -m "Cleaning up for mer[0K[?25hg[0Ke[0K[43G[?25l$ git commit -a -m "Cleaning up for merge t[0K[?25ho[0K[46G[?25l$ git commit -a -m "Cleaning up for merge to m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K"[0K[?25l
+[0K[?25h

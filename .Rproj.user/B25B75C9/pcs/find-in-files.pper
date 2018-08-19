@@ -1,0 +1,10 @@
+{
+    "dialog-state" : {
+        "caseSensitive" : false,
+        "filePatterns" : [
+        ],
+        "path" : "~/Teaching/PSU-EC314",
+        "query" : "an account that earns 12% interest ",
+        "regex" : false
+    }
+}

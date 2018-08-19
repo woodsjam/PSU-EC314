@@ -1,0 +1,55 @@
+---
+title: "Accounting Ratios"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Goals
+
++ A way of using the definitions you just learned again to make them more solid.
++ Give us the U in EC314U by adding a topic of general interest.
++ View ratios as a non-probabilistic expression of risk. 
++ Point out other uses of the ratios.
+
+
+## The Ratios
+
+https://prezi.com/gz6nmvsbjrz7/accounting-ratios/
+
+## Summary of Use
+
+There are multiple uses for each ratio.  These are categorized by how we used them in class, not exclusive use.
+
++ Loan Related
+    + Debt Ratio:  How likely will a lender be able to recover principal of a loan if borrower stops making payments.
+    + TIER:  How likely will the borrower make payments on time.
+    + Subtleties on which to use when and how to combine depending on  if the firm requires few or many assets to produce.
+    
++ Working Capital related
+    + Current Ratio: Upper bound on working capital adequacy.
+    + Quick Ratio: Lower bound on working capital adequacy.
+    + Subtleties on which to use depending on if inventory is firm specific or can be sold for near purchase price.
+    
+    
+## Summary of Use (Con't)
+
++ Meeting Increases in Sales
+    + Inventory Turnover: Can you meet a temporary increase in sales?
+    + Asset Turnover: Can you meet a permanent increase in sales?
+
+
+
+## Warnings/Reminders
+
+Use:
+
++ Real World use can be different and complex, recall the DuPont example
++ "Good" depends on industry
+
+Typical Exam Questions:
+
++ A few interpretive questions, "Which firm would you rather lend to"
++ Some require some algebra and require you to remember some accounting definitions and identities.

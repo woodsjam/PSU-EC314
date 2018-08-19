@@ -1,0 +1,590 @@
+---
+title: "Taxes"
+output: beamer_presentation
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(dplyr)
+source("AmTable.R")
+PW <- function(marr, cf){
+  Len <- length(cf)
+  Disc <- rep(1, times = Len) * 1/(1+marr)
+  Disc2 <- cumprod(Disc) * (1+marr)
+  sum(cf*Disc2)
+}
+
+#PW(.1, c(-10,15,0,0,13))
+
+Acc <- function(x){format(x,nsmall=2,digits=2,big.mark=',',scientific=FALSE)}
+```
+
+## Goals
+
++ Simplified Introduction to taxes
++ How taxes interact with how a firm is organized, e.g., sole proprietorship vs C-Corp, etc.
++ Depreciation recapture when assets are sold for other than book value.
++ Effects of taxes on incentives to replace assets.
++ Effects of taxes on incentives to borrow money.
+
+
+## Taxes are a specialist area
+
++ The statutes (US Code) http://uscode.house.gov/browse/prelim@title26&edition=prelim
++ The regulations (US CFRs) https://www.ecfr.gov/cgi-bin/text-idx?SID=53e8b2eb097e4352766122db08d0c572&mc=true&tpl=/ecfrbrowse/Title26/26tab_02.tpl
++ There is also a mass of case law on taxes.
+
+We take a simplified approach that is appropriate for first pass estimate of cash flow.  In real life, that one box takes as much effort as revenue and cost estimates.
+
+## The Legal Structure
+
+You have a few basic choices for how to legally organize a business:
+
++ Sole Proprietorship  
+    + Simple to do
+    + A few bucks to get a fictitious name.
++ Partnership
+    + Can be handshake
+    + Should not be a handshake
++ Corporation
+    + Two main types
+        + C Corp  
+        + S Corp
+    + Lots of paperwork
++ LLC/LLP -- Both are crosses between Corporation and Partnership
+    + Less paperwork than corp
+    + About the same as well organized partnership.
+    
+## Tax Treatment
+
+Most of these pass through income to be taxed at the individual rate of the person who earned the money.
+
+Corporations have a separate income tax that must be paid.  Dividends granted to shareholder are then taxed again as the shareholders income.
+
++ \$1000 in taxable earnings
++ -\$300 in corporate tax
++ \$700 distributed as dividends
++ \$700 in dividend earning
++ -\$245 in personal tax
++ Net to individual \$455
+
+
+## Just a Few Warnings  
+
++ I will try to stay out of the politics.
++ Economists give lots of "second-best" solutions since the best is politically impossible.
+
+
+## New Tax Law
+
+Gives a 20% discount to pass through income, i.e., income not taxed at business level but passed through to you at the personal level.
+
+There are some limitations based on:
+
++ Business salaries
++ Business investments
+
+Set the Federal corporate tax rate to 21%
+
+
+## This Reform Was ... odd
+
++ The last major tax reform was 1986.
+    + That reform passed in the Senate 97-3
+        + Truly bipartisan
+        + Revenue neutral simplification
+        + Reduction in rates with a wider base
++ This was a party line vote.
++ Without support from both major parties, it creates uncertainty about future rates.
+    + More likely that there will be changes if either house or senate flips.
+    + May actually stifle the positive effects.
+    + Makes it hard to round up support for fixes.
+    
+## Some Principles of Taxation
+
++ Higher taxes on what you don't want and lower taxes, or subsidies, on what you do want.
+    + So treat labor income and capital income the same or you will see gaming to reduce taxes.
+    + Treat foreign and domestic earnings the same or, again, gaming to reduce rates.
++ Discourage gaming of where you book income.
+
+## The new rules violate principles
+
++ Lower rate on capital earnings than labor.
+    + We had this with the long-term capital gains
+    + Now this is regular.
++ Lower rate on foreign business earnings than domestic.
++ Fun things with pass through income will encourage some creative accounting.
+    + Lawyers generally don't get the reduction in pass through.
+    + If, the form a law group and an intellectual property group.
+    + The law group gets no pass through reduction but if they pay the intellectual property group, almost, all those gains for using the intellectual property -- they can.
+
+## Back to the lecture
+    
+## Why you want to be "double taxed"?
+
+If you don't intend to take money out of the business (Grow it).
+
++ Corporate taxes tend to be lower than individual taxes
++ If you don't issue dividends the money only faces the corporate tax and not the individual tax.
+
+This is very similar to how there is a tax reducing way to give money to your children when you have a business. 
+
++ Give the money through the most tax friendly channel.
++ For the child case:
+    + Don't give the money directly, after you paid high taxes.
+    + Give it as pay, taxed at the child's lower rate.
+
+## Growing a Small Business
+
++ Sole Proprietorship
+    + 1000 taxable income
+    + Less 350 personal tax
+    + 650 to grow the business
++ Corporation
+    + 1000 taxable income
+    + Less 210 corporate tax (The Federal rate)
+    + 790 to grow the business
+
+## Protection of Personal Assets
+
++ SP and Partnerships mingle personal and business assets.
+    + (SP) If you do something stupid, they take your house.
+    + (Partnership) If your *partner* does something stupid, they take *your* house.
++ Corporations, LLCs,  provide the most protection
+    + But there are ways to "pierce the corporate veil" to go after officers assets.
+    + Strength of these laws depends on the state.
+    
+More protection often comes with more paperwork and in the case of C-Corps, a new level of taxes.  LLC/LLP are often subject to taxes that Partnerships and SP are not.
+
+## Small Business Consideration
+
+Benefits: insurance, retirement, medical
+
++ Very specialized area that changes from year-to-year.
++ Some are only SP and LLC some only Partnerships and C-Corps
++ There is a whole industry developed around being experts in these rules and providing services, Heath and Benefits Brokerages.
+
+## Don't Feel Trapped
+
+You can change forms of organization from time to time.
+
+## In this class
+
+We will treat taxes as a simple percent.
+
++ Clearly, we are hiding a lot of complexity.
++ What we are doing is the equivalent of making "rough cash flow estimate".
+    + Semi-rough and Detailed are much more work.
+    + For those, the economists, engineers and MBA types will work separately in specialist areas and then assemble at the end.
+    
+In this class:
+
++ You will be given a rate, e.g., 30\%.  Like asking accounting what assumed rate to use.
++ Use a rule of thumb rate, i.e, 40\%.  Covers most income  correlated taxes.
+
+
+## Tax Incentives to Replace Assets
+
++ Only business have depreciation expenses
++ Only business see decreases in taxes because they buy assets.
++ They have greater financial incentives to replace existing assets than households do.
+
+## Recall the Depreciation of a Car we did before
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+library(dplyr)
+library(stargazer)
+Year <- 1:6
+Cost <- 10000
+Personal <- c(-Cost, 0,0,0,0,0)
+MACRS <- c(.2, .32, .192, .1152, .1152, .0576)
+Depreciation <- Cost * MACRS
+BookValue <- Cost - cumsum(Depreciation)
+
+FullLife <- as.data.frame(cbind(Year, Personal, Depreciation))
+
+stargazer(FullLife, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE)
+
+```
+
+
+## Add Taxes
+
+Depreciation is an expense, which reduces taxable income and taxes.  Assume a 40\% combined tax rate.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+library(dplyr)
+library(stargazer)
+Year <- 1:6
+Cost <- 10000
+Personal <- c(-Cost, 0,0,0,0,0)
+MACRS <- c(.2, .32, .192, .1152, .1152, .0576)
+Depreciation <- Cost * MACRS
+BookValue <- Cost - cumsum(Depreciation)
+TaxSave <- Depreciation * .4
+AfterTax <- Personal + TaxSave
+
+
+FullLife <- as.data.frame(cbind(Year, Personal, Depreciation, TaxSave, AfterTax))
+
+stargazer(FullLife, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE, digits = 0)
+
+```
+
+Businesses have lower negative cash flow at purchase and positive thereafter.
+
+## Interpretation
+
+Suppose you were deciding to replace an existing car with a new one that had the same, maintenance, fuel and other costs.
+
++ From a personal finance point of view, you would need to find \$10,000 in non-financial benefits, e.g., a sunroof, to justify replacing it.
+
++ From a business point of view you only need, $PW(AfterTax|MARR = 10\%) = \$`r Acc(-PW(.1,AfterTax ))`$ 
+
+This is why you often have newer equipment on the job site than at home.
+
+
+## Tax Incentives to Borrow
+
++ With a few exceptions, i.e., mortgage and student loans, only business reduce taxable income with interest expenses.
++ They have greater financial incentives to borrow money than households do.
+
+
+## Consider the Following Loan 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+SampleLoan <- AmTable(10000, .1, 5)
+stargazer(SampleLoan, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE, digits = 0)
+```
+
+A household would look at the PW of the payments to evaluate if it was a good loan for them.
+
+## Business Point of View
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+LoanPart <- SampleLoan[,1:3]
+LoanPart$TaxSavings <- LoanPart$Interest * .4
+LoanPart$AfterTax <- LoanPart$Payment - LoanPart$TaxSavings
+
+stargazer(LoanPart, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE, digits = 0)
+```
+
+See the advantage?
+
+## Businesses will Borrow When Individuals would not
+
+The tax advantages mean that businesses will often borrow at a higher rate than MARR.
+
++ MARR can be thought of as an after tax interest rate.
++ Interest on loans is pre-tax for businesses.
++ Quick rule of thumb if $Loan~Rate(1-c)<MARR$, take the loan
+    + Approximation only works with moderate interest rates
+    + Longish loan periods.
+
+## Interaction with Latest Tax Reform
+
++ Suppose you made a decision to borrow several years ago based on the tax rates at the time.
++ A big part of the decision to borrow was because interest is an expense and lowers taxes.
++ Now, the tax rate fell
+    + The tax savings from interest falls.
+    + Approximate after-tax rate originally, with 35\% tax, $5\%(1 - .35 )= `r round(100*(.05*(1-.35)),2)`\%$
+    + Approximate after-tax rate with 21/% tax, $5\%(1 - .21 )= `r round(100*(.05*(1-.21)),2)`\%$
+
+Overall lower taxes, but this altered the trade-offs between equity and debt fueled growth.    
+    
+## Summary of Incentives
+
+Because businesses have ways of reducing taxable income that households do not, they do things differently than households.
+
++ Asset replacement
+    + Households have a bigger leap to warrant replacement.
+    + Because households can't take depreciation expenses off of taxable income.
++ Loans
+    + Households tolerate lower interest rates on loans
+    + Because households can't  take interest expense off taxable income.
+
+## Back to How Depreciation Works
+
++ Remember we never addressed what happens when you sell an asset for something other than book value?
++ There is a process of truing up called, "depreciation recapture" that results in a gains tax.
+
+Warnings:
+
+  + There is a different treatment for different kinds of gains in personal taxes
+      + Ordinary Gains -- Selling asset for more than book value but less than cost basis.
+      + Capital Gains  -- Selling asset for more than cost basis.
+      + Long-term Capital -- Selling asset for more than cost basis but after more than a year.
+  + We only handle corporate taxes here, where the rates are all the same.  Consult a financial planner for personal.
+  
+## Business Income Taxes
+
+Business taxes tend to be "trued up" over time.
+
++ If you run a loss one year, you can get some of the taxes you paid in previous years back.
++ If you run a big enough loss, you can get all the taxes back for the last few years and use the rest to reduce future taxes. Rules are detailed.
++ Ordinary and Capital losses are treated differently. There are differences on what losses can be applied to and for how long.
+
+Similar truing up is done  with assets sold for something other than book value.
+
++ Treated as ordinary gains and is taxed.
++ Warning, technical area.  
++ I show basics for beginners.
+
+## Return of the Car
+
+Same as before with 40\% tax rate.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+library(dplyr)
+library(stargazer)
+Year <- 1:6
+Cost <- 10000
+Personal <- c(-Cost, 0,0,0,0,0)
+MACRS <- c(.2, .32, .192, .1152, .1152, .0576)
+Depreciation <- Cost * MACRS
+BookValue <- Cost - cumsum(Depreciation)
+TaxSave <- Depreciation * .4
+AfterTax <- Personal + TaxSave
+
+
+FullLife <- as.data.frame(cbind(Year, Personal, Depreciation, TaxSave, AfterTax))
+
+stargazer(FullLife, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE, digits = 0)
+
+```
+
+Book value is zero in time 7.  We are going to sell it for \$1,000 in time 7.
+
+## Sell it for \$1,000 in period 7
+
+Book Value was zero so \$1,000 is more than the zero book value and you must pay 40% tax on the gain.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+FullSale <- rbind(FullLife[,c(1,2,5)], c(7,1000,0))
+GainsTax <- c(0,0,0,0,0,0, 1000 * .4)
+NetCash <- FullSale$AfterTax - GainsTax
+GainsTable <- as.data.frame(cbind(FullSale, GainsTax, NetCash))
+
+
+GainsTable$NetCash[7] <- GainsTable$NetCash[7] + 1000
+
+
+stargazer(GainsTable, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE, digits = 0)
+
+```
+
+## Try Selling for Other than Book Value in time 4
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+library(dplyr)
+library(stargazer)
+Year <- 1:4
+Cost <- 10000
+MACRS <- c(.2, .32, .192, .1152/2)
+Depreciation <- Cost * MACRS
+BookValue <- Cost - cumsum(Depreciation)
+
+FullLife <- as.data.frame(cbind(Year, MACRS, Depreciation, BookValue))
+
+stargazer(FullLife, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE)
+
+```
+Two examples: sale for more than book value, $5,000 and; less than book value, \$1,000.
+
+## Sell for \$5,000, i.e., more than book
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+library(dplyr)
+library(stargazer)
+Year <- 1:4
+Cost <- 10000
+Salvage <- 5000
+PreTax <- c(-Cost, 0,0,Salvage)
+MACRS <- c(.2, .32, .192, .1152/2)
+Depreciation <- Cost * MACRS
+BookValue <- Cost - cumsum(Depreciation)
+TaxSavings <- Depreciation * .4
+AfterTax <- PreTax + TaxSavings
+GainsTax <- c(0,0,0,(Salvage - BookValue[[4]]) * .4)
+NetCash <- AfterTax - GainsTax
+
+DTable <- as.data.frame(cbind(Year, Depreciation, BookValue, PreTax))
+
+stargazer(DTable, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE)
+
+```
+
+$$Gains~Tax = (Salvage - Book~Value)Tax~Rate$$
+
+## Net Cash Flow With Gains Tax
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+EarlySale <- as.data.frame(cbind(Year, PreTax, AfterTax, GainsTax, NetCash))
+
+stargazer(EarlySale, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE)
+
+```
+
+You pay tax when you sell for more than book value.
+
+
+
+
+## Sell for \$1,000, i.e., less than book
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+library(dplyr)
+library(stargazer)
+Year <- 1:4
+Cost <- 10000
+Salvage <- 1000
+PreTax <- c(-Cost, 0,0,Salvage)
+MACRS <- c(.2, .32, .192, .1152/2)
+Depreciation <- Cost * MACRS
+BookValue <- Cost - cumsum(Depreciation)
+TaxSavings <- Depreciation * .4
+AfterTax <- PreTax + TaxSavings
+GainsTax <- c(0,0,0,(Salvage - BookValue[[4]]) * .4)
+NetCash <- AfterTax - GainsTax
+
+DTable <- as.data.frame(cbind(Year, Depreciation, BookValue, PreTax))
+
+stargazer(DTable, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE)
+
+```
+
+$$Gains~Tax = (Salvage - Book~Value)Tax~Rate$$
+
+## Net Cash Flow With Gains Tax
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+EarlySale <- as.data.frame(cbind(Year, PreTax, AfterTax, GainsTax, NetCash))
+
+stargazer(EarlySale, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE)
+
+```
+
+You get money back when you sell for less than book value.
+
+## A View on Gains Tax
+
++ You will have an undiscounted sum of tax savings equal to the the difference between the cost basis and actual salvage value.
++ Understatement of depreciation, almost always the case, give business a zero interest loan from the government.
++ Overstatement, give the government a zero interest  loan from the business.
+
+## Extreme Depreciation
+
+Section 179 Depreciation (26 U.S.C. \S 179)
+
++ Allows you to expense some kinds of property, i.e., fully depreciate it when you buy it.
++ Dollar and type limitations.
++ Explains the "Hummer Plague" of the early 2000s.
+
+## The Hummer Plague
+
++ Starting in about 2004 Hummers were showing up everywhere.
++ Why?
+    + They were heavy, which eliminated the limitation on depreciation of cars.
+    + This is why the cars are always cheap in this class, there is limited depreciation (26 U.S. Code \S 280F)
+    + 2003 Congress increased the limits on Section 179 a lot.
+
+Businesses saw a "luxury" vehicle they could expense in one year.    
+
+
+## The Hummer Plague Start
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+library(dplyr)
+library(stargazer)
+Year <- 1:6
+Cost <- 104000
+Personal <- c(-Cost, 0,0,0,0,0)
+MACRS <-c(1,0,0,0,0,0) 
+  # c(.2, .32, .192, .1152, .1152, .0576)
+Depreciation <- Cost * MACRS
+BookValue <- Cost - cumsum(Depreciation)
+TaxSave <- Depreciation * .4
+AfterTax <- Personal + TaxSave
+
+
+FullLife <- as.data.frame(cbind(Year, Personal, Depreciation, TaxSave, AfterTax))
+
+stargazer(FullLife, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE, digits = 0)
+
+```
+
+Looks like a Hummer for, roughly, half price at 40\% tax rate.
+
+## But Hummers Are Impractical
+
++ 6 MPG
++ Can't park downtown
++ People key your car and pop your tires
++ Gas prices 
+
+## So, they sold them
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+library(dplyr)
+library(stargazer)
+Year <- 1:4
+Cost <- 104000
+Salvage <- 40000
+PreTax <- c(-Cost, 0,0,Salvage)
+MACRS <- c(1, 0, 0, 0)
+  # c(.2, .32, .192, .1152/2)
+Depreciation <- Cost * MACRS
+BookValue <- Cost - cumsum(Depreciation)
+TaxSavings <- Depreciation * .4
+AfterTax <- PreTax + TaxSavings
+GainsTax <- c(0,0,0,(Salvage - BookValue[[4]]) * .4)
+NetCash <- AfterTax - GainsTax
+
+DTable <- as.data.frame(cbind(Year, Depreciation, BookValue, PreTax))
+
+stargazer(DTable, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE)
+
+```
+
+## And took a massive tax hit
+
+The hit was because the book value was zero after the first year.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+EarlySale <- as.data.frame(cbind(Year, PreTax, AfterTax, GainsTax, NetCash))
+
+stargazer(EarlySale, type = "latex", summary = FALSE, rownames = FALSE, header = FALSE)
+
+```
+
+
+## And then they vanished
+
++ Poof, just like that.
++ My wife reported that she saw a lot of them in Bakersfield, if you want to see one in the wild.
+
+
+## Summary
+
++ Very simple treatment of tax effects
++ Expert area but you know enough for a rough cash flow projection.
++ Effects:
+    + More likely to replace
+    + More likely to borrow
+    
++ Next we will put all this information into a form that others can read and understand, Income/Cash Flow form.    

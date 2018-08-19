@@ -589,4 +589,525 @@ The file will have its original line endings in your working directory.[0K
 [0K[?25h[?25l
 [0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (master)[0m[0K
 $[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25h[?25la[0K[15G[?25h[16G[17G[?25l$ git commit -a -[0K[?25hm[0K[20G[?25l$ git commit -a -m "[0K[?25hC[0Kl[0Ka[0K[?25l$ git commit -a -m "Cl[0K[?25he[0Ka[0Kn[0Ki[0Kn[0K[?25lg[0K[28G[?25h[29G[30G[?25l$ git commit -a -m "Cleaning u[0K[30G[?25h[31G[?25l$ git commit -a -m "Cleaning up[0K[?25h[33G[?25l$ git commit -a -m "Cleaning up f[0K[?25ho[0Kr[0K[37G[?25l$ git commit -a -m "Cleaning up for m[0K[?25h[?25le[0K[38G[?25h[39G[?25l$ git commit -a -m "Cleaning up for mer[0K[?25hg[0Ke[0K[43G[?25l$ git commit -a -m "Cleaning up for merge t[0K[?25ho[0K[46G[?25l$ git commit -a -m "Cleaning up for merge to m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K"[0K[?25l
+[0K[?25h[master 31ac38f] Cleaning up for merge to master[0K[?25l
+ Committer: James Woods <woodsj@psu.ds.pdx.edu>[0K
+Your name and email address were configured automatically based[0K
+on your username and hostname. Please check that they are accurate.[0K
+You can suppress this message by setting them explicitly. Run the[0K
+following command and follow the instructions in your editor to edit[0K
+your configuration file:[0K
+[0K
+    git config --global --edit[0K
+[0K
+After doing this, you may fix the identity used for this commit with:[0K
+[0K
+    git commit --amend --reset-author[0K
+[0K
+ 262 files changed, 1388 insertions(+), 7174 deletions(-)[0K
+ create mode 100644 .Rproj.user/B25B75C9/console06/2F5257F6[0K
+ create mode 100644 .Rproj.user/B25B75C9/console06/INDEX001[0K
+ create mode 100644 .Rproj.user/B25B75C9/pcs/debug-breakpoints.pper[0K
+ create mode 100644 .Rproj.user/B25B75C9/pcs/files-pane.pper[0K
+ create mode 100644 .Rproj.user/B25B75C9/pcs/find-in-files.pper[0K
+ create mode 100644 .Rproj.user/B25B75C9/pcs/packages-pane.pper[0K
+ create mode 100644 .Rproj.user/B25B75C9/pcs/source-pane.pper[0K
+ create mode 100644 .Rproj.user/B25B75C9/pcs/source-window.pper[0K
+ create mode 100644 .Rproj.user/B25B75C9/pcs/windowlayoutstate.pper[0K
+ create mode 100644 .Rproj.user/B25B75C9/pcs/workbench-pane.pper[0K
+ create mode 100644 .Rproj.user/B25B75C9/persistent-state[0K
+ create mode 100644 .Rproj.user/B25B75C9/presentation/presentation-state-v2[0K
+ create mode 100644 .Rproj.user/B25B75C9/rmd-outputs[0K
+ create mode 100644 .Rproj.user/B25B75C9/saved_source_markers[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/per/t/128A2342[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/per/t/67BB7DC4[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/per/t/85B805F0[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/per/t/8D02EAD6[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/per/t/B8EC967A[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/per/t/D6A9A33F[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/10ADF7E3[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/1628C28A[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/17D934D[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/18EA5658[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/213D7A9F[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/24A3D339[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/25751F41[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/2ABA8D90[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/30594EC[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/3228F61A[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/35C0086A[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/4808611[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/4AD1A777[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/4E42D385[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/56BBC8E1[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/57FA867C[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/6D16AB46[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/85C7BEEE[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/881653F2[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/914238A6[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/9657B673[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/9C80C830[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/9E14D49F[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/BCBAEEE1[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/C65F5571[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/CB62415B[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/D3B7C2B9[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/D667EB41[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/DEE5634F[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/E0A6156C[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/E4634435[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/E49112E4[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/EBC56B1A[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/F18DC85[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/F80F78F1[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/F97B500C[0K
+ create mode 100644 .Rproj.user/B25B75C9/sdb/prop/INDEX[0K
+ create mode 100644 .Rproj.user/B25B75C9/session-persistent-state[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/10ADF7E3[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/14DB2985[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/1628C28A[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/17D934D[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/18EA5658[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/1D69317C[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/213D7A9F[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/220AA866[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/24A3D339[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/25751F41[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/2AB65C0A[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/2ABA8D90[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/2D7C67AF[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/2F45C1E2[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/30594EC[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/31456946[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/3228F61A[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/35C0086A[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/4808611[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/4AD1A777[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/4E42D385[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/4F632C52[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/4FB8B4C2[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/56BBC8E1[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/57CDDAC[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/57FA867C[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/64D736C6[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/68D2F4E4[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/6D16AB46[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/814E27EC[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/85C7BEEE[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/881653F2[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/8CE8DCD2[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/8F9CE445[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/914238A6[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/9657B673[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/975FF372[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/9B726188[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/9C80C830[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/9DB9E211[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/9E14D49F[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/ACD65A4C[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/B5FA875F[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/BC4C8630[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/BCBAEEE1[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/C1E7F2AD[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/C65F5571[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/C89075C6[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/CB62415B[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/CC327745[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/D3B7C2B9[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/D667EB41[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/DEE5634F[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/E04214C3[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/E0A6156C[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/E1C4060[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/E4634435[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/E49112E4[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/EBC56B1A[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/F18DC85[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/F6281D57[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/F80F78F1[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/F97B500C[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/FAE116F[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/FFB42C93[0K
+ create mode 100644 .Rproj.user/B25B75C9/sources/prop/INDEX[0K[28G[?25h[?25l
+ create mode 100644 .Rproj.user/B25B75C9/sources/s-8B0D218E/lock_file[0K
+ create mode 100644 .Rproj.user/shared/notebooks/11722C1D-EC314Syllabus/1/B25B75C9/chunks[0K.
+json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/11722C1D-EC314Syllabus/1/B25B75C910C5941[0K7
+/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/11722C1D-EC314Syllabus/1/B25B75C913E2088[0K6
+/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/11722C1D-EC314Syllabus/1/B25B75C927B96D3[0KD
+/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/11722C1D-EC314Syllabus/1/B25B75C92C6759A[0K9
+/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/11722C1D-EC314Syllabus/1/B25B75C9588C9E5[0K0
+/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/11722C1D-EC314Syllabus/1/B25B75C99D7146A[0KE
+/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/11722C1D-EC314Syllabus/1/B25B75C9B28DDE9[0K9
+/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/11722C1D-EC314Syllabus/1/B25B75C9B2E7935[0K6
+/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/11722C1D-EC314Syllabus/1/B25B75C9D03CC9C[0K4
+/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/11722C1D-EC314Syllabus/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/194D7F9B-ChoiceSummary/1/B25B75C9F592C4B[0KB
+/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/194D7F9B-ChoiceSummary/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/307F4A52-Loans/1/B25B75C9BCB46535/chunks[0K.
+json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/307F4A52-Loans/1/B25B75C9C487A6C6/chunks[0K.
+json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/307F4A52-Loans/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/4D0E2B62-NewEnvironments/1/B25B75C9143BA[0KB
+E/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/4D0E2B62-NewEnvironments/1/B25B75C943809[0K4
+41/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/4D0E2B62-NewEnvironments/1/B25B75C9BE104[0KA
+97/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/4D0E2B62-NewEnvironments/1/B25B75C9DB73E[0K9
+76/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/4D0E2B62-NewEnvironments/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/5A90CB16-ReviewTransactions/1/B25B75C93C[0K3
+BC9CB/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/5A90CB16-ReviewTransactions/1/B25B75C941[0K8
+BD6A8/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/5A90CB16-ReviewTransactions/1/B25B75C94F[0K7
+A4C0/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/5A90CB16-ReviewTransactions/1/s/chunks.j[0Ks
+on[0K
+ create mode 100644 .Rproj.user/shared/notebooks/6EE92F89-MoreAccounting/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/7AE66D68-Taxes/1/B25B75C94F6592C0/chunks[0K.
+json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/7AE66D68-Taxes/1/B25B75C94F9C92F0/chunks[0K.
+json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/7AE66D68-Taxes/1/B25B75C96249E3F5/chunks[0K.
+json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/7AE66D68-Taxes/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/7C0C9CF-PreTest/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/7C3C48C-IncomeCashFlow/1/B25B75C958E0437[0K4
+/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/7C3C48C-IncomeCashFlow/1/B25B75C9A9518EE[0KF
+/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/7C3C48C-IncomeCashFlow/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/7C3C48C-IncomeCashFlow/1/s/cs1l7p04bk23b[0K/
+000002.csv[0K
+ create mode 100644 .Rproj.user/shared/notebooks/7C3C48C-IncomeCashFlow/1/s/cs1l7p04bk23b[0K/
+000003.error[0K
+ create mode 100644 .Rproj.user/shared/notebooks/7C3C48C-IncomeCashFlow/1/s/csetup_chunk/[0K0
+00002.csv[0K
+ create mode 100644 .Rproj.user/shared/notebooks/8E61A8CF-DayOne/1/B25B75C948451FFC/chunk[0Ks
+.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/8E61A8CF-DayOne/1/B25B75C96EC93726/chunk[0Ks
+.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/8E61A8CF-DayOne/1/B25B75C99D7146AE/chunk[0Ks
+.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/8E61A8CF-DayOne/1/B25B75C9A766564/chunks[0K.
+json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/8E61A8CF-DayOne/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/A3800E46-AccountingRatios/1/B25B75C9A5E2[0KF
+52E/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/A3800E46-AccountingRatios/1/s/chunks.jso[0Kn
+[0K
+ create mode 100644 .Rproj.user/shared/notebooks/AB78D334-IntroChoice/1/B25B75C928C2287B/[0Kc
+hunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/AB78D334-IntroChoice/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/B169C56-TimeValueOfMoney/1/B25B75C93C3BC[0K9
+CB/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/B169C56-TimeValueOfMoney/1/B25B75C98C5AF[0KB
+12/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/B169C56-TimeValueOfMoney/1/B25B75C9918DA[0K8
+D9/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/B169C56-TimeValueOfMoney/1/B25B75C9C5B47[0KB
+97/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/B169C56-TimeValueOfMoney/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/C96B7DB8-Depreciation/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/D15E9420-IntroAccounting/1/B25B75C97E196[0K5
+F3/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/D15E9420-IntroAccounting/1/B25B75C9A5E2F[0K5
+2E/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/D15E9420-IntroAccounting/1/B25B75C9CA169[0K5
+72/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/D15E9420-IntroAccounting/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/E322B67E-AnnualWorth/1/B25B75C94C3E62C0/[0Kc
+hunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/E322B67E-AnnualWorth/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/F194B209-QuickRequest/1/B25B75C92839AE5B[0K/
+chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/F194B209-QuickRequest/1/B25B75C9CA169572[0K/
+chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/F194B209-QuickRequest/1/s/chunks.json[0K
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names[0K
+ create mode 100644 .Rproj.user/shared/notebooks/paths[0K
+ delete mode 100644 .gitignore[0K
+ delete mode 100644 Choice/15Percent.png[0K
+ delete mode 100644 Choice/20Percent.png[0K
+ delete mode 100644 Choice/AnnualWorth.Rmd[0K
+ delete mode 100644 Choice/AnnualWorth.pdf[0K
+ delete mode 100644 Choice/ArrowDiagram.png[0K
+ delete mode 100644 Choice/InternalRateOfReturn.Rmd[0K
+ delete mode 100644 Choice/InternalRateOfReturn.pdf[0K
+ delete mode 100644 Choice/IntroChoice.Rmd[0K
+ delete mode 100644 Choice/IntroChoice.pdf[0K
+ delete mode 100644 Choice/PVCRoof.png[0K
+ delete mode 100644 Choice/Setup.png[0K
+ delete mode 100644 Choice/ac.png[0K
+ delete mode 100644 Choice/cd.png[0K
+ delete mode 100644 Choice/ce.png[0K
+ delete mode 100644 Choice/cf.png[0K
+ delete mode 100644 Choice/lessthanmarr.png[0K
+ delete mode 100644 Choice/theassets.png[0K
+ delete mode 100644 DepreciationAndTaxes/Accelerated.png[0K
+ delete mode 100644 DepreciationAndTaxes/AmTable.R[0K
+ delete mode 100644 DepreciationAndTaxes/Depreciation.Rmd[0K
+ delete mode 100644 DepreciationAndTaxes/Depreciation.pdf[0K
+ delete mode 100644 DepreciationAndTaxes/StLine.png[0K
+ delete mode 100644 DepreciationAndTaxes/Taxes.Rmd[0K
+ delete mode 100644 DepreciationAndTaxes/Taxes.pdf[0K
+ delete mode 100644 DivisibleShape.png[0K
+ delete mode 100644 IncomeCashFlow/IncomeCashFlow.Rmd[0K
+ delete mode 100644 IncomeCashFlow/IncomeCashFlow.pdf[0K
+ delete mode 100644 IntroAccounting/IntroAccounting.Rmd[0K
+ delete mode 100644 IntroAccounting/IntroAccounting.pdf[0K
+ delete mode 100644 NewEnvironments/AvgMarginal.png[0K
+ delete mode 100644 NewEnvironments/BenAndCosts.png[0K
+ delete mode 100644 NewEnvironments/Divisible.png[0K
+ delete mode 100644 NewEnvironments/DivisibleAssumption.png[0K
+ delete mode 100644 NewEnvironments/IBIC.png[0K
+ delete mode 100644 NewEnvironments/NetBenefits.png[0K
+ delete mode 100644 NewEnvironments/NewEnvironments.Rmd[0K
+ delete mode 100644 NewEnvironments/NewEnvironments.pdf[0K
+ delete mode 100644 NewEnvironments/WrongCurve.png[0K
+ delete mode 100644 PSU-EC314.Rproj[0K
+ delete mode 100644 PreTest/PreTest.Rmd[0K
+ delete mode 100644 PreTest/PreTest.pdf[0K
+ delete mode 100644 PreTest/PreTestKEY.Rmd[0K
+ delete mode 100644 PreTest/PreTestKEY.pdf[0K
+ delete mode 100644 Ratios/AccountingRatios.Rmd[0K
+ delete mode 100644 Ratios/AccountingRatios.pdf[0K
+ delete mode 100644 SinglePeriodChoice/AC.png[0K
+ delete mode 100644 SinglePeriodChoice/AFC.png[0K
+ delete mode 100644 SinglePeriodChoice/AVC.png[0K
+ delete mode 100644 SinglePeriodChoice/BreakEven.png[0K
+ delete mode 100644 SinglePeriodChoice/CostAssumed.png[0K
+ delete mode 100644 SinglePeriodChoice/CostGen.png[0K
+ delete mode 100644 SinglePeriodChoice/MakeVBuy.png[0K
+ delete mode 100644 SinglePeriodChoice/OptimalPace.png[0K
+ delete mode 100644 SinglePeriodChoice/RealLife1.png[0K
+ delete mode 100644 SinglePeriodChoice/RealLife2.png[0K
+ delete mode 100644 SinglePeriodChoice/SinglePeriodChoice.Rmd[0K
+ delete mode 100644 SinglePeriodChoice/SinglePeriodChoice.pdf[0K
+ delete mode 100644 SinglePeriodChoice/ThreeVolumeIndex.png[0K
+ delete mode 100644 SinglePeriodChoice/VehiclesOnly.png[0K
+ delete mode 100644 Syllabus/EC314Syllabus.Rmd[0K
+ delete mode 100644 Syllabus/EC314Syllabus.pdf[0K
+ delete mode 100644 Syllabus/README.md[0K
+ delete mode 100644 TVMAndLoans/Loans.Rmd[0K
+ delete mode 100644 TVMAndLoans/Loans.pdf[0K
+ delete mode 100644 TVMAndLoans/Sketch.png[0K
+ delete mode 100644 TVMAndLoans/TVM.R[0K
+ delete mode 100644 TVMAndLoans/TimeValueOfMoney.Rmd[0K
+ delete mode 100644 TVMAndLoans/TimeValueOfMoney.html[0K
+ delete mode 100644 TVMAndLoans/TimeValueOfMoney.pdf[0K
+ delete mode 100644 Uncertainty/TestUn-figure/unnamed-chunk-2-1.png[0K
+ delete mode 100644 Uncertainty/Uncertainty.Rmd[0K
+ delete mode 100644 Uncertainty/Uncertainty.html[0K
+ delete mode 100644 Uncertainty/Uncertainty.pdf[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git m[0K[?25he[0Kr[0Kg[0Ke[0K[13G[?25l$ git merge S[0K[?25hu[0Km[0Km[0Ke[0Kr[0K[?25l$ git merge Summe[0K[?25h[?25l$ git merge Summ[0K[?25h[?25l$ git merge Sum[0K[?25h[?25l$ git merge Su[0K[?25h[?25l$ git merge S[0K[?25h[?25l$ git merge[0K[13G[?25h[12G[?25l$ git merg[0K[?25h[?25l$ git mer[0K[11G[?25h[10G[?25l$ git me[0K[?25h[?25l$ git m[0K[?25h[?25l$ git[0K[7G[?25h[?25l$ git b[0K[?25hr[0Ka[0Kn[0Kc[0Kh[0K[?25l
+[0K[?25h  Fall2016[0K[?25l
+  Fall2017[0K
+  Spring2015[0K
+  Spring2016[0K
+  Spring2017[0K
+  Spring2018[0K[?25h[?25l
+  Summer2016[0K
+  Summer2017[0K
+  Summer2018[0K
+  Winter2016[0K
+  Winter2017[0K
+  Winter2018[0K
+* [0;32mmaster[0m[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git m[0K[?25h[?25le[0K[8G[?25h[9G[?25l$ git mer[0K[?25hg[0Ke[0K[13G[?25l$ git merge S[0K[?25hu[0K[?25lm[0K[15G[?25h[16G[?25l$ git merge Summ[0K[?25he[0Kr[0K2[0K0[0K1[0K8[0K[?25l
+[0K[?25hCONFLICT (modify/delete): Syllabus/EC314Syllabus.pdf deleted in HEAD and modified in Summ[0Ke[?25l
+r2018. Version Summer2018 of Syllabus/EC314Syllabus.pdf left in tree.[0K
+CONFLICT (modify/delete): Syllabus/EC314Syllabus.Rmd deleted in HEAD and modified in Summ[0Ke
+r2018. Version Summer2018 of Syllabus/EC314Syllabus.Rmd left in tree.[0K
+CONFLICT (rename/delete): Uncertainty/Uncertainty.pdf deleted in HEAD and renamed to 9-Un[0Kc
+ertainty/Uncertainty.pdf in Summer2018. Version Summer2018 of 9-Uncertainty/Uncertainty.p[0Kd
+f left in tree.[0K
+CONFLICT (rename/delete): Uncertainty/Uncertainty.html deleted in HEAD and renamed to 9-U[0Kn
+certainty/Uncertainty.html in Summer2018. Version Summer2018 of 9-Uncertainty/Uncertainty[0K.
+html left in tree.[0K
+CONFLICT (rename/delete): Uncertainty/Uncertainty.Rmd deleted in HEAD and renamed to 9-Un[0Kc
+ertainty/Uncertainty.Rmd in Summer2018. Version Summer2018 of 9-Uncertainty/Uncertainty.R[0Km
+d left in tree.[0K
+CONFLICT (rename/delete): Uncertainty/TestUn-figure/unnamed-chunk-2-1.png deleted in HEAD[0K
+and renamed to 9-Uncertainty/TestUn-figure/unnamed-chunk-2-1.png in Summer2018. Version S[0Ku
+mmer2018 of 9-Uncertainty/TestUn-figure/unnamed-chunk-2-1.png left in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/VehiclesOnly.png deleted in HEAD and renamed[0K
+to 8-SinglePeriodChoice/VehiclesOnly.png in Summer2018. Version Summer2018 of 8-SinglePer[0Ki
+odChoice/VehiclesOnly.png left in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/ThreeVolumeIndex.png deleted in HEAD and ren[0Ka
+med to 8-SinglePeriodChoice/ThreeVolumeIndex.png in Summer2018. Version Summer2018 of 8-S[0Ki
+nglePeriodChoice/ThreeVolumeIndex.png left in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/SinglePeriodChoice.pdf deleted in HEAD and r[0Ke
+named to 8-SinglePeriodChoice/SinglePeriodChoice.pdf in Summer2018. Version Summer2018 of[0K
+8-SinglePeriodChoice/SinglePeriodChoice.pdf left in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/SinglePeriodChoice.Rmd deleted in HEAD and r[0Ke
+named to 8-SinglePeriodChoice/SinglePeriodChoice.Rmd in Summer2018. Version Summer2018 of[0K
+8-SinglePeriodChoice/SinglePeriodChoice.Rmd left in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/RealLife2.png deleted in HEAD and renamed to[0K
+8-SinglePeriodChoice/RealLife2.png in Summer2018. Version Summer2018 of 8-SinglePeriodCho[0Ki
+ce/RealLife2.png left in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/RealLife1.png deleted in HEAD and renamed to[0K
+8-SinglePeriodChoice/RealLife1.png in Summer2018. Version Summer2018 of 8-SinglePeriodCho[0Ki
+ce/RealLife1.png left in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/OptimalPace.png deleted in HEAD and renamed [0Kt
+o 8-SinglePeriodChoice/OptimalPace.png in Summer2018. Version Summer2018 of 8-SinglePerio[0Kd
+Choice/OptimalPace.png left in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/MakeVBuy.png deleted in HEAD and renamed to [0K8
+-SinglePeriodChoice/MakeVBuy.png in Summer2018. Version Summer2018 of 8-SinglePeriodChoic[0Ke
+/MakeVBuy.png left in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/CostGen.png deleted in HEAD and renamed to 8[0K-
+SinglePeriodChoice/CostGen.png in Summer2018. Version Summer2018 of 8-SinglePeriodChoice/[0KC
+ostGen.png left in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/CostAssumed.png deleted in HEAD and renamed [0Kt
+o 8-SinglePeriodChoice/CostAssumed.png in Summer2018. Version Summer2018 of 8-SinglePerio[0Kd
+Choice/CostAssumed.png left in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/BreakEven.png deleted in HEAD and renamed to[0K
+8-SinglePeriodChoice/BreakEven.png in Summer2018. Version Summer2018 of 8-SinglePeriodCho[0Ki
+ce/BreakEven.png left in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/AVC.png deleted in HEAD and renamed to 8-Sin[0Kg
+lePeriodChoice/AVC.png in Summer2018. Version Summer2018 of 8-SinglePeriodChoice/AVC.png [0Kl
+eft in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/AFC.png deleted in HEAD and renamed to 8-Sin[0Kg
+lePeriodChoice/AFC.png in Summer2018. Version Summer2018 of 8-SinglePeriodChoice/AFC.png [0Kl
+eft in tree.[0K
+CONFLICT (rename/delete): SinglePeriodChoice/AC.png deleted in HEAD and renamed to 8-Sing[0Kl
+ePeriodChoice/AC.png in Summer2018. Version Summer2018 of 8-SinglePeriodChoice/AC.png lef[0Kt
+ in tree.[0K
+CONFLICT (rename/delete): NewEnvironments/WrongCurve.png deleted in HEAD and renamed to 7[0K-
+NewEnvironments/WrongCurve.png in Summer2018. Version Summer2018 of 7-NewEnvironments/Wro[0Kn
+gCurve.png left in tree.[0K
+CONFLICT (rename/delete): NewEnvironments/NewEnvironments.pdf deleted in HEAD and renamed[0K
+to 7-NewEnvironments/NewEnvironments.pdf in Summer2018. Version Summer2018 of 7-NewEnviro[0Kn
+ments/NewEnvironments.pdf left in tree.[0K
+CONFLICT (rename/delete): NewEnvironments/NewEnvironments.Rmd deleted in HEAD and renamed[0K
+to 7-NewEnvironments/NewEnvironments.Rmd in Summer2018. Version Summer2018 of 7-NewEnviro[0Kn
+ments/NewEnvironments.Rmd left in tree.[0K
+CONFLICT (rename/delete): NewEnvironments/NetBenefits.png deleted in HEAD and renamed to [0K7
+-NewEnvironments/NetBenefits.png in Summer2018. Version Summer2018 of 7-NewEnvironments/N[0Ke
+tBenefits.png left in tree.[0K
+CONFLICT (rename/delete): NewEnvironments/IBIC.png deleted in HEAD and renamed to 7-NewEn[0Kv
+ironments/IBIC.png in Summer2018. Version Summer2018 of 7-NewEnvironments/IBIC.png left i[0Kn
+ tree.[0K
+CONFLICT (rename/delete): DivisibleShape.png deleted in HEAD and renamed to 7-NewEnvironm[0Ke
+nts/DivisibleShape.png in Summer2018. Version Summer2018 of 7-NewEnvironments/DivisibleSh[0Ka
+pe.png left in tree.[0K
+CONFLICT (rename/delete): NewEnvironments/DivisibleAssumption.png deleted in HEAD and ren[0Ka
+med to 7-NewEnvironments/DivisibleAssumption.png in Summer2018. Version Summer2018 of 7-N[0Ke
+wEnvironments/DivisibleAssumption.png left in tree.[0K
+CONFLICT (rename/delete): NewEnvironments/Divisible.png deleted in HEAD and renamed to 7-[0KN
+ewEnvironments/Divisible.png in Summer2018. Version Summer2018 of 7-NewEnvironments/Divis[0Ki
+ble.png left in tree.[0K
+CONFLICT (rename/delete): NewEnvironments/BenAndCosts.png deleted in HEAD and renamed to [0K7
+-NewEnvironments/BenAndCosts.png in Summer2018. Version Summer2018 of 7-NewEnvironments/B[0Ke
+nAndCosts.png left in tree.[0K
+CONFLICT (rename/delete): NewEnvironments/AvgMarginal.png deleted in HEAD and renamed to [0K7
+-NewEnvironments/AvgMarginal.png in Summer2018. Version Summer2018 of 7-NewEnvironments/A[0Kv
+gMarginal.png left in tree.[0K
+CONFLICT (rename/delete): IncomeCashFlow/IncomeCashFlow.pdf deleted in HEAD and renamed t[0Ko
+ 6-IncomeCashFlow/IncomeCashFlow.pdf in Summer2018. Version Summer2018 of 6-IncomeCashFlo[0Kw
+/IncomeCashFlow.pdf left in tree.[0K
+CONFLICT (rename/delete): IncomeCashFlow/IncomeCashFlow.Rmd deleted in HEAD and renamed t[0Ko
+ 6-IncomeCashFlow/IncomeCashFlow.Rmd in Summer2018. Version Summer2018 of 6-IncomeCashFlo[0Kw
+/IncomeCashFlow.Rmd left in tree.[0K
+CONFLICT (rename/delete): DepreciationAndTaxes/Taxes.Rmd deleted in HEAD and renamed to 5[0K-
+DepreciationAndTaxes/Taxes.Rmd in Summer2018. Version Summer2018 of 5-DepreciationAndTaxe[0Ks
+/Taxes.Rmd left in tree.[0K
+CONFLICT (rename/delete): DepreciationAndTaxes/StLine.png deleted in HEAD and renamed to [0K5
+-DepreciationAndTaxes/StLine.png in Summer2018. Version Summer2018 of 5-DepreciationAndTa[0Kx
+es/StLine.png left in tree.[0K
+CONFLICT (rename/delete): DepreciationAndTaxes/Depreciation.pdf deleted in HEAD and renam[0Ke
+d to 5-DepreciationAndTaxes/Depreciation.pdf in Summer2018. Version Summer2018 of 5-Depre[0Kc
+iationAndTaxes/Depreciation.pdf left in tree.[0K
+CONFLICT (rename/delete): DepreciationAndTaxes/Depreciation.Rmd deleted in HEAD and renam[0Ke
+d to 5-DepreciationAndTaxes/Depreciation.Rmd in Summer2018. Version Summer2018 of 5-Depre[0Kc
+iationAndTaxes/Depreciation.Rmd left in tree.[0K
+CONFLICT (rename/delete): DepreciationAndTaxes/AmTable.R deleted in HEAD and renamed to 5[0K-
+DepreciationAndTaxes/AmTable.R in Summer2018. Version Summer2018 of 5-DepreciationAndTaxe[0Ks
+/AmTable.R left in tree.[0K
+CONFLICT (rename/delete): DepreciationAndTaxes/Accelerated.png deleted in HEAD and rename[0Kd
+ to 5-DepreciationAndTaxes/Accelerated.png in Summer2018. Version Summer2018 of 5-Depreci[0Ka
+tionAndTaxes/Accelerated.png left in tree.[0K
+CONFLICT (rename/delete): Choice/theassets.png deleted in HEAD and renamed to 4-Choice/th[0Ke
+assets.png in Summer2018. Version Summer2018 of 4-Choice/theassets.png left in tree.[0K
+CONFLICT (rename/delete): Choice/lessthanmarr.png deleted in HEAD and renamed to 4-Choice[0K/
+lessthanmarr.png in Summer2018. Version Summer2018 of 4-Choice/lessthanmarr.png left in t[0Kr
+ee.[0K
+CONFLICT (rename/delete): Choice/cf.png deleted in HEAD and renamed to 4-Choice/cf.png in[0K
+Summer2018. Version Summer2018 of 4-Choice/cf.png left in tree.[0K
+CONFLICT (rename/delete): Choice/ce.png deleted in HEAD and renamed to 4-Choice/ce.png in[0K
+Summer2018. Version Summer2018 of 4-Choice/ce.png left in tree.[0K
+CONFLICT (rename/delete): Choice/cd.png deleted in HEAD and renamed to 4-Choice/cd.png in[0K
+Summer2018. Version Summer2018 of 4-Choice/cd.png left in tree.[0K
+CONFLICT (rename/delete): Choice/ac.png deleted in HEAD and renamed to 4-Choice/ac.png in[0K
+Summer2018. Version Summer2018 of 4-Choice/ac.png left in tree.[0K
+CONFLICT (rename/delete): Choice/Setup.png deleted in HEAD and renamed to 4-Choice/Setup.[0Kp
+ng in Summer2018. Version Summer2018 of 4-Choice/Setup.png left in tree.[0K
+CONFLICT (rename/delete): Choice/PVCRoof.png deleted in HEAD and renamed to 4-Choice/PVCR[0Ko
+of.png in Summer2018. Version Summer2018 of 4-Choice/PVCRoof.png left in tree.[0K
+CONFLICT (rename/delete): Choice/IntroChoice.pdf deleted in HEAD and renamed to 4-Choice/[0KI
+ntroChoice.pdf in Summer2018. Version Summer2018 of 4-Choice/IntroChoice.pdf left in tree[0K.
+[0K
+CONFLICT (rename/delete): Choice/IntroChoice.Rmd deleted in HEAD and renamed to 4-Choice/[0KI
+ntroChoice.Rmd in Summer2018. Version Summer2018 of 4-Choice/IntroChoice.Rmd left in tree[0K.
+[0K
+CONFLICT (rename/delete): Choice/InternalRateOfReturn.pdf deleted in HEAD and renamed to [0K4
+-Choice/InternalRateOfReturn.pdf in Summer2018. Version Summer2018 of 4-Choice/InternalRa[0Kt
+eOfReturn.pdf left in tree.[0K
+CONFLICT (rename/delete): Choice/InternalRateOfReturn.Rmd deleted in HEAD and renamed to [0K4
+-Choice/InternalRateOfReturn.Rmd in Summer2018. Version Summer2018 of 4-Choice/InternalRa[0Kt
+eOfReturn.Rmd left in tree.[0K
+CONFLICT (rename/delete): Choice/ArrowDiagram.png deleted in HEAD and renamed to 4-Choice[0K/
+ArrowDiagram.png in Summer2018. Version Summer2018 of 4-Choice/ArrowDiagram.png left in t[0Kr
+ee.[0K
+CONFLICT (rename/delete): Choice/AnnualWorth.pdf deleted in HEAD and renamed to 4-Choice/[0KA
+nnualWorth.pdf in Summer2018. Version Summer2018 of 4-Choice/AnnualWorth.pdf left in tree[0K.
+[0K
+CONFLICT (rename/delete): Choice/AnnualWorth.Rmd deleted in HEAD and renamed to 4-Choice/[0KA
+nnualWorth.Rmd in Summer2018. Version Summer2018 of 4-Choice/AnnualWorth.Rmd left in tree[0K.
+[0K
+CONFLICT (rename/delete): Choice/20Percent.png deleted in HEAD and renamed to 4-Choice/20[0KP
+ercent.png in Summer2018. Version Summer2018 of 4-Choice/20Percent.png left in tree.[0K
+CONFLICT (rename/delete): Choice/15Percent.png deleted in HEAD and renamed to 4-Choice/15[0KP
+ercent.png in Summer2018. Version Summer2018 of 4-Choice/15Percent.png left in tree.[0K
+CONFLICT (rename/delete): TVMAndLoans/TimeValueOfMoney.pdf deleted in HEAD and renamed to[0K
+3-TVMAndLoans/TimeValueOfMoney.pdf in Summer2018. Version Summer2018 of 3-TVMAndLoans/Tim[0Ke
+ValueOfMoney.pdf left in tree.[0K
+CONFLICT (rename/delete): TVMAndLoans/TimeValueOfMoney.Rmd deleted in HEAD and renamed to[0K
+3-TVMAndLoans/TimeValueOfMoney.Rmd in Summer2018. Version Summer2018 of 3-TVMAndLoans/Tim[0Ke
+ValueOfMoney.Rmd left in tree.[0K
+CONFLICT (rename/delete): TVMAndLoans/TVM.R deleted in HEAD and renamed to 3-TVMAndLoans/[0KT
+VM.R in Summer2018. Version Summer2018 of 3-TVMAndLoans/TVM.R left in tree.[0K
+CONFLICT (rename/delete): TVMAndLoans/Sketch.png deleted in HEAD and renamed to 3-TVMAndL[0Ko
+ans/Sketch.png in Summer2018. Version Summer2018 of 3-TVMAndLoans/Sketch.png left in tree[0K.
+[0K
+CONFLICT (rename/delete): TVMAndLoans/Loans.pdf deleted in HEAD and renamed to 3-TVMAndLo[0Ka
+ns/Loans.pdf in Summer2018. Version Summer2018 of 3-TVMAndLoans/Loans.pdf left in tree.[0K
+CONFLICT (rename/delete): TVMAndLoans/Loans.Rmd deleted in HEAD and renamed to 3-TVMAndLo[0Ka
+ns/Loans.Rmd in Summer2018. Version Summer2018 of 3-TVMAndLoans/Loans.Rmd left in tree.[0K
+CONFLICT (rename/delete): IntroAccounting/IntroAccounting.Rmd deleted in HEAD and renamed[0K
+to 1-IntroAccounting/IntroAccounting.Rmd in Summer2018. Version Summer2018 of 1-IntroAcco[0Ku
+nting/IntroAccounting.Rmd left in tree.[0K[?25h[?25l
+Automatic merge failed; fix conflicts and then commit the result.[0K
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (master|MERGING)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add -[0K[?25hA[0K[?25l
+[0K[?25h[?25l
+[0;32mwoodsj@ECON-CH241O-JWO [0;35m [0;33m~/Documents/Teaching/PSU-EC314[0;36m (master|MERGING)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25ha[0K[17G[?25l$ git commit -a -[0K[?25hm[0K[20G[?25l$ git commit -a -m "[0K[?25hM[0Ke[0Kr[0Kg[0Ki[0Kn[0Kg[0K[29G[?25l$ git commit -a -m "Merging l[0K[?25ha[0Ks[0Kt[0K[34G[?25l$ git commit -a -m "Merging last t[0K[?25hi[0Km[0Ke[0K[39G[?25l$ git commit -a -m "Merging last time I[0K[?25h[41G[?25l$ git commit -a -m "Merging last time I g[0K[?25hu[0K[?25lg[0K[43G[?25h[44G[?25l$ git commit -a -m "Merging last time I gugh[0K[?25ht[0K[47G[46G[?25l$ git commit -a -m "Merging last time I gugh[0K[?25h[?25l$ git commit -a -m "Merging last time I gug[0K[?25h[?25l$ git commit -a -m "Merging last time I gu[0K[?25h[?25l$ git commit -a -m "Merging last time I g[0K[?25h[?25l$ git commit -a -m "Merging last time I[0K[41G[?25h[40G[?25l$ git commit -a -m "Merging last time It[0K[?25ha[0K[?25l$ git commit -a -m "Merging last time It[0K[?25h[?25l$ git commit -a -m "Merging last time I[0K[?25h[41G[?25l$ git commit -a -m "Merging last time I t[0K[?25ha[0K[?25lu[0K[43G[?25h[44G[?25l$ git commit -a -m "Merging last time I taug[0K[?25hh[0Kt[0K[48G[?25l$ git commit -a -m "Merging last time I taught t[0K[?25ho[0K[51G[?25l$ git commit -a -m "Merging last time I taught to m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K"[0K[?25l
 [0K[?25h
